@@ -1,0 +1,13 @@
+***Setting***                                                                               |
+Library   org.robotframework.javalib.library.AnnotationLibrary	org/sky/auto/robot/key/**.class
+***Variable***
+${seconds}  ${2}  
+
+***Test Cases*** 
+BaiDu  
+  :FOR	${addr}  IN  ROBOT  QQ  WTF
+	\	Open Browser  Firefox  http://www.baidu.com
+	\	Element Input  百度首页-搜索框  ${addr}
+	\	Element Click  百度首页-搜索按钮
+	\	Sleep  ${seconds}  
+	\	Close All Window  
