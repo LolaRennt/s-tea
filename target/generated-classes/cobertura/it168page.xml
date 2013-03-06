@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:elements xmlns:tns="http://www.example.org/page" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/page page.xsd ">
+	<tns:element value="chanpin" by="id" id="笔记本浮层">
+		<tns:childElement value="a" by="tagName" index="0"></tns:childElement>
+	</tns:element>
+	<tns:element value=".//*[@id='h80']/dt/div/span[1]/ul/li[1]/a" by="xpath" id="笔记本链接"></tns:element>
+</tns:elements>
