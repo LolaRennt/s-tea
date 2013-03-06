@@ -37,7 +37,9 @@ import org.sky.auto.runner.AutoResetThreadLocal;
 //import org.sky.auto.xml.XMLParser;
 import org.sky.auto.xml.XmlProvider;
 
-
+/**
+ * 这是整个框架的一个核心类，可以理解为主要入口类，把分层的各种概念都整合在了这个类里面
+ * */
 public class AutoBase {
 	//private static ThreadDriver td;
 	
@@ -46,25 +48,28 @@ public class AutoBase {
 			return new AutoDriver();	
 		};
 	};
+	/**获取获取框架的核心driver对象*/
 	public static AutoDriver getAutoDriver(){
 		return art.get();
 	}
+	/**这个字段表明了浏览器是否执行过了关闭操作*/
 	private static boolean CLOSE_STATUS;
 	//static private ThreadDriver td =new ThreadDriver();
 	static Logger logger =Logger.getLogger(AutoBase.class);
 	//private  String sourcePath=File.separator+"xml"+File.separator+"source.xml";
 	//private static String type="SINGLE";
+	/**资源目录*/
 	private String sourcePath;
 	private static Actions action;
 	public AutoBase(String path){
 		this.sourcePath=path;
 	}
-	
+	/**设置log的日志目录*/
 	public static void setLogProperties(String path){
 		PropertyConfigurator.configure(path);
 	}
 	
-	
+	/**设置浏览器类型*/
 	public static void setDriver(Browser browser){
 		setClose_Status(false);
 		getAutoDriver().setDriver(browser);
@@ -246,7 +251,7 @@ public class AutoBase {
 		logger.info("元素["+id+"]-->");
 		return xp.sElement(id, xp.getPath());
 	}
-	
+	/**得到元素的列表*/
 	public static ListElement listElement(String id){
 		ListElement le= new ListElement(AutoBase.elements("id"));
 		logger.info("元素LIST["+id+"]-->");
@@ -302,16 +307,16 @@ public class AutoBase {
 		logger.info("TextField["+id+"]-->");
 		return tf;
 	}
-	
+	/**把浏览器的设置为null，释放资源*/
 	public static void clearCurrentThreadDriver(){
 		getAutoDriver().setDriver(Browser.NULL);
 		logger.info("多线程资源释放成功！");
 	}
-	
+	/**开启日志功能，默认为resource目录下的log4j.properties*/
 	public static void setLogStarted(){
 		setLogProperties("resource"+File.separator+"log4j.properties");
 	}
-	
+	/**睡眠等待，参数单位为秒*/
 	public static void sleep(int seconds){
 		try {
 			Thread.sleep(seconds*1000);

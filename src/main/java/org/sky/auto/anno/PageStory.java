@@ -7,7 +7,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 /**
  * 用来标记方法的名字，可以使用story的模式来进行编写脚本，标记后的page类不需要再进行导入操作。
- * 
+ * 为了配合story的模式来开发的一个注解，用来简化page-object模式的使用
  * */
 
 

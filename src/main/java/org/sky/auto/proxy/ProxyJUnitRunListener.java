@@ -5,7 +5,7 @@ import java.util.List;
 
 import org.junit.runner.notification.RunListener;
 
-
+/**这个类是JUnit的自身监听器的代理实现，可以通过这个类来静态的注册*/
 
 public class ProxyJUnitRunListener {
 	static List<RunListener> eventsList = new ArrayList<RunListener>();
