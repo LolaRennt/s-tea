@@ -5,8 +5,7 @@ import java.util.Map;
 
 public class ConfigParser {
 	public static Map<String,String> parse(){
-		return PropertiesTool.getPropertiesMap("config.properties");
-		
+		return PropertiesTool.getPropertiesMap("resource"+File.separator+"config.properties");
 	}
 	
 	/**得到浏览器的路径*/
@@ -48,6 +47,10 @@ public class ConfigParser {
 	
 	public static String getErrorLogDir(){
 		return parse().get("error-log");
+	}
+	
+	public static String getBaseName(){
+		return parse().get("base-name");
 	}
 	
 	

@@ -101,8 +101,8 @@ public class SElementWordkeys {
 		AutoBase.sElement(id).mouseOver();
 	}
 	@RobotKeyword
-	public void elementInput(String id,CharSequence...charSequences){
-		AutoBase.sElement(id).sendKeys(charSequences);
+	public void elementInput(String id,String text){
+		AutoBase.sElement(id).sendKeys(text);
 	}
 	@RobotKeyword
 	public void elementScroll(String id){

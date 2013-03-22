@@ -37,7 +37,7 @@ public class Table extends PageContorl{
 			}
 			return content;
 		}else{
-			logger.error("第"+(row+1)+"行，第"+(col+1)+"列的元素获取成功！");
+			logger.error("第"+(row+1)+"行，第"+(col+1)+"列的元素获取失败！！");
 			return null;
 		}
 		

@@ -47,9 +47,9 @@ public class Table extends SElement{
 		if(isExist()){
 			try{
 				content=getElement().findElement(By.xpath(".//tr["+(row)+"]/td{"+(col)+"]")).getText();
-				logger.info("第"+(row+1)+"行，第"+(col+1)+"列的元素获取成功！");
+				logger.info(">>["+this.getId()+"]第"+(row+1)+"行，第"+(col+1)+"列的元素获取成功！");
 			}catch(Exception e){
-				logger.info("第"+(row+1)+"行，第"+(col+1)+"列的元素获取失败！找不到这个table元素！");
+				logger.info(">>["+this.getId()+"]第"+(row+1)+"行，第"+(col+1)+"列的元素获取失败！找不到这个table元素！");
 			}
 			return content;
 		}else{
@@ -72,13 +72,13 @@ public class Table extends SElement{
 				for(WebElement cell : cells){
 					contents.add(cell.getText());
 				}
-				logger.info("第"+col+"列的信息获得成功！");
+				logger.info(">>["+this.getId()+"]第"+col+"列的信息获得成功！");
 				return contents;
 			}catch(Exception e){
 				logger.error("第"+col+"列的信息获得失败！！");
 			}
 		}else{
-			logger.error("第"+col+"列的信息获得失败！！元素没有找到！");
+			logger.error(">>["+this.getId()+"]第"+col+"列的信息获得失败！！元素没有找到！");
 			throw new MyAutoException("["+this.getId()+"]查找这个元素的时候出现了错误，可能这个元素不存在，没有找到元素！");
 		}
 		
@@ -99,7 +99,7 @@ public class Table extends SElement{
 					}
 					contents.add(getTableContentByRow(rowCount));
 					rowCount++;
-					logger.info("第"+rowCount+"行的所有信息获得成功！");
+					logger.info(">>["+this.getId()+"]第"+rowCount+"行的所有信息获得成功！");
 				}
 			}catch(Exception e){
 				logger.info("第"+rowCount+"行的所有信息获得失败！没有找到这个table内的要查找的元素！");
@@ -125,7 +125,7 @@ public class Table extends SElement{
 				for(WebElement cell : cells){
 					contents.add(cell.getText());
 				}
-				logger.info("第"+row+"行的信息获得成功！");
+				logger.info(">>["+this.getId()+"]第"+row+"行的信息获得成功！");
 			}catch(Exception e){
 				logger.info("第"+row+"行的信息获得失败！找不到table内的要查找的的元素！");
 			}

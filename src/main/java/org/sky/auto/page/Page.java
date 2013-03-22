@@ -1,6 +1,6 @@
 package org.sky.auto.page;
 
-import java.io.File;
+
 import java.util.Iterator;
 import java.util.Set;
 
@@ -19,9 +19,10 @@ import org.sky.auto.element.RichTextField;
 import org.sky.auto.element.SElement;
 import org.sky.auto.element.Table;
 import org.sky.auto.element.TextField;
-import org.sky.auto.xml.XmlProvider;
+import org.sky.auto.page.source.CurrentPage;
 
-public class Page implements SResource{
+
+public class Page extends CurrentPage{
 	//protected static Page page = new Page();
 	static Logger logger = Logger.getLogger(Page.class);
 	static Object o;
@@ -40,16 +41,11 @@ public class Page implements SResource{
 	}
 	/**获得定义好的元素*/
 	public SElement sElement(String id){
-		return new SElement(element(id));
+		return AutoBase.sElement(id);
 	}
 	
 	public WebElement element(String id){
-		String name=this.getClass().getName();
-		int len =name.lastIndexOf(".");
-		String path="xml"+File.separator+name.substring(len+1).toLowerCase()+".xml";
-		XmlProvider xp = new XmlProvider();
-		xp.setPath(path);
-		return xp.element(id, xp.getPath());
+		return AutoBase.element(id);
 	}
 	
 	/**得到页面的title*/

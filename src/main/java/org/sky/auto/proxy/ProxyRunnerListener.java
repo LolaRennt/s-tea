@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.sky.auto.driver.event.RunnerListener;
+import org.sky.auto.exception.NotFoundListenerException;
 
 public class ProxyRunnerListener {
 	
@@ -28,16 +29,34 @@ public class ProxyRunnerListener {
 			});
 	
 	
-	public static void register(RunnerListener runListener){
-		runListeners.add(runListener);
-	}
 	
 	public static void unregister(RunnerListener runListener){
-		runListeners.remove(runListener);
+		if(containsListener(runListener)){
+			runListeners.remove(runListener);
+		}else{
+			throw new NotFoundListenerException(runListener.getClass().getName()+"->没有找到这个监听器");
+		}
+		
 	}
 
 	public static RunnerListener getDispatcher() {
 		return dispatcher;
+	}
+	
+	public static void register(RunnerListener runListener){
+		if(!containsListener(runListener)){
+			runListeners.add(runListener);
+		}
+		
+	}
+	
+	public static boolean containsListener(RunnerListener runListener){
+		for(RunnerListener rl : runListeners){
+			if(rl.getClass().getName().equals(runListener.getClass().getName())){
+				return true;
+			}
+		}
+		return false;
 	}
 	
 }

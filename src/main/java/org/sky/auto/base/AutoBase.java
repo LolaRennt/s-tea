@@ -30,10 +30,17 @@ import org.sky.auto.element.SElement;
 import org.sky.auto.element.Table;
 import org.sky.auto.element.TextField;
 import org.sky.auto.exception.MyAutoException;
+import org.sky.auto.exception.MyElementNotFoundException;
 import org.sky.auto.intrumentation.ClassPool;
+import org.sky.auto.load.Source;
+import org.sky.auto.load.SourceLoader;
 import org.sky.auto.page.Page;
+import org.sky.auto.page.source.CurrentPage;
 import org.sky.auto.proxy.ProxyRunnerListener;
 import org.sky.auto.runner.AutoResetThreadLocal;
+import org.sky.auto.text.read.TxtLoader;
+import org.sky.auto.text.read.TxtProvider;
+import org.sky.auto.xml.XMLLoader;
 //import org.sky.auto.xml.XMLParser;
 import org.sky.auto.xml.XmlProvider;
 
@@ -42,7 +49,6 @@ import org.sky.auto.xml.XmlProvider;
  * */
 public class AutoBase {
 	//private static ThreadDriver td;
-	
 	private static AutoResetThreadLocal<AutoDriver> art = new AutoResetThreadLocal<AutoDriver>(){
 		protected synchronized AutoDriver initialValue() {
 			return new AutoDriver();	
@@ -56,14 +62,9 @@ public class AutoBase {
 	private static boolean CLOSE_STATUS;
 	//static private ThreadDriver td =new ThreadDriver();
 	static Logger logger =Logger.getLogger(AutoBase.class);
-	//private  String sourcePath=File.separator+"xml"+File.separator+"source.xml";
-	//private static String type="SINGLE";
 	/**资源目录*/
-	private String sourcePath;
 	private static Actions action;
-	public AutoBase(String path){
-		this.sourcePath=path;
-	}
+	private AutoBase(){}
 	/**设置log的日志目录*/
 	public static void setLogProperties(String path){
 		PropertyConfigurator.configure(path);
@@ -71,14 +72,19 @@ public class AutoBase {
 	
 	/**设置浏览器类型*/
 	public static void setDriver(Browser browser){
+		XMLLoader.load();
+		TxtLoader.load();
 		setClose_Status(false);
 		getAutoDriver().setDriver(browser);
 		ClassPool.reset();
 		Set<Class<?>> cls = ClassPool.getClassPool();
+		logger.info("开始扫描监听器......");
 		for(Class<?>clazz:cls){
+			
 			if(clazz.isAnnotationPresent(Register.class)){
+				logger.info("扫描到了动作监听器："+clazz.getName());
 				try {
-					ProxyRunnerListener.register((RunnerListener) clazz.newInstance());
+					ProxyRunnerListener.register((RunnerListener)clazz.newInstance());
 				} catch (InstantiationException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -94,9 +100,9 @@ public class AutoBase {
 	/**打开浏览器,里面包含了初始化操作，必须以此方法为开始*/
 	public static void open(Browser browser,String url){
 		ProxyRunnerListener.getDispatcher().beforeOpen();
-		getAutoDriver().setDriver(browser);
+		setDriver(browser);
 		getAutoDriver().getDriver().get(url);
-		logger.info("使用浏览器"+browser+"进行自动化测试，将要打开网址"+url);
+		logger.info("使用浏览器"+browser+"进行自动化测试，将要打开网址"+url+"测试");
 		ProxyRunnerListener.getDispatcher().afterOpen();
 	}
 	/**在本页面跳转到指定的链接处*/
@@ -118,13 +124,6 @@ public class AutoBase {
 
 	/**通过这个方法可以得到driver的对象*/
 	public static WebDriver driver(){
-//		//System.out.println(type);
-//		if(type.toLowerCase().contains("single")){
-//			return (WebDriver) DriverHandler.getInstance().getDriver().getEngine();
-//		}else if(type.toLowerCase().contains("thread")){
-//			return getThreadDriver().getDriver();
-//		}
-//		return null;
 		return getAutoDriver().getDriver();
 	}
 	
@@ -163,6 +162,7 @@ public class AutoBase {
 	}
 	/**点击某个元素*/
 	public static void click(WebElement element){
+		//Window.updateWindow();
 		getActions().click(element);
 	}
 	/**拖拽某个元素*/
@@ -218,93 +218,61 @@ public class AutoBase {
 		driver().close();
 		ProxyRunnerListener.getDispatcher().aftercloseCurrentWindow();
 	}
-	/**得到xml的路径*/
-	public String getSourcePath() {
-		return sourcePath;
-	}
-	/**设置默认的xml的路径*/
-	public void setSourcePath(String sourcePath) {
-		this.sourcePath = sourcePath;
-	}
-	/**得到WebElement类型的元素*/
-	public  static WebElement element(String id){
-		AutoBase ab=new AutoBase("xml"+File.separator+"source.xml");
-		//WebElement element = XMLParser.element(id, ab.getSourcePath());
-		XmlProvider xp = new XmlProvider();
-		xp.setPath(ab.getSourcePath());
-		return xp.element(id, xp.getPath());
-	}
-	public  static List<WebElement> elements(String id){
-		AutoBase ab = new AutoBase("xml"+File.separator+"source.xml");
-		//List<WebElement> list= XMLParser.elements(id, ab.getSourcePath());
-		//logger.info("元素LIST["+id+"]-->");
-		XmlProvider xp =new XmlProvider();
-		xp.setPath(ab.getSourcePath());
-		return xp.elements(id, xp.getPath());
-	}
-	
-	public static SElement sElement(String id){
-		AutoBase ab = new AutoBase("xml"+File.separator+"source.xml");
-		//SElement element= XMLParser.sElement(id, ab.getSourcePath());
-		XmlProvider xp = new XmlProvider();
-		xp.setPath(ab.getSourcePath());
-		logger.info("元素["+id+"]-->");
-		return xp.sElement(id, xp.getPath());
-	}
+
 	/**得到元素的列表*/
 	public static ListElement listElement(String id){
 		ListElement le= new ListElement(AutoBase.elements("id"));
-		logger.info("元素LIST["+id+"]-->");
+		//logger.info("元素LIST["+id+"]-->");
 		return le;
  	}
 	public static Button button(String id){
 		Button bt=new Button(element(id));
-		logger.info("按钮["+id+"]-->");
+		//logger.info("按钮["+id+"]-->");
 		return bt;
 	}
 	
 	public static CheckBox checkBox(String id){
 		CheckBox cb =new CheckBox(element(id));
-		logger.info("CheckBox["+id+"]-->");
+		//logger.info("CheckBox["+id+"]-->");
 		return cb;
 	}
 	
 	public static ComoboBox comoboBox(String id){
 		ComoboBox cb=new ComoboBox(element(id));
-		logger.info("ComoboBox["+id+"]-->");
+		//logger.info("ComoboBox["+id+"]-->");
 		return cb;
 	}
 	
 	public static Image image(String id){
 		Image i = new Image(element(id));
-		logger.info("Image["+id+"]-->");
+		//logger.info("Image["+id+"]-->");
 		return i;
 	}
 	
 	public static Link link(String id){
 		Link l =new Link(element(id));
-		logger.info("Link["+id+"]-->");
+		//logger.info("Link["+id+"]-->");
 		return l;
 	}
 	
 	public static RadioButton radioButton(String id){
 		RadioButton rd = new RadioButton(element(id));
-		logger.info("RadioButton["+id+"]-->");
+		//logger.info("RadioButton["+id+"]-->");
 		return rd;
 	}
 	public static RichTextField richTextField(String id){
 		RichTextField rtf = new RichTextField(element(id));
-		logger.info("RichTextField["+id+"]-->");
+		//logger.info("RichTextField["+id+"]-->");
 		return rtf;
 	}
 	public static Table table(String id){
 		Table t=new Table(element(id));
-		logger.info("Table["+id+"]-->");
+		//logger.info("Table["+id+"]-->");
 		return t;
 	}
 	public static TextField textField(String id){
 		TextField tf = new TextField(element(id));
-		logger.info("TextField["+id+"]-->");
+		//logger.info("TextField["+id+"]-->");
 		return tf;
 	}
 	/**把浏览器的设置为null，释放资源*/
@@ -315,6 +283,10 @@ public class AutoBase {
 	/**开启日志功能，默认为resource目录下的log4j.properties*/
 	public static void setLogStarted(){
 		setLogProperties("resource"+File.separator+"log4j.properties");
+	}
+	
+	public static void setLogStarted(String path){
+		setLogProperties(path);
 	}
 	/**睡眠等待，参数单位为秒*/
 	public static void sleep(int seconds){
@@ -332,4 +304,43 @@ public class AutoBase {
 	public static void setClose_Status(boolean status) {
 		CLOSE_STATUS = status;
 	}	
+	/**返回在资源中定义好的元素*/
+	public static SElement sElement(String id){
+		SElement se=new SElement(element(id));
+		se.setId(id);
+		return se;
+	}
+	
+	public static WebElement element(String id){
+		//System.out.println(elementBelongTo(id));
+		if(elementBelongTo(id).toString().equals("TXT")){
+			logger.info("["+id+"]是来自TXT的资源");
+			TxtProvider tp = new TxtProvider();
+			return tp.element(id);
+		}else if(elementBelongTo(id).toString().equals("XML")){
+			logger.info("["+id+"]是来自XML的资源");
+			XmlProvider xp = new XmlProvider();
+			return xp.element(id);
+		}else{
+			throw new MyElementNotFoundException("扫描的资源中没有找到["+id+"]元素，请检查是否输入正确");
+		}
+		
+	}
+	/**获得element的list元素*/
+	public static List<WebElement> elements(String id){
+		XmlProvider xp = new XmlProvider();
+		return xp.elements(id);
+	}
+	
+	
+	private static Source elementBelongTo(String id){
+		return SourceLoader.getSource(id);
+	}
+	
+	/**当前操作的当前页面*/
+	public CurrentPage currentpage(){
+		return new CurrentPage();
+	}
+	
+	
 }

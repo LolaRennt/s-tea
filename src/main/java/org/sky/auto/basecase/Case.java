@@ -7,6 +7,34 @@ public class Case {
 	private Object Andstep;
 	private Object resultStep;
 	private Object whenStep;
+	private Object beforeStep;
+	private Object afterStep;
+	private Object beforeCase;
+	private Object afterCase;
+	public Object getBeforeStep() {
+		return beforeStep;
+	}
+	public void setBeforeStep(Object beforeStep) {
+		this.beforeStep = beforeStep;
+	}
+	public Object getAfterStep() {
+		return afterStep;
+	}
+	public void setAfterStep(Object afterStep) {
+		this.afterStep = afterStep;
+	}
+	public Object getBeforeCase() {
+		return beforeCase;
+	}
+	public void setBeforeCase(Object beforeCase) {
+		this.beforeCase = beforeCase;
+	}
+	public Object getAfterCase() {
+		return afterCase;
+	}
+	public void setAfterCase(Object afterCase) {
+		this.afterCase = afterCase;
+	}
 	public Object getInitStep() {
 		return initStep;
 	}

@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
@@ -28,6 +29,7 @@ import org.sky.auto.proxy.ProxyRunnerListener;
  * @author 王天庆
  * */
 public class Window {
+	private static Set<String> windowHandles =new HashSet<String>();	
 	/**通过title来选择页面*/
 	public static void selectWindowByTitle(String title){
 		ProxyRunnerListener.getDispatcher().beforeselectWindow();
@@ -255,6 +257,33 @@ public class Window {
 	public static String getUrl(){
 		return AutoBase.driver().getCurrentUrl();
 	}
+	/**更新当前所有的窗口集合*/
+	public static void updateWindow(){
+		windowHandles=AutoBase.driver().getWindowHandles();
+	}
+	/**切换到最新打开的窗口*/
+	public static void selectNewWindow(){
+		for(String window:AutoBase.driver().getWindowHandles()){
+			int i=0;
+			for(String wh:windowHandles){
+				if(wh.equals(window)){
+					i++;
+				}
+			}
+			if(i==0){
+				AutoBase.driver().switchTo().window(window);
+				break;
+			}
+		}
+	}
+	
+	/**清空句柄集合*/
+	public static void clearWindowHandle(){
+		windowHandles.clear();
+	}
+	
+	
+	
 	
 	
 }

@@ -28,16 +28,16 @@ public class TextField extends SElement {
 		if(isExist()){
 			getElement().clear();
 			getElement().sendKeys(text);
-			logger.info("输入成功！");
+			logger.info(">>["+this.getId()+"]输入成功！");
 		}else{
-			logger.error("找不到元素！输入值失败！");
+			logger.error(">>["+this.getId()+"]找不到元素！输入值失败！");
 		}
 	}
 	
 	public void clear(){
 		if(isExist()){
 			getElement().clear();
-			logger.info("输入框清理值成功了！");
+			logger.info(">>["+this.getId()+"]输入框清理值成功了！");
 		}else{
 			logger.error("查找元素失败！没有找到元素！");
 		}
@@ -48,7 +48,7 @@ public class TextField extends SElement {
 		String content=null;
 		if(isExist()){
 			content=getElement().getAttribute("value");
-			logger.info("获得输入框文本内容成功");
+			logger.info(">>["+this.getId()+"]获得输入框文本内容成功");
 		}else{
 			logger.error("没有找到元素，获得值失败！");
 		}

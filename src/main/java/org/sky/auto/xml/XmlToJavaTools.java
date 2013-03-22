@@ -5,12 +5,13 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
+import org.sky.auto.exception.MyElementNotFoundException;
 
 public class XmlToJavaTools {
 	static Logger logger = Logger.getLogger(XmlToJavaTools.class);
 	
 	
-	public Map<By,Integer> by(String by,String selector,int index) throws Exception{
+	public Map<By,Integer> by(String by,String selector,int index){
 		Map<By,Integer> byMap= new HashMap<By,Integer>();
 		By b=null;
 		if(by.equals("id")){
@@ -39,12 +40,12 @@ public class XmlToJavaTools {
 			byMap.put(b, index);
 		}else{
 			logger.error(by+"这种定位方式没有被找到！");
-			throw new Exception("["+by+"]这种定位方式没有被找到！");
+			throw new MyElementNotFoundException("["+by+"]这种定位方式没有被找到！");
 		}
 		return byMap;
 	}
 	
-	public By locator(String by,String selector) throws Exception{	
+	public By locator(String by,String selector){	
 		By b=null;
 		if(by.equals("id")){
 			b = By.id(selector);
@@ -63,7 +64,7 @@ public class XmlToJavaTools {
 		}else if(by.equals("partialLinkText")){
 			b=By.partialLinkText(selector);
 		}else{
-			throw new Exception("["+by+"]这种定位方式没有被找到！");
+			throw new MyElementNotFoundException("["+by+"]这种定位方式没有被找到！");
 		}
 		return b;
 	}
