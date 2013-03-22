@@ -52,7 +52,7 @@ public class ComoboBox extends SElement{
 	public void selectByIndex(int index){
 		if(isExist()){
 			getSelect().selectByIndex(index);
-			logger.info("选择第"+index+"选项成功！");
+			logger.info(">>["+this.getId()+"]选择第"+index+"选项成功！");
 		}else{
 			logger.error("元素不存在，通过索引值"+index+"查找失败！");
 			throw new MyAutoException("["+this.getId()+"]通过索引进行选择的时候失败了，这个元素不存在，没有被找到！");
@@ -66,7 +66,7 @@ public class ComoboBox extends SElement{
 	public void selectByValue(String value){
 		if(isExist()){
 			getSelect().selectByValue(value);
-			logger.info("选择"+value+"所在项成功！");
+			logger.info(">>["+this.getId()+"]选择"+value+"所在项成功！");
 		}else{
 			logger.error("元素不存在，通过值"+value+"查找失败！");
 			throw new MyAutoException("["+this.getId()+"]通过内容查找元素的时候失败了！这个元素不存在，没有被找到！");
@@ -79,7 +79,7 @@ public class ComoboBox extends SElement{
 	public void selectByVisiableText(String text){
 		if(isExist()){
 			select.selectByVisibleText(text);
-			logger.info("选择值为"+text+"所在项成功！");
+			logger.info(">>["+this.getId()+"]选择值为"+text+"所在项成功！");
 		}else{
 			logger.error("元素不存在，通过内容值"+text+"查找失败！");
 			throw new MyAutoException("["+this.getId()+"]通过标签之间的内容来进行查找的时候失败了，这个元素没有被找到！");
@@ -97,7 +97,7 @@ public class ComoboBox extends SElement{
 					selectedIndex=i;
 				}
 			}
-			logger.info("获得选中项的索引值成功！");
+			logger.info(">>["+this.getId()+"]获得选中项的索引值成功！");
 			return selectedIndex;
 		}else{
 			logger.error("元素不存在，获得选中项的索引值失败！");
@@ -110,7 +110,7 @@ public class ComoboBox extends SElement{
 		String value=null;
 		if(isExist()){
 			value=getSelect().getFirstSelectedOption().getText();
-			logger.info("获得选中项的索引值成功！");
+			logger.info(">>["+this.getId()+"]获得选中项的索引值成功！");
 			return value;
 		}else{
 			logger.error("元素不存在，获得当前选中项内容失败！");
@@ -126,7 +126,7 @@ public class ComoboBox extends SElement{
 			for(int i=0;i<selectedItems.size();i++){
 				values[i]=selectedItems.get(i).getText();
 			}
-			logger.info("获得全部选中项内容成功");
+			logger.info(">>["+this.getId()+"]获得全部选中项内容成功");
 			return values;	
 		}else{
 			logger.error("元素没有找到，获得内容失败！");
@@ -147,7 +147,7 @@ public class ComoboBox extends SElement{
 					}
 				}
 			}
-			logger.info("获得全部选中项内容成功");
+			logger.info(">>["+this.getId()+"]获得全部选中项内容成功");
 			return indexs;	
 		}else{
 			logger.error("元素没有找到，获得索引值失败！");
@@ -159,7 +159,7 @@ public class ComoboBox extends SElement{
 		int size=-1;
 		if(isExist()){
 			size= getSelect().getOptions().size();
-			logger.info("得到comobox的大小为-->"+size);
+			logger.info(">>["+this.getId()+"]得到comobox的大小为-->"+size);
 			return size;
 		}else{
 			logger.error("元素不存在，返回comobox的大小失败！");
@@ -173,7 +173,7 @@ public class ComoboBox extends SElement{
 			int max=getSelect().getOptions().size();
 			int random=r.nextInt(max);
 			getSelect().selectByIndex(random);
-			logger.info("选择了第"+getSelectedIndex()+"项，并且值为"+getSelectedValue());
+			logger.info(">>["+this.getId()+"]选择了第"+getSelectedIndex()+"项，并且值为"+getSelectedValue());
 		}else{
 			throw new MyAutoException("["+this.getId()+"]获取控件大小的时候出现了错误！可能的原因是这个元素不存在！");
 			//logger.error("元素查找失败，没有找到相关的随即项！");

@@ -12,5 +12,4 @@ public class MyElementNotFoundException extends NoSuchElementException{
 	public MyElementNotFoundException(String reason) {
 		super(reason);
 	}
-
 }

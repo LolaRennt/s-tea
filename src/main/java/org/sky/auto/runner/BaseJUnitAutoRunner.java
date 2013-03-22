@@ -11,6 +11,7 @@ import java.util.concurrent.Future;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import org.apache.log4j.Logger;
 import org.databene.feed4junit.Feeder;
 import org.junit.runner.notification.RunListener;
 import org.junit.runner.notification.RunNotifier;
@@ -28,6 +29,7 @@ import org.sky.auto.runner.statement.Interceptor;
 import org.sky.auto.runner.statement.InterceptorStatement;
 
 public class BaseJUnitAutoRunner extends Feeder{
+	private Logger logger = Logger.getLogger(BaseJUnitAutoRunner.class);
 	public BaseJUnitAutoRunner(final Class<?> klass)
 			throws InitializationError {
 		super(klass);
@@ -116,16 +118,13 @@ public class BaseJUnitAutoRunner extends Feeder{
 				}
 			}
 		}
-		if(ProxyJUnitRunListener.dispatcher().size()!=0){
-			for(RunListener rl:ProxyJUnitRunListener.dispatcher()){
-				rn.addListener(rl);
-			}
-		}
+		
 		Set<Class<?>> cls = ClassPool.getClassPool();
 		for(Class<?>clazz : cls){
 			if(clazz.isAnnotationPresent(RunListenerRegister.class)){
 				try {
 					ProxyJUnitRunListener.register((RunListener) clazz.newInstance());
+					logger.info("加载了JUnit级别监听器"+clazz.getName());
 				} catch (InstantiationException e) {
 					e.printStackTrace();
 				} catch (IllegalAccessException e) {
@@ -133,7 +132,11 @@ public class BaseJUnitAutoRunner extends Feeder{
 				}
 			}
 		}
-		
+		if(ProxyJUnitRunListener.dispatcher().size()!=0){
+			for(RunListener rl:ProxyJUnitRunListener.dispatcher()){
+				rn.addListener(rl);
+			}
+		}
 		
 		super.run(rn);
 	}

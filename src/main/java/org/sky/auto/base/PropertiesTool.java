@@ -334,12 +334,12 @@ public class PropertiesTool {
 		}
 		return properties;
 	}
-	/**从类路径获得sk配置文件(类路径下的Resource目录下)
+	/**从类路径获得配置文件(类路径下的Resource目录下)
 	 * @param 给定的sk配置文件的名字
 	 * @return 找到的由properties配置文件创建的{@link Properties}对象，如果没有找到配置文件，返回null*/
 	public static Properties getPropertiesFromClassPath(String propertiesFileName){
 		if(propertiesFileName==null||"".equalsIgnoreCase(propertiesFileName)){
-			System.out.println("没有给定 properties文件的名字!");
+			System.out.println("没有给定properties文件的名字!");
 		}
 		InputStream input=null;
 		Properties properties=new Properties();
@@ -363,8 +363,8 @@ public class PropertiesTool {
 		}
 		return properties;
 	}
-	/**从普通文件路径获得sk配置文件
-	 * @param 给定的sk配置文件的全路径
+	/**从普通文件路径获得配置文件
+	 * @param 给定的配置文件的全路径
 	 * @return 找到的由properties配置文件创建的{@link Properties}对象，如果没有找到配置文件，返回null*/
 	public static Properties getPropertiesFromCommonFilePath(String filePath){
 		if(filePath==null||"".equalsIgnoreCase(filePath)){
@@ -409,7 +409,7 @@ public class PropertiesTool {
 	 * 只支持在类路径下的properties文件
 	 * */
 	public static Map<String,String> getPropertiesMap(String propertiesName){
-		Properties props = getPropertiesFromClassPath(propertiesName);
+		Properties props = getPropertiesFromCommonFilePath(propertiesName);
 		Map<String,String> keyInfo = null;
 		try{
 			keyInfo=new HashMap<String,String>();

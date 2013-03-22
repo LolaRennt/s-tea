@@ -5,11 +5,10 @@ import org.robotframework.RobotFramework;
 import org.sky.auto.exception.MyAutoException;
 
 public class AutoKeyWordRunner {
+	private String path;
 	@Test
-	public void run(){
-		
-		
-		int rc = RobotFramework.run(new String[]{"--outputdir","/Users/ouamaqing/robotHtml","txt"});
+	public void run(){	
+		int rc = RobotFramework.run(new String[]{"--outputdir",getPath(),"txt"});
 		if(rc==0){
 			System.out.println("All tests passed");
 		}else if(rc<=250){
@@ -21,6 +20,12 @@ public class AutoKeyWordRunner {
 		}
 	}
 	
-	
+	public void setOutPutDir(String path){
+		this.path=path;
+	}
+
+	public String getPath() {
+		return path;
+	}
 	
 }

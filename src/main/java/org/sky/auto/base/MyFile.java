@@ -9,11 +9,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MyFile {
+	
+	private  List<String> fileList=new ArrayList<String>();
 
 	private String filePath;
 
 	File file;
-
+	
+	public MyFile(){
+		
+	}
 	public MyFile(String filePath) {
 
 		this.filePath = filePath;
@@ -183,23 +188,21 @@ public class MyFile {
 	/**
 	 * @return 得到目录文件下的列表，如果有子目录的话，会遍历子目录
 	 * */
-	public static List<String> listFile(File f, String suffix, boolean isDepth) {
+	public   List<String> listFile(File f, String suffix, boolean isDepth) {		
 		
-		List<String> fileList = new ArrayList<String>();
-
 		if (f.isDirectory() && isDepth == true) {
 
 			File[] t = f.listFiles();
-
+			//System.out.println(t.length);
 			for (int i = 0; i < t.length; i++) {
-
+				//System.out.println(t[i].getName());
 				listFile(t[i], suffix, isDepth);
 
 			}
 		} else {
 
 			String filePath = f.getAbsolutePath();
-
+			//System.out.println(filePath);
 			if (suffix != null) {
 
 				int begIndex = filePath.lastIndexOf(".");
@@ -210,15 +213,16 @@ public class MyFile {
 
 					tempsuffix = filePath.substring(begIndex + 1,
 							filePath.length());
-
+					//System.out.println(tempsuffix);
 				}
 				if (tempsuffix.equals(suffix)) {
-
+					//System.out.println(filePath);
 					fileList.add(filePath);// 
+					//System.out.println("加入成功！");
 				}
 			}
 		}
-
+		//System.out.println(fileList.size());
 		return fileList;
 
 	}

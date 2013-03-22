@@ -110,6 +110,7 @@ public class ClassPathScanHandler {
 					className = className.substring(0, className.length()-6);
 					try{
 						classes.add(Thread.currentThread().getContextClassLoader().loadClass(className));
+						logger.info("className:"+className);
 					}catch(ClassNotFoundException e){
 						logger.error("Class.forName Error:"+e);
 					}

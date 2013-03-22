@@ -36,7 +36,7 @@ public class RichTextField extends SElement{
 			String js="contentWindow.document.body.innerText=\'"+text+"\';";
 			Window.runJS(js);
 		}else{
-			logger.error("在富文本框内输入内容失败！");
+			logger.error(">>["+this.getId()+"]在富文本框内输入内容失败！");
 			throw new MyAutoException("["+this.getId()+"]进行输入的时候出现错误，可能这个元素没有定位正确，元素不存在！");
 		}
 	}
@@ -44,7 +44,7 @@ public class RichTextField extends SElement{
 		if(isExist()){
 			String js="contentWindow.document.body.innerText=\'\';";
 			Window.runJS(js);
-			logger.info("富文本框内容清理成功！");
+			logger.info(">>["+this.getId()+"]富文本框内容清理成功！");
 		}else{
 			logger.error("找到元素失败！清理失败！");
 			throw new MyAutoException("["+this.getId()+"]进行清除操作的时候失败了，可能是这个元素定位失败！元素不存在！");

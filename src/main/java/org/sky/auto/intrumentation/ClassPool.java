@@ -3,6 +3,8 @@ package org.sky.auto.intrumentation;
 import java.util.HashSet;
 import java.util.Set;
 
+import org.sky.auto.base.Configure;
+
 
 /**
  * 本地class文件的扫描方法，初始化只能扫描一次，不能够重复扫描，如果需要重置
@@ -17,9 +19,15 @@ public class ClassPool {
 	 *@return 返回项目目录下的class的集合。
 	 */
 	public static Set<Class<?>> getClassPool(){
-		ClassPathScanHandler cpsh = new ClassPathScanHandler(true, true, null);
-		classPool=cpsh.getPackageAllClasses("org.sky.auto", true);
-		return classPool;
+		if(classPool.size()==0){
+			Configure cf = new Configure();
+			ClassPathScanHandler cpsh = new ClassPathScanHandler(true, true, null);
+			classPool=cpsh.getPackageAllClasses(cf.getBasename(), true);
+			return classPool;
+		}else{
+			return classPool;
+		}
+		
 	}
 	/**
 	 *@param clazz 需要添加的class对象，需要在classpath找到的class
