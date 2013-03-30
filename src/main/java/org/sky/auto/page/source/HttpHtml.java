@@ -8,10 +8,6 @@ public abstract class HttpHtml {
 	 * */
 	abstract public String getContext();
 	/**
-	 * @return 返回请求页面的响应码
-	 * */
-	abstract public int getStatusCode();
-	/**
 	 * @return 返回页面的所有的csslink连接
 	 * */
 	abstract public List<String> getCssLink();

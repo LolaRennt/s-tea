@@ -1,13 +1,8 @@
 package org.sky.auto.page.source;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
-import org.apache.http.HttpEntity;
-import org.apache.http.ParseException;
-import org.apache.http.util.EntityUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -16,39 +11,18 @@ import org.jsoup.select.Elements;
 public class PageHtml extends HttpHtml{
 	
 	private String url;
-	private Response response;
-	private HttpMethod method;
 	public PageHtml(String url){
 		this.url=url;
-		this.method=HttpMethod.GET;
 	}
-	public PageHtml(String url,HttpMethod method){
-		this.url=url;
-		this.setHttpMethod(method);
-	}
+	
 	
 	@Override
 	public String getContext() {
-		this.startResponse();
-		HttpEntity entity=response.response().getEntity();
-		try {
-			String content=EntityUtils.toString(entity);
-			this.response.abort();
-			return content;
-		} catch (ParseException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		return null;
-	}
-
-	@Override
-	public int getStatusCode() {
-		this.startResponse();
-		int statuscode = response.response().getStatusLine().getStatusCode();
-		this.closeResponse();
-		return statuscode;
+		Response response = new Response(this.url);
+		String content= response.getContent();
+		response.abort();
+		response.closeResponse();
+		return content;
 	}
 
 	@Override
@@ -80,14 +54,13 @@ public class PageHtml extends HttpHtml{
 	@Override
 	public boolean isGzip() {
 		boolean iszip=false;
-		this.startResponse();
+		Response response = new Response(getUrl());
 		response.addHeader(HttpHeaders.ACCEPT_ENCODING, "gzip,deflate");
 		HttpHeader header = new HttpHeader(response);
 		String gzip=header.getHeaderValue(HttpHeaders.CONTENT_ENCODING);
 		if(gzip!=null&&gzip.toLowerCase().contains(gzip)){
 			iszip=true;	
 		}
-		this.closeResponse();
 		return iszip;
 	}
 
@@ -101,11 +74,10 @@ public class PageHtml extends HttpHtml{
 	}
 	/**得到指定js的加载时间*/
 	public long getJavaScriptLoadTime(String name){
+		Response response = new Response(getUrl());
 		for(String js:getJavaScriptURL()){
 			if(js.endsWith(js)){
-				this.startResponse();
-				long time=this.response.getPageLoadTime();
-				this.closeResponse();
+				long time=response.getPageLoadTime();
 				return time;
 			}
 		}
@@ -124,41 +96,4 @@ public class PageHtml extends HttpHtml{
 		}
 		return headercss;
 	}
-	
-	/**关闭实时的请求*/
-	public void closeResponse(){
-		this.response.closeResponse();
-	}
-	/**开启实时请求*/
-	public void startResponse(){
-		this.response=new Response(getHttpMethod(),getUrl());
-		this.method=this.response.getHttpmethod();
-	}
-	/**@return 请求的方法*/
-	public HttpMethod getHttpMethod() {
-		return method;
-	}
-	/**设置请求方法*/
-	public void setHttpMethod(HttpMethod method) {
-		this.method = method;
-	}
-	/**页面加载时间*/
-	public long getPageLoadTime(){
-		this.startResponse();
-		long time=this.response.getPageLoadTime(getUrl());
-		this.closeResponse();
-		return time;
-	}
-	/**得到页面的响应*/
-	public Response getResponse() {
-		return response;
-	}
-	/**设置页面的响应*/
-	public void setResponse(Response response) {
-		this.response = response;
-	}
-	
-	
-	
-	
 }

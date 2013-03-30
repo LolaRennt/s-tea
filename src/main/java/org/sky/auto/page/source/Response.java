@@ -7,6 +7,7 @@ import java.util.List;
 
 import org.apache.http.Header;
 import org.apache.http.HttpResponse;
+import org.apache.http.ParseException;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpDelete;
@@ -18,6 +19,7 @@ import org.apache.http.client.methods.HttpPut;
 import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicHeader;
+import org.apache.http.util.EntityUtils;
 
 public class Response {
 	private List<Header> headerlist=new ArrayList<Header>();
@@ -278,5 +280,25 @@ public class Response {
 	public void abort(){
 		getHttprequest().abort();
 	}
+	
+	public String getContent(){
+		try {
+			String content= EntityUtils.toString(response().getEntity());
+			abort();
+			return content;
+		} catch (ParseException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	public int getStatusCode(){
+		int code = response().getStatusLine().getStatusCode();
+		abort();
+		return code;
+	}
+	
 	
 }
