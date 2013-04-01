@@ -86,7 +86,6 @@ public class Response {
 	 * @return 返回请求的响应信息
 	 * */
 	public HttpResponse response(){
-		if(resp==null){
 			httprequest=getHttpUriRequest(getHttpmethod());
 			for(Header header: headerlist){
 				httprequest.addHeader(header);
@@ -98,7 +97,6 @@ public class Response {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-		}
 		return resp;
 	}
 	/**此方法返回请求的响应信息
@@ -106,7 +104,6 @@ public class Response {
 	 * @return 返回请求的响应信息
 	 * */
 	public HttpResponse response(String askurl){
-		if(resp==null){
 			httprequest=getHttpUriRequest(getHttpmethod(),askurl);
 			for(Header header: headerlist){
 				httprequest.addHeader(header);
@@ -118,7 +115,6 @@ public class Response {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-		}
 		return resp;
 	}
 	
@@ -168,7 +164,6 @@ public class Response {
 	 * @return 返回请求的响应信息
 	 * */
 	public HttpResponse response(HttpMethod method,String askurl) {
-		if(resp==null){
 			setHttpmethod(method);
 			HttpUriRequest urirequest=getHttpUriRequest(method, askurl);
 			for(Header header: headerlist){
@@ -181,7 +176,6 @@ public class Response {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-		}
 		
 		return resp;
 	}
@@ -202,17 +196,17 @@ public class Response {
 	 * @return 返回页面首屏的加载时间
 	 * */
 	public long getPageLoadTime(HttpMethod hm,String askurl){
-		HttpUriRequest requestMethod = getHttpUriRequest(hm, askurl);
+		httprequest = getHttpUriRequest(hm, askurl);
 		long start = System.currentTimeMillis();
 		try {
-			this.client.execute(requestMethod);
+			this.client.execute(httprequest);
 		} catch (ClientProtocolException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		long end = System.currentTimeMillis();
-		requestMethod.abort();
+		httprequest.abort();
 		return end-start;
 	}
 	/**得到页面首次加载的时间，首屏时间
@@ -267,6 +261,7 @@ public class Response {
 	
 	/**关闭HTTP的请求，同时关闭客户端*/
 	public void closeResponse(){
+		//this.abort();
 		this.client.getConnectionManager().shutdown();
 	}
 	public HttpUriRequest getHttprequest() {
@@ -298,6 +293,32 @@ public class Response {
 		int code = response().getStatusLine().getStatusCode();
 		abort();
 		return code;
+	}
+	
+	
+	/**判断页面中是否有*/
+	public boolean isGzip() {
+		boolean iszip=false;
+		this.addHeader(HttpHeaders.ACCEPT_ENCODING, "gzip,deflate");
+		HttpHeader header = new HttpHeader(this);
+		String gzip=header.getHeaderValue(HttpHeaders.CONTENT_ENCODING);
+		if(gzip!=null&&gzip.toLowerCase().contains(gzip)){
+			iszip=true;	
+		}
+		return iszip;
+	}
+	
+	/**判断页面中是否有*/
+	public boolean isGzip(String url) {
+		this.setUrl(url);
+		boolean iszip=false;
+		this.addHeader(HttpHeaders.ACCEPT_ENCODING, "gzip,deflate");
+		HttpHeader header = new HttpHeader(this);
+		String gzip=header.getHeaderValue(HttpHeaders.CONTENT_ENCODING);
+		if(gzip!=null&&gzip.toLowerCase().contains(gzip)){
+			iszip=true;	
+		}
+		return iszip;
 	}
 	
 	

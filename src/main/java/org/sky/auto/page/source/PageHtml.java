@@ -50,19 +50,7 @@ public class PageHtml extends HttpHtml{
 		}
 		return jslist;
 	}
-	/**判断页面中是否有*/
-	@Override
-	public boolean isGzip() {
-		boolean iszip=false;
-		Response response = new Response(getUrl());
-		response.addHeader(HttpHeaders.ACCEPT_ENCODING, "gzip,deflate");
-		HttpHeader header = new HttpHeader(response);
-		String gzip=header.getHeaderValue(HttpHeaders.CONTENT_ENCODING);
-		if(gzip!=null&&gzip.toLowerCase().contains(gzip)){
-			iszip=true;	
-		}
-		return iszip;
-	}
+	
 
 
 	public String getUrl() {
@@ -78,6 +66,7 @@ public class PageHtml extends HttpHtml{
 		for(String js:getJavaScriptURL()){
 			if(js.endsWith(js)){
 				long time=response.getPageLoadTime();
+				response.closeResponse();
 				return time;
 			}
 		}

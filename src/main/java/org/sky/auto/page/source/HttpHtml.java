@@ -15,8 +15,4 @@ public abstract class HttpHtml {
 	 * @return 返回页面所有的js
 	 * */
 	abstract public List<String> getJavaScriptURL();
-	/**
-	 * 判断页面是否被压缩过
-	 * */
-	abstract boolean isGzip();
 }

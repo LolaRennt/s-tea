@@ -11,7 +11,7 @@ import org.robotframework.javalib.annotation.RobotKeyword;
 import org.sky.auto.base.AutoBase;
 import org.sky.auto.driver.Browser;
 import org.sky.auto.intrumentation.ClassPool;
-import org.sky.auto.page.source.PageHtml;
+import org.sky.auto.page.source.Response;
 import org.sky.auto.window.Window;
 
 public class STeaKeywords {
@@ -318,10 +318,10 @@ public class STeaKeywords {
 		Window.selectNewWindow();
 	}
 	
-	@RobotKeyword
-	public long currentpageLoadTime(){
-		return AutoBase.currentpage().getLoadTime();
-	}
+//	@RobotKeyword
+//	public long currentpageLoadTime(){
+//		return AutoBase.currentpage().getLoadTime();
+//	}
 	
 	@RobotKeyword
 	public String currentpageHeaderValue(String name){
@@ -345,7 +345,7 @@ public class STeaKeywords {
 	
 	@RobotKeyword
 	public boolean isGzip(String url){
-		PageHtml ph =new PageHtml(url);
-		return ph.isGzip();
+		Response response = new Response(url);
+		return response.isGzip();
 	}
 }

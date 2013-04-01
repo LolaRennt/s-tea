@@ -33,6 +33,7 @@ public class HttpHeader {
 	 * */
 	public Header[] getHeaders(){
 		Header[] headers= getResponse().response().getAllHeaders();
+		getResponse().abort();
 		return headers;
 	
 	}
