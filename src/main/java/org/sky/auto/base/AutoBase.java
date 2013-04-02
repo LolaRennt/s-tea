@@ -399,4 +399,13 @@ public class AutoBase {
 	public static SElement sElement(By by){
 		return new SElement(by);
 		}
+	
+	
+	/**@return 返回一个空的SELment元素*/
+	public static SElement sElement(){
+		return new SElement();
+	}
+	
+	
+	
 }

@@ -48,7 +48,7 @@ public class SElement{
 	public void addLocator(WebElement element){
 		this.element=element;
 	}
-	public void addLocator(Locator locator,String value){
+	public SElement addLocator(Locator locator,String value){
 		ProxyRunnerListener.getDispatcher().beforeaddLocator();
 		switch(locator){
 			case Id:
@@ -87,8 +87,9 @@ public class SElement{
 				logger.error("定位方式选择错误！没有加入成功！");
 				throw new MyAutoException("选择的定位方式不支持！");
 		}
+		return this;
 	}
-	public void addLocator(Locator locator,String value, int index){
+	public SElement addLocator(Locator locator,String value, int index){
 		ProxyRunnerListener.getDispatcher().beforeaddLocator();
 		switch(locator){
 			case Id:
@@ -130,12 +131,14 @@ public class SElement{
 		if(element==null){
 			throw new NoSuchElementException("在定位元素的时候发生了错误，很有可能是元素没有定位到！请检查自己配置的元素定位方式是否正确！");
 		}
+		return this;
 	}
 	
-	public void addLocator(By by,int index){
+	public SElement addLocator(By by,int index){
 		ProxyRunnerListener.getDispatcher().beforeaddLocator();
 		this.element=AutoBase.driver().findElements(by).get(index);
 		ProxyRunnerListener.getDispatcher().afteraddLocator();
+		return this;
 	}
 	/**点击操作*/
 	public void click(){
