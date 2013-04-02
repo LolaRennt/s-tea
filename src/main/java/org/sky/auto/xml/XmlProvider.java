@@ -8,6 +8,8 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.sky.auto.base.AutoBase;
 import org.sky.auto.element.SElement;
+import org.sky.auto.exception.MyAutoException;
+import org.sky.auto.exception.MyElementNotFoundException;
 import org.sky.auto.window.Window;
 
 public class XmlProvider{
@@ -59,7 +61,7 @@ public class XmlProvider{
 		XmlToJavaTools xtj = new XmlToJavaTools();
 		if(xn==null){
 			try {
-				throw new Exception("查找元素["+id+"]的时候出现错误！没有找到正确的元素！");
+				throw new MyElementNotFoundException("查找元素["+id+"]的时候出现错误！没有找到正确的元素！");
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -72,14 +74,14 @@ public class XmlProvider{
 					index=Integer.parseInt(xn.getIndex());
 				}catch(NumberFormatException e1){
 					logger.error("元素["+id+"]的index值不能够被转化成为int类型，index的属性值输入错误！");
-					e1.printStackTrace();
+					throw new MyAutoException("元素["+id+"]的index值不能够被转化成为int类型，index的属性值输入错误！");
 				}
 			}
 			try {
 				we=AutoBase.driver().findElements(xtj.locator(xn.getBy(), xn.getValue())).get(index);
 			} catch (Exception e) {
 				logger.error("定位元素["+id+"]的时候,出现错误！");
-				e.printStackTrace();
+				throw new MyElementNotFoundException("定位元素["+id+"]的时候,出现错误！");
 			}	
 			if(((XMLElement) xn).getXMLChildElements().size()!=0){
 				for(XMLChildElement xc : ((XMLElement)xn).getXMLChildElements()){
@@ -89,13 +91,14 @@ public class XmlProvider{
 							cindex=Integer.parseInt(xc.getIndex());
 						}catch(NumberFormatException e1){
 							logger.error("child元素["+xc.getValue()+"]的index值不能够被转化成为int类型，index的属性值输入错误！");
-							e1.printStackTrace();
+							throw new MyAutoException("child元素["+xc.getValue()+"]的index值不能够被转化成为int类型，index的属性值输入错误！");
 						}
 					}
 					try{
 						we=we.findElements(xtj.locator(xc.getBy(), xc.getValue())).get(cindex);
 					}catch(Exception e){
 						logger.error("定位元素["+id+"]的child元素的时候,出现错误！");
+						throw new MyElementNotFoundException("定位元素["+id+"]的child元素的时候,出现错误！");
 					}
 				}
 			}
@@ -108,14 +111,14 @@ public class XmlProvider{
 					pindex=Integer.parseInt(xf.getIndex());
 				}catch(NumberFormatException e){
 					logger.error("元素["+id+"]的index值不能够被转化成为int类型，index的属性值输入错误！");
-					e.printStackTrace();
+					throw new MyAutoException("元素["+id+"]的index值不能够被转化成为int类型，index的属性值输入错误！");
 				}
 			}
 			try{
 				Window.selectFrame(AutoBase.driver().findElements(xtj.locator(xf.getBy(), xf.getValue())).get(pindex));
 			}catch(Exception e){
 				logger.error("定位元素["+id+"]的时候,出现错误！进行切换frame的时候定位出错！");
-				e.printStackTrace();
+				throw new MyElementNotFoundException("定位元素["+id+"]的时候,出现错误！进行切换frame的时候定位出错！");
 			}
 			int index=0;
 			if(xf.getIndex()!=null){
@@ -123,14 +126,14 @@ public class XmlProvider{
 					index=Integer.parseInt(xf.getIndex());
 				}catch(NumberFormatException e){
 					logger.error("元素["+id+"]的index值不能够被转化成为int类型，index的属性值输入错误！");
-					e.printStackTrace();
+					throw new MyAutoException("元素["+id+"]的index值不能够被转化成为int类型，index的属性值输入错误！");
 				}
 			}
 			try{
 				we=AutoBase.driver().findElements(xtj.locator(xn.getBy(), xn.getValue())).get(index);
 			}catch(Exception e){
 				logger.error("定位元素["+id+"]的时候,出现错误！");
-				e.printStackTrace();
+				throw new MyElementNotFoundException("定位元素["+id+"]的时候,出现错误！");
 			}
 			if(xn.getXMLChildElements().size()!=0){
 				for(XMLChildElement xce:xn.getXMLChildElements()){
@@ -140,7 +143,7 @@ public class XmlProvider{
 							cindex=Integer.parseInt(xce.getIndex());
 						}catch(NumberFormatException e){
 							logger.error("元素["+id+"]的index值不能够被转化成为int类型，index的属性值输入错误！");
-							e.printStackTrace();
+							throw new MyAutoException("元素["+id+"]的index值不能够被转化成为int类型，index的属性值输入错误！");
 						}
 					}
 					try{
@@ -148,7 +151,7 @@ public class XmlProvider{
 						//Window.selectDefaultWindow();
 					}catch(Exception e){
 						logger.error("定位元素["+id+"]的child元素"+xce.getValue()+"的时候,出现错误！");
-						e.printStackTrace();
+						throw new MyElementNotFoundException("定位元素["+id+"]的child元素"+xce.getValue()+"的时候,出现错误！");
 					}
 				}
 			}
@@ -166,7 +169,7 @@ public class XmlProvider{
 					return AutoBase.driver().findElements(xtj.locator(xn.getBy(), xn.getValue()));
 				} catch (Exception e) {
 					logger.error("定位元素["+id+"]的时候,出现错误！");
-					e.printStackTrace();
+					throw new MyElementNotFoundException("定位元素["+id+"]的时候,出现错误！");
 				}
 			}else{
 				int index = 0;
@@ -175,14 +178,14 @@ public class XmlProvider{
 						index=Integer.parseInt(xn.getIndex());
 					}catch(NumberFormatException e){
 						logger.error("元素["+id+"]的index值不能够被转化成为int类型，index的属性值输入错误！");
-						e.printStackTrace();
+						throw new MyAutoException("元素["+id+"]的index值不能够被转化成为int类型，index的属性值输入错误！");
 					}
 				}
 				try {
 					we=AutoBase.driver().findElements(xtj.locator(xn.getBy(), xn.getValue())).get(index);
 				} catch (Exception e) {
 					logger.error("定位元素["+id+"]的时候,出现错误！");
-					e.printStackTrace();
+					throw new MyElementNotFoundException("定位元素["+id+"]的时候,出现错误！");
 				}
 				for(int i=0;i<xn.getXMLChildElements().size();i++){
 					if(i==xn.getXMLChildElements().size()-1){
@@ -191,7 +194,7 @@ public class XmlProvider{
 							return we.findElements(xtj.locator(xce.getBy(), xce.getValue()));
 						} catch (Exception e) {
 							logger.error("定位元素["+id+"]的时候,出现错误！");
-							e.printStackTrace();
+							throw new MyElementNotFoundException("定位元素["+id+"]的时候,出现错误！");
 						}
 					}else{
 						int cindex =0;
@@ -201,14 +204,14 @@ public class XmlProvider{
 								index=Integer.parseInt(xn.getIndex());
 							}catch(NumberFormatException e){
 								logger.error("元素["+id+"]的index值不能够被转化成为int类型，index的属性值输入错误！");
-								e.printStackTrace();
+								throw new MyAutoException("元素["+id+"]的index值不能够被转化成为int类型，index的属性值输入错误！");
 							}
 						}
 						try{
 							we=we.findElements(xtj.locator(xce.getBy(), xce.getValue())).get(cindex);
 						}catch(Exception e){
 							logger.error("定位元素["+id+"]的时候,出现错误！");
-							e.printStackTrace();
+							throw new MyElementNotFoundException("定位元素["+id+"]的时候,出现错误！");
 						}
 					}
 				}
@@ -223,21 +226,21 @@ public class XmlProvider{
 					pindex=Integer.parseInt(xn.getIndex());
 				}catch(NumberFormatException e){
 					logger.error("元素["+id+"]的index值不能够被转化成为int类型，index的属性值输入错误！");
-					e.printStackTrace();
+					throw new MyAutoException("元素["+id+"]的index值不能够被转化成为int类型，index的属性值输入错误！");
 				}
 			}
 			try{
 				Window.selectFrame(AutoBase.driver().findElements(xtj.locator(xf.getBy(), xf.getValue())).get(pindex));
 			}catch(Exception e){
 				logger.error("定位元素["+id+"]的时候,出现错误！进行切换frame的时候定位出错！");
-				e.printStackTrace();
+				throw new MyElementNotFoundException("定位元素["+id+"]的时候,出现错误！进行切换frame的时候定位出错！");
 			}
 			if(xn.getXMLChildElements().size()==0){
 				try {
 					return AutoBase.driver().findElements(xtj.locator(xn.getBy(), xn.getValue()));
 				} catch (Exception e) {
 					logger.error("定位元素["+id+"]的时候,出现错误！");
-					e.printStackTrace();
+					throw new MyElementNotFoundException("定位元素["+id+"]的时候,出现错误！");
 				}
 			}else{
 				int index = 0;
@@ -246,14 +249,14 @@ public class XmlProvider{
 						index=Integer.parseInt(xn.getIndex());
 					}catch(NumberFormatException e){
 						logger.error("元素["+id+"]的index值不能够被转化成为int类型，index的属性值输入错误！");
-						e.printStackTrace();
+						throw new MyAutoException("元素["+id+"]的index值不能够被转化成为int类型，index的属性值输入错误！");
 					}
 				}
 				try {
 					we=AutoBase.driver().findElements(xtj.locator(xn.getBy(), xn.getValue())).get(index);
 				} catch (Exception e) {
 					logger.error("定位元素["+id+"]的时候,出现错误！");
-					e.printStackTrace();
+					throw new MyElementNotFoundException("定位元素["+id+"]的时候,出现错误！");
 				}
 				for(int i=0;i<xn.getXMLChildElements().size();i++){
 					if(i==xn.getXMLChildElements().size()-1){
@@ -262,7 +265,7 @@ public class XmlProvider{
 							return we.findElements(xtj.locator(xce.getBy(), xce.getValue()));
 						} catch (Exception e) {
 							logger.error("定位元素["+id+"]的时候,出现错误！");
-							e.printStackTrace();
+							throw new  MyElementNotFoundException("定位元素["+id+"]的时候,出现错误！");
 						}
 					}else{
 						int cindex =0;
@@ -272,14 +275,14 @@ public class XmlProvider{
 								index=Integer.parseInt(xn.getIndex());
 							}catch(NumberFormatException e){
 								logger.error("元素["+id+"]的index值不能够被转化成为int类型，index的属性值输入错误！");
-								e.printStackTrace();
+								throw new MyAutoException("元素["+id+"]的index值不能够被转化成为int类型，index的属性值输入错误！");
 							}
 						}
 						try{
 							we=we.findElements(xtj.locator(xce.getBy(), xce.getValue())).get(cindex);
 						}catch(Exception e){
 							logger.error("定位元素["+id+"]的时候,出现错误！");
-							e.printStackTrace();
+							throw new MyElementNotFoundException("定位元素["+id+"]的时候,出现错误！");
 						}
 					}
 				}
