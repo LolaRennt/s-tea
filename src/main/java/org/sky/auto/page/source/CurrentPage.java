@@ -91,5 +91,7 @@ public class CurrentPage {
 		return code;
 	}
 	
-	
+	public String getPageSource(){
+		return AutoBase.driver().getPageSource();
+	}
 }
