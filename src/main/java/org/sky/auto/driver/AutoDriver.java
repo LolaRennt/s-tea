@@ -18,9 +18,9 @@ import org.sky.auto.driver.event.AutoDriverEventListener;
 import org.sky.auto.runner.AutoResetThreadLocal;
 
 
-public class AutoDriver implements IDriver{
+public class AutoDriver<T extends WebDriver> implements IDriver{
 	static Logger logger = Logger.getLogger(AutoDriver.class);
-	private WebDriver driver;
+	private T driver;
 	private EventFiringWebDriver efdriver;
 
 	class Firefox implements Runnable{
@@ -242,45 +242,46 @@ public class AutoDriver implements IDriver{
 	}
 	
 	
-	public WebDriver getDriver() {
-		return this.driver;
+	public T getDriver() {
+		return  this.driver;
 	}
 
-	public void setDriver(WebDriver driver) {
-		this.driver = driver;
+	public void setDriver(T driver) {
+		this.driver =  driver;
 	}
 
+	@SuppressWarnings("unchecked")
 	public void setDriver(Browser browser){
 		if(browser.equals(Browser.Firefox)){
 			Firefox ff = new Firefox();
-			setDriver(ff.firefox());
+			setDriver((T) ff.firefox());
 		}else if(browser.equals(Browser.Chrome)){
 			Chrome c = new Chrome();
-			setDriver(c.chrome());
+			setDriver((T) c.chrome());
 		}else if(browser.equals(Browser.IE)){
 			IE ie = new IE();
-			setDriver(ie.ie());
+			setDriver((T) ie.ie());
 		}else if(browser.equals(Browser.Safari)){
 			Safari s = new Safari();
-			setDriver(s.safari());
+			setDriver((T) s.safari());
 		}else if(browser.equals(Browser.RemoteChrome)){
 			RemoteChrome rc = new RemoteChrome();
-			setDriver(rc.remoteChrome());
+			setDriver((T) (T) rc.remoteChrome());
 		}else if(browser.equals(Browser.RemoteFirefox)){
 			RemoteFirefox rf = new RemoteFirefox();
-			setDriver(rf.remoteFirefox());
+			setDriver((T) rf.remoteFirefox());
 		}else if(browser.equals(Browser.RemoteIE)){
 			RemoteIE ri = new RemoteIE();
-			setDriver(ri.remoteIE());
+			setDriver((T) ri.remoteIE());
 		}else if(browser.equals(Browser.RemoteHtmlUnit)){
 			RemoteHtmlUnit rh = new RemoteHtmlUnit();
-			setDriver(rh.remoteHtmlUnit());
+			setDriver((T) rh.remoteHtmlUnit());
 		}else if(browser.equals(Browser.RemoteSafari)){
 			RemoteSafari rs = new RemoteSafari();
-			setDriver(rs.remoteSafari());
+			setDriver((T) rs.remoteSafari());
 		}else if(browser.equals(Browser.HtmlUnit)){
 			HtmlUnit hu = new HtmlUnit();
-			setDriver(hu.htmlUnit());
+			setDriver((T) hu.htmlUnit());
 		}else if(browser.equals(Browser.NULL)){
 			this.driver=null;
 		}else{
@@ -288,37 +289,38 @@ public class AutoDriver implements IDriver{
 		}
 	}
 
+	@SuppressWarnings("unchecked")
 	public void setDriver(String browser){
 		if(browser.equals(Browser.Firefox.toString().toLowerCase())){
 			Firefox ff = new Firefox();
-			setDriver(ff.firefox());
+			setDriver((T) ff.firefox());
 		}else if(browser.equals(Browser.Chrome.toString().toLowerCase())){
 			Chrome c = new Chrome();
-			setDriver(c.chrome());
+			setDriver((T) c.chrome());
 		}else if(browser.equals(Browser.IE.toString().toLowerCase())){
 			IE ie = new IE();
-			setDriver(ie.ie());
+			setDriver((T) ie.ie());
 		}else if(browser.equals(Browser.Safari.toString().toLowerCase())){
 			Safari s = new Safari();
-			setDriver(s.safari());
+			setDriver((T) s.safari());
 		}else if(browser.equals(Browser.RemoteChrome.toString().toLowerCase())){
 			RemoteChrome rc = new RemoteChrome();
-			setDriver(rc.remoteChrome());
+			setDriver((T) rc.remoteChrome());
 		}else if(browser.equals(Browser.RemoteFirefox.toString().toLowerCase())){
 			RemoteFirefox rf = new RemoteFirefox();
-			setDriver(rf.remoteFirefox());
+			setDriver((T) rf.remoteFirefox());
 		}else if(browser.equals(Browser.RemoteIE.toString().toLowerCase())){
 			RemoteIE ri = new RemoteIE();
-			setDriver(ri.remoteIE());
+			setDriver((T) ri.remoteIE());
 		}else if(browser.equals(Browser.RemoteHtmlUnit.toString().toLowerCase())){
 			RemoteHtmlUnit rh = new RemoteHtmlUnit();
-			setDriver(rh.remoteHtmlUnit());
+			setDriver((T) rh.remoteHtmlUnit());
 		}else if(browser.equals(Browser.RemoteSafari.toString().toLowerCase())){
 			RemoteSafari rs = new RemoteSafari();
-			setDriver(rs.remoteSafari());
+			setDriver((T) rs.remoteSafari());
 		}else if(browser.equals(Browser.HtmlUnit.toString().toLowerCase())){
 			HtmlUnit hu = new HtmlUnit();
-			setDriver(hu.htmlUnit());
+			setDriver((T) hu.htmlUnit());
 		}else if(browser.equals(Browser.NULL)){
 			this.driver=null;
 		}else{
@@ -330,8 +332,9 @@ public class AutoDriver implements IDriver{
 		return driver;
 	}
 	
+	@SuppressWarnings("unchecked")
 	public WebDriver register(AutoDriverEventListener ade){
-		driver = new EventFiringWebDriver(getWebDriver()).register(ade);	
+		driver = (T) new EventFiringWebDriver(getWebDriver()).register(ade);	
 		return driver;
 	}
 
@@ -343,8 +346,9 @@ public class AutoDriver implements IDriver{
 		this.efdriver = efdriver;
 	}
 	
+	@SuppressWarnings("unchecked")
 	public WebDriver unregister(AutoDriverEventListener ade){
-		driver = new EventFiringWebDriver(getWebDriver()).unregister(ade);
+		driver = (T) new EventFiringWebDriver(getWebDriver()).unregister(ade);
 		return driver;
 	}
 }
