@@ -50,6 +50,7 @@ import org.sky.auto.xml.XmlProvider;
  * */
 public class AutoBase {
 	//private static ThreadDriver td;
+	@SuppressWarnings("rawtypes")
 	private static AutoResetThreadLocal<AutoDriver> art = new AutoResetThreadLocal<AutoDriver>(){
 		protected synchronized AutoDriver initialValue() {
 			return new AutoDriver();	
@@ -58,6 +59,7 @@ public class AutoBase {
 	/**获取获取框架的核心driver对象
 	 * @return 返回s-tea的核心浏览器对象
 	 * */
+	@SuppressWarnings("rawtypes")
 	public static AutoDriver getAutoDriver(){
 		return art.get();
 	}
@@ -95,6 +97,7 @@ public class AutoBase {
 			}
 		}
 		logger.info("扫描动作监听器结束");
+		Window.maxWindow();
 	}
 	
 	/**设置浏览器类型
@@ -116,7 +119,8 @@ public class AutoBase {
 				ProxyRunnerListener.register(clazz);
 			}
 		}
-		Window.maxWindow();
+		logger.info("扫描动作监听器结束");
+		Window.maxWindow();	
 	}
 	
 	/**打开浏览器,里面包含了初始化操作，必须以此方法为开始

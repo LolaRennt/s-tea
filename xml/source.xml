@@ -6,4 +6,10 @@
 	<tns:element value="ddl_mode" by="id" id="测评模式" />
 	<tns:element value=".//*[@id='div_gpuTop']/div[1]/div[2]/div" by="xpath" id="测评得分"></tns:element>
 	<tns:element value=".//*[@id='div_gpuTop']/div[1]/div[3]/div/a" by="xpath" id="测评显卡均价"></tns:element>
+	<tns:frame value="" by="id" id="">
+	    <tns:frame value="" by="id" id="">
+	        <tns:element value="" by="id" id=""></tns:element>
+	    </tns:frame>
+	</tns:frame>
 </tns:elements>
+ 

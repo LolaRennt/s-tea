@@ -16,10 +16,6 @@ public class SimpleRunListener extends RunListener{
 			AutoBase.closeAllWindow();
 		}
 	}
-	
-	
-	
-	
 }
 
 

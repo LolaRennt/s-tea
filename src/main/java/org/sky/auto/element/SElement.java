@@ -42,11 +42,13 @@ public class SElement{
 	public void setElement(WebElement element) {
 		this.element = element;
 	}
-	public void addLocator(By by){
+	public SElement addLocator(By by){
 		this.element=AutoBase.driver().findElement(by);
+		return this;
 	}
-	public void addLocator(WebElement element){
+	public SElement addLocator(WebElement element){
 		this.element=element;
+		return this;
 	}
 	public SElement addLocator(Locator locator,String value){
 		ProxyRunnerListener.getDispatcher().beforeaddLocator();
