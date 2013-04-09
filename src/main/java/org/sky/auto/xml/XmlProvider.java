@@ -83,8 +83,9 @@ public class XmlProvider{
 				logger.error("定位元素["+id+"]的时候,出现错误！");
 				throw new MyElementNotFoundException("定位元素["+id+"]的时候,出现错误！");
 			}	
-			if(((XMLElement) xn).getXMLChildElements().size()!=0){
-				for(XMLChildElement xc : ((XMLElement)xn).getXMLChildElements()){
+			List<XMLChildElement> xcelement=xn.getXMLChildElements();
+			if(xcelement.size()!=0){
+				for(XMLChildElement xc : xcelement){
 					int cindex=0;
 					if(xc.getIndex()!=null){
 						try{
@@ -135,8 +136,9 @@ public class XmlProvider{
 				logger.error("定位元素["+id+"]的时候,出现错误！");
 				throw new MyElementNotFoundException("定位元素["+id+"]的时候,出现错误！");
 			}
-			if(xn.getXMLChildElements().size()!=0){
-				for(XMLChildElement xce:xn.getXMLChildElements()){
+			List<XMLChildElement> xcds = xn.getXMLChildElements();
+			if(xcds.size()!=0){
+				for(XMLChildElement xce:xcds){
 					int cindex=0;
 					if(xce.getIndex()!=null){
 						try{
@@ -187,9 +189,10 @@ public class XmlProvider{
 					logger.error("定位元素["+id+"]的时候,出现错误！");
 					throw new MyElementNotFoundException("定位元素["+id+"]的时候,出现错误！");
 				}
-				for(int i=0;i<xn.getXMLChildElements().size();i++){
-					if(i==xn.getXMLChildElements().size()-1){
-						XMLChildElement xce = xn.getXMLChildElements().get(i);
+				List<XMLChildElement> xcelements = xn.getXMLChildElements();
+				for(int i=0;i<xcelements.size();i++){
+					if(i==xcelements.size()-1){
+						XMLChildElement xce = xcelements.get(i);
 						try {
 							return we.findElements(xtj.locator(xce.getBy(), xce.getValue()));
 						} catch (Exception e) {
@@ -198,7 +201,7 @@ public class XmlProvider{
 						}
 					}else{
 						int cindex =0;
-						XMLChildElement xce = xn.getXMLChildElements().get(i);
+						XMLChildElement xce = xcelements.get(i);
 						if(xce.getIndex()!=null){
 							try{
 								index=Integer.parseInt(xn.getIndex());
@@ -235,7 +238,8 @@ public class XmlProvider{
 				logger.error("定位元素["+id+"]的时候,出现错误！进行切换frame的时候定位出错！");
 				throw new MyElementNotFoundException("定位元素["+id+"]的时候,出现错误！进行切换frame的时候定位出错！");
 			}
-			if(xn.getXMLChildElements().size()==0){
+			List<XMLChildElement> xcelements=xn.getXMLChildElements();
+			if(xcelements.size()==0){
 				try {
 					return AutoBase.driver().findElements(xtj.locator(xn.getBy(), xn.getValue()));
 				} catch (Exception e) {
@@ -258,9 +262,9 @@ public class XmlProvider{
 					logger.error("定位元素["+id+"]的时候,出现错误！");
 					throw new MyElementNotFoundException("定位元素["+id+"]的时候,出现错误！");
 				}
-				for(int i=0;i<xn.getXMLChildElements().size();i++){
-					if(i==xn.getXMLChildElements().size()-1){
-						XMLChildElement xce = xn.getXMLChildElements().get(i);
+				for(int i=0;i<xcelements.size();i++){
+					if(i==xcelements.size()-1){
+						XMLChildElement xce = xcelements.get(i);
 						try {
 							return we.findElements(xtj.locator(xce.getBy(), xce.getValue()));
 						} catch (Exception e) {
@@ -269,7 +273,7 @@ public class XmlProvider{
 						}
 					}else{
 						int cindex =0;
-						XMLChildElement xce = xn.getXMLChildElements().get(i);
+						XMLChildElement xce = xcelements.get(i);
 						if(xce.getIndex()!=null){
 							try{
 								index=Integer.parseInt(xn.getIndex());

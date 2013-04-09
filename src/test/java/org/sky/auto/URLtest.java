@@ -4,6 +4,9 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 import org.junit.Test;
+import org.sky.auto.base.AutoBase;
+import org.sky.auto.driver.Browser;
+import org.sky.auto.window.Window;
 
 public class URLtest {
 
@@ -16,6 +19,13 @@ public class URLtest {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	
+	@Test
+	public void htmlTest(){
+		AutoBase.open(Browser.HtmlUnit, "http://www.baidu.com");
+		Window.maxWindow();
+		AutoBase.closeAllWindow();
 	}
 	
 }

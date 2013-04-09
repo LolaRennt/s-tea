@@ -9,7 +9,12 @@ import org.dom4j.Element;
 
 public class XMLChildElement implements XMLNode{
 	private Element e;
-
+	public XMLChildElement(Element e){
+		this.e=e;
+	}
+	public XMLChildElement(){
+		
+	}
 	public Element getElement() {
 		return e;
 	}
@@ -44,4 +49,20 @@ public class XMLChildElement implements XMLNode{
 	public List<Attribute> getAttributeList(){
 		return getElement().attributes();
 	}
+	
+//	public List<XMLChildElement> getXMLChildElement(){
+//		List<XMLChildElement> clist = new ArrayList<XMLChildElement>();
+//		Iterator<?> iter = e.elementIterator();
+//		while(iter.hasNext()){
+//			Element ce = (Element) iter.next();
+//			XMLChildElement xce = new XMLChildElement();
+//			xce.setElement(ce);
+//			clist.add(xce);
+//			getXMLChildElement(ce);
+//		}
+//	}
+	
+	
+	
+	
 }

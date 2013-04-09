@@ -390,7 +390,12 @@ public class AutoBase {
 	
 	
 	private static Source elementBelongTo(String id){
-		return SourceLoader.getSource(id);
+		try{
+			return SourceLoader.getSource(id);
+		}catch(Exception e){
+			throw new MyAutoException("没有找到这个"+id+"资源，请检查是否在资源文件中定义");
+		}
+		
 	}
 	
 	/**当前操作的当前页面
