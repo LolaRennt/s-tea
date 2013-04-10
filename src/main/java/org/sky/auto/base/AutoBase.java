@@ -49,8 +49,7 @@ import org.sky.auto.xml.XmlProvider;
  * @author 王天庆
  * */
 public class AutoBase {
-	//private static ThreadDriver td;
-	@SuppressWarnings("rawtypes")
+	//private static ThreadDriver td
 	private static AutoResetThreadLocal<AutoDriver> art = new AutoResetThreadLocal<AutoDriver>(){
 		protected synchronized AutoDriver initialValue() {
 			return new AutoDriver();	
@@ -59,7 +58,6 @@ public class AutoBase {
 	/**获取获取框架的核心driver对象
 	 * @return 返回s-tea的核心浏览器对象
 	 * */
-	@SuppressWarnings("rawtypes")
 	public static AutoDriver getAutoDriver(){
 		return art.get();
 	}
@@ -166,9 +164,10 @@ public class AutoBase {
 		action.moveToElement(element).build().perform();	
 	}
 
-	/**通过这个方法可以得到driver的对象*/
+	/**通过这个方法可以得到driver的对象
+	 * @param <T>*/
 	public static WebDriver driver(){
-		return getAutoDriver().getDriver();
+		return  getAutoDriver().getDriver();
 	}
 	
 	/**判断元素是否存在*/

@@ -276,7 +276,7 @@ public class XmlProvider{
 						XMLChildElement xce = xcelements.get(i);
 						if(xce.getIndex()!=null){
 							try{
-								index=Integer.parseInt(xn.getIndex());
+								index=Integer.parseInt(xce.getIndex());
 							}catch(NumberFormatException e){
 								logger.error("元素["+id+"]的index值不能够被转化成为int类型，index的属性值输入错误！");
 								throw new MyAutoException("元素["+id+"]的index值不能够被转化成为int类型，index的属性值输入错误！");

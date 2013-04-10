@@ -76,7 +76,7 @@ public class XMLElements implements XMLNode{
 		return null;
 	}
 	
-	public List<XMLList> getXMLLists(){
+	public List<XMLList> getXMLList(){
 		List<XMLList> elist = new ArrayList<XMLList>();
 		Iterator<?> iter = e.elementIterator("list");
 		while(iter.hasNext()){
@@ -91,7 +91,7 @@ public class XMLElements implements XMLNode{
 	}
 	
 	public XMLList getXMLList(String id){
-		for(XMLList xl : getXMLLists()){
+		for(XMLList xl : getXMLList()){
 			if(xl.getElement().attributeValue("id").equals(id)){
 				return xl;
 			}
@@ -111,13 +111,14 @@ public class XMLElements implements XMLNode{
 				xnlist.add(xf);
 			}
 		}
-		if(getXMLLists().size()!=0){
-			for(XMLList xl : getXMLLists()){
+		if(getXMLList().size()!=0){
+			for(XMLList xl : getXMLList()){
 				xnlist.add(xl);
 			}
 		}
 		return xnlist;
 	}
+	
 	/**这个方法里面搜索的Elmenet包括所有的Element元素*/
 	public XMLNode getNode(String id){
 		if(getXMLNodes().size()!=0){
@@ -131,7 +132,7 @@ public class XMLElements implements XMLNode{
 	}
 	
 	
-	public List<XMLElement> getAllXMLElment(){
+	public List<XMLElement> getAllXMLElement(){
 		List<XMLElement> elist =new ArrayList<XMLElement>();
 		if(getXMLElementList().size()!=0){
 			for(XMLElement xe: getXMLElementList()){
@@ -145,12 +146,21 @@ public class XMLElements implements XMLNode{
 				}
 			}
 		}
+		if(getXMLList().size()!=0){
+			for(XMLList xl:getXMLList()){
+				if(xl.getXMLElement()!=null){
+					elist.add(xl.getXMLElement());
+				}else if(xl.getFrameXMLElement()!=null){
+					elist.add(xl.getFrameXMLElement());
+				}
+			}
+		}
 		return elist;
 	}
 	
 	public XMLElement getXMLElementOfAll(String id){
-		if(getAllXMLElment().size()!=0){
-			for(XMLElement xe:getAllXMLElment()){
+		if(getAllXMLElement().size()!=0){
+			for(XMLElement xe:getAllXMLElement()){
 				if(xe.getId().equals(id)){
 					return xe;
 				}

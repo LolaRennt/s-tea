@@ -11,5 +11,8 @@
       		<tns:childElement value="苹果" by="linkText"/>
     	</tns:childElement>
   </tns:element>
+  <tns:list id="">
+      <tns:element value="" by="id" id=""></tns:element>
+  </tns:list>
 </tns:elements>
  

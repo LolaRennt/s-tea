@@ -12,10 +12,9 @@ import org.openqa.selenium.WebElement;
 import static org.apache.commons.lang.StringUtils.join;
 
 /**
- * <p>A {@link WebDriver} decorator that allows interaction with a Flash object via Javascript calls.
- * The WebDriver must be an instance of {@link JavascriptExecutor}.</p>
- * 
- * <p>The Flash object is found via the object ID provided.</p>
+ * 需要一个javascript和actionscript的钩子来实现通信，目前在不获得源码的情况下很难实现钩子，
+ * 目前这个类是不能够进行自动化测试的。缺少必要的组件，钩子问题需要慢慢的找方法解决，先把这个类放在
+ * 这里，需要后期慢慢发现方法。
  */
 public class FlashDriver implements WebDriver {
 

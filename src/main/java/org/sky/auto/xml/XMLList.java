@@ -1,8 +1,6 @@
 package org.sky.auto.xml;
 
-import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.List;
 import org.dom4j.Element;
 
 public class XMLList implements XMLNode{
@@ -16,49 +14,51 @@ public class XMLList implements XMLNode{
 		this.e = e;
 	}
 	
-	public List<XMLElement> getXMLElementList(){
-		List<XMLElement> elist = new ArrayList<XMLElement>();
+	public XMLElement getXMLElement(){
 		Iterator<?> iter = e.elementIterator("element");
+		XMLElement xe=null;
 		while(iter.hasNext()){
 			Element ee=(Element) iter.next();
 			if(ee.getParent().isRootElement()){
-				XMLElement xe = new XMLElement();
+				xe = new XMLElement();
 				xe.setElement(ee);
-				elist.add(xe);
+				xe.setListElement(true);
 			}
 		}
-		return elist;
+		return xe;
 	}
 	
-	public XMLElement getXMLElement(String id){
-		for(XMLElement xe:getXMLElementList()){
-			if(xe.getElement().attributeValue("id").equals(id)){
-				return xe;
-			}
-		}
-		return null;
-	}
 	
-	public List<XMLFrame> getXMLFrameList(){
-		List<XMLFrame> elist = new ArrayList<XMLFrame>();
+	public XMLFrame getXMLFrame(){
+		XMLFrame xf = null;
 		Iterator<?> iter = e.elementIterator("frame");
 		while(iter.hasNext()){
 			Element ee=(Element) iter.next();
 			if(ee.getParent().isRootElement()){
-				XMLFrame xf = new XMLFrame();
+				xf = new XMLFrame();
 				xf.setElement(ee);
-				elist.add(xf);
 			}
 		}
-		return elist;
+		return xf;
 	}
 	
-	public XMLFrame getXMLFrame(String id){
-		for(XMLFrame xf : getXMLFrameList()){
-			if(xf.getElement().attributeValue("id").equals(id)){
-				return xf;
+	
+	public XMLElement getFrameXMLElement(){
+		XMLFrame xf = getXMLFrame();
+		XMLElement xe = null;
+		if(xf!=null){
+			xe = xf.getXMLElement();
+			if(xe!=null){
+				xe.setFrameElement(true);
+				xe.setListElement(true);
 			}
 		}
-		return null;
+		
+		return xe;
 	}
+	
+	
+	
+	
+	
 }

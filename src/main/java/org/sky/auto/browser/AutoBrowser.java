@@ -16,9 +16,9 @@ import org.sky.auto.element.TextField;
 
 public class AutoBrowser implements IBrowser{
 
-	private AutoDriver<?> driver;
+	private AutoDriver driver;
 	
-	public AutoBrowser(AutoDriver<?> driver){
+	public AutoBrowser(AutoDriver driver){
 		this.driver=driver;
 	}
 	

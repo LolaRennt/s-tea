@@ -15,6 +15,8 @@ public class XMLElement implements XMLNode{
 	private Element e;
 	/**这个属性存储的是在这个XMLElement元素下面所有的child元素的list*/
 	private List<XMLChildElement> elist = new ArrayList<XMLChildElement>();
+	private boolean isFrameElement=false;
+	private boolean isListElement=false;
 	public XMLElement(){
 		
 	}
@@ -56,7 +58,7 @@ public class XMLElement implements XMLNode{
 		return getElement().attributes();
 	}
 	
-	public List<XMLChildElement> getXMLChildElements(){
+	protected List<XMLChildElement> getXMLChildElements(){
 		collectChildElments(getElement());
 		return elist;
 	}
@@ -73,6 +75,18 @@ public class XMLElement implements XMLNode{
                 collectChildElments(elem);   
             }   
         }   
+	}
+	public boolean isFrameElement() {
+		return isFrameElement;
+	}
+	public void setFrameElement(boolean isFrameElement) {
+		this.isFrameElement = isFrameElement;
+	}
+	public boolean isListElement() {
+		return isListElement;
+	}
+	public void setListElement(boolean isListElement) {
+		this.isListElement = isListElement;
 	}
 	
 }

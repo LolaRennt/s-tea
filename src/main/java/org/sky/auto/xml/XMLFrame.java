@@ -58,16 +58,11 @@ public class XMLFrame implements XMLNode{
 		while(iter.hasNext()){
 			Element ee =(Element) iter.next();
 			XMLElement  xe = new XMLElement();
+			xe.setFrameElement(true);
 			xe.setElement(ee);
 			return xe;
 		}
 		return null;
 			
 	}
-	
-//	public XMLNode getParent(){
-//
-//		
-//	}
-//	
 }

@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/page" xmlns:tns="http://www.example.org/page" elementFormDefault="qualified">
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/page" xmlns:st="http://www.example.org/page" elementFormDefault="qualified">
 
-    <element name="elements" type="tns:elements"></element>
+    <element name="elements" type="st:elements"></element>
     
-    <element name="frame" type="tns:frame"></element>
+    <element name="frame" type="st:frame"></element>
     
-    <element name="element" type="tns:element"></element>
+    <element name="element" type="st:element"></element>
     
-    <element name="childElement" type="tns:childelement"></element>
+    <element name="childElement" type="st:childelement"></element>
     
     <complexType name="elements">
     	<sequence maxOccurs="unbounded" minOccurs="0">
-    		<element ref="tns:element" maxOccurs="unbounded"
+    		<element ref="st:element" maxOccurs="unbounded"
     			minOccurs="0">
     		</element>
-    		<element ref="tns:frame" minOccurs="0"
+    		<element ref="st:frame" minOccurs="0"
     			maxOccurs="unbounded">
     		</element>
-    		<element ref="tns:list" minOccurs="0" maxOccurs="unbounded"></element>
+    		<element ref="st:list" minOccurs="0" maxOccurs="unbounded"></element>
     	</sequence>
     </complexType>
 
     <complexType name="element">
     	<sequence maxOccurs="1" minOccurs="0">
-    		<element ref="tns:childElement" maxOccurs="1"
+    		<element ref="st:childElement" maxOccurs="1"
     			minOccurs="0">
     		</element>
     	</sequence>
@@ -68,7 +68,7 @@
 
     <complexType name="childelement">
     	<sequence maxOccurs="1" minOccurs="0">
-    		<element ref="tns:childElement"></element>
+    		<element ref="st:childElement"></element>
     	</sequence>
     	<attribute name="by" use="required">
     		<simpleType>
@@ -90,8 +90,8 @@
 
     <complexType name="frame">
     	<sequence minOccurs="0" maxOccurs="1">
-    		<element ref="tns:element" maxOccurs="1" minOccurs="0"></element>
-    		<element ref="tns:frame" maxOccurs="1" minOccurs="0"></element>
+    		<element ref="st:element" maxOccurs="1" minOccurs="0"></element>
+    		<element ref="st:frame" maxOccurs="1" minOccurs="0"></element>
     	</sequence>
     	<attribute name="id" type="string" use="required"></attribute>
     	<attribute name="by" use="required">
@@ -114,14 +114,15 @@
 
     
 
-    <element name="list" type="tns:list"></element>
+    <element name="list" type="st:list">
+    </element>
 
     
     <complexType name="list">
     	<sequence maxOccurs="unbounded">
-    		<element ref="tns:frame" minOccurs="0" ></element>
-    		<element ref="tns:element" minOccurs="0"></element>
+    		<element ref="st:frame" minOccurs="0" ></element>
+    		<element ref="st:element" minOccurs="0"></element>
     	</sequence>
-    	<attribute name="id" type="string"></attribute>
+    	<attribute name="id" type="string" use="required"></attribute>
     </complexType>
 </schema>
