@@ -16,20 +16,20 @@ import org.sky.auto.element.TextField;
 
 public class AutoBrowser implements IBrowser{
 
-	private AutoDriver<?> driver;
+	private IBrowser driver;
 	
-	public AutoBrowser(AutoDriver<?> driver){
+	public AutoBrowser(IBrowser driver){
 		this.driver=driver;
 	}
 	
 	@Override
 	public void open(String url) {
-		driver.getDriver().get(url);
+		driver.open(url);
 	}
 
 	@Override
 	public void close() {
-		driver.getDriver().quit();
+		driver.close();
 	}
 
 	@Override
@@ -40,7 +40,7 @@ public class AutoBrowser implements IBrowser{
 
 	@Override
 	public void maxWindow() {
-		driver.getDriver().manage().window().maximize();
+		driver.maxWindow();
 		
 	}
 
