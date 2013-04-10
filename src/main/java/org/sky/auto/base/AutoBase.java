@@ -4,13 +4,11 @@ import java.io.File;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
-
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -41,8 +39,8 @@ import org.sky.auto.text.read.TxtLoader;
 import org.sky.auto.text.read.TxtProvider;
 import org.sky.auto.window.Window;
 import org.sky.auto.xml.XMLLoader;
+import org.sky.auto.xml.XMLToWebElement;
 //import org.sky.auto.xml.XMLParser;
-import org.sky.auto.xml.XmlProvider;
 
 /**
  * 这是整个框架的一个核心类，可以理解为主要入口类，把分层的各种概念都整合在了这个类里面
@@ -359,32 +357,15 @@ public class AutoBase {
 		se.setId(id);
 		return se;
 	}
-	/**返回WebElement的元素
-	 * @param id 我们在资源中定义的id值
-	 * @return 通过id值返回一个定义的WebElement元素
-	 * */
-	public static WebElement element(String id){
-		//System.out.println(elementBelongTo(id));
-		if(elementBelongTo(id).toString().equals("TXT")){
-			logger.info("["+id+"]是来自TXT的资源");
-			TxtProvider tp = new TxtProvider();
-			return tp.element(id);
-		}else if(elementBelongTo(id).toString().equals("XML")){
-			logger.info("["+id+"]是来自XML的资源");
-			XmlProvider xp = new XmlProvider();
-			return xp.element(id);
-		}else{
-			throw new MyElementNotFoundException("扫描的资源中没有找到["+id+"]元素，请检查是否输入正确");
-		}
-		
-	}
+	
+
 	/**获得element的list元素
 	 * @param id 在资源定义的id值
 	 * @return 通过id值返回的定义好的WebElement元素的列表
 	 * */
 	public static List<WebElement> elements(String id){
-		XmlProvider xp = new XmlProvider();
-		return xp.elements(id);
+		XMLToWebElement xtw = new XMLToWebElement();
+		return xtw.elements(id);
 	}
 	
 	
@@ -414,6 +395,25 @@ public class AutoBase {
 		return new SElement();
 	}
 	
+	  
+	/**返回WebElement的元素
+	 * @param id 我们在资源中定义的id值
+	 * @return 通过id值返回一个定义的WebElement元素
+	 * */
+	public static WebElement element(String id){
+		if(elementBelongTo(id).toString().equals("TXT")){
+			logger.info("["+id+"]是来自TXT的资源");
+			TxtProvider tp = new TxtProvider();
+			return tp.element(id);
+		}else if(elementBelongTo(id).toString().equals("XML")){
+			logger.info("["+id+"]是来自XML的资源");
+			XMLToWebElement xtw = new XMLToWebElement();
+			return xtw.element(id);
+		}else{
+			throw new MyElementNotFoundException("扫描的资源中没有找到["+id+"]元素，请检查是否输入正确");
+		}
+		
+	}
 	
 	
 }

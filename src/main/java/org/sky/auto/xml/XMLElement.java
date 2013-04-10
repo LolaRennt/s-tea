@@ -64,7 +64,7 @@ public class XMLElement implements XMLNode{
 	}
 	
 	private void collectChildElments(Element en){
-		List<?> xlist = en.elements();
+		List<?> xlist = en.elements("childElement");
 		if (xlist.size() != 0) {      
             for (Iterator<?> it = xlist.iterator(); it.hasNext();) {   
                 Element elem = (Element) it.next();

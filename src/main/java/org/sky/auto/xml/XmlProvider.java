@@ -12,6 +12,7 @@ import org.sky.auto.exception.MyAutoException;
 import org.sky.auto.exception.MyElementNotFoundException;
 import org.sky.auto.window.Window;
 
+@Deprecated
 public class XmlProvider{
 	static Logger logger = Logger.getLogger(XmlProvider.class);
 

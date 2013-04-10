@@ -161,7 +161,7 @@ public class XMLElements implements XMLNode{
 	public XMLElement getXMLElementOfAll(String id){
 		if(getAllXMLElement().size()!=0){
 			for(XMLElement xe:getAllXMLElement()){
-				if(xe.getId().equals(id)){
+				if(xe.getId().trim().equals(id)){
 					return xe;
 				}
 			}

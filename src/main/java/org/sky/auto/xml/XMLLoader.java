@@ -30,7 +30,6 @@ public class XMLLoader {
 				for(XMLElement xn :xe.getAllXMLElement()){
 					SourceLoader.add(xn);
 					xmlmap.put(xn.getId(),xn);
-					
 					logger.info("扫描收集了资源->"+xn.getId());
 				}
 			}

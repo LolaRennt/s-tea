@@ -54,6 +54,7 @@ public class XMLToWebElement{
 			XMLElement xe = XMLLoader.getXMLElement(id);
 			if(xe.isFrameElement()){
 				Window.selectDefaultWindow();
+				logger.info("元素"+id+"是Frame内的元素！");
 				enterFrame(xe, id);
 				return getLocator(xe, id);
 			}else{
@@ -71,30 +72,38 @@ public class XMLToWebElement{
 		Stack<Map<By,Integer>> stack = new Stack<Map<By,Integer>>();
 		int j=getParentFrameLevel(xe);
 		XmlToJavaTools xjt = new XmlToJavaTools();
+		Element e=xe.getElement().getParent();
 		for(int i=0;i<j;i++){
 			Map<By,Integer> frameList = new HashMap<By,Integer>();
-			Element e =xe.getElement();
 			int index=0;
-			String value = e.getParent().attributeValue("value");
-			String by = e.getParent().attributeValue("by");
+			String value = e.attributeValue("value");
+			String by = e.attributeValue("by");
 			if(e.getParent().attributeValue("index")!=null){
 				index = Integer.parseInt(e.getParent().attributeValue("index"));
 			}
+			//System.out.println(index);
 			frameList.put(xjt.locator(by, value), index);
 			e=e.getParent();
 			stack.push(frameList);
 		}
+		//System.out.println(stack.size());
 		while(!stack.empty()){
-			WebElement we = null;
+			//WebElement we = null;
 			By key=null;
 			Integer value=null;
 			Iterator<Entry<By,Integer>> iter = stack.pop().entrySet().iterator();
 			while(iter.hasNext()){
-				key = iter.next().getKey();
-				value = iter.next().getValue(); 
+				Entry<By,Integer> entry = iter.next();
+				key=entry.getKey();
+				//System.out.println(key);
+				value=entry.getValue();
+				//System.out.println(value);
 			}
-			we=AutoBase.driver().findElements(key).get(value);
-			Window.selectFrame(we);
+				try{
+					Window.selectFrame(AutoBase.driver().findElements(key).get(value));
+				}catch(Exception e1){
+					throw new MyElementNotFoundException("切入进Frame的时候出现错误！请检查Frame的定位是否正确。错误的定位的方式-->"+key);
+				}
 		}
 	}
 	
@@ -127,13 +136,6 @@ public class XMLToWebElement{
 		}
 		return null;
 	}
-	
-	
-	
-	
-	
-	
-	
 	
 	protected WebElement getLocator(XMLElement xe,String id){
 		XmlToJavaTools xtj = new XmlToJavaTools();
@@ -256,30 +258,38 @@ public class XMLToWebElement{
 		Stack<Map<By,Integer>> stack = new Stack<Map<By,Integer>>();
 		int j=getListParentFrameLevel(xe);
 		XmlToJavaTools xjt = new XmlToJavaTools();
+		Element e=xe.getElement().getParent();
 		for(int i=0;i<j;i++){
 			Map<By,Integer> frameList = new HashMap<By,Integer>();
-			Element e =xe.getElement();
 			int index=0;
-			String value = e.getParent().attributeValue("value");
-			String by = e.getParent().attributeValue("by");
+			String value = e.attributeValue("value");
+			String by = e.attributeValue("by");
 			if(e.getParent().attributeValue("index")!=null){
 				index = Integer.parseInt(e.getParent().attributeValue("index"));
 			}
+			//System.out.println(index);
 			frameList.put(xjt.locator(by, value), index);
 			e=e.getParent();
 			stack.push(frameList);
 		}
+		//System.out.println(stack.size());
 		while(!stack.empty()){
-			WebElement we = null;
+			//WebElement we = null;
 			By key=null;
 			Integer value=null;
 			Iterator<Entry<By,Integer>> iter = stack.pop().entrySet().iterator();
 			while(iter.hasNext()){
-				key = iter.next().getKey();
-				value = iter.next().getValue(); 
+				Entry<By,Integer> entry = iter.next();
+				key=entry.getKey();
+				//System.out.println(key);
+				value=entry.getValue();
+				//System.out.println(value);
 			}
-			we=AutoBase.driver().findElements(key).get(value);
-			Window.selectFrame(we);
+				try{
+					Window.selectFrame(AutoBase.driver().findElements(key).get(value));
+				}catch(Exception e1){
+					throw new MyElementNotFoundException("切入进Frame的时候出现错误！请检查Frame的定位是否正确。错误的定位的方式-->"+key);
+				}
 		}
 	}
 	
@@ -288,16 +298,21 @@ public class XMLToWebElement{
 	
 	private int getParentFrameLevel(XMLElement xe){
 		int i=0;
-		while(!xe.getElement().getParent().isRootElement()){
+		Element e = xe.getElement().getParent();
+		while(!e.isRootElement()){
 			i++;
+			e=e.getParent();
 		}
+		//System.out.println("元素含有的Frame数目为：->"+i);
 		return i;
 	}
 	
 	private int getListParentFrameLevel(XMLElement xe){
+		Element e = xe.getElement().getParent();
 		int i=0;
-		while(!xe.getElement().getParent().getName().toLowerCase().equals("list")){
+		while(!e.getName().toLowerCase().equals("list")){
 			i++;
+			e=e.getParent();
 		}
 		return i;
 	}

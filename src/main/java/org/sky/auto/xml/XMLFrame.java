@@ -13,7 +13,7 @@ import org.dom4j.Element;
 public class XMLFrame implements XMLNode{
 	
 	private Element e;
-
+	private XMLElement xelement;
 	public Element getElement() {
 		return e;
 	}
@@ -54,15 +54,28 @@ public class XMLFrame implements XMLNode{
 	}
 	
 	public XMLElement getXMLElement(){
-		Iterator<?> iter = e.elementIterator("element");
-		while(iter.hasNext()){
-			Element ee =(Element) iter.next();
-			XMLElement  xe = new XMLElement();
-			xe.setFrameElement(true);
-			xe.setElement(ee);
-			return xe;
-		}
-		return null;
-			
+		collectXMLElement(getElement());
+		return this.xelement;
 	}
+	
+	private void collectXMLElement(Element e){
+		Iterator<?> iter = e.elementIterator();
+		while(iter.hasNext()){
+			Element xe = (Element) iter.next();
+			if(xe.getName().toLowerCase().equals("element")){
+				xelement=new XMLElement();
+				xelement.setElement(xe);
+				xelement.setFrameElement(true);
+				break;
+			}else{
+				collectXMLElement(xe);
+			}
+		}
+		
+	}
+	
+	
+	
+	
+	
 }

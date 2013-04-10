@@ -11,8 +11,10 @@
       		<tns:childElement value="苹果" by="linkText"/>
     	</tns:childElement>
   </tns:element>
-  <tns:list id="">
-      <tns:element value="" by="id" id=""></tns:element>
-  </tns:list>
+  <tns:frame value="iframe" by="tagName" id="ffj" index="0">
+      <tns:frame value="cproIframe1" by="id" id="fj">
+          <tns:element value="title1" by="id" id="百度-联想"></tns:element>
+      </tns:frame>
+  </tns:frame>
 </tns:elements>
  
