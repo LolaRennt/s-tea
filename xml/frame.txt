@@ -1,0 +1,7 @@
+Frame{
+	id:su;
+	百度-搜索框{
+		id:kw;
+	}
+}
+#如果元素在Frame内，则需要单独定义个Frame的文件，在这个文件内来定义Frame和元素，但是不支持Frame的嵌套。
