@@ -1,5 +1,6 @@
 package org.sky.auto.runner;
 
+import java.io.File;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Set;
@@ -12,6 +13,7 @@ import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.databene.feed4junit.Feeder;
 import org.junit.runner.notification.RunListener;
 import org.junit.runner.notification.RunNotifier;
@@ -32,8 +34,8 @@ public class BaseJUnitAutoRunner extends Feeder{
 	private Logger logger = Logger.getLogger(BaseJUnitAutoRunner.class);
 	public BaseJUnitAutoRunner(final Class<?> klass)
 			throws InitializationError {
-		//AutoBase.setLogStarted();
 		super(klass);
+		PropertyConfigurator.configure("resource"+File.separator+"log4j.properties");
 		setScheduler(new RunnerScheduler() {
 			ExecutorService executorService = Executors.newFixedThreadPool(
                     klass.isAnnotationPresent(ThreadRunner.class) ?
@@ -102,8 +104,7 @@ public class BaseJUnitAutoRunner extends Feeder{
 	
 	
 	public void run(RunNotifier rn) {
-		//Description des = getDescription();
-	//	rn.addListener(new DefaultAutoRunnerJUnitListener());
+		//AutoBase.setLogStarted();
 		if(getDescription().getAnnotation(JUnitRunListener.class)!=null){
 			JUnitRunListener jrl = getDescription().getAnnotation(JUnitRunListener.class);
 			Class<?>[] rls = jrl.value();

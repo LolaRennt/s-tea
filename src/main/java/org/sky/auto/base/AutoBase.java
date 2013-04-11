@@ -259,6 +259,7 @@ public class AutoBase {
 	public static void closeCurrentWindow(){
 		ProxyRunnerListener.getDispatcher().beforecloseCurrentWindow();
 		driver().close();
+		//setClose_Status(true);
 		ProxyRunnerListener.getDispatcher().aftercloseCurrentWindow();
 	}
 

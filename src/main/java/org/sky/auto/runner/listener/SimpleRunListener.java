@@ -12,9 +12,12 @@ public class SimpleRunListener extends RunListener{
 	
 	@Override
 	public void testFinished(Description description) throws Exception {
-		if(!AutoBase.isClose_Status()){
-			AutoBase.closeAllWindow();
+		if(AutoBase.driver()!=null){
+			if(!AutoBase.isClose_Status()){
+				AutoBase.closeAllWindow();
+			}
 		}
+		
 	}
 }
 
