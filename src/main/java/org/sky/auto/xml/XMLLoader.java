@@ -27,10 +27,9 @@ public class XMLLoader {
 			for(String path:list){
 				XMLDocument xd = new XMLDocument(path);
 				XMLElements xe = new XMLElements(xd);
-				for(XMLElement xn :xe.getAllXMLElment()){
+				for(XMLElement xn :xe.getAllXMLElement()){
 					SourceLoader.add(xn);
 					xmlmap.put(xn.getId(),xn);
-					
 					logger.info("扫描收集了资源->"+xn.getId());
 				}
 			}
@@ -58,7 +57,7 @@ public class XMLLoader {
 			for(String path:list){
 				XMLDocument xd = new XMLDocument(path);
 				XMLElements xe = new XMLElements(xd);
-				for(XMLElement xn :xe.getAllXMLElment()){
+				for(XMLElement xn :xe.getAllXMLElement()){
 					SourceLoader.add(xn);
 					xmlmap.put(xn.getId(),xn);
 					

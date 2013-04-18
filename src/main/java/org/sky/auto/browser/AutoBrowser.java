@@ -2,7 +2,6 @@ package org.sky.auto.browser;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.sky.auto.driver.AutoDriver;
 import org.sky.auto.element.Button;
 import org.sky.auto.element.CheckBox;
 import org.sky.auto.element.ComoboBox; 

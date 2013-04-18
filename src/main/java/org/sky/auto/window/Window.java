@@ -18,6 +18,7 @@ import org.openqa.selenium.Point;
 import org.openqa.selenium.TakesScreenshot;
 //import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.sky.auto.base.AutoBase;
 import org.sky.auto.base.ConfigParser;
 import org.sky.auto.driver.Browser;
@@ -145,7 +146,12 @@ public class Window {
 //	    //最大化浏览器的实现代码
 //	    ((WebDriver)AutoBase.driver()).manage().window().setSize(new Dimension(screenX,screenY));
 		ProxyRunnerListener.getDispatcher().beforemaxWindow();
-		AutoBase.driver().manage().window().maximize();
+		if(AutoBase.driver() instanceof HtmlUnitDriver){
+			//do nothing！
+		}else{
+			AutoBase.driver().manage().window().maximize();
+		}
+		
 		ProxyRunnerListener.getDispatcher().aftermaxWindow();
 	}
 	/**页面刷新*/
