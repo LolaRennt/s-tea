@@ -32,5 +32,5 @@ public class URLtest {
 		Window.maxWindow();
 		AutoBase.closeAllWindow();
 	}
-	
+	 
 }

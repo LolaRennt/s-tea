@@ -9,7 +9,6 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.Point;
 import org.robotframework.javalib.annotation.RobotKeyword;
 import org.sky.auto.base.AutoBase;
-import org.sky.auto.driver.Browser;
 import org.sky.auto.intrumentation.ClassPool;
 import org.sky.auto.page.source.Response;
 import org.sky.auto.window.Window;
@@ -207,8 +206,7 @@ public class STeaKeywords {
 	
 	@RobotKeyword
 	public void openBrowser(String browser,String url){
-		Browser b=Enum.valueOf(Browser.class, browser);
-		AutoBase.open(b, url);
+		AutoBase.open(browser, url);
 	}
 	
 	@RobotKeyword
