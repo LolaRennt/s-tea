@@ -19,6 +19,7 @@ public  class XMLDocument {
 		SAXReader sr = new SAXReader();
 		try {
 			this.setDoc(sr.read(new File(path)));
+			doc.setXMLEncoding("UTF-8");
 		} catch (DocumentException e) {
 			e.printStackTrace();
 		}

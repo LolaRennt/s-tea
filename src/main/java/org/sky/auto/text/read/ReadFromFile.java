@@ -3,11 +3,11 @@ package org.sky.auto.text.read;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
-
 public class ReadFromFile {
 	StringContorl sc=new StringContorl();
 	private File file;
@@ -32,7 +32,7 @@ public class ReadFromFile {
 		BufferedReader br = null;
 		try {
 			text=new String();
-			br= new BufferedReader(new FileReader(getFile()));
+			br= new BufferedReader(new InputStreamReader(new FileInputStream(getFile()),"UTF-8"));
 			String tmp=br.readLine();
 			while(tmp!=null){
 				text=text+tmp;

@@ -289,34 +289,34 @@ public class AutoDriver implements IDriver{
 	}
 
 	public void setDriver(String browser){
-		if(browser.equals(Browser.Firefox.toString().toLowerCase())){
+		if(browser.toLowerCase().equals(Browser.Firefox.toString().toLowerCase())){
 			Firefox ff = new Firefox();
 			setDriver(ff.firefox());
-		}else if(browser.equals(Browser.Chrome.toString().toLowerCase())){
+		}else if(browser.toLowerCase().equals(Browser.Chrome.toString().toLowerCase())){
 			Chrome c = new Chrome();
 			setDriver(c.chrome());
-		}else if(browser.equals(Browser.IE.toString().toLowerCase())){
+		}else if(browser.toLowerCase().equals(Browser.IE.toString().toLowerCase())){
 			IE ie = new IE();
 			setDriver(ie.ie());
-		}else if(browser.equals(Browser.Safari.toString().toLowerCase())){
+		}else if(browser.toLowerCase().equals(Browser.Safari.toString().toLowerCase())){
 			Safari s = new Safari();
 			setDriver(s.safari());
-		}else if(browser.equals(Browser.RemoteChrome.toString().toLowerCase())){
+		}else if(browser.toLowerCase().equals(Browser.RemoteChrome.toString().toLowerCase())){
 			RemoteChrome rc = new RemoteChrome();
 			setDriver(rc.remoteChrome());
-		}else if(browser.equals(Browser.RemoteFirefox.toString().toLowerCase())){
+		}else if(browser.toLowerCase().equals(Browser.RemoteFirefox.toString().toLowerCase())){
 			RemoteFirefox rf = new RemoteFirefox();
 			setDriver(rf.remoteFirefox());
-		}else if(browser.equals(Browser.RemoteIE.toString().toLowerCase())){
+		}else if(browser.toLowerCase().equals(Browser.RemoteIE.toString().toLowerCase())){
 			RemoteIE ri = new RemoteIE();
 			setDriver(ri.remoteIE());
-		}else if(browser.equals(Browser.RemoteHtmlUnit.toString().toLowerCase())){
+		}else if(browser.toLowerCase().equals(Browser.RemoteHtmlUnit.toString().toLowerCase())){
 			RemoteHtmlUnit rh = new RemoteHtmlUnit();
 			setDriver(rh.remoteHtmlUnit());
-		}else if(browser.equals(Browser.RemoteSafari.toString().toLowerCase())){
+		}else if(browser.toLowerCase().equals(Browser.RemoteSafari.toString().toLowerCase())){
 			RemoteSafari rs = new RemoteSafari();
 			setDriver(rs.remoteSafari());
-		}else if(browser.equals(Browser.HtmlUnit.toString().toLowerCase())){
+		}else if(browser.toLowerCase().equals(Browser.HtmlUnit.toString().toLowerCase())){
 			HtmlUnit hu = new HtmlUnit();
 			setDriver(hu.htmlUnit());
 		}else if(browser.equals(Browser.NULL)){

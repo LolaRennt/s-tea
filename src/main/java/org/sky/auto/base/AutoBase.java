@@ -1,6 +1,6 @@
 package org.sky.auto.base;
 
-import java.io.File;
+import java.io.File; 
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
@@ -259,6 +259,7 @@ public class AutoBase {
 	public static void closeCurrentWindow(){
 		ProxyRunnerListener.getDispatcher().beforecloseCurrentWindow();
 		driver().close();
+		//setClose_Status(true);
 		ProxyRunnerListener.getDispatcher().aftercloseCurrentWindow();
 	}
 
@@ -401,18 +402,20 @@ public class AutoBase {
 	 * @return 通过id值返回一个定义的WebElement元素
 	 * */
 	public static WebElement element(String id){
-		if(elementBelongTo(id).toString().equals("TXT")){
-			logger.info("["+id+"]是来自TXT的资源");
-			TxtProvider tp = new TxtProvider();
-			return tp.element(id);
-		}else if(elementBelongTo(id).toString().equals("XML")){
-			logger.info("["+id+"]是来自XML的资源");
-			XMLToWebElement xtw = new XMLToWebElement();
-			return xtw.element(id);
-		}else{
-			throw new MyElementNotFoundException("扫描的资源中没有找到["+id+"]元素，请检查是否输入正确");
+		if(elementBelongTo(id)!=null){
+			if(elementBelongTo(id).toString().equals("TXT")){
+				logger.info("["+id+"]是来自TXT的资源");
+				TxtProvider tp = new TxtProvider();
+				return tp.element(id);
+			}else if(elementBelongTo(id).toString().equals("XML")){
+				logger.info("["+id+"]是来自XML的资源");
+				XMLToWebElement xtw = new XMLToWebElement();
+				return xtw.element(id);
+			}else{
+				throw new MyElementNotFoundException("扫描的资源中没有找到["+id+"]元素，请检查是否输入正确");
+			}
 		}
-		
+		return null;
 	}
 	
 	
