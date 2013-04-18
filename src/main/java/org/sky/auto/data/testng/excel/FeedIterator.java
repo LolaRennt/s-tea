@@ -13,7 +13,7 @@ public class FeedIterator implements Iterator<Object[]> {
 	    this.generator = generator;
 	    this.next = new ProductWrapper<Object[]>();
 	    fetchNext();
-    }
+    } 
 	
 	// interface -------------------------------------------------------------------------------------------------------
 
