@@ -5,7 +5,6 @@ import org.dom4j.Element;
 
 public class XMLList implements XMLNode{
 	private Element e;
-
 	public Element getElement() {
 		return e;
 	}
@@ -56,6 +55,12 @@ public class XMLList implements XMLNode{
 		
 		return xe;
 	}
+
+	public String getId() {
+		return getElement().attributeValue("id").trim();
+	}
+
+	
 	
 	
 	

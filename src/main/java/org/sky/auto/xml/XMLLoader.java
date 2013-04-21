@@ -29,7 +29,7 @@ public class XMLLoader {
 				XMLElements xe = new XMLElements(xd);
 				for(XMLElement xn :xe.getAllXMLElement()){
 					SourceLoader.add(xn);
-					xmlmap.put(xn.getId(),xn);
+					xmlmap.put(xn.getId().trim(),xn);
 					logger.info("扫描收集了资源->"+xn.getId());
 				}
 			}

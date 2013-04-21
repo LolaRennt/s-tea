@@ -38,19 +38,19 @@ public class XMLElement implements XMLNode{
 	}
 	
 	public String getId(){
-		return getAttributes().get("id");
+		return getAttributes().get("id").trim();
 	}
 	
 	public String getValue(){
-		return getAttributes().get("value");
+		return getAttributes().get("value").trim();
 	}
 	
 	public String getIndex(){
-		return getAttributes().get("index");
+		return getAttributes().get("index").trim();
 	}
 	
 	public String getBy(){
-		return getAttributes().get("by");
+		return getAttributes().get("by").trim();
 	}
 	
 	@SuppressWarnings("unchecked")

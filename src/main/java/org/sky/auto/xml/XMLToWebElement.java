@@ -76,10 +76,10 @@ public class XMLToWebElement{
 		for(int i=0;i<j;i++){
 			Map<By,Integer> frameList = new HashMap<By,Integer>();
 			int index=0;
-			String value = e.attributeValue("value");
-			String by = e.attributeValue("by");
+			String value = e.attributeValue("value").trim();
+			String by = e.attributeValue("by").trim();
 			if(e.getParent().attributeValue("index")!=null){
-				index = Integer.parseInt(e.getParent().attributeValue("index"));
+				index = Integer.parseInt(e.getParent().attributeValue("index").trim());
 			}
 			//System.out.println(index);
 			frameList.put(xjt.locator(by, value), index);
@@ -262,10 +262,10 @@ public class XMLToWebElement{
 		for(int i=0;i<j;i++){
 			Map<By,Integer> frameList = new HashMap<By,Integer>();
 			int index=0;
-			String value = e.attributeValue("value");
-			String by = e.attributeValue("by");
+			String value = e.attributeValue("value").trim();
+			String by = e.attributeValue("by").trim();
 			if(e.getParent().attributeValue("index")!=null){
-				index = Integer.parseInt(e.getParent().attributeValue("index"));
+				index = Integer.parseInt(e.getParent().attributeValue("index").trim());
 			}
 			//System.out.println(index);
 			frameList.put(xjt.locator(by, value), index);
