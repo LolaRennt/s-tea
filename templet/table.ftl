@@ -1,5 +1,5 @@
 <div class="itable">
-                    <table class="table table-bordered table-hover" style="width: 900px">
+                    <table class="table table-bordered table-hover" style="width: 900px；margin:auto">
                         <thead>
                         <tr style="background-color: #00b3ee">
                             <th>系统平台</th>
