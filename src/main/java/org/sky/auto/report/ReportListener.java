@@ -35,7 +35,16 @@ public class ReportListener extends RunListener{
 	private Class<?>[] clas;
 	private StandardOutInfo soi;
 	
-	public ReportListener(){
+	public void init(){
+		//MyFile.deleteDirectory("report");
+	}
+	
+	
+	@Override
+	public void testStarted(Description description) throws Exception {
+		//soi=new StandardOutInfo();
+		//soi.start();
+		//init();
 		th=TempletHtml.getInstance();
 		MyFile.createDictory("report");
 		MyFile.createFile("report"+File.separator+"report.html");
@@ -46,18 +55,9 @@ public class ReportListener extends RunListener{
 				}
 			}
 		}
-	}
-	
-	
-	@Override
-	public void testStarted(Description description) throws Exception {
-		//soi=new StandardOutInfo();
-		//soi.start();
-		env=new Environment();
-		String caseName = description.getMethodName()+".ftl";
-		MyFile.createFile("report"+File.separator+"case"+caseName);
-		des=new MyDescription(description);
-		temp=th.getTemplate(caseName);
+		String caseName = description.getMethodName()+".html";
+		MyFile.createFile("report"+File.separator+caseName);
+		temp=th.getTemplate("case.ftl");
 		for(Method m:description.getTestClass().getDeclaredMethods()){
 			if(m.equals(description.getMethodName())){
 				clas=m.getParameterTypes();
@@ -70,16 +70,18 @@ public class ReportListener extends RunListener{
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@Override
 	public void testFinished(Description description) throws Exception {
+		env=new Environment();
+		des=new MyDescription(description);
 		if(clas!=null){
 			CaseStatus.addRunCase(des.getTestClass().getDeclaredMethod(description.getMethodName(),clas));
 		}else{
-			CaseStatus.addRunCase(des.getTestClass().getDeclaredMethod(description.getMethodName()));
+			CaseStatus.addRunCase(des.getTestClass().getDeclaredMethod(description.getMethodName(),clas));
 		}	
 		CaseStatus.addRunCaseDescription(description);
 		Map map = new HashMap();
 		map.put("des",des);
 		map.put("env", env);
-		Writer write = new OutputStreamWriter(new FileOutputStream(new File("report"+File.separator+"case"+File.separator+des.getMethodName())+".html"));
+		Writer write = new OutputStreamWriter(new FileOutputStream(new File("report"+File.separator+des.getMethodName())+".html"));
 		temp.process(map, write);
 		write.flush();
 		write.close();
@@ -89,8 +91,23 @@ public class ReportListener extends RunListener{
 	
 	@Override
 	public void testFailure(Failure failure) throws Exception {
+		if(clas!=null){
+			Description d =failure.getDescription();
+			des=new MyDescription(d);
+			des.setFailureCase(true);
+			des.setFailure(new MyFailure(failure));
+			CaseStatus.addRunCaseDescription(des);
+			CaseStatus.addRunCase(d.getTestClass().getDeclaredMethod(d.getMethodName(),clas));
+		}else{
+			Description d =failure.getDescription();
+			des=new MyDescription(d);
+			des.setFailureCase(true);
+			des.setFailure(new MyFailure(failure));
+			CaseStatus.addRunCaseDescription(des);
+			CaseStatus.addRunCase(d.getTestClass().getDeclaredMethod(d.getMethodName(),clas));
+		}
 		CaseStatus.addFailureCase(fail);
-		CaseStatus.addRunCase(des.getTestClass().getDeclaredMethod(failure.getDescription().getMethodName()));
+		
 		fail = new MyFailure(failure);
 		
 	}
@@ -102,7 +119,7 @@ public class ReportListener extends RunListener{
 		cj.copyCssAndJsSource();
 		res=new MyResult(result);
 		Set<MyDescription> dess=CaseStatus.getDescriptionCases(); 
-		temp=th.getTemplate("templet"+File.separator+"report.ftl");
+		temp=th.getTemplate("frame.ftl");
 		Map resmap = new HashMap();
 		resmap.put("res",res);
 		resmap.put("dess", dess);
@@ -111,4 +128,10 @@ public class ReportListener extends RunListener{
 		write.flush();
 		write.close();
 	}
+	
+	@Override
+	public void testRunStarted(Description description) throws Exception {
+		new File("report").createNewFile();
+	}
+	
 }

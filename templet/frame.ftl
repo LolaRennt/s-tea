@@ -47,10 +47,10 @@
             vertical-align: middle;
             text-align: center;
         }
-        .right{
+        .wrong{
             background-color: #dd1144;
         }
-        .wrong{
+        .right{
             background-color: #387038;
         }
         .table a{
@@ -70,7 +70,7 @@
 </head>
 <body>
 	<div class="container" style="width: 100%;height: 90%">
-    <#include "templet/head.html">  
+    <#include "head.html">  
     <div id="fill" style="height: 70px"></div>
         <div class="row-fluid">
             <div class="span12">
@@ -87,19 +87,19 @@
                     </thead>
                     <tbody>
                     <tr style="background-color: #ffffff">
-                        <td>${env.getRunTime}</td>
-                        <td>${res.getTime}</td>
-                        <td>${res.getCount}</td>
-                        <td>${res.getFilureCount}</td>
+                        <td>${res.runTime}</td>
+                        <td>${res.time}</td>
+                        <td>${res.runCount}</td>
+                        <td>${res.failureCount}</td>
                     </tr>
                     </tbody>
                 </table>
             	</div>
-            <#include "templet/table.ftl">
+            <#include "table.ftl">
             </div>
         </div>
     </div>
-<#include "tmplet/foot.html">
+<#include "foot.html">
 <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
 <script src="js/bootstrap.min.js" type="text/javascript"></script>
 </body>

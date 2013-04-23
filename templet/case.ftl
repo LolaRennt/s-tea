@@ -47,10 +47,10 @@
             vertical-align: middle;
             text-align: center;
         }
-        .right{
+        .wrong{
             background-color: #dd1144;
         }
-        .wrong{
+        .right{
             background-color: #387038;
         }
         .table a{
@@ -64,43 +64,26 @@
             text-decoration:none;
             font-weight:bold;
         }
-
+		 .info{
+            background: #ffffff;
+        }
     </style>
     <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
 </head>
 <body>
 <div class="container" style="width: 100%;height: 90%">
-    <#include "templet/head.html">  
+    <#include "head.html">  
     <div id="fill" style="height: 70px"></div>
-    <div class="title"><h1>&nbsp;&nbsp;测试结果>><small>${description.getMethodName}</small></h1></div>
         <div class="row-fluid">
             <div class="span12">
-            	<div class="result">
-                <h2>测试结果总结和运行环境</h2>
-      			<table class="table table-bordered" style="width: 700px; margin:auto">
-                    <thead>
-                    <tr style="background-color: #00b3ee">
-                        <th>运行系统</th>
-                        <th>运行结束时间</th>
-                        <th>运行浏览器</th>
-                        <th>浏览器版本</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr style="background-color: #ffffff">
-                        <td>${env.getOS}</td>
-                        <td>${res.getRunTime}</td>
-                        <td>${env.getBrowser}</td>
-                        <td>${env.getBrowserVersion}</td>
-                    </tr>
-                    </tbody>
-                </table>
-            	</div>
-            <#include "templet/casetable.ftl">
-            </div>
-        </div>
-    </div>
-<#include "tmplet/foot.html">
+            <#include "casetable.ftl">
+       		</div>
+    	</div>
+<div class="blank">
+	<h2>&nbsp;&nbsp;</h2>
+</div>
+ </div>
+<#include "foot.html">
 <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
 <script src="js/bootstrap.min.js" type="text/javascript"></script>
 </body>

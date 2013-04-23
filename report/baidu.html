@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JUnit测试报告</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <style type="text/css">
+        html, 
+        body { 
+            height: 100%;
+            width: 100%;
+        } 
+        body{ 
+            background: url("bg.jpg");
+        }
+        #footer {
+            height: 60px;
+        }
+        #footer {
+            background-color: #f5f5f5;
+        }
+
+        @media (max-width: 767px) {
+            #footer {
+                margin-left: -20px;
+                margin-right: -20px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+        .container {
+            width: auto;
+            max-width: 1100px;
+        }
+        .container .credit {
+            margin: 20px 0;
+        }
+        .table td{
+            max-width: 300px;
+            word-break:break-all;
+            min-width: 70px;
+            vertical-align: middle;
+            text-align: center;
+        }
+        .table th{
+            vertical-align: middle;
+            text-align: center;
+        }
+        .wrong{
+            background-color: #dd1144;
+        }
+        .right{
+            background-color: #387038;
+        }
+        .table a{
+            color:#a9dba9;
+            text-decoration:none;
+            font-weight:bold;
+            font-size: 16px;
+        }
+        .table a:hover{
+            color: #7a43b6;
+            text-decoration:none;
+            font-weight:bold;
+        }
+		 .info{
+            background: #ffffff;
+        }
+    </style>
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container" style="width: 100%;height: 90%">
+    <div class="navbar navbar-inverse navbar-fixed-top" style="height: 10%; float: none">
+        <div class="navbar-inner">
+            <div class="container">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="brand" href="#">JUnit测试报告</a>
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <li class="active"><a href="#">详细报告</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Case<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">需求</a></li>
+                                <li><a href="#">用例</a> </li>
+                                <li class="divider"></li>
+                                <li><a href="#">源码</a></li>
+                                <li><a href="#">报告</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+    </div>    <div id="fill" style="height: 70px"></div>
+        <div class="row-fluid">
+            <div class="span12">
+<div class="result">
+                <h2>测试结果总结和运行环境</h2>
+      			<table class="table table-bordered" style="width: 700px; margin:auto">
+                    <thead>
+                    <tr style="background-color: #00b3ee">
+                        <th>运行系统</th>
+                        <th>运行结束时间</th>
+                        <th>运行浏览器</th>
+                        <th>浏览器版本</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr style="background-color: #ffffff">
+                        <td></td>
+                        <td>2013-04-114 01:47:19</td>
+                        <td>HtmlUnit</td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+</div>
+<div class="itable">
+                <h2>测试用例>></h2>
+                <table class="table table-bordered" style="width: 900px;margin:auto">
+                    <tbody>
+                    <tr style="background-color: #00b3ee">
+                        <th colspan="2" style="height: 100px">测试用例执行汇总</th>
+                    </tr>
+                    <tr class="right">
+                        <th style="width: 150px">测试用例方法名</th>
+                        <td>baidu</td>
+                    </tr>
+                    <tr class="info">
+                        <th>所属类名称</th>
+                        <td>org.sky.auto.test.FrameTest</td>
+                    </tr>
+                    <tr class="info">
+                        <th>异常情况</th> 
+                        <td>无异常</td>
+                    </tr>
+                    <tr class="info">
+                        <th>异常信息</th>
+                        <td>无异常信息</td>
+                    </tr>
+                    <tr class="info">
+                        <th>执行日志信息</th>
+                        <td><p>
+2013-04-23 20:25:35 INFO  [main] org.sky.auto.xml.XMLLoader 开始对xml资源进行扫描....
+2013-04-23 20:25:35 INFO  [main] org.sky.auto.xml.XMLLoader 扫描收集了资源->百度首页-搜索框
+2013-04-23 20:25:35 INFO  [main] org.sky.auto.xml.XMLLoader 扫描收集了资源->百度首页-搜索按钮
+2013-04-23 20:25:35 INFO  [main] org.sky.auto.xml.XMLLoader 扫描收集了资源->测评游戏
+2013-04-23 20:25:35 INFO  [main] org.sky.auto.xml.XMLLoader 扫描收集了资源->测评模式
+2013-04-23 20:25:35 INFO  [main] org.sky.auto.xml.XMLLoader 扫描收集了资源->测评得分
+2013-04-23 20:25:35 INFO  [main] org.sky.auto.xml.XMLLoader 扫描收集了资源->测评显卡均价
+2013-04-23 20:25:35 INFO  [main] org.sky.auto.xml.XMLLoader 扫描收集了资源->MW-平板列表-苹果
+2013-04-23 20:25:35 INFO  [main] org.sky.auto.xml.XMLLoader 扫描收集了资源->百度-联想
+2013-04-23 20:25:35 INFO  [main] org.sky.auto.xml.XMLLoader 扫描XML资源完毕...
+2013-04-23 20:25:35 INFO  [main] org.sky.auto.text.read.TxtLoader 开始扫描txt的资源元素...
+2013-04-23 20:25:35 INFO  [main] org.sky.auto.text.read.TxtLoader 扫描收集了资源->百度-搜索框
+2013-04-23 20:25:35 INFO  [main] org.sky.auto.text.read.TxtLoader 扫描收集了资源->百度-搜索按钮
+2013-04-23 20:25:35 INFO  [main] org.sky.auto.text.read.TxtLoader txt资源扫描结束
+2013-04-23 20:25:47 INFO  [main] org.sky.auto.intrumentation.ClassPathScanHandler 扫描file类型的class文件...
+2013-04-23 20:25:47 INFO  [main] org.sky.auto.intrumentation.ClassPathScanHandler 扫描file类型的class文件...
+2013-04-23 20:25:48 INFO  [main] org.sky.auto.base.AutoBase 开始扫描动作监听器......
+2013-04-23 20:25:48 INFO  [main] org.sky.auto.base.AutoBase 扫描动作监听器结束
+2013-04-23 20:25:59 INFO  [main] org.sky.auto.base.AutoBase 使用浏览器Firefox进行自动化测试，将要打开网址http://www.baidu.com测试
+2013-04-23 20:26:00 INFO  [main] org.sky.auto.base.AutoBase 关闭了所有的浏览器！
+</p></td>
+                    </tr>
+                    </tbody>
+
+                </table>
+            </div>       		</div>
+    	</div>
+<div class="blank">
+	<h2>&nbsp;&nbsp;</h2>
+</div>
+ </div>
+<div id="footer" style="height: 10%;width: 100%; background-color: #595959; clear:auto">
+    <div class="container">
+        <p class="muted credit">此插件来自于自动化测试框架<a href="http://github.com/celeskyking/s-tea" target=_blank>s-tea</a>，请访问<a href="http://github.com/celeskyking/s-tea" target=_blank>http://github.com/celeskyking/s-tea</a>了解更多。</p>
+    </div>
+</div><script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+</body>
+</html>

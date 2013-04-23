@@ -8,7 +8,7 @@ import freemarker.template.DefaultObjectWrapper;
 import freemarker.template.Template;
 
 public class TempletHtml {
-	Configuration config;
+	private Configuration config;
 	static private TempletHtml th;
 	private TempletHtml(){
 		try {
@@ -33,7 +33,12 @@ public class TempletHtml {
 	}
 	
 	public Template getTemplate(String file){
-		return th.getTemplate(file);
+		try {
+			return config.getTemplate(file);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
 	
 }

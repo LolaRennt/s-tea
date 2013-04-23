@@ -23,7 +23,7 @@ public class FrameTest {
 	
 	@Test
 	public void baidu(){
-		AutoBase.open(Browser.Firefox, "http://www.baidu.com");
+		AutoBase.open(Browser.HtmlUnit, "http://www.baidu.com");
 //		AutoBase.sElement("百度首页-搜索框").sendKeys("北京");
 //		AutoBase.sElement("百度首页-搜索按钮").click();
 		AutoBase.closeAllWindow();

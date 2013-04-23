@@ -4,55 +4,110 @@ import java.lang.annotation.Annotation;
 import java.util.Collection;
 
 import org.junit.runner.Description;
+import org.sky.auto.mail.date.SimpleDate;
 
 public class MyDescription {
-	private Description des;
-	
+	private Description description;
+	private String methodName;
+	private Class<?> testClass;
+	private Collection<Annotation> annotations;
+	private int testCount;
+	private String time;
+	private MyFailure failure;
+	public void setFailure(MyFailure failure) {
+		this.failure = failure;
+	}
+
+
+	private boolean failureCase;
+	public Description getDescription() {
+		return description;
+	}
+
+
+	public void setDescription(Description des) {
+		this.description = des;
+	}
+
+
+	public void setMethodName(String methodName) {
+		this.methodName = methodName;
+	}
+
+
+	public void setTestClass(Class<?> testClass) {
+		this.testClass = testClass;
+	}
+
+
+	public void setAnnotations(Collection<Annotation> annotations) {
+		this.annotations = annotations;
+	}
+
+
+	public void setTestCount(int testCount) {
+		this.testCount = testCount;
+	}
+
+
+	public void setTime(String time) {
+		this.time = time;
+	}
+
+
+	public void setFailureCase(boolean failureCase) {
+		this.failureCase = failureCase;
+	}
+
+
 	public MyDescription(Description des){
-		this.des=des;
+		this.description=des;
+		this.annotations=des.getAnnotations();
+		this.testClass=des.getTestClass();
+		this.methodName=des.getMethodName();
+		this.time=SimpleDate.getSimpleDateFormat();
+		this.testCount=des.testCount();
 	}
 	
 	
 	public String getMethodName(){
-		return des.getMethodName();
+		return this.methodName;
 	}
-	
-	public String getClassName(){
-		return des.getClassName();
-	}
+
 	
 	
 	public <T extends Annotation> T getAnnotation(Class<T> annotationType){
-		return des.getAnnotation(annotationType);
+		return description.getAnnotation(annotationType);
 	}
 	
 	public Collection<Annotation> getAnnotations(){
-		return des.getAnnotations();
+		return this.annotations;
 	}
 	
 	public Class<?> getTestClass(){
-		return des.getTestClass();
+		return this.testClass;
 	}
 	
 	public int getTestCount(){
-		return des.testCount();
+		return this.testCount;
 	}
 	
 	public boolean isEmpty(){
-		return des.isEmpty();
+		return description.isEmpty();
 	}
 	public boolean isSuit(){
-		return des.isSuite();
+		return description.isSuite();
 	}
 	
 	public boolean isTest(){
-		return des.isTest();
+		return description.isTest();
 	}
 	
 	public boolean isFailureCase(){
 		for(MyFailure clazz:CaseStatus.getFailureCases()){
 			if(clazz.getFailureDescription().getMethodName().equals(getMethodName())){
-				return true;
+				this.failureCase=true;
+				return this.failureCase;
 			}
 		}
 		return false;
@@ -61,9 +116,16 @@ public class MyDescription {
 	public MyFailure getFailure(){
 		for(MyFailure clazz:CaseStatus.getFailureCases()){
 			if(clazz.getFailureDescription().getTestClass().getName().equals(getTestClass().getName())){
-				return clazz;
+				this.failure=clazz;
+				return this.failure;
 			}
 		}
 		return null;
+	}
+	
+	
+	public String getTime(){
+		this.time= SimpleDate.getSimpleDateFormat();
+		return this.time;
 	}
 }

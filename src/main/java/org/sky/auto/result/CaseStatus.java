@@ -27,7 +27,7 @@ public class CaseStatus {
 		haveruncls.clear();
 	}
 	
-	public static void addRunClassDescription(MyDescription des){
+	public static void addRunCaseDescription(MyDescription des){
 		haverunclsDes.add(des);
 		noruncls.remove(des.getTestClass());
 	}

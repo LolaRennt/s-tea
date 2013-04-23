@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JUnit测试报告</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <style type="text/css">
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+        body{
+            background: url("bg.jpg");
+        }
+        #footer {
+            height: 60px;
+        }
+        #footer {
+            background-color: #f5f5f5;
+        }
+
+        @media (max-width: 767px) {
+            #footer {
+                margin-left: -20px;
+                margin-right: -20px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+        .container {
+            width: auto;
+            max-width: 1100px;
+        }
+        .container .credit {
+            margin: 20px 0;
+        }
+        .table td{
+            max-width: 300px;
+            word-break:break-all;
+            min-width: 70px;
+            vertical-align: middle;
+            text-align: center;
+        }
+        .table th{
+            vertical-align: middle;
+            text-align: center;
+        }
+        .wrong{
+            background-color: #dd1144;
+        }
+        .right{
+            background-color: #387038;
+        }
+        .table a{
+            color:#a9dba9;
+            text-decoration:none;
+            font-weight:bold;
+            font-size: 16px;
+        }
+        .table a:hover{
+            color: #7a43b6;
+            text-decoration:none;
+            font-weight:bold;
+        }
+
+    </style>
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+</head>
+<body>
+	<div class="container" style="width: 100%;height: 90%">
+    <div class="navbar navbar-inverse navbar-fixed-top" style="height: 10%; float: none">
+        <div class="navbar-inner">
+            <div class="container">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="brand" href="#">JUnit测试报告</a>
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <li class="active"><a href="#">详细报告</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Case<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">需求</a></li>
+                                <li><a href="#">用例</a> </li>
+                                <li class="divider"></li>
+                                <li><a href="#">源码</a></li>
+                                <li><a href="#">报告</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+    </div>    <div id="fill" style="height: 70px"></div>
+        <div class="row-fluid">
+            <div class="span12">
+            	<div class="result">
+                <h2>运行环境</h2>
+                <table class="table table-bordered" style="width: 700px; margin:auto">
+                    <thead>
+                    <tr style="background-color: #00b3ee">
+                        <th>运行消耗时间</th>
+                        <th>运行结束时间</th>
+                        <th>运行用例的总数</th>
+                        <th>用例执行失败数</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr style="background-color: #ffffff">
+                        <td>1,858</td>
+                        <td>2013-04-114 01:47:19</td>
+                        <td>1</td>
+                        <td>0</td>
+                    </tr>
+                    </tbody>
+                </table>
+            	</div>
+<div class="itable">
+<div><h2>测试结果</h2></div>
+                    <table class="table table-bordered table-hover" style="width: 900px；margin:auto">
+                        <thead>
+                        <tr style="background-color: #0088cc">
+                            <th></th>
+                            <th>方法名</th>
+                            <th>类名</th>
+                            <th>运行</th>
+                            <th>运行状况</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                                                	<tr class="right">
+                        	<td></td>
+                        	<td><a href="baidu.html">baidu</a></td>
+                        	<td>org.sky.auto.test.FrameTest</td>
+                        	<td>passed</td>
+                        	<td>没有异常信息</td>
+                        	
+                        </tbody>
+
+                    </table>
+                </div>            </div>
+        </div>
+    </div>
+<div id="footer" style="height: 10%;width: 100%; background-color: #595959; clear:auto">
+    <div class="container">
+        <p class="muted credit">此插件来自于自动化测试框架<a href="http://github.com/celeskyking/s-tea" target=_blank>s-tea</a>，请访问<a href="http://github.com/celeskyking/s-tea" target=_blank>http://github.com/celeskyking/s-tea</a>了解更多。</p>
+    </div>
+</div><script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+</body>
+</html>

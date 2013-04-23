@@ -1,4 +1,5 @@
 <div class="itable">
+<div><h2>测试结果</h2></div>
                     <table class="table table-bordered table-hover" style="width: 900px；margin:auto">
                         <thead>
                         <tr style="background-color: #0088cc">
@@ -11,15 +12,22 @@
                         </thead>
                         <tbody>
                         <#list dess as d>
-                        	<#if d.isFailureCase>
+                        	<#if d.failureCase>
                         	<tr class="wrong">
+                        	<td></td>
+                        	<td><a href="${d.methodName}.html">${d.methodName}</a></td>
+                        	<td>${d.testClass.name}</td>
+                        	<td>passed</td>
+                        	<td>${d.failure.message}</td>
                         	<#else>
                         	<tr class="right">
-                        	</#if>
-                        	<td><a href="case/${d.getMethodName}.html">${d.getMethodName}</a></td>
-                        	<td>${d.getTestClass.getName}</td>
+                        	<td></td>
+                        	<td><a href="${d.methodName}.html">${d.methodName}</a></td>
+                        	<td>${d.testClass.name}</td>
                         	<td>passed</td>
-                        	<td>${d.getFailure.getMessage}
+                        	<td>没有异常信息</td>
+                        	</#if>
+                        	
                         </#list>
                         </tbody>
 
