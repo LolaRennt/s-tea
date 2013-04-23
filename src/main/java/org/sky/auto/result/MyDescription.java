@@ -48,4 +48,22 @@ public class MyDescription {
 	public boolean isTest(){
 		return des.isTest();
 	}
+	
+	public boolean isFailureCase(){
+		for(MyFailure clazz:CaseStatus.getFailureCases()){
+			if(clazz.getFailureDescription().getMethodName().equals(getMethodName())){
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	public MyFailure getFailure(){
+		for(MyFailure clazz:CaseStatus.getFailureCases()){
+			if(clazz.getFailureDescription().getTestClass().getName().equals(getTestClass().getName())){
+				return clazz;
+			}
+		}
+		return null;
+	}
 }

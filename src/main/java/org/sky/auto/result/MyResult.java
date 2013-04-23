@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;
+import org.sky.auto.mail.date.SimpleDate;
 
 public class MyResult {
 	private Result result;
@@ -27,7 +28,9 @@ public class MyResult {
 		return result.getRunTime();
 	}
 	
-	
+	public String getTime(){
+		return SimpleDate.getSimpleDateFormat();
+	}
 	
 	
 	

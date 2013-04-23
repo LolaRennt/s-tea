@@ -68,8 +68,8 @@
     </style>
     <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
 </head>
-<div class="container" style="width: 100%;height: 90%">
 <body>
+<div class="container" style="width: 100%;height: 90%">
     <#include "templet/head.html">  
     <div id="fill" style="height: 70px"></div>
     <div class="title"><h1>&nbsp;&nbsp;测试结果>><small>${description.getMethodName}</small></h1></div>
@@ -99,7 +99,6 @@
             <#include "templet/casetable.ftl">
             </div>
         </div>
-
     </div>
 <#include "tmplet/foot.html">
 <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>

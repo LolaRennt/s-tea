@@ -79,20 +79,16 @@
                 <table class="table table-bordered" style="width: 700px; margin:auto">
                     <thead>
                     <tr style="background-color: #00b3ee">
-                        <th>运行系统</th>
+                        <th>运行消耗时间</th>
                         <th>运行结束时间</th>
-                        <th>运行浏览器</th>
-                        <th>浏览器版本</th>
                         <th>运行用例的总数</th>
                         <th>用例执行失败数</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr style="background-color: #ffffff">
-                        <td>${env.getOS}</td>
-                        <td>${res.getRunTime}</td>
-                        <td>${env.getBrowser}</td>
-                        <td>${env.getBrowserVersion}</td>
+                        <td>${env.getRunTime}</td>
+                        <td>${res.getTime}</td>
                         <td>${res.getCount}</td>
                         <td>${res.getFilureCount}</td>
                     </tr>

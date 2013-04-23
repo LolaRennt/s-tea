@@ -1,23 +1,24 @@
 package org.sky.auto.result;
 
 
+import java.lang.reflect.Method;
 import java.util.HashSet;
 import java.util.Set;
 
 import org.junit.runner.Description;
 
 public class CaseStatus {
-	static public Set<Class<?>> noruncls = new HashSet<Class<?>>();
-	static public Set<Class<?>> haveruncls = new HashSet<Class<?>>();
+	static public Set<Method> noruncls = new HashSet<Method>();
+	static public Set<Method> haveruncls = new HashSet<Method>();
 	static public Set<MyDescription> haverunclsDes = new HashSet<MyDescription>();
 	static public Set<MyFailure> errorcls = new HashSet<MyFailure>();
-	public static void addRunClass(Class<?>clazz){
-		haveruncls.add(clazz);
-		noruncls.remove(clazz);
+	public static void addRunCase(Method method){
+		haveruncls.add(method);
+		noruncls.remove(method);
 	}
 	
-	public static void addNotRunClass(Class<?>clazz){
-		noruncls.add(clazz);
+	public static void addNotRunCase(Method method){
+		noruncls.add(method);
 	}
 	
 	
@@ -31,35 +32,35 @@ public class CaseStatus {
 		noruncls.remove(des.getTestClass());
 	}
 	
-	public static void addRunClassDescription(Description des){
+	public static void addRunCaseDescription(Description des){
 		haverunclsDes.add(new MyDescription(des));
 		noruncls.remove(des.getTestClass());
 	}
 
-	public static void addFailureClass(MyFailure failure){
+	public static void addFailureCase(MyFailure failure){
 		errorcls.add(failure);
 		noruncls.remove(failure.getFailure().getDescription().getTestClass());
 	}
 
 	
-	public static Set<Class<?>> getRunClasses(){
+	public static Set<Method> getRunCases(){
 		return haveruncls;
 	}
 	
-	public static Set<Class<?>> getNotRunClasses(){
+	public static Set<Method> getNotRunCases(){
 		return noruncls;
 	}
 	
-	public static Set<MyDescription> getDescriptionClasses(){
+	public static Set<MyDescription> getDescriptionCases(){
 		return haverunclsDes;
 	}
 	
-	public static Set<MyFailure> getFailureClasses(){
+	public static Set<MyFailure> getFailureCases(){
 		return errorcls;
 	}
 	
-	public static void setNotRunClasses(Set<Class<?>>cls){
-		noruncls.addAll(cls);
+	public static void setNotRunCases(Set<Method>methods){
+		noruncls.addAll(methods);
 	}
 	
 	
