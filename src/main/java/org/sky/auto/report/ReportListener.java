@@ -13,7 +13,6 @@ import org.junit.runner.Description;
 import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;
 import org.junit.runner.notification.RunListener;
-import org.sky.auto.anno.RunListenerRegister;
 import org.sky.auto.base.MyFile;
 import org.sky.auto.result.CaseStatus;
 import org.sky.auto.result.Environment;
@@ -23,7 +22,6 @@ import org.sky.auto.result.MyResult;
 import org.sky.auto.intrumentation.*;
 
 import freemarker.template.Template;
-@RunListenerRegister
 public class ReportListener extends RunListener{
 	//private static Logger logger = Logger.getLogger(ReportListener.class);
 	private MyResult res;

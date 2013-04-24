@@ -28,6 +28,7 @@ import org.sky.auto.anno.ThreadRunner;
 import org.sky.auto.base.MyFile;
 import org.sky.auto.intrumentation.ClassPool;
 import org.sky.auto.proxy.ProxyJUnitRunListener;
+import org.sky.auto.report.ReportListener;
 import org.sky.auto.runner.statement.Interceptor;
 import org.sky.auto.runner.statement.InterceptorStatement;
 
@@ -113,6 +114,7 @@ public class BaseJUnitAutoRunner extends Feeder{
 		if(new File("templet"+File.separator+"LOG.txt").exists()){
 			new File("templet"+File.separator+"LOG.txt").delete();
 		}
+		rn.addListener(new ReportListener());
 		MyFile.createFile("templet"+File.separator+"LOG.txt");
 		if(getDescription().getAnnotation(JUnitRunListener.class)!=null){
 			JUnitRunListener jrl = getDescription().getAnnotation(JUnitRunListener.class);
