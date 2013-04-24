@@ -76,7 +76,6 @@ public class SElementWordkeys {
 	
 	@RobotKeyword
 	public void elementLeftDown(String id){
-	
 		AutoBase.sElement(id).leftDown();
 	}
 	
