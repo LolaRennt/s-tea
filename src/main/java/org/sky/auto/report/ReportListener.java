@@ -8,7 +8,6 @@ import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
-
 import org.junit.Test;
 import org.junit.runner.Description;
 import org.junit.runner.Result;
@@ -26,6 +25,7 @@ import org.sky.auto.intrumentation.*;
 import freemarker.template.Template;
 @RunListenerRegister
 public class ReportListener extends RunListener{
+	//private static Logger logger = Logger.getLogger(ReportListener.class);
 	private MyResult res;
 	private MyFailure fail;
 	private MyDescription des;
@@ -35,15 +35,13 @@ public class ReportListener extends RunListener{
 	private Class<?>[] clas;
 	private StandardOutInfo soi;
 	
-	public void init(){
-		//MyFile.deleteDirectory("report");
-	}
+	
 	
 	
 	@Override
 	public void testStarted(Description description) throws Exception {
-		//soi=new StandardOutInfo();
-		//soi.start();
+		soi=new StandardOutInfo();
+		soi.start();
 		//init();
 		th=TempletHtml.getInstance();
 		MyFile.createDictory("report");
@@ -71,6 +69,7 @@ public class ReportListener extends RunListener{
 	@Override
 	public void testFinished(Description description) throws Exception {
 		env=new Environment();
+		soi.write();
 		des=new MyDescription(description);
 		if(clas!=null){
 			CaseStatus.addRunCase(des.getTestClass().getDeclaredMethod(description.getMethodName(),clas));
@@ -85,8 +84,7 @@ public class ReportListener extends RunListener{
 		temp.process(map, write);
 		write.flush();
 		write.close();
-		//soi.write();
-		//soi.clearStream();
+		soi.clearStream();
 	}
 	
 	@Override
@@ -131,7 +129,6 @@ public class ReportListener extends RunListener{
 	
 	@Override
 	public void testRunStarted(Description description) throws Exception {
-		new File("report").createNewFile();
 	}
 	
 }

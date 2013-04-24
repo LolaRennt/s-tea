@@ -2,7 +2,6 @@ package org.sky.auto.test;
 
 import org.junit.runner.Description;
 import org.junit.runner.notification.RunListener;
-import org.sky.auto.anno.RunListenerRegister;
 import org.sky.auto.report.StandardOutInfo;
 
 public class STDTest extends RunListener{

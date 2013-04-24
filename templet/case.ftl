@@ -79,10 +79,10 @@
             <#include "casetable.ftl">
        		</div>
     	</div>
-<div class="blank">
+ </div>
+ <div class="blank" style="clear:both">
 	<h2>&nbsp;&nbsp;</h2>
 </div>
- </div>
 <#include "foot.html">
 <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
 <script src="js/bootstrap.min.js" type="text/javascript"></script>

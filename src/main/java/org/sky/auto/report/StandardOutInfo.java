@@ -10,6 +10,7 @@ import java.io.PipedOutputStream;
 import java.io.PrintStream;
 
 import org.sky.auto.exception.MyAutoException;
+import org.sky.auto.text.read.StringContorl;
 
 public class StandardOutInfo {
 	private PipedInputStream pis;
@@ -21,12 +22,7 @@ public class StandardOutInfo {
 	private File file;
 	private String str;
 	public StandardOutInfo(){
-		try {
-			new File("LOG.txt").createNewFile();
-			file=new File("lOG.txt");
-		} catch (IOException e1) {
-			e1.printStackTrace();
-		}
+		file=new File("templet"+File.separator+"LOG.txt");
 		pis = new PipedInputStream() {
 	        public void close() {
 	            keepRunning = false;
@@ -73,9 +69,10 @@ public class StandardOutInfo {
 	
 	public void write(){
 		try {
+			useMyOut();
 			fw = new FileWriter(file);
-			String str=getOutputStream().toString("UTF-8");
-			fw.write(str);
+			String strtemp=getOutputStream().toString("UTF-8");
+			fw.write(format(strtemp));
 			fw.flush();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -109,36 +106,34 @@ public class StandardOutInfo {
 						useSystemOut();
 						str=str.substring(0, str.length()-1);
 						System.out.println(str);
-					} catch (IOException e1) {
-						e1.printStackTrace();
-					}
-                	if(byteArrayOS.size() > 0) {
-                        byte[] buffer = null;
-                        synchronized(byteArrayOS) {
-                            buffer = byteArrayOS.toByteArray();
-                            byteArrayOS.reset(); // 清除缓冲区
-                        }
-                        try {
-                            // 把提取到的数据发送给PipedOutputStream
-                            pos.write(buffer, 0, buffer.length);
-                            //useSystemOut();
-                            //System.out.println(pos.toString());
-                        }
-                        catch(IOException e) {
-                            // 记录错误或其他处理
-                            // 为简单计，此处我们直接结束
-                            System.exit(1);
-                        }
-                    }
-                    else // 没有数据可用，线程进入睡眠状态
-                        try {
-                            // 每隔1秒查看ByteArrayOutputStream检查新数据
-                            Thread.sleep(1000);
-                        }
-                        catch(InterruptedException e) {}
-                    }
-                }
-             
+	                   }catch(IOException e){
+	                	   e.printStackTrace();
+	                   }
+//                	if(byteArrayOS.size() > 0) {
+//                        byte[] buffer = null;
+//                        synchronized(byteArrayOS) {
+//                            buffer = byteArrayOS.toByteArray();
+//                            byteArrayOS.reset(); // 清除缓冲区
+//                        }
+//                        try {
+//                            // 把提取到的数据发送给PipedOutputStream
+//                            pos.write(buffer, 0, buffer.length);
+//                        }
+//                        catch(IOException e) {
+//                            // 记录错误或其他处理
+//                            // 为简单计，此处我们直接结束
+//                            System.exit(1);
+//                        }
+//                    }
+//                    else // 没有数据可用，线程进入睡眠状态
+//                        try {
+//                            // 每隔1秒查看ByteArrayOutputStream检查新数据
+//                            Thread.sleep(1000);
+//                        }
+//                        catch(InterruptedException e) {}
+//                    }
+                } 
+            }
         }).start();
     } // startByteArrayReaderThread()
 	
@@ -158,4 +153,17 @@ public class StandardOutInfo {
     	System.setErr(ps);
     }
 
+    
+    
+    private String format(String string){
+    	string=StringContorl.replaceBlank(string);
+    	String[] strs=string.split("2013");
+    	String temp=null;
+    	for(int i=1;i<strs.length;i++){
+    		strs[i]="2013"+strs[i]+"</br>";
+    		temp=temp+strs[i];
+    	}
+    	
+    	return temp.replaceAll("null", "");
+    }
 }

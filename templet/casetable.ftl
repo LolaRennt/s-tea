@@ -59,7 +59,7 @@
                     </#if>
                     <tr class="info">
                         <th>执行日志信息</th>
-                        <td><p><#include "LOG.txt"></p></td>
+                        <td style="text-align: left;font-size:10px"><p><#include "LOG.txt"></p></td>
                     </tr>
                     </tbody>
 
