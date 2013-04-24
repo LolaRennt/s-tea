@@ -60,22 +60,22 @@ public class STeaKeywords {
 	
 
 	@RobotKeyword
-	public void ElementClear(String id){
+	public void elementClear(String id){
 		AutoBase.sElement(id).clear();
 	}
 	
 	@RobotKeyword
-	public void ElementClick(String id){
+	public void elementClick(String id){
 		AutoBase.sElement(id).click();
 	}
 	
 	@RobotKeyword
-	public void ElementDoubleClick(String id){
+	public void elementDoubleClick(String id){
 		AutoBase.sElement(id).doubleClick();
 	}
 	
 	@RobotKeyword
-	public void ElementDragAndDrop(String id,String oid){
+	public void elementDragAndDrop(String id,String oid){
 		AutoBase.sElement(id).dragAndDrop(AutoBase.sElement(oid));
 	}
 	
@@ -165,7 +165,7 @@ public class STeaKeywords {
 	}
 	
 	@RobotKeyword
-	public int GetComboBoxSize(String id){
+	public int getComboBoxSize(String id){
 		return AutoBase.comoboBox(id).getComoboBoxSize();
 	}
 	

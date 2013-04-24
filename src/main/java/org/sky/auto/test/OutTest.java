@@ -1,42 +1,17 @@
 package org.sky.auto.test;
 
 import org.junit.Test;
-import org.sky.auto.base.AutoBase;
-import org.sky.auto.driver.Browser;
-import org.sky.auto.report.StandardOutInfo;
+import org.sky.auto.robot.key.STeaKeywords;
 
 public class OutTest {
 
 	@Test
 	public void test(){
-		StandardOutInfo soi = new StandardOutInfo();
-		soi.start();
-		System.out.println("thanks!");
-		System.out.println("yes！！！！！");
-		System.out.println("拯救的人是你么??");
-		System.out.println("拯救的人是你么??");
-		System.out.println("拯救的人是你么??");
-		System.out.println("拯救的人是你么??");
-		System.out.println("拯救的人是你么??");
-		System.out.println("拯救的人是你么??");
-		System.out.println("拯救的人是你么??");
-		System.out.println("拯救的人是你么??");
-		System.out.println("拯救的人是你么??");
-		
-		System.out.println("拯救的人是你么??");
-		System.out.println("拯救的人是你么??");
-		System.out.println("拯救的人是你么??");
-		System.out.println("拯救的人是你么??");
-		System.out.println("拯救的人是你么??");
-		
-		System.out.println("拯救的人是你么??");
-		System.out.println("拯救的人是你么??");
-		System.out.println("拯救的人是你么??");
-		AutoBase.open(Browser.Firefox, "http://www.baidu.com");
-		AutoBase.closeAllWindow();
-		soi.write();
-		//soi.stop();
-		soi.clearStream();
+		STeaKeywords sk = new STeaKeywords();
+		sk.openBrowser("firefox", "http://www.baidu.com");
+		sk.elementInput("百度首页-搜索框", "北京");
+		sk.elementClick("百度首页-搜索按钮");
+		sk.closeAllWindow();
 	}
 	
 }

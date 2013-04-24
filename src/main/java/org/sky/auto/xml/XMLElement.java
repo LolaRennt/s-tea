@@ -46,7 +46,10 @@ public class XMLElement implements XMLNode{
 	}
 	
 	public String getIndex(){
-		return getAttributes().get("index").trim();
+		if(getAttributes().get("index")!=null){
+			return getAttributes().get("index").trim();
+		}
+		return null;
 	}
 	
 	public String getBy(){
