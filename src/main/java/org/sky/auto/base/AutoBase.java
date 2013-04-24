@@ -34,6 +34,7 @@ import org.sky.auto.load.SourceLoader;
 import org.sky.auto.page.Page;
 import org.sky.auto.page.source.CurrentPage;
 import org.sky.auto.proxy.ProxyRunnerListener;
+import org.sky.auto.report.StandardOutInfo;
 import org.sky.auto.runner.AutoResetThreadLocal;
 import org.sky.auto.text.read.TxtLoader;
 import org.sky.auto.text.read.TxtProvider;
@@ -53,6 +54,7 @@ public class AutoBase {
 			return new AutoDriver();	
 		};
 	};
+	private static StandardOutInfo soi;
 	/**获取获取框架的核心driver对象
 	 * @return 返回s-tea的核心浏览器对象
 	 * */
@@ -78,6 +80,8 @@ public class AutoBase {
 	 * */
 	public static void setDriver(Browser browser){
 		setLogStarted();
+		soi=new StandardOutInfo();
+		soi.start();
 		XMLLoader.load();
 		TxtLoader.load();
 		setClose_Status(false);
@@ -100,7 +104,9 @@ public class AutoBase {
 	 * @param browser 设置浏览器属性，通过String来设置
 	 * */
 	public static void setDriver(String browser){
-		//setLogStarted();
+		setLogStarted();
+		soi=new StandardOutInfo();
+		soi.start();
 		XMLLoader.load();
 		TxtLoader.load();
 		setClose_Status(false);
@@ -254,6 +260,10 @@ public class AutoBase {
 			logger.error("driver是空值！不存在认识的浏览器对象！");
 			throw new MyAutoException("driver设置值出现错误，导致driver值为空值，请检查是否配置正确的driver");
 		}
+//		if(soi!=null){
+//			soi.write();
+//			soi.clearStream();
+//		}
 	}
 	/**关闭当前的窗口*/
 	public static void closeCurrentWindow(){

@@ -72,7 +72,7 @@ public class StandardOutInfo {
 			useMyOut();
 			fw = new FileWriter(file);
 			String strtemp=getOutputStream().toString("UTF-8");
-			fw.write(format(strtemp));
+			fw.write(format(format(strtemp)));
 			fw.flush();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

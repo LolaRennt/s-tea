@@ -17,6 +17,8 @@ import org.sky.auto.base.ConfigParser;
 import org.sky.auto.driver.event.AutoDriverEventListener;
 import org.sky.auto.runner.AutoResetThreadLocal;
 
+import com.gargoylesoftware.htmlunit.BrowserVersion;
+
 
 public class AutoDriver implements IDriver{
 	static Logger logger = Logger.getLogger(AutoDriver.class);
@@ -97,7 +99,7 @@ public class AutoDriver implements IDriver{
 	class HtmlUnit implements Runnable{
 		ThreadLocal<HtmlUnitDriver> tl = new ThreadLocal<HtmlUnitDriver>(){
 			protected HtmlUnitDriver initialValue() {
-				return new HtmlUnitDriver();
+				return new HtmlUnitDriver(BrowserVersion.FIREFOX_17);
 			};
 		};
 
@@ -106,7 +108,9 @@ public class AutoDriver implements IDriver{
 		
 		}
 		public HtmlUnitDriver htmlUnit(){
-			return tl.get();
+			HtmlUnitDriver hud=tl.get();
+			//hud.setJavascriptEnabled(true);
+			return hud;
 		}
 		
 	}

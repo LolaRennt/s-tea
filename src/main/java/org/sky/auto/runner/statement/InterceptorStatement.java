@@ -28,7 +28,8 @@ public class InterceptorStatement extends Statement{
 			interceptor.interceptorAfter();
 		}
 	}
+	
+	
 	public void addInterceptor(Interceptor interceptor){
-		interceptors.add(interceptor);
 	}
 }

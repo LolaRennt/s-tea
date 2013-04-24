@@ -13,13 +13,13 @@ import org.sky.auto.runner.BaseJUnitAutoRunner;
 public class FrameTest {
 	
 	
-//	@Test
-//	public void frametest(){
-//		AutoBase.open(Browser.Firefox, "http://product.it168.com/list/b/03010377_1.shtml");
-//		AutoBase.sleep(5);
-//		AutoBase.sElement("百度-联想").click();
-//		AutoBase.closeAllWindow();
-//	}
+	//@Test
+	public void frametest(){
+		AutoBase.open(Browser.HtmlUnit, "http://product.it168.com/list/b/03010377_1.shtml");
+		AutoBase.sleep(5);
+		//AutoBase.sElement("百度-联想").click();
+		AutoBase.closeAllWindow();
+	}
 	
 	@Test
 	public void baidu(){

@@ -31,15 +31,12 @@ public class ReportListener extends RunListener{
 	private Environment env;
 	private Template temp;
 	private Class<?>[] clas;
-	private StandardOutInfo soi;
-	
-	
-	
+	//private StandardOutInfo soi;
 	
 	@Override
 	public void testStarted(Description description) throws Exception {
-		soi=new StandardOutInfo();
-		soi.start();
+		//soi=new StandardOutInfo();
+		//soi.start();
 		//init();
 		th=TempletHtml.getInstance();
 		MyFile.createDictory("report");
@@ -67,7 +64,7 @@ public class ReportListener extends RunListener{
 	@Override
 	public void testFinished(Description description) throws Exception {
 		env=new Environment();
-		soi.write();
+		//soi.write();
 		des=new MyDescription(description);
 		if(clas!=null){
 			CaseStatus.addRunCase(des.getTestClass().getDeclaredMethod(description.getMethodName(),clas));
@@ -82,7 +79,8 @@ public class ReportListener extends RunListener{
 		temp.process(map, write);
 		write.flush();
 		write.close();
-		soi.clearStream();
+		//soi.clearStream();
+		//soi=null;
 	}
 	
 	@Override
