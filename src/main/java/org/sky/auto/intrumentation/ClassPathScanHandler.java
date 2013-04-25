@@ -15,6 +15,7 @@ import java.util.jar.JarFile;
 import java.util.regex.Pattern;
 
 import org.apache.log4j.Logger;
+import org.sky.auto.report.RunTimeMethod;
 
 
 public class ClassPathScanHandler {
@@ -67,10 +68,10 @@ public class ClassPathScanHandler {
 				String protocol = url.getProtocol();
 				if("file".equals(protocol)){
 					String filePath = URLDecoder.decode(url.getFile(),"UTF-8");
-					logger.info("扫描file类型的class文件...");
+					logger.info("["+RunTimeMethod.getName()+"]"+"扫描file类型的class文件...");
 					doScanPackageClassesByFile(classes, baseName, filePath,recursive);
 				}else if("jar".equals(protocol)){
-					logger.info("扫描jar文件中的类...");
+					logger.info("["+RunTimeMethod.getName()+"]"+"扫描jar文件中的类...");
 					doScanPackageClassesByJAR(baseName, url, recursive, classes);
 				}
 			}

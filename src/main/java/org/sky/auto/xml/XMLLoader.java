@@ -6,6 +6,7 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 import org.sky.auto.load.SourceLoader;
+import org.sky.auto.report.RunTimeMethod;
 
 
 
@@ -22,7 +23,7 @@ public class XMLLoader {
 	
 	public static Map<String, XMLElement> load(String basepath){
 		if(xmlmap.size()==0){
-			logger.info("开始对xml资源进行扫描....");
+			logger.info("["+RunTimeMethod.getName()+"]"+"开始对xml资源进行扫描....");
 			List<String> list = getXMLs(basepath);
 			for(String path:list){
 				XMLDocument xd = new XMLDocument(path);
@@ -30,14 +31,12 @@ public class XMLLoader {
 				for(XMLElement xn :xe.getAllXMLElement()){
 					SourceLoader.add(xn);
 					xmlmap.put(xn.getId().trim(),xn);
-					logger.info("扫描收集了资源->"+xn.getId());
+					logger.info("["+RunTimeMethod.getName()+"]"+"扫描收集了资源->"+xn.getId());
 				}
 			}
 			//Log.Debug("查找到"+xmlmap.size()+"个元素！");
-			logger.info("扫描XML资源完毕...");
-		}else{
-			return xmlmap;
-		}
+			logger.info("["+RunTimeMethod.getName()+"]"+"扫描XML资源完毕...");
+		}		
 		return xmlmap;
 	}
 	
@@ -52,7 +51,7 @@ public class XMLLoader {
 	
 	public static Map<String, XMLElement> load(){
 		if(xmlmap.size()==0){
-			logger.info("开始对xml资源进行扫描....");
+			logger.info("["+RunTimeMethod.getName()+"]"+"开始对xml资源进行扫描....");
 			List<String> list = getXMLs("xml");
 			for(String path:list){
 				XMLDocument xd = new XMLDocument(path);
@@ -61,11 +60,11 @@ public class XMLLoader {
 					SourceLoader.add(xn);
 					xmlmap.put(xn.getId(),xn);
 					
-					logger.info("扫描收集了资源->"+xn.getId());
+					logger.info("["+RunTimeMethod.getName()+"]"+"扫描收集了资源->"+xn.getId());
 				}
 			}
 			//Log.Debug("查找到"+xmlmap.size()+"个元素！");
-			logger.info("扫描XML资源完毕...");
+			logger.info("["+RunTimeMethod.getName()+"]"+"扫描XML资源完毕...");
 		}else{
 			return xmlmap;
 		}

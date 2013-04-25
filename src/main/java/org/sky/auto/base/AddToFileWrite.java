@@ -8,7 +8,7 @@ public class AddToFileWrite {
 	private static  FileWriter fw;
 	public static void writeContext(String text,String fname){
 		if(!new File(fname).exists()){
-			MyFile.createFile(fname);
+			MyFile.createLevelFile(fname);
 		}
 		try {
 			fw=new FileWriter(fname, true);

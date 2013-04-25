@@ -16,7 +16,6 @@
           <tns:element value="title1" by="id" id="百度-联想"></tns:element>
       </tns:frame>
   </tns:frame>
-  
   <!-- xml文件的定义，通过page.xsd文件来创建xml，里面有xml文件的语义约束，提供我们输入元素的速度。
   	并且提供我们必须填写的元素项。元素定义的规范：
   	每一个子标签代表一个元素或者一个List。frame元素内不允许存在多个同级的element元素。

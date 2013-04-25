@@ -59,7 +59,7 @@
                     </#if>
                     <tr class="info">
                         <th>执行日志信息</th>
-                        <td style="text-align: left;font-size:10px"><p><#include "LOG.txt"></p></td>
+                        <td style="text-align: left;font-size:10px"><p><#include "${des.methodName}.inc"></p></td>
                     </tr>
                     </tbody>
 

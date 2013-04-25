@@ -23,23 +23,15 @@ public class ListElement {
 			slist.add(new SElement(elist.get(i)));
 		}
 	}
+
 	
-	private int index=0;
-	
-	public int getIndex(){
-		return index;
-	}
-	
+
 	public List<SElement> getSlist() {
 		return slist;
 	}
 
 	public void setSlist(List<SElement> slist) {
 		this.slist = slist;
-	}
-
-	public void select(int index){
-		this.index=index;
 	}
 	
 	public SElement get(int index){
@@ -52,4 +44,11 @@ public class ListElement {
 		int random =r.nextInt(max);
 		return get(random);
 	}
+	
+	public int getSize(){
+		return slist.size();
+	}
+	
+	
+	
 }

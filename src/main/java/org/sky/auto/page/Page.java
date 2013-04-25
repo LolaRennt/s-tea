@@ -20,6 +20,7 @@ import org.sky.auto.element.SElement;
 import org.sky.auto.element.Table;
 import org.sky.auto.element.TextField;
 import org.sky.auto.page.source.CurrentPage;
+import org.sky.auto.report.RunTimeMethod;
 
 
 public class Page extends CurrentPage{
@@ -80,57 +81,57 @@ public class Page extends CurrentPage{
 	
 	public  ListElement listElement(String id){
 		ListElement le= new ListElement(AutoBase.elements("id"));
-		logger.info("元素LIST["+id+"]的操作--->");
+		logger.info("["+RunTimeMethod.getName()+"]"+"元素LIST["+id+"]的操作--->");
 		return le;
  	}
 	public  Button button(String id){
 		Button bt=new Button(element(id));
-		logger.info("按钮["+id+"]的操作--->");
+		logger.info("["+RunTimeMethod.getName()+"]"+"按钮["+id+"]的操作--->");
 		return bt;
 	}
 	
 	public  CheckBox checkBox(String id){
 		CheckBox cb =new CheckBox(element(id));
-		logger.info("CheckBox["+id+"]的操作--->");
+		logger.info("["+RunTimeMethod.getName()+"]"+"CheckBox["+id+"]的操作--->");
 		return cb;
 	}
 	
 	public  ComoboBox comoboBox(String id){
 		ComoboBox cb=new ComoboBox(element(id));
-		logger.info("ComoboBox["+id+"]的操作--->");
+		logger.info("["+RunTimeMethod.getName()+"]"+"ComoboBox["+id+"]的操作--->");
 		return cb;
 	}
 	
 	public  Image image(String id){
 		Image i = new Image(element(id));
-		logger.info("Image["+id+"]的操作--->");
+		logger.info("["+RunTimeMethod.getName()+"]"+"Image["+id+"]的操作--->");
 		return i;
 	}
 	
 	public  Link link(String id){
 		Link l =new Link(element(id));
-		logger.info("Link["+id+"]的操作--->");
+		logger.info("["+RunTimeMethod.getName()+"]"+"Link["+id+"]的操作--->");
 		return l;
 	}
 	
 	public  RadioButton radioButton(String id){
 		RadioButton rd = new RadioButton(element(id));
-		logger.info("RadioButton["+id+"]的操作--->");
+		logger.info("["+RunTimeMethod.getName()+"]"+"RadioButton["+id+"]的操作--->");
 		return rd;
 	}
 	public  RichTextField richTextField(String id){
 		RichTextField rtf = new RichTextField(element(id));
-		logger.info("RichTextField["+id+"]的操作--->");
+		logger.info("["+RunTimeMethod.getName()+"]"+"RichTextField["+id+"]的操作--->");
 		return rtf;
 	}
 	public  Table table(String id){
 		Table t=new Table(element(id));
-		logger.info("Table["+id+"]的操作--->");
+		logger.info("["+RunTimeMethod.getName()+"]"+"Table["+id+"]的操作--->");
 		return t;
 	}
 	public  TextField textField(String id){
 		TextField tf = new TextField(element(id));
-		logger.info("TextField["+id+"]的操作--->");
+		logger.info("["+RunTimeMethod.getName()+"]"+"TextField["+id+"]的操作--->");
 		return tf;
 	}
 	

@@ -41,11 +41,15 @@ public class CssAndJSReport {
 	
 	protected void copyDirectory(String oldPath,String newPath){
 		try  {  
-	           (new  File(newPath)).mkdirs();  //如果文件夹不存在  则建立新文件夹  
+			  File f = new File(newPath);
+			  if(f.exists()){
+				  f.mkdirs();
+			  }
+	          // new  File(newPath).mkdirs();  //如果文件夹不存在  则建立新文件夹  
 	           File  a=new  File(oldPath);  
 	           String[]  file=a.list();  
 	           File  temp=null;  
-	           for  (int  i  =  0;  i  <  file.length;  i++)  {  
+	           for  (int  i = 0;  i < file.length;  i++)  {  
 	               if(oldPath.endsWith(File.separator)){  
 	                   temp=new  File(oldPath+file[i]);  
 	               }  
@@ -72,7 +76,7 @@ public class CssAndJSReport {
 	           }  
 	       }  
 	       catch  (Exception  e)  {  
-	           System.out.println("复制整个文件夹内容操作出错");  
+	           //System.out.println("复制整个文件夹内容操作出错");  
 	           e.printStackTrace();  
 	       }  
 	 

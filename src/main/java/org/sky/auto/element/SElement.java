@@ -12,6 +12,7 @@ import org.openqa.selenium.remote.RemoteWebElement;
 import org.sky.auto.base.AutoBase;
 import org.sky.auto.exception.MyAutoException;
 import org.sky.auto.proxy.ProxyRunnerListener;
+import org.sky.auto.report.RunTimeMethod;
 //import org.sky.auto.log.MyLogger;
 import org.sky.auto.window.Window;
 /**这个Element类是一个辅助操作的类，可以混用的一个类型，里面定义了常用的元素方法，这样的话可以节约自己封装了<br>
@@ -86,8 +87,8 @@ public class SElement{
 				ProxyRunnerListener.getDispatcher().afteraddLocator();
 				break;
 			default:
-				logger.error("定位方式选择错误！没有加入成功！");
-				throw new MyAutoException("选择的定位方式不支持！");
+				logger.error("["+RunTimeMethod.getName()+"]"+"定位方式选择错误！没有加入成功！");
+				throw new MyAutoException("["+RunTimeMethod.getName()+"]"+"选择的定位方式不支持！");
 		}
 		return this;
 	}
@@ -127,11 +128,11 @@ public class SElement{
 				ProxyRunnerListener.getDispatcher().afteraddLocator();
 				break;
 			default:
-				logger.error("定位方式选择错误！没有加入成功！");
-				throw new MyAutoException("选择的定位方式不支持！");
+				logger.error("["+RunTimeMethod.getName()+"]"+"定位方式选择错误！没有加入成功！");
+				throw new MyAutoException("["+RunTimeMethod.getName()+"]"+"选择的定位方式不支持！");
 		}
 		if(element==null){
-			throw new NoSuchElementException("在定位元素的时候发生了错误，很有可能是元素没有定位到！请检查自己配置的元素定位方式是否正确！");
+			throw new NoSuchElementException("["+RunTimeMethod.getName()+"]"+"在定位元素的时候发生了错误，很有可能是元素没有定位到！请检查自己配置的元素定位方式是否正确！");
 		}
 		return this;
 	}
@@ -148,10 +149,10 @@ public class SElement{
 		ProxyRunnerListener.getDispatcher().beforeClickOn();
 		if(isExist()){
 			getElement().click();
-			logger.info(">>["+this.getId()+"]点击成功！");
+			logger.info("["+RunTimeMethod.getName()+"]"+">>["+this.getId()+"]点击成功！");
 		}else{
-			logger.error(">>没有找到元素，点击失败！");
-			throw new MyAutoException("["+this.getId()+"]进行点击操作的时候出现错误！");
+			logger.error("["+RunTimeMethod.getName()+"]"+">>没有找到元素，点击失败！");
+			throw new MyAutoException("["+RunTimeMethod.getName()+"]"+"["+this.getId()+"]进行点击操作的时候出现错误！");
 		}
 		ProxyRunnerListener.getDispatcher().afterClickOn();
 		
@@ -163,10 +164,10 @@ public class SElement{
 		ProxyRunnerListener.getDispatcher().beforeclear();
 		if(isExist()){
 			getElement().clear();
-			logger.info(">>["+this.getId()+"]输入框内容清理成功！");
+			logger.info("["+RunTimeMethod.getName()+"]"+">>["+this.getId()+"]输入框内容清理成功！");
 		}else{
-			logger.error(">>输入框内容清理失败！没有找到元素！");
-			throw new MyAutoException("["+this.getId()+"]清理输入框失败！没有找到元素！");
+			logger.error("["+RunTimeMethod.getName()+"]"+">>输入框内容清理失败！没有找到元素！");
+			throw new MyAutoException("["+RunTimeMethod.getName()+"]"+"["+this.getId()+"]清理输入框失败！没有找到元素！");
 		}
 		ProxyRunnerListener.getDispatcher().afterclear();
 	}
@@ -176,10 +177,10 @@ public class SElement{
 		ProxyRunnerListener.getDispatcher().beforedoubleClick();
 		if(isExist()){
 			AutoBase.doubleClick(getElement());
-			logger.info(">>["+this.getId()+"]双击成功！");
+			logger.info("["+RunTimeMethod.getName()+"]"+">>["+this.getId()+"]双击成功！");
 		}else{
-			logger.error(">>双击失败！没有找到元素！");
-			throw new MyAutoException("["+this.getId()+"]进行双击操作的时候失败！很有可能的原因是自己定义的元素没有被找到元素！");
+			logger.error("["+RunTimeMethod.getName()+"]"+">>双击失败！没有找到元素！");
+			throw new MyAutoException("["+RunTimeMethod.getName()+"]"+"["+this.getId()+"]进行双击操作的时候失败！很有可能的原因是自己定义的元素没有被找到元素！");
 		}
 		ProxyRunnerListener.getDispatcher().beforedoubleClick();
 		
@@ -190,10 +191,10 @@ public class SElement{
 		ProxyRunnerListener.getDispatcher().beforemouserOver();
 		if(isExist()){
 			AutoBase.moveToElement(getElement());
-			logger.info(">>["+this.getId()+"]鼠标悬停成功！");
+			logger.info("["+RunTimeMethod.getName()+"]"+">>["+this.getId()+"]鼠标悬停成功！");
 		}else{
-			logger.error(">>没有找到元素，鼠标悬停失败！");
-			throw new MyAutoException("["+this.getId()+"]处鼠标进行悬停操作的时候失败了！很有可能的原因是没有找到元素！");
+			logger.error("["+RunTimeMethod.getName()+"]"+">>没有找到元素，鼠标悬停失败！");
+			throw new MyAutoException("["+RunTimeMethod.getName()+"]"+"["+this.getId()+"]处鼠标进行悬停操作的时候失败了！很有可能的原因是没有找到元素！");
 		}
 		ProxyRunnerListener.getDispatcher().beforemouserOver();
 	}
@@ -203,10 +204,10 @@ public class SElement{
 		ProxyRunnerListener.getDispatcher().beforekeyDown();
 		if(isExist()){
 			AutoBase.keyDown(getElement(),key);
-			logger.info(">>["+this.getId()+"]按下按钮"+key.toString()+"成功！");
+			logger.info("["+RunTimeMethod.getName()+"]"+">>["+this.getId()+"]按下按钮"+key.toString()+"成功！");
 		}else{
-			logger.error("没有找到元素，按下按钮失败！");
-			throw new MyAutoException("["+this.getId()+"]进行按键操作的失败！很有可能的原因是没有找到元素！");
+			logger.error("["+RunTimeMethod.getName()+"]"+"没有找到元素，按下按钮失败！");
+			throw new MyAutoException("["+RunTimeMethod.getName()+"]"+"["+this.getId()+"]进行按键操作的失败！很有可能的原因是没有找到元素！");
 		}
 		ProxyRunnerListener.getDispatcher().afterkeyDown();
 	}
@@ -216,10 +217,10 @@ public class SElement{
 		ProxyRunnerListener.getDispatcher().beforekeyUp();
 		if(isExist()){
 			AutoBase.keyUp(getElement(), key);
-			logger.info(">>["+this.getId()+"]"+key+"松开成功！");
+			logger.info("["+RunTimeMethod.getName()+"]"+">>["+this.getId()+"]"+key+"松开成功！");
 		}else{
-			logger.error(">>按钮松开失败！没有找到元素！");
-			throw new MyAutoException("["+this.getId()+"]进行松开按钮操作的失败！很有可能的原因是没有找到这个元素！");
+			logger.error("["+RunTimeMethod.getName()+"]"+">>按钮松开失败！没有找到元素！");
+			throw new MyAutoException("["+RunTimeMethod.getName()+"]"+"["+this.getId()+"]进行松开按钮操作的失败！很有可能的原因是没有找到这个元素！");
 		}
 		ProxyRunnerListener.getDispatcher().beforekeyUp();
 	}
@@ -229,10 +230,10 @@ public class SElement{
 		ProxyRunnerListener.getDispatcher().beforeleftDown();
 		if(isExist()){
 			AutoBase.leftMouseDown(getElement());
-			logger.info(">>["+this.getId()+"]按下左键成功！");
+			logger.info("["+RunTimeMethod.getName()+"]"+">>["+this.getId()+"]按下左键成功！");
 		}else{
-			logger.error(">>按下左键失败！没有找到元素！");
-			throw new MyAutoException("["+this.getId()+"]进行按下左键操作的时候失败了！很有可能的原因是没有找到此元素！");
+			logger.error("["+RunTimeMethod.getName()+"]"+">>按下左键失败！没有找到元素！");
+			throw new MyAutoException("["+RunTimeMethod.getName()+"]"+"["+this.getId()+"]进行按下左键操作的时候失败了！很有可能的原因是没有找到此元素！");
 		}
 		ProxyRunnerListener.getDispatcher().afterleftDown();
 	}
@@ -242,10 +243,10 @@ public class SElement{
 		ProxyRunnerListener.getDispatcher().beforeleftUp();
 		if(isExist()){
 			AutoBase.leftMouseUp(getElement());
-			logger.info(">>["+this.getId()+"]左键松开成功！");
+			logger.info("["+RunTimeMethod.getName()+"]"+">>["+this.getId()+"]左键松开成功！");
 		}else{
-			logger.error(">>左键松开失败！");
-			throw new MyAutoException("进行松开左键操作的时候失败了！很有可能的原因是没有找到此元素！");
+			logger.error("["+RunTimeMethod.getName()+"]"+">>左键松开失败！");
+			throw new MyAutoException("["+RunTimeMethod.getName()+"]"+"进行松开左键操作的时候失败了！很有可能的原因是没有找到此元素！");
 		}
 		ProxyRunnerListener.getDispatcher().afterleftUp();
 	}
@@ -255,10 +256,10 @@ public class SElement{
 		ProxyRunnerListener.getDispatcher().beforedragAndDrop();
 		if(isExist()){
 			AutoBase.dragAndDrop(getElement(), location.getX(), location.getY());
-			logger.info(">>["+this.getId()+"]拖拽成功！");
+			logger.info("["+RunTimeMethod.getName()+"]"+">>["+this.getId()+"]拖拽成功！");
 		}else{
-			logger.error(">>拖拽失败！没有找到元素！");
-			throw new MyAutoException("["+this.getId()+"]进行拖拽操作的时候失败了！可能的原因是没有找到元素！");
+			logger.error("["+RunTimeMethod.getName()+"]"+">>拖拽失败！没有找到元素！");
+			throw new MyAutoException("["+RunTimeMethod.getName()+"]"+"["+this.getId()+"]进行拖拽操作的时候失败了！可能的原因是没有找到元素！");
 		}
 		ProxyRunnerListener.getDispatcher().afterdragAndDrop();
 	}
@@ -267,10 +268,10 @@ public class SElement{
 		Window.updateWindow();
 		if(isExist()){
 			AutoBase.dragAndDrop(getElement(), element.getElement());
-			logger.info(">>["+this.getId()+"]拖拽到指定元素上成功！");
+			logger.info("["+RunTimeMethod.getName()+"]"+">>["+this.getId()+"]拖拽到指定元素上成功！");
 		}else{
-			logger.error(">>拖拽到指定的元素上面失败！没有找到元素！");
-			throw new MyAutoException("["+this.getId()+"]进行拖拽操作的时候失败了！拖拽到指定元素失败！没有找到指定元素！");
+			logger.error("["+RunTimeMethod.getName()+"]"+">>拖拽到指定的元素上面失败！没有找到元素！");
+			throw new MyAutoException("["+RunTimeMethod.getName()+"]"+"["+this.getId()+"]进行拖拽操作的时候失败了！拖拽到指定元素失败！没有找到指定元素！");
 		}
 		
 	}
@@ -281,66 +282,66 @@ public class SElement{
 			int height=ds.getHeight();
 			int width=ds.getWidth();
 			int[] size =new int[]{height,width};
-			logger.info(">>["+this.getId()+"]得到尺寸成功！");
+			logger.info("["+RunTimeMethod.getName()+"]"+">>["+this.getId()+"]得到尺寸成功！");
 			return size;
 		}else{
-			logger.error(">>得到尺寸失败！没有找到元素！");
-			throw new MyAutoException("["+this.getId()+"]获取元素的尺寸失败了！没有找到元素！");
+			logger.error("["+RunTimeMethod.getName()+"]"+">>得到尺寸失败！没有找到元素！");
+			throw new MyAutoException("["+RunTimeMethod.getName()+"]"+"["+this.getId()+"]获取元素的尺寸失败了！没有找到元素！");
 		}
 		//return null;
 	}
 	/**得到元素的位置*/
 	public Point getLocation(){
 		if(isExist()){
-			logger.info(">>["+this.getId()+"]得到元素位置成功！");
+			logger.info("["+RunTimeMethod.getName()+"]"+">>["+this.getId()+"]得到元素位置成功！");
 			return getElement().getLocation();	
 		}else{
-			logger.error(">>得到元素的位置失败！没有找到元素！");
-			throw new MyAutoException("["+this.getId()+"]得到元素位置失败！没有找到元素！");
+			logger.error("["+RunTimeMethod.getName()+"]"+">>得到元素的位置失败！没有找到元素！");
+			throw new MyAutoException("["+RunTimeMethod.getName()+"]"+"["+this.getId()+"]得到元素位置失败！没有找到元素！");
 		}
 	//	return null;
 	}
 	/**得到属性值*/
 	public String getAttribute(String name){
 		if(isExist()){
-			logger.info("["+this.getId()+"]得到属性值为"+getElement().getAttribute(name));
+			logger.info("["+RunTimeMethod.getName()+"]"+"["+this.getId()+"]得到属性值为"+getElement().getAttribute(name));
 			return getElement().getAttribute(name);
 		}else{
-			logger.error("获得属性值"+name+"失败！没有找到元素！");
-			throw new MyAutoException("["+this.getId()+"]没有获取到元素属性！元素没有被找到！");
+			logger.error("["+RunTimeMethod.getName()+"]"+"获得属性值"+name+"失败！没有找到元素！");
+			throw new MyAutoException("["+RunTimeMethod.getName()+"]"+"["+this.getId()+"]没有获取到元素属性！元素没有被找到！");
 		}
 		//return null;
 	}
 	/**得到标签的名字*/
 	public String getTagName(){
 		if(isExist()){
-			logger.info("["+this.getId()+"]得到标签值为"+getElement().getTagName());
+			logger.info("["+RunTimeMethod.getName()+"]"+"["+this.getId()+"]得到标签值为"+getElement().getTagName());
 			return getElement().getTagName();
 		}else{
-			logger.error("得到标签的名字失败！没有找到元素！");
-			throw new MyAutoException("["+this.getId()+"]没有获得到tagname！元素没有找到！");
+			logger.error("["+RunTimeMethod.getName()+"]"+"得到标签的名字失败！没有找到元素！");
+			throw new MyAutoException("["+RunTimeMethod.getName()+"]"+"["+this.getId()+"]没有获得到tagname！元素没有找到！");
 		}
 		//return null;
 	}
 	/**得到css的值*/
 	public String getCssValue(String name){
 		if(isExist()){
-			logger.info("["+this.getId()+"]得到css值为"+getElement().getCssValue(name));
+			logger.info("["+RunTimeMethod.getName()+"]"+"["+this.getId()+"]得到css值为"+getElement().getCssValue(name));
 			return getElement().getCssValue(name);
 		}else{
-			logger.error("得到css的值失败！没有找到元素！");
-			throw new MyAutoException("["+this.getId()+"]获取css值失败！元素没有找到！");
+			logger.error("["+RunTimeMethod.getName()+"]"+"得到css的值失败！没有找到元素！");
+			throw new MyAutoException("["+RunTimeMethod.getName()+"]"+"["+this.getId()+"]获取css值失败！元素没有找到！");
 		}
 		//return null;
 	}
 	/**得到标签内的文本内容*/
 	public String getText(){
 		if(isExist()){		
-			logger.info("["+this.getId()+"]得到文本内容为["+getElement().getText()+"]");
+			logger.info("["+RunTimeMethod.getName()+"]"+"["+this.getId()+"]得到文本内容为["+getElement().getText()+"]");
 			return getElement().getText();
 		}else{
-			logger.error("得到文本内的内容失败！元素不存在！");
-			throw new MyAutoException("["+this.getId()+"]得到文本内容失败！没有找到元素！");
+			logger.error("["+RunTimeMethod.getName()+"]"+"得到文本内的内容失败！元素不存在！");
+			throw new MyAutoException("["+RunTimeMethod.getName()+"]"+"["+this.getId()+"]得到文本内容失败！没有找到元素！");
 		//	return null;
 		}
 		
@@ -350,7 +351,7 @@ public class SElement{
 		if(isExist()){
 			return getElement().isDisplayed();
 		}else{
-			logger.info("判断元素是否可见失败！元素不存在！");
+			logger.info("["+RunTimeMethod.getName()+"]"+"判断元素是否可见失败！元素不存在！");
 			throw new MyAutoException("["+this.getId()+"]可见性判断失败！元素不存在！");
 			//return false;
 		}
@@ -361,8 +362,8 @@ public class SElement{
 		if(isExist()){
 			return getElement().isEnabled();
 		}else{
-			logger.error("元素不可以被编辑，元素不存在！");
-			throw new MyAutoException("["+this.getId()+"]判断可编辑性失败！元素不存在！");
+			logger.error("["+RunTimeMethod.getName()+"]"+"元素不可以被编辑，元素不存在！");
+			throw new MyAutoException("["+RunTimeMethod.getName()+"]"+"["+this.getId()+"]判断可编辑性失败！元素不存在！");
 			//return false;
 		}
 		
@@ -372,7 +373,7 @@ public class SElement{
 		if(isExist()){
 			return getElement().isSelected();
 		}else{
-			logger.error("元素可选择属性判断失败！元素不存在！");
+			logger.error("["+RunTimeMethod.getName()+"]"+"元素可选择属性判断失败！元素不存在！");
 			throw new MyAutoException("["+this.getId()+"]元素可选择性判断失败！元素不存在！！");
 			//return false;
 		}
@@ -384,10 +385,10 @@ public class SElement{
 		ProxyRunnerListener.getDispatcher().beforescroll();
 		if(isExist()){
 			Window.scrollTo(getElement());
-			logger.info(">>["+this.getId()+"]视角滚动成功！");
+			logger.info("["+RunTimeMethod.getName()+"]"+">>["+this.getId()+"]视角滚动成功！");
 		}else{
-			logger.error("视角滚动失败！元素不存在！");
-			throw new MyAutoException("["+this.getId()+"]视角滚动失败！元素没有找到！！！");
+			logger.error("["+RunTimeMethod.getName()+"]"+"视角滚动失败！元素不存在！");
+			throw new MyAutoException("["+RunTimeMethod.getName()+"]"+"["+this.getId()+"]视角滚动失败！元素没有找到！！！");
 		}
 		ProxyRunnerListener.getDispatcher().afterscroll();
 	}
@@ -413,7 +414,7 @@ public class SElement{
 		case TagName:
 			return new SElement(getElement().findElement(By.tagName(value)));
 		default:
-			throw new MyAutoException("定位方式错误，没有找到子元素");
+			throw new MyAutoException("["+RunTimeMethod.getName()+"]"+"定位方式错误，没有找到子元素");
 		}
 	}
 	/**在此元素的基础上添加子元素
@@ -421,7 +422,7 @@ public class SElement{
 	public SElement childElement(Locator locator,String value,int index) {
 		SElement se;
 		if(getElement()==null){
-			throw new NoSuchElementException("此元素还未进行指定locator，请先指定元素具体位置！");
+			throw new NoSuchElementException("["+RunTimeMethod.getName()+"]"+"此元素还未进行指定locator，请先指定元素具体位置！");
 		}
 		switch(locator){
 		case Id:
@@ -449,10 +450,10 @@ public class SElement{
 			se= new SElement(getElement().findElements(By.tagName(value)).get(index));
 			break;
 		default:
-			throw new MyAutoException("定位方式错误，没有找到子元素");
+			throw new MyAutoException("["+RunTimeMethod.getName()+"]"+"定位方式错误，没有找到子元素");
 		}
 		if(se.getElement()==null){
-			throw new NoSuchElementException("["+this.getId()+"]在定位元素的时候发生了错误，很有可能是元素没有定位到！请检查自己配置的元素定位方式是否正确！");
+			throw new NoSuchElementException("["+RunTimeMethod.getName()+"]"+"["+this.getId()+"]在定位元素的时候发生了错误，很有可能是元素没有定位到！请检查自己配置的元素定位方式是否正确！");
 		}
 		return se;
 		
@@ -475,10 +476,10 @@ public class SElement{
 		Window.updateWindow();
 		if(isExist()){
 			getElement().sendKeys(text);
-			logger.info(">>["+this.getId()+"]输入值["+text+"]成功！");
+			logger.info("["+RunTimeMethod.getName()+"]"+">>["+this.getId()+"]输入值["+text+"]成功！");
 		}else{
-			logger.error(">>没有找到元素，输入失败！");
-			throw new MyAutoException("["+getId()+"]进行输入操作失败！很有可能的原因是在配置元素的时候发生错误。没有找到元素！");
+			logger.error("["+RunTimeMethod.getName()+"]"+">>没有找到元素，输入失败！");
+			throw new MyAutoException("["+RunTimeMethod.getName()+"]"+"["+getId()+"]进行输入操作失败！很有可能的原因是在配置元素的时候发生错误。没有找到元素！");
 		}
 	}
 	/**表单内的确认*/
@@ -486,10 +487,10 @@ public class SElement{
 		Window.updateWindow();
 		if(isExist()){
 			getElement().submit();
-			logger.info(">>["+this.getId()+"]提交表单成功！");
+			logger.info("["+RunTimeMethod.getName()+"]"+">>["+this.getId()+"]提交表单成功！");
 		}else{
-			logger.error(">>提交表单失败！元素没有找到！");
-			throw new MyAutoException("["+this.getId()+"]没有找到这个元素！，进行提交操作的时候出现错误！");
+			logger.error("["+RunTimeMethod.getName()+"]"+">>提交表单失败！元素没有找到！");
+			throw new MyAutoException("["+RunTimeMethod.getName()+"]"+"["+this.getId()+"]没有找到这个元素！，进行提交操作的时候出现错误！");
 		}
 		
 	}
