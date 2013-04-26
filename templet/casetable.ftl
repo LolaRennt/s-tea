@@ -45,7 +45,7 @@
                     </tr>
                     <tr class="info">
                         <th>异常信息</th>
-                        <td>${des.failure.message}</td>
+                        <td><a href="log.html">请查看具体的日志文件信息...</a></td>
                     </tr>
                     <#else>
                     <tr class="info">

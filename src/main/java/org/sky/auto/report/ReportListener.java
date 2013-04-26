@@ -58,14 +58,24 @@ public class ReportListener extends RunListener{
 			CaseStatus.addRunCase(des.getTestClass().getDeclaredMethod(description.getMethodName(),clas));
 		}else{
 			CaseStatus.addRunCase(des.getTestClass().getDeclaredMethod(description.getMethodName(),clas));
+		}
+		if(infomap.get(description.getMethodName())==null){
+			CaseStatus.addRunCaseDescription(description);
+			caseinfo = new CaseInfo(env,des);
+			infomap.put(description.getMethodName(), caseinfo);
 		}	
-		CaseStatus.addRunCaseDescription(description);
-		caseinfo = new CaseInfo(env,des);
 	}
 	
 	@Override
 	public void testFailure(Failure failure) throws Exception {
 		logger.error(">>>>>>>>>>>>>>>测试用例执行失败>>>>>>>>>>>");
+		logger.error(failure.getException());
+		logger.error(failure.getMessage());
+		logger.error(failure.getTrace());
+		if(infomap.get(failure.getDescription().getMethodName())!=null){
+			infomap.remove(failure.getDescription().getMethodName());
+			CaseStatus.removeRunCaseDescription(new MyDescription(failure.getDescription()));
+		}
 		env=new Environment();
 		if(clas!=null){
 			Description d =failure.getDescription();
@@ -74,6 +84,7 @@ public class ReportListener extends RunListener{
 			des.setFailure(new MyFailure(failure));
 			CaseStatus.addRunCaseDescription(des);
 			CaseStatus.addRunCase(d.getTestClass().getDeclaredMethod(d.getMethodName(),clas));
+			
 		}else{
 			Description d =failure.getDescription();
 			des=new MyDescription(d);
@@ -96,10 +107,12 @@ public class ReportListener extends RunListener{
 		//cj.copyCssAndJsSource();
 		th=TempletHtml.getInstance();
 		Template temp=th.getTemplate("frame.ftl");
-		
 		pp.FinishedReport(temp, result);
 		Template ctemp=th.getTemplate("case.ftl");
-		pp.caseReport(ctemp, caseinfo.getDescription().getDescription(), caseinfo.getEnviroment());
+		for(MyDescription des:CaseStatus.getDescriptionCases()){
+			pp.caseReport(ctemp, infomap.get(des.getMethodName()).getDescription(), infomap.get(des.getMethodName()).getEnviroment());
+		}
+		
 	}
 	
 	

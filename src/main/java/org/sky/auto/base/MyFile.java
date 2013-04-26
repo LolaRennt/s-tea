@@ -8,10 +8,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
 public class MyFile {
 	
 	private  List<String> fileList=new ArrayList<String>();
-
+	private static Logger logger = Logger.getLogger(MyFile.class);
 	private String filePath;
 
 	File file;
@@ -294,34 +296,18 @@ private static String lineBreak;
 		     }
 	  }
 	
-	  public static boolean delAllFile(String path,String suffix) {
-	       boolean flag = false;
+	  public static void delAllFile(String path,String suffix) {
 	       File file = new File(path);
-	       if (!file.exists()) {
-	         return flag;
+	       if(!file.exists()){
+	    	  logger.info("不存在要删除的页面，请检查一下目录是否正确");
+	       }else{
+	    	   File[] files = file.listFiles();
+		       for(File f: files){
+		    	   if(f.getName().endsWith(suffix)){
+		    		   f.delete();
+		    	   }
+		       }
 	       }
-	       if (!file.isDirectory()) {
-	         return flag;
-	       }
-	       String[] tempList = file.list();
-	       File temp = null;
-	       for (int i = 0; i < tempList.length; i++) {
-	          if (path.endsWith(File.separator)) {
-	             temp = new File(path + tempList[i]);
-	          } else {
-	              temp = new File(path + File.separator + tempList[i]);
-	          }
-	          if (temp.isFile()) {
-	        	  if(temp.getName().substring(temp.getName().lastIndexOf(".")).equals(suffix)){
-	        		  temp.delete();
-	        	  }       
-	          }
-	          if (temp.isDirectory()) {
-	             delAllFile(path + File.separator + tempList[i]);//先删除文件夹里面的文件
-	             delFolder(path + File.separator + tempList[i]);//再删除空文件夹
-	             flag = true;
-	          }
-	       }
-	       return flag;
+	          
 	     }
 }

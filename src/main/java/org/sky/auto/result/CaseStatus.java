@@ -63,5 +63,9 @@ public class CaseStatus {
 		noruncls.addAll(methods);
 	}
 	
+	public static void removeRunCaseDescription(MyDescription des){
+		haverunclsDes.remove(des);
+	}
+	
 	
 }

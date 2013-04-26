@@ -9,6 +9,9 @@ public class CssAndJSReport {
 	private String css ="templet"+File.separator+"css";
 	private String js ="templet"+File.separator+"js";
 	private String img="templet"+File.separator+"bg.jpg";
+	
+	
+	
 	public void copyCssAndJsSource(){
 		copyDirectory(css, "report"+File.separator+"css");
 		copyDirectory(js, "report"+File.separator+"js");
@@ -42,7 +45,7 @@ public class CssAndJSReport {
 	protected void copyDirectory(String oldPath,String newPath){
 		try  {  
 			  File f = new File(newPath);
-			  if(f.exists()){
+			  if(!f.exists()){
 				  f.mkdirs();
 			  }
 	          // new  File(newPath).mkdirs();  //如果文件夹不存在  则建立新文件夹  

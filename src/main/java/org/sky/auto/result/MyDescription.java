@@ -67,6 +67,7 @@ public class MyDescription {
 		this.methodName=des.getMethodName();
 		this.time=SimpleDate.getSimpleDateFormat();
 		this.testCount=des.testCount();
+		this.failureCase=false;
 	}
 	
 	
@@ -104,23 +105,11 @@ public class MyDescription {
 	}
 	
 	public boolean isFailureCase(){
-		for(MyFailure clazz:CaseStatus.getFailureCases()){
-			if(clazz.getFailureDescription().getMethodName().equals(getMethodName())){
-				this.failureCase=true;
-				return this.failureCase;
-			}
-		}
-		return false;
+		return failureCase;
 	}
 	
 	public MyFailure getFailure(){
-		for(MyFailure clazz:CaseStatus.getFailureCases()){
-			if(clazz.getFailureDescription().getTestClass().getName().equals(getTestClass().getName())){
-				this.failure=clazz;
-				return this.failure;
-			}
-		}
-		return null;
+		return failure;
 	}
 	
 	

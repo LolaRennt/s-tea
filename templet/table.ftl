@@ -11,14 +11,14 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <#list dess as d>
+                        <#list des as d>
                         	<#if d.failureCase>
                         	<tr class="wrong">
                         	<td></td>
                         	<td><a href="${d.methodName}.html">${d.methodName}</a></td>
                         	<td>${d.testClass.name}</td>
-                        	<td>passed</td>
-                        	<td>${d.failure.message}</td>
+                        	<td>failed</td>
+                        	<td><a href="log.html">测试失败了，请查看具体的日志文件</a></td>
                         	<#else>
                         	<tr class="right">
                         	<td></td>

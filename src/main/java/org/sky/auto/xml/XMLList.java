@@ -18,7 +18,7 @@ public class XMLList implements XMLNode{
 		XMLElement xe=null;
 		while(iter.hasNext()){
 			Element ee=(Element) iter.next();
-			if(ee.getParent().isRootElement()){
+			if(!ee.getParent().getName().equals("frame")){
 				xe = new XMLElement();
 				xe.setElement(ee);
 				xe.setListElement(true);

@@ -27,5 +27,10 @@
   	支持Frame的嵌套，如果frame中有frame，则可以通过frame中套frame，见上面的例子。
   	所有的资源不管是txt文件还是xml文件都必须定义在项目的xml文件目录下面，为了方便维护，文件名最好定义为小写的，不过没有特别的的命名规定。
    -->
+   <tns:list id="产品链接">
+       <tns:element value="chanpin" by="id" id="仓库">
+           <tns:childElement value="a" by="tagName"></tns:childElement>
+       </tns:element>
+   </tns:list>
 </tns:elements>
  

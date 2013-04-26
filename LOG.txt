@@ -1,34 +1,85 @@
-2013-04-25 19:41:51 INFO  AUTO-RUN [Case:FrameTest=>frametest]开始对xml资源进行扫描....
-2013-04-25 19:41:52 INFO  AUTO-RUN [Case:FrameTest=>frametest]扫描收集了资源->百度首页-搜索框
-2013-04-25 19:41:52 INFO  AUTO-RUN [Case:FrameTest=>frametest]扫描收集了资源->百度首页-搜索按钮
-2013-04-25 19:41:52 INFO  AUTO-RUN [Case:FrameTest=>frametest]扫描收集了资源->测评游戏
-2013-04-25 19:41:52 INFO  AUTO-RUN [Case:FrameTest=>frametest]扫描收集了资源->测评模式
-2013-04-25 19:41:52 INFO  AUTO-RUN [Case:FrameTest=>frametest]扫描收集了资源->测评得分
-2013-04-25 19:41:52 INFO  AUTO-RUN [Case:FrameTest=>frametest]扫描收集了资源->测评显卡均价
-2013-04-25 19:41:52 INFO  AUTO-RUN [Case:FrameTest=>frametest]扫描收集了资源->MW-平板列表-苹果
-2013-04-25 19:41:52 INFO  AUTO-RUN [Case:FrameTest=>frametest]扫描收集了资源->百度-联想
-2013-04-25 19:41:52 INFO  AUTO-RUN [Case:FrameTest=>frametest]扫描XML资源完毕...
-2013-04-25 19:41:52 INFO  AUTO-RUN [Case:FrameTest=>frametest]开始扫描txt的资源元素...
-2013-04-25 19:41:52 INFO  AUTO-RUN [Case:FrameTest=>frametest]txt资源扫描结束
-2013-04-25 19:41:54 INFO  AUTO-RUN [Case:FrameTest=>frametest]扫描file类型的class文件...
-2013-04-25 19:41:54 INFO  AUTO-RUN [Case:FrameTest=>frametest]扫描file类型的class文件...
-2013-04-25 19:41:54 INFO  AUTO-RUN [Case:FrameTest=>frametest]开始扫描动作监听器......
-2013-04-25 19:41:54 INFO  AUTO-RUN [Case:FrameTest=>frametest]扫描动作监听器结束
-2013-04-25 19:41:56 INFO  AUTO-RUN [Case:FrameTest=>frametest]使用浏览器HtmlUnit进行自动化测试，将要打开网址http://product.it168.com/list/b/03010377_1.shtml测试
-2013-04-25 19:42:01 INFO  AUTO-RUN ############
-2013-04-25 19:42:01 INFO  AUTO-RUN [Case:FrameTest=>frametest]关闭了所有的浏览器！
-2013-04-25 19:42:01 INFO  AUTO-RUN >>>>>>>>>>>>>>>测试用例执行结束>>>>>>>>>>>
-2013-04-25 19:42:01 INFO  AUTO-RUN >>>>>>>>>>>>>>>测试用例执行开始>>>>>>>>>>>
-2013-04-25 19:42:01 INFO  AUTO-RUN [Case:FrameTest=>baidu]开始扫描txt的资源元素...
-2013-04-25 19:42:01 INFO  AUTO-RUN [Case:FrameTest=>baidu]txt资源扫描结束
-2013-04-25 19:42:01 INFO  AUTO-RUN [Case:FrameTest=>baidu]扫描file类型的class文件...
-2013-04-25 19:42:01 INFO  AUTO-RUN [Case:FrameTest=>baidu]扫描file类型的class文件...
-2013-04-25 19:42:01 INFO  AUTO-RUN [Case:FrameTest=>baidu]开始扫描动作监听器......
-2013-04-25 19:42:01 INFO  AUTO-RUN [Case:FrameTest=>baidu]扫描动作监听器结束
-2013-04-25 19:42:01 INFO  AUTO-RUN [Case:FrameTest=>baidu]使用浏览器HtmlUnit进行自动化测试，将要打开网址http://www.baidu.com测试
-2013-04-25 19:42:01 INFO  AUTO-RUN [Case:FrameTest=>baidu][百度首页-搜索框]是来自XML的资源
-2013-04-25 19:42:02 INFO  AUTO-RUN [Case:FrameTest=>baidu]>>[百度首页-搜索框]输入值[北京]成功！
-2013-04-25 19:42:02 INFO  AUTO-RUN [Case:FrameTest=>baidu][百度首页-搜索按钮]是来自XML的资源
-2013-04-25 19:42:03 INFO  AUTO-RUN [Case:FrameTest=>baidu]>>[百度首页-搜索按钮]点击成功！
-2013-04-25 19:42:03 INFO  AUTO-RUN [Case:FrameTest=>baidu]关闭了所有的浏览器！
-2013-04-25 19:42:03 INFO  AUTO-RUN >>>>>>>>>>>>>>>测试用例执行结束>>>>>>>>>>>
+2013-04-26 18:01:50 INFO  AUTO-RUN [Case:FrameTest=>frametest]开始对xml的List资源进行扫描....
+2013-04-26 18:01:50 INFO  AUTO-RUN [Case:FrameTest=>frametest]扫描收集了List资源->产品链接
+2013-04-26 18:01:50 INFO  AUTO-RUN [Case:FrameTest=>frametest]扫描List资源完毕...
+2013-04-26 18:01:50 INFO  AUTO-RUN [Case:FrameTest=>frametest]开始对xml资源进行扫描....
+2013-04-26 18:01:50 INFO  AUTO-RUN [Case:FrameTest=>frametest]扫描收集了资源->百度首页-搜索框
+2013-04-26 18:01:50 INFO  AUTO-RUN [Case:FrameTest=>frametest]扫描收集了资源->百度首页-搜索按钮
+2013-04-26 18:01:50 INFO  AUTO-RUN [Case:FrameTest=>frametest]扫描收集了资源->测评游戏
+2013-04-26 18:01:50 INFO  AUTO-RUN [Case:FrameTest=>frametest]扫描收集了资源->测评模式
+2013-04-26 18:01:50 INFO  AUTO-RUN [Case:FrameTest=>frametest]扫描收集了资源->测评得分
+2013-04-26 18:01:50 INFO  AUTO-RUN [Case:FrameTest=>frametest]扫描收集了资源->测评显卡均价
+2013-04-26 18:01:50 INFO  AUTO-RUN [Case:FrameTest=>frametest]扫描收集了资源->MW-平板列表-苹果
+2013-04-26 18:01:50 INFO  AUTO-RUN [Case:FrameTest=>frametest]扫描收集了资源->百度-联想
+2013-04-26 18:01:50 INFO  AUTO-RUN [Case:FrameTest=>frametest]扫描XML资源完毕...
+2013-04-26 18:01:50 INFO  AUTO-RUN [Case:FrameTest=>frametest]开始扫描txt的资源元素...
+2013-04-26 18:01:50 INFO  AUTO-RUN [Case:FrameTest=>frametest]txt资源扫描结束
+2013-04-26 18:01:52 INFO  AUTO-RUN [Case:FrameTest=>frametest]扫描file类型的class文件...
+2013-04-26 18:01:52 INFO  AUTO-RUN [Case:FrameTest=>frametest]扫描file类型的class文件...
+2013-04-26 18:01:52 INFO  AUTO-RUN [Case:FrameTest=>frametest]开始扫描动作监听器......
+2013-04-26 18:01:52 INFO  AUTO-RUN [Case:FrameTest=>frametest]扫描动作监听器结束
+2013-04-26 18:01:53 INFO  AUTO-RUN [Case:FrameTest=>frametest]使用浏览器HtmlUnit进行自动化测试，将要打开网址http://product.it168.com/list/b/03010377_1.shtml测试
+2013-04-26 18:01:58 ERROR AUTO-RUN >>>>>>>>>>>>>>>测试用例执行失败>>>>>>>>>>>
+2013-04-26 18:01:58 ERROR AUTO-RUN org.sky.auto.exception.MyAutoException
+2013-04-26 18:01:58 ERROR AUTO-RUN 
+2013-04-26 18:01:58 ERROR AUTO-RUN org.sky.auto.exception.MyAutoException
+	at org.sky.auto.test.FrameTest.frametest(FrameTest.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:45)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:42)
+	at org.sky.auto.runner.statement.InterceptorStatement.evaluate(InterceptorStatement.java:29)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:263)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:68)
+	at org.databene.feed4junit.Feeder.runChild(Feeder.java:194)
+	at org.databene.feed4junit.ChildRunner.run(ChildRunner.java:58)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:439)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:439)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:680)
+
+2013-04-26 18:01:58 INFO  AUTO-RUN >>>>>>>>>>>>>>>测试用例执行结束>>>>>>>>>>>
+2013-04-26 18:01:58 INFO  AUTO-RUN [Case:FrameTest=>frametest]关闭了所有的浏览器！
+2013-04-26 18:01:58 INFO  AUTO-RUN >>>>>>>>>>>>>>>测试用例执行开始>>>>>>>>>>>
+2013-04-26 18:01:58 INFO  AUTO-RUN [Case:FrameTest=>baidu]开始扫描txt的资源元素...
+2013-04-26 18:01:58 INFO  AUTO-RUN [Case:FrameTest=>baidu]txt资源扫描结束
+2013-04-26 18:01:58 INFO  AUTO-RUN [Case:FrameTest=>baidu]扫描file类型的class文件...
+2013-04-26 18:01:58 INFO  AUTO-RUN [Case:FrameTest=>baidu]扫描file类型的class文件...
+2013-04-26 18:01:58 INFO  AUTO-RUN [Case:FrameTest=>baidu]开始扫描动作监听器......
+2013-04-26 18:01:58 INFO  AUTO-RUN [Case:FrameTest=>baidu]扫描动作监听器结束
+2013-04-26 18:01:58 INFO  AUTO-RUN [Case:FrameTest=>baidu]使用浏览器HtmlUnit进行自动化测试，将要打开网址http://www.baidu.com测试
+2013-04-26 18:01:58 INFO  AUTO-RUN [Case:FrameTest=>baidu][百度首页-搜索框]是来自XML的资源
+2013-04-26 18:01:59 INFO  AUTO-RUN [Case:FrameTest=>baidu]>>[百度首页-搜索框]输入值[北京]成功！
+2013-04-26 18:01:59 INFO  AUTO-RUN [Case:FrameTest=>baidu][百度首页-搜索按钮]是来自XML的资源
+2013-04-26 18:01:59 INFO  AUTO-RUN [Case:FrameTest=>baidu]>>[百度首页-搜索按钮]点击成功！
+2013-04-26 18:01:59 INFO  AUTO-RUN [Case:FrameTest=>baidu]关闭了所有的浏览器！
+2013-04-26 18:01:59 INFO  AUTO-RUN >>>>>>>>>>>>>>>测试用例执行结束>>>>>>>>>>>
+2013-04-26 18:01:59 INFO  AUTO-RUN >>>>>>>>>>>>>>>测试用例执行开始>>>>>>>>>>>
+2013-04-26 18:01:59 INFO  AUTO-RUN [Case:FrameTest=>testlist]开始扫描txt的资源元素...
+2013-04-26 18:01:59 INFO  AUTO-RUN [Case:FrameTest=>testlist]txt资源扫描结束
+2013-04-26 18:01:59 INFO  AUTO-RUN [Case:FrameTest=>testlist]扫描file类型的class文件...
+2013-04-26 18:01:59 INFO  AUTO-RUN [Case:FrameTest=>testlist]扫描file类型的class文件...
+2013-04-26 18:01:59 INFO  AUTO-RUN [Case:FrameTest=>testlist]开始扫描动作监听器......
+2013-04-26 18:01:59 INFO  AUTO-RUN [Case:FrameTest=>testlist]扫描动作监听器结束
+2013-04-26 18:02:00 INFO  AUTO-RUN [Case:FrameTest=>testlist]使用浏览器HtmlUnit进行自动化测试，将要打开网址http://www.it168.com/测试
+2013-04-26 18:02:01 INFO  AUTO-RUN [仓库]有子元素,定位方式为:By->tagName,Value->a,Index->null
+2013-04-26 18:02:01 WARN  AUTO-RUN CSS error: 'http://www.it168.com/' [12:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, <COMMA>, <HASH>, ".", ":", "[", <S>.)
+2013-04-26 18:02:01 WARN  AUTO-RUN CSS warning: 'http://www.it168.com/' [12:2] Ignoring the following declarations in this rule.
+2013-04-26 18:02:01 WARN  AUTO-RUN CSS error: 'http://www.it168.com/' [168:47] Error in style rule. (Invalid token "*". Was expecting one of: <EOF>, <S>, <IDENT>, "}", ";".)
+2013-04-26 18:02:01 WARN  AUTO-RUN CSS warning: 'http://www.it168.com/' [168:47] Ignoring the following declarations in this rule.
+2013-04-26 18:02:01 WARN  AUTO-RUN CSS error: 'http://www.it168.com/' [204:97] Error in style rule. (Invalid token ":". Was expecting one of: <EOF>, <S>, <NUMBER>, "inherit", <IDENT>, <STRING>, <PLUS>, <COMMA>, <HASH>, <IMPORTANT_SYM>, <EMS>, <EXS>, <LENGTH_PX>, <LENGTH_CM>, <LENGTH_MM>, <LENGTH_IN>, <LENGTH_PT>, <LENGTH_PC>, <ANGLE_DEG>, <ANGLE_RAD>, <ANGLE_GRAD>, <TIME_MS>, <TIME_S>, <FREQ_HZ>, <FREQ_KHZ>, <PERCENTAGE>, <DIMENSION>, <URI>, <FUNCTION>, "}", ";", "/", "-".)
+2013-04-26 18:02:01 WARN  AUTO-RUN CSS warning: 'http://www.it168.com/' [204:97] Ignoring the following declarations in this rule.
+2013-04-26 18:02:01 WARN  AUTO-RUN CSS error: 'http://www.it168.com/' [383:156] Error in expression. (Invalid token "eval(". Was expecting one of: <S>, <NUMBER>, <IDENT>, <STRING>, <PLUS>, <COMMA>, <URI>, "-", "=".)
+2013-04-26 18:02:01 WARN  AUTO-RUN CSS error: 'http://www.it168.com/' [384:126] Error in expression. (Invalid token "eval(". Was expecting one of: <S>, <NUMBER>, <IDENT>, <STRING>, <PLUS>, <COMMA>, <URI>, "-", "=".)
+2013-04-26 18:02:01 WARN  AUTO-RUN CSS error: 'http://www.it168.com/' [384:168] Error in style rule. (Invalid token "_position". Was expecting one of: <EOF>, "}", ";".)
+2013-04-26 18:02:01 WARN  AUTO-RUN CSS warning: 'http://www.it168.com/' [384:168] Ignoring the following declarations in this rule.
+2013-04-26 18:02:01 INFO  AUTO-RUN [Case:FrameTest=>testlist][Element]得到文本内容为[笔记本及平板]
+2013-04-26 18:02:01 INFO  AUTO-RUN [Case:FrameTest=>testlist]关闭了所有的浏览器！
+2013-04-26 18:02:01 INFO  AUTO-RUN >>>>>>>>>>>>>>>测试用例执行结束>>>>>>>>>>>

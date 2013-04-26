@@ -1,6 +1,9 @@
 package org.sky.auto.element;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
@@ -514,5 +517,16 @@ public class SElement{
 		Window.updateWindow();
 		AutoBase.focus(getElement());
 	}
+	/**通过这个元素获取他指定标签的元素list*/
+	public List<SElement> getOptions(String tagname){
+		List<SElement>slist=new ArrayList<SElement>();
+		List<WebElement> wlist = getElement().findElements(By.tagName(tagname));
+		for(WebElement we:wlist){
+			slist.add(new SElement(we));
+		}
+		return slist;
+	}
+	
+	
 	
 }

@@ -80,6 +80,7 @@ public class AutoBase {
 	public static void setDriver(Browser browser){
 		setCaseName(RunTimeMethod.getMethodName());
 		setLogStarted();
+		XMLLoader.loadXMLList();
 		XMLLoader.load();
 		TxtLoader.load();
 		setClose_Status(false);
@@ -269,7 +270,7 @@ public class AutoBase {
 
 	/**得到元素的列表*/
 	public static ListElement listElement(String id){
-		ListElement le= new ListElement(AutoBase.elements("id"));
+		ListElement le= new ListElement(AutoBase.elements(id));
 		//logger.info("元素LIST["+id+"]-->");
 		return le;
  	}

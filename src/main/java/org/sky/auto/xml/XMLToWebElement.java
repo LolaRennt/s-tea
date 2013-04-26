@@ -64,7 +64,21 @@ public class XMLToWebElement{
 		}
 		
 		public List<WebElement> elements(String id){
-			return elements(id,"xml");
+			//XMLLoader.loadXMLList();
+			XMLList xl= XMLLoader.getXMLList(id);
+			if(xl==null){
+				throw new MyAutoException("没有找到"+id+"这个list元素，请假检查资源文件");
+			}
+			if(xl.getXMLElement()!=null){
+				Window.selectDefaultWindow();
+				return getListLocator(xl, id);
+			}else if(xl.getFrameXMLElement()!=null){
+				enterListFrame(xl.getFrameXMLElement(), id);
+				return getListLocator(xl, id);
+			}else{
+				throw new MyAutoException("没有找到任何的list元素");
+			}
+			
 		}
 		
 		

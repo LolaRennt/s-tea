@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.dom4j.Element;
+import org.sky.auto.exception.MyElementNotFoundException;
 
 
 
@@ -78,10 +79,10 @@ public class XMLElements implements XMLNode{
 	
 	public List<XMLList> getXMLList(){
 		List<XMLList> elist = new ArrayList<XMLList>();
-		Iterator<?> iter = e.elementIterator("list");
+		Iterator<?> iter = getElement().elementIterator("list");
 		while(iter.hasNext()){
 			Element ee = (Element) iter.next();
-			if(ee.isRootElement()){
+			if(ee.getParent().isRootElement()){
 				XMLList xl = new XMLList();
 				xl.setElement(ee);
 				elist.add(xl);
@@ -92,11 +93,17 @@ public class XMLElements implements XMLNode{
 	
 	public XMLList getXMLList(String id){
 		for(XMLList xl : getXMLList()){
+			System.out.println(getXMLList().size());
+			System.out.println(xl.getElement().attributeValue("id"));
+			System.out.println(id);
 			if(xl.getElement().attributeValue("id").equals(id)){
 				return xl;
+			}else{
+				throw new MyElementNotFoundException("没有找到这个["+id+"]List元素！请检查是否输入id正确");
 			}
 		}
 		return null;
+		
 	}
 	
 	public List<XMLNode> getXMLNodes(){
@@ -146,15 +153,15 @@ public class XMLElements implements XMLNode{
 				}
 			}
 		}
-		if(getXMLList().size()!=0){
-			for(XMLList xl:getXMLList()){
-				if(xl.getXMLElement()!=null){
-					elist.add(xl.getXMLElement());
-				}else if(xl.getFrameXMLElement()!=null){
-					elist.add(xl.getFrameXMLElement());
-				}
-			}
-		}
+//		if(getXMLList().size()!=0){
+//			for(XMLList xl:getXMLList()){
+//				if(xl.getXMLElement()!=null){
+//					elist.add(xl.getXMLElement());
+//				}else if(xl.getFrameXMLElement()!=null){
+//					elist.add(xl.getFrameXMLElement());
+//				}
+//			}
+//		}
 		return elist;
 	}
 	
