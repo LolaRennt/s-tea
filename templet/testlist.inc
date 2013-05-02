@@ -1,9 +1,0 @@
-2013-04-26 18:01:59 INFO  AUTO-RUN [Case:FrameTest=>testlist]开始扫描txt的资源元素...</br>
-2013-04-26 18:01:59 INFO  AUTO-RUN [Case:FrameTest=>testlist]txt资源扫描结束</br>
-2013-04-26 18:01:59 INFO  AUTO-RUN [Case:FrameTest=>testlist]扫描file类型的class文件...</br>
-2013-04-26 18:01:59 INFO  AUTO-RUN [Case:FrameTest=>testlist]扫描file类型的class文件...</br>
-2013-04-26 18:01:59 INFO  AUTO-RUN [Case:FrameTest=>testlist]开始扫描动作监听器......</br>
-2013-04-26 18:01:59 INFO  AUTO-RUN [Case:FrameTest=>testlist]扫描动作监听器结束</br>
-2013-04-26 18:02:00 INFO  AUTO-RUN [Case:FrameTest=>testlist]使用浏览器HtmlUnit进行自动化测试，将要打开网址http://www.it168.com/测试</br>
-2013-04-26 18:02:01 INFO  AUTO-RUN [Case:FrameTest=>testlist][Element]得到文本内容为[笔记本及平板]</br>
-2013-04-26 18:02:01 INFO  AUTO-RUN [Case:FrameTest=>testlist]关闭了所有的浏览器！</br>

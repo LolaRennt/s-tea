@@ -1,7 +1,6 @@
 package org.sky.auto.base;
 
 import java.io.File; 
-import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import org.apache.log4j.Logger;
@@ -20,7 +19,6 @@ import org.sky.auto.element.CheckBox;
 import org.sky.auto.element.ComoboBox;
 import org.sky.auto.element.Image;
 import org.sky.auto.element.Link;
-import org.sky.auto.element.ListElement;
 import org.sky.auto.element.RadioButton;
 import org.sky.auto.element.RichTextField;
 import org.sky.auto.element.SElement;
@@ -80,7 +78,6 @@ public class AutoBase {
 	public static void setDriver(Browser browser){
 		setCaseName(RunTimeMethod.getMethodName());
 		setLogStarted();
-		XMLLoader.loadXMLList();
 		XMLLoader.load();
 		TxtLoader.load();
 		setClose_Status(false);
@@ -268,12 +265,12 @@ public class AutoBase {
 		ProxyRunnerListener.getDispatcher().aftercloseCurrentWindow();
 	}
 
-	/**得到元素的列表*/
-	public static ListElement listElement(String id){
-		ListElement le= new ListElement(AutoBase.elements(id));
-		//logger.info("元素LIST["+id+"]-->");
-		return le;
- 	}
+//	/**得到元素的列表*/
+//	public static ListElement listElement(String id){
+//		ListElement le= new ListElement(AutoBase.elements(id));
+//		//logger.info("元素LIST["+id+"]-->");
+//		return le;
+// 	}
 	public static Button button(String id){
 		Button bt=new Button(element(id));
 		//logger.info("按钮["+id+"]-->");
@@ -369,11 +366,6 @@ public class AutoBase {
 	 * @param id 在资源定义的id值
 	 * @return 通过id值返回的定义好的WebElement元素的列表
 	 * */
-	public static List<WebElement> elements(String id){
-		XMLToWebElement xtw = new XMLToWebElement();
-		return xtw.elements(id);
-	}
-	
 	
 	private static Source elementBelongTo(String id){
 		try{

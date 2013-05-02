@@ -92,4 +92,8 @@ public class XMLElement implements XMLNode{
 		this.isListElement = isListElement;
 	}
 	
+	public void clearChildElement(){
+		this.elist.clear();
+	}
+	
 }

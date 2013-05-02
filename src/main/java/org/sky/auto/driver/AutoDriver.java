@@ -109,7 +109,7 @@ public class AutoDriver implements IDriver{
 		}
 		public HtmlUnitDriver htmlUnit(){
 			HtmlUnitDriver hud=tl.get();
-			//hud.setJavascriptEnabled(true);
+			hud.setJavascriptEnabled(true);
 			return hud;
 		}
 		
