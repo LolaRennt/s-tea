@@ -74,10 +74,10 @@ public class CurrentPage {
 //		return time;
 //	}
 	
-	/**返回某个js的加载时间*/
-	public long getJavaScriptLoadTime(String name){
-		return content.getJavaScriptLoadTime(name);
-	}	
+//	/**返回某个js的加载时间*/
+//	public long getJavaScriptLoadTime(String name){
+//		return content.getJavaScriptLoadTime(name);
+//	}	
 	
 	/**返回头部的css的列表*/
 	public List<String> getHeadCssLinks(){
