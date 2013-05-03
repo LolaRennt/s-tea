@@ -1,182 +1,26 @@
-2013-05-02 10:11:14 INFO  AUTO-RUN 初始化了报告文件夹
-2013-05-02 10:11:14 INFO  AUTO-RUN [Main]扫描file类型的class文件...
-2013-05-02 10:11:14 INFO  AUTO-RUN [Main]扫描file类型的class文件...
-2013-05-02 10:11:15 INFO  AUTO-RUN 扫描到了运行器级别的监听器org.sky.auto.runner.listener.SimpleRunListener
-2013-05-02 10:11:15 INFO  AUTO-RUN >>>>>>>>>>>>>>>测试用例执行开始>>>>>>>>>>>
-2013-05-02 10:11:16 INFO  AUTO-RUN >>>>>>>>>>>>>>>测试用例执行开始>>>>>>>>>>>
-2013-05-02 10:11:16 INFO  AUTO-RUN [Case:FrameTest=>frametest]开始对xml资源进行扫描....
-2013-05-02 10:11:16 INFO  AUTO-RUN [Case:FrameTest=>baidu]开始对xml资源进行扫描....
-2013-05-02 10:11:16 INFO  AUTO-RUN [Case:FrameTest=>baidu]扫描收集了资源->百度首页-搜索框
-2013-05-02 10:11:16 INFO  AUTO-RUN [Case:FrameTest=>frametest]扫描收集了资源->百度首页-搜索框
-2013-05-02 10:11:16 INFO  AUTO-RUN [Case:FrameTest=>baidu]扫描收集了资源->百度首页-搜索按钮
-2013-05-02 10:11:16 INFO  AUTO-RUN [Case:FrameTest=>frametest]扫描收集了资源->百度首页-搜索按钮
-2013-05-02 10:11:16 INFO  AUTO-RUN [Case:FrameTest=>baidu]扫描收集了资源->测评游戏
-2013-05-02 10:11:16 INFO  AUTO-RUN [Case:FrameTest=>frametest]扫描收集了资源->测评游戏
-2013-05-02 10:11:16 INFO  AUTO-RUN [Case:FrameTest=>baidu]扫描收集了资源->测评模式
-2013-05-02 10:11:16 INFO  AUTO-RUN [Case:FrameTest=>frametest]扫描收集了资源->测评模式
-2013-05-02 10:11:16 INFO  AUTO-RUN [Case:FrameTest=>baidu]扫描收集了资源->测评得分
-2013-05-02 10:11:16 INFO  AUTO-RUN [Case:FrameTest=>frametest]扫描收集了资源->测评得分
-2013-05-02 10:11:16 INFO  AUTO-RUN [Case:FrameTest=>baidu]扫描收集了资源->测评显卡均价
-2013-05-02 10:11:16 INFO  AUTO-RUN [Case:FrameTest=>frametest]扫描收集了资源->测评显卡均价
-2013-05-02 10:11:16 INFO  AUTO-RUN [Case:FrameTest=>baidu]扫描收集了资源->MW-平板列表-苹果
-2013-05-02 10:11:16 INFO  AUTO-RUN [Case:FrameTest=>frametest]扫描收集了资源->MW-平板列表-苹果
-2013-05-02 10:11:16 INFO  AUTO-RUN [Case:FrameTest=>baidu]扫描收集了资源->百度-联想
-2013-05-02 10:11:16 INFO  AUTO-RUN [Case:FrameTest=>frametest]扫描收集了资源->百度-联想
-2013-05-02 10:11:16 INFO  AUTO-RUN [Case:FrameTest=>baidu]扫描XML资源完毕...
-2013-05-02 10:11:16 INFO  AUTO-RUN [Case:FrameTest=>frametest]扫描XML资源完毕...
-2013-05-02 10:11:16 INFO  AUTO-RUN [Case:FrameTest=>baidu]开始扫描txt的资源元素...
-2013-05-02 10:11:16 INFO  AUTO-RUN [Case:FrameTest=>frametest]开始扫描txt的资源元素...
-2013-05-02 10:11:16 INFO  AUTO-RUN [Case:FrameTest=>baidu]txt资源扫描结束
-2013-05-02 10:11:16 INFO  AUTO-RUN [Case:FrameTest=>frametest]txt资源扫描结束
-2013-05-02 10:11:19 INFO  AUTO-RUN [Case:FrameTest=>baidu]扫描file类型的class文件...
-2013-05-02 10:11:19 INFO  AUTO-RUN [Case:FrameTest=>frametest]扫描file类型的class文件...
-2013-05-02 10:11:19 INFO  AUTO-RUN [Case:FrameTest=>baidu]扫描file类型的class文件...
-2013-05-02 10:11:19 INFO  AUTO-RUN [Case:FrameTest=>frametest]扫描file类型的class文件...
-2013-05-02 10:11:19 INFO  AUTO-RUN [Case:FrameTest=>baidu]开始扫描动作监听器......
-2013-05-02 10:11:19 INFO  AUTO-RUN [Case:FrameTest=>baidu]扫描动作监听器结束
-2013-05-02 10:11:19 INFO  AUTO-RUN [Case:FrameTest=>frametest]开始扫描动作监听器......
-2013-05-02 10:11:19 INFO  AUTO-RUN [Case:FrameTest=>frametest]扫描动作监听器结束
-2013-05-02 10:11:20 WARN  AUTO-RUN Obsolete content type encountered: 'application/x-javascript'.
-2013-05-02 10:11:20 WARN  AUTO-RUN Obsolete content type encountered: 'application/x-javascript'.
-2013-05-02 10:11:20 WARN  AUTO-RUN Expected content type of 'application/javascript' or 'application/ecmascript' for remotely loaded JavaScript element at 'http://g.168.it168.com/GetFrom/GetFrom.aspx?rnd=', but got 'text/html'.
-2013-05-02 10:11:20 WARN  AUTO-RUN Expected content type of 'application/javascript' or 'application/ecmascript' for remotely loaded JavaScript element at 'http://open.pcpop.com/Ajax_EbWorthBuyingProduct.aspx?subCategorySN=0301&siteid=2&pageType=102&pageprocount=3&pagecount=5&divId=testdiv&width=189&pageblockId=163', but got 'text/html'.
-2013-05-02 10:11:20 WARN  AUTO-RUN Expected content type of 'application/javascript' or 'application/ecmascript' for remotely loaded JavaScript element at 'http://suggestion.baidu.com/su?wd=&cb=window.bdsug.sugPreRequest&sid=2365_1441_2133_1944_2202_1788_2249_2361&t=1367460680521', but got 'baiduApp/json'.
-2013-05-02 10:11:21 INFO  AUTO-RUN [Case:FrameTest=>baidu]使用浏览器HtmlUnit进行自动化测试，将要打开网址http://www.baidu.com测试
-2013-05-02 10:11:21 INFO  AUTO-RUN [Case:FrameTest=>baidu][百度首页-搜索框]是来自XML的资源
-2013-05-02 10:11:21 WARN  AUTO-RUN Obsolete content type encountered: 'text/javascript'.
-2013-05-02 10:11:22 WARN  AUTO-RUN CSS error: 'http://www.baidu.com/' [1:81] Error in expression. (Invalid token ";". Was expecting one of: <S>, <NUMBER>, "inherit", <IDENT>, <STRING>, <PLUS>, <HASH>, <EMS>, <EXS>, <LENGTH_PX>, <LENGTH_CM>, <LENGTH_MM>, <LENGTH_IN>, <LENGTH_PT>, <LENGTH_PC>, <ANGLE_DEG>, <ANGLE_RAD>, <ANGLE_GRAD>, <TIME_MS>, <TIME_S>, <FREQ_HZ>, <FREQ_KHZ>, <PERCENTAGE>, <DIMENSION>, <URI>, <FUNCTION>, "-".)
-2013-05-02 10:11:22 WARN  AUTO-RUN CSS error: 'http://www.baidu.com/' [1:331] Error in expression. (Invalid token ";". Was expecting one of: <S>, <NUMBER>, "inherit", <IDENT>, <STRING>, <PLUS>, <HASH>, <EMS>, <EXS>, <LENGTH_PX>, <LENGTH_CM>, <LENGTH_MM>, <LENGTH_IN>, <LENGTH_PT>, <LENGTH_PC>, <ANGLE_DEG>, <ANGLE_RAD>, <ANGLE_GRAD>, <TIME_MS>, <TIME_S>, <FREQ_HZ>, <FREQ_KHZ>, <PERCENTAGE>, <DIMENSION>, <URI>, <FUNCTION>, "-".)
-2013-05-02 10:11:22 WARN  AUTO-RUN CSS error: 'http://open.pcpop.com/css/ChannelHotProduct.css?v=2012009271109' [21:120] Error in style rule. (Invalid token ":". Was expecting one of: <EOF>, <S>, <NUMBER>, "inherit", <IDENT>, <STRING>, <PLUS>, <COMMA>, <HASH>, <IMPORTANT_SYM>, <EMS>, <EXS>, <LENGTH_PX>, <LENGTH_CM>, <LENGTH_MM>, <LENGTH_IN>, <LENGTH_PT>, <LENGTH_PC>, <ANGLE_DEG>, <ANGLE_RAD>, <ANGLE_GRAD>, <TIME_MS>, <TIME_S>, <FREQ_HZ>, <FREQ_KHZ>, <PERCENTAGE>, <DIMENSION>, <URI>, <FUNCTION>, "}", ";", "/", "-".)
-2013-05-02 10:11:22 WARN  AUTO-RUN CSS warning: 'http://open.pcpop.com/css/ChannelHotProduct.css?v=2012009271109' [21:120] Ignoring the following declarations in this rule.
-2013-05-02 10:11:22 WARN  AUTO-RUN CSS error: 'http://www.baidu.com/' [1:1484] Error in style rule. (Invalid token "*". Was expecting one of: <EOF>, <S>, <IDENT>, "}", ";".)
-2013-05-02 10:11:22 WARN  AUTO-RUN CSS warning: 'http://www.baidu.com/' [1:1484] Ignoring the following declarations in this rule.
-2013-05-02 10:11:22 WARN  AUTO-RUN CSS error: 'http://www.baidu.com/' [1:1708] Error in style rule. (Invalid token "*". Was expecting one of: <EOF>, <S>, <IDENT>, "}", ";".)
-2013-05-02 10:11:22 WARN  AUTO-RUN CSS warning: 'http://www.baidu.com/' [1:1708] Ignoring the following declarations in this rule.
-2013-05-02 10:11:22 WARN  AUTO-RUN CSS error: 'http://www.baidu.com/' [1:2340] Error in style rule. (Invalid token ":". Was expecting one of: <EOF>, <S>, <NUMBER>, "inherit", <IDENT>, <STRING>, <PLUS>, <COMMA>, <HASH>, <IMPORTANT_SYM>, <EMS>, <EXS>, <LENGTH_PX>, <LENGTH_CM>, <LENGTH_MM>, <LENGTH_IN>, <LENGTH_PT>, <LENGTH_PC>, <ANGLE_DEG>, <ANGLE_RAD>, <ANGLE_GRAD>, <TIME_MS>, <TIME_S>, <FREQ_HZ>, <FREQ_KHZ>, <PERCENTAGE>, <DIMENSION>, <URI>, <FUNCTION>, "}", ";", "/", "-".)
-2013-05-02 10:11:22 WARN  AUTO-RUN CSS warning: 'http://www.baidu.com/' [1:2340] Ignoring the following declarations in this rule.
-2013-05-02 10:11:22 INFO  AUTO-RUN [Case:FrameTest=>baidu]>>[百度首页-搜索框]输入值[北京]成功！
-2013-05-02 10:11:22 INFO  AUTO-RUN [Case:FrameTest=>baidu][百度首页-搜索按钮]是来自XML的资源
-2013-05-02 10:11:22 WARN  AUTO-RUN CSS error: 'http://product.it168.com/include/styleList.css?v=111' [331:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, <COMMA>, <HASH>, ".", ":", "[", <S>.)
-2013-05-02 10:11:22 WARN  AUTO-RUN CSS warning: 'http://product.it168.com/include/styleList.css?v=111' [331:2] Ignoring the following declarations in this rule.
-2013-05-02 10:11:22 WARN  AUTO-RUN CSS error: 'http://product.it168.com/include/styleList.css?v=111' [339:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, <COMMA>, <HASH>, ".", ":", "[", <S>.)
-2013-05-02 10:11:22 WARN  AUTO-RUN CSS warning: 'http://product.it168.com/include/styleList.css?v=111' [339:2] Ignoring the following declarations in this rule.
-2013-05-02 10:11:22 WARN  AUTO-RUN CSS error: 'http://product.it168.com/include/styleList.css?v=111' [344:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, <COMMA>, <HASH>, ".", ":", "[", <S>.)
-2013-05-02 10:11:22 WARN  AUTO-RUN CSS warning: 'http://product.it168.com/include/styleList.css?v=111' [344:2] Ignoring the following declarations in this rule.
-2013-05-02 10:11:22 WARN  AUTO-RUN CSS error: 'http://product.it168.com/include/styleList.css?v=111' [351:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, <COMMA>, <HASH>, ".", ":", "[", <S>.)
-2013-05-02 10:11:22 WARN  AUTO-RUN CSS warning: 'http://product.it168.com/include/styleList.css?v=111' [351:2] Ignoring the following declarations in this rule.
-2013-05-02 10:11:22 WARN  AUTO-RUN CSS error: 'http://product.it168.com/include/styleList.css?v=111' [355:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, <COMMA>, <HASH>, ".", ":", "[", <S>.)
-2013-05-02 10:11:22 WARN  AUTO-RUN CSS warning: 'http://product.it168.com/include/styleList.css?v=111' [355:2] Ignoring the following declarations in this rule.
-2013-05-02 10:11:22 WARN  AUTO-RUN CSS error: 'http://product.it168.com/include/styleList.css?v=111' [356:2] Error in style rule. (Invalid token "html". Was expecting one of: <S>, <LBRACE>, <COMMA>, <HASH>, ".", ":", "[", <S>.)
-2013-05-02 10:11:22 WARN  AUTO-RUN CSS warning: 'http://product.it168.com/include/styleList.css?v=111' [356:2] Ignoring the following declarations in this rule.
-2013-05-02 10:11:22 WARN  AUTO-RUN CSS error: 'http://product.it168.com/include/styleCV2.css?v=201203191' [62:119] Error in style rule. (Invalid token "*". Was expecting one of: <EOF>, <S>, <IDENT>, "}", ";".)
-2013-05-02 10:11:22 WARN  AUTO-RUN CSS warning: 'http://product.it168.com/include/styleCV2.css?v=201203191' [62:119] Ignoring the following declarations in this rule.
-2013-05-02 10:11:22 WARN  AUTO-RUN CSS error: 'http://product.pcpop.com/eb/css/EbWorthBuyingProduct.css' [3:1] Error in style rule. (Invalid token ".". Was expecting one of: <S>, <LBRACE>, <COMMA>.)
-2013-05-02 10:11:22 WARN  AUTO-RUN CSS warning: 'http://product.pcpop.com/eb/css/EbWorthBuyingProduct.css' [3:1] Ignoring the following declarations in this rule.
-2013-05-02 10:11:23 WARN  AUTO-RUN Obsolete content type encountered: 'text/javascript'.
-2013-05-02 10:11:23 WARN  AUTO-RUN Obsolete content type encountered: 'text/javascript'.
-2013-05-02 10:11:23 WARN  AUTO-RUN Obsolete content type encountered: 'text/javascript'.
-2013-05-02 10:11:23 WARN  AUTO-RUN Obsolete content type encountered: 'text/javascript'.
-2013-05-02 10:11:23 WARN  AUTO-RUN Obsolete content type encountered: 'text/javascript'.
-2013-05-02 10:11:24 WARN  AUTO-RUN CSS error: 'http://www.baidu.com/s?wd=%E5%8C%97%E4%BA%AC&rsv_bp=0&ch=&tn=baidu&bar=&rsv_spt=3&ie=utf-8&inputT=67' [1:1767] Error in style rule. (Invalid token "*". Was expecting one of: <EOF>, <S>, <IDENT>, "}", ";".)
-2013-05-02 10:11:24 WARN  AUTO-RUN CSS warning: 'http://www.baidu.com/s?wd=%E5%8C%97%E4%BA%AC&rsv_bp=0&ch=&tn=baidu&bar=&rsv_spt=3&ie=utf-8&inputT=67' [1:1767] Ignoring the following declarations in this rule.
-2013-05-02 10:11:24 WARN  AUTO-RUN CSS error: 'http://www.baidu.com/s?wd=%E5%8C%97%E4%BA%AC&rsv_bp=0&ch=&tn=baidu&bar=&rsv_spt=3&ie=utf-8&inputT=67' [1:2923] Error in style rule. (Invalid token "*". Was expecting one of: <EOF>, <S>, <IDENT>, "}", ";".)
-2013-05-02 10:11:24 WARN  AUTO-RUN CSS warning: 'http://www.baidu.com/s?wd=%E5%8C%97%E4%BA%AC&rsv_bp=0&ch=&tn=baidu&bar=&rsv_spt=3&ie=utf-8&inputT=67' [1:2923] Ignoring the following declarations in this rule.
-2013-05-02 10:11:24 WARN  AUTO-RUN CSS error: 'http://www.baidu.com/s?wd=%E5%8C%97%E4%BA%AC&rsv_bp=0&ch=&tn=baidu&bar=&rsv_spt=3&ie=utf-8&inputT=67' [1:5022] Error in style rule. (Invalid token "*". Was expecting one of: <EOF>, <S>, <IDENT>, "}", ";".)
-2013-05-02 10:11:24 WARN  AUTO-RUN CSS warning: 'http://www.baidu.com/s?wd=%E5%8C%97%E4%BA%AC&rsv_bp=0&ch=&tn=baidu&bar=&rsv_spt=3&ie=utf-8&inputT=67' [1:5022] Ignoring the following declarations in this rule.
-2013-05-02 10:11:24 WARN  AUTO-RUN CSS error: 'http://www.baidu.com/s?wd=%E5%8C%97%E4%BA%AC&rsv_bp=0&ch=&tn=baidu&bar=&rsv_spt=3&ie=utf-8&inputT=67' [1:6674] Error in style rule. (Invalid token "*". Was expecting one of: <EOF>, <S>, <IDENT>, "}", ";".)
-2013-05-02 10:11:24 WARN  AUTO-RUN CSS warning: 'http://www.baidu.com/s?wd=%E5%8C%97%E4%BA%AC&rsv_bp=0&ch=&tn=baidu&bar=&rsv_spt=3&ie=utf-8&inputT=67' [1:6674] Ignoring the following declarations in this rule.
-2013-05-02 10:11:24 WARN  AUTO-RUN CSS error: 'http://www.baidu.com/s?wd=%E5%8C%97%E4%BA%AC&rsv_bp=0&ch=&tn=baidu&bar=&rsv_spt=3&ie=utf-8&inputT=67' [1:7086] Error in style rule. (Invalid token "*". Was expecting one of: <EOF>, <S>, <IDENT>, "}", ";".)
-2013-05-02 10:11:24 WARN  AUTO-RUN CSS warning: 'http://www.baidu.com/s?wd=%E5%8C%97%E4%BA%AC&rsv_bp=0&ch=&tn=baidu&bar=&rsv_spt=3&ie=utf-8&inputT=67' [1:7086] Ignoring the following declarations in this rule.
-2013-05-02 10:11:24 WARN  AUTO-RUN CSS error: 'http://www.baidu.com/s?wd=%E5%8C%97%E4%BA%AC&rsv_bp=0&ch=&tn=baidu&bar=&rsv_spt=3&ie=utf-8&inputT=67' [1:7420] Error in style rule. (Invalid token ":". Was expecting one of: <EOF>, <S>, <NUMBER>, "inherit", <IDENT>, <STRING>, <PLUS>, <COMMA>, <HASH>, <IMPORTANT_SYM>, <EMS>, <EXS>, <LENGTH_PX>, <LENGTH_CM>, <LENGTH_MM>, <LENGTH_IN>, <LENGTH_PT>, <LENGTH_PC>, <ANGLE_DEG>, <ANGLE_RAD>, <ANGLE_GRAD>, <TIME_MS>, <TIME_S>, <FREQ_HZ>, <FREQ_KHZ>, <PERCENTAGE>, <DIMENSION>, <URI>, <FUNCTION>, "}", ";", "/", "-".)
-2013-05-02 10:11:24 WARN  AUTO-RUN CSS warning: 'http://www.baidu.com/s?wd=%E5%8C%97%E4%BA%AC&rsv_bp=0&ch=&tn=baidu&bar=&rsv_spt=3&ie=utf-8&inputT=67' [1:7420] Ignoring the following declarations in this rule.
-2013-05-02 10:11:24 WARN  AUTO-RUN CSS error: 'http://www.baidu.com/s?wd=%E5%8C%97%E4%BA%AC&rsv_bp=0&ch=&tn=baidu&bar=&rsv_spt=3&ie=utf-8&inputT=67' [1:7707] Error in style rule. (Invalid token "*". Was expecting one of: <EOF>, <S>, <IDENT>, "}", ";".)
-2013-05-02 10:11:24 WARN  AUTO-RUN CSS warning: 'http://www.baidu.com/s?wd=%E5%8C%97%E4%BA%AC&rsv_bp=0&ch=&tn=baidu&bar=&rsv_spt=3&ie=utf-8&inputT=67' [1:7707] Ignoring the following declarations in this rule.
-2013-05-02 10:11:24 WARN  AUTO-RUN CSS error: 'http://www.baidu.com/s?wd=%E5%8C%97%E4%BA%AC&rsv_bp=0&ch=&tn=baidu&bar=&rsv_spt=3&ie=utf-8&inputT=67' [1:7924] Error in style rule. (Invalid token "*". Was expecting one of: <EOF>, <S>, <IDENT>, "}", ";".)
-2013-05-02 10:11:24 WARN  AUTO-RUN CSS warning: 'http://www.baidu.com/s?wd=%E5%8C%97%E4%BA%AC&rsv_bp=0&ch=&tn=baidu&bar=&rsv_spt=3&ie=utf-8&inputT=67' [1:7924] Ignoring the following declarations in this rule.
-2013-05-02 10:11:24 WARN  AUTO-RUN CSS error: 'http://www.baidu.com/s?wd=%E5%8C%97%E4%BA%AC&rsv_bp=0&ch=&tn=baidu&bar=&rsv_spt=3&ie=utf-8&inputT=67' [1:8722] Error in style rule. (Invalid token "*". Was expecting one of: <EOF>, <S>, <IDENT>, "}", ";".)
-2013-05-02 10:11:24 WARN  AUTO-RUN CSS warning: 'http://www.baidu.com/s?wd=%E5%8C%97%E4%BA%AC&rsv_bp=0&ch=&tn=baidu&bar=&rsv_spt=3&ie=utf-8&inputT=67' [1:8722] Ignoring the following declarations in this rule.
-2013-05-02 10:11:24 WARN  AUTO-RUN CSS error: 'http://www.baidu.com/s?wd=%E5%8C%97%E4%BA%AC&rsv_bp=0&ch=&tn=baidu&bar=&rsv_spt=3&ie=utf-8&inputT=67' [1:922] Error in style rule. (Invalid token "*". Was expecting one of: <EOF>, <S>, <IDENT>, "}", ";".)
-2013-05-02 10:11:24 WARN  AUTO-RUN CSS warning: 'http://www.baidu.com/s?wd=%E5%8C%97%E4%BA%AC&rsv_bp=0&ch=&tn=baidu&bar=&rsv_spt=3&ie=utf-8&inputT=67' [1:922] Ignoring the following declarations in this rule.
-2013-05-02 10:11:24 WARN  AUTO-RUN CSS error: 'http://www.baidu.com/s?wd=%E5%8C%97%E4%BA%AC&rsv_bp=0&ch=&tn=baidu&bar=&rsv_spt=3&ie=utf-8&inputT=67' [1:690] Error in style rule. (Invalid token "*". Was expecting one of: <EOF>, <S>, <IDENT>, "}", ";".)
-2013-05-02 10:11:24 WARN  AUTO-RUN CSS warning: 'http://www.baidu.com/s?wd=%E5%8C%97%E4%BA%AC&rsv_bp=0&ch=&tn=baidu&bar=&rsv_spt=3&ie=utf-8&inputT=67' [1:690] Ignoring the following declarations in this rule.
-2013-05-02 10:11:24 WARN  AUTO-RUN CSS error: 'http://www.baidu.com/s?wd=%E5%8C%97%E4%BA%AC&rsv_bp=0&ch=&tn=baidu&bar=&rsv_spt=3&ie=utf-8&inputT=67' [1:840] Error in style rule. (Invalid token "*". Was expecting one of: <EOF>, <S>, <IDENT>, "}", ";".)
-2013-05-02 10:11:24 WARN  AUTO-RUN CSS warning: 'http://www.baidu.com/s?wd=%E5%8C%97%E4%BA%AC&rsv_bp=0&ch=&tn=baidu&bar=&rsv_spt=3&ie=utf-8&inputT=67' [1:840] Ignoring the following declarations in this rule.
-2013-05-02 10:11:24 WARN  AUTO-RUN CSS error: 'http://www.baidu.com/s?wd=%E5%8C%97%E4%BA%AC&rsv_bp=0&ch=&tn=baidu&bar=&rsv_spt=3&ie=utf-8&inputT=67' [1:1056] Error in style rule. (Invalid token "*". Was expecting one of: <EOF>, <S>, <IDENT>, "}", ";".)
-2013-05-02 10:11:24 WARN  AUTO-RUN CSS warning: 'http://www.baidu.com/s?wd=%E5%8C%97%E4%BA%AC&rsv_bp=0&ch=&tn=baidu&bar=&rsv_spt=3&ie=utf-8&inputT=67' [1:1056] Ignoring the following declarations in this rule.
-2013-05-02 10:11:24 WARN  AUTO-RUN CSS error: 'http://www.baidu.com/s?wd=%E5%8C%97%E4%BA%AC&rsv_bp=0&ch=&tn=baidu&bar=&rsv_spt=3&ie=utf-8&inputT=67' [1:1469] Error in style rule. (Invalid token "*". Was expecting one of: <EOF>, <S>, <IDENT>, "}", ";".)
-2013-05-02 10:11:24 WARN  AUTO-RUN CSS warning: 'http://www.baidu.com/s?wd=%E5%8C%97%E4%BA%AC&rsv_bp=0&ch=&tn=baidu&bar=&rsv_spt=3&ie=utf-8&inputT=67' [1:1469] Ignoring the following declarations in this rule.
-2013-05-02 10:11:24 WARN  AUTO-RUN CSS error: 'http://www.baidu.com/s?wd=%E5%8C%97%E4%BA%AC&rsv_bp=0&ch=&tn=baidu&bar=&rsv_spt=3&ie=utf-8&inputT=67' [1:932] Error in style rule. (Invalid token "*". Was expecting one of: <EOF>, <S>, <IDENT>, "}", ";".)
-2013-05-02 10:11:24 WARN  AUTO-RUN CSS warning: 'http://www.baidu.com/s?wd=%E5%8C%97%E4%BA%AC&rsv_bp=0&ch=&tn=baidu&bar=&rsv_spt=3&ie=utf-8&inputT=67' [1:932] Ignoring the following declarations in this rule.
-2013-05-02 10:11:25 INFO  AUTO-RUN [Case:FrameTest=>baidu]>>[百度首页-搜索按钮]点击成功！
-2013-05-02 10:11:25 WARN  AUTO-RUN Obsolete content type encountered: 'text/javascript'.
-2013-05-02 10:11:25 WARN  AUTO-RUN Obsolete content type encountered: 'text/javascript'.
-2013-05-02 10:11:25 INFO  AUTO-RUN [Case:FrameTest=>baidu]关闭了所有的浏览器！
-2013-05-02 10:11:25 INFO  AUTO-RUN >>>>>>>>>>>>>>>测试用例执行结束>>>>>>>>>>>
-2013-05-02 10:11:26 WARN  AUTO-RUN Obsolete content type encountered: 'application/x-javascript'.
-2013-05-02 10:11:26 WARN  AUTO-RUN Obsolete content type encountered: 'application/x-javascript'.
-2013-05-02 10:11:26 WARN  AUTO-RUN Obsolete content type encountered: 'application/x-javascript'.
-2013-05-02 10:11:27 WARN  AUTO-RUN Obsolete content type encountered: 'application/x-javascript'.
-2013-05-02 10:11:27 WARN  AUTO-RUN Obsolete content type encountered: 'application/x-javascript'.
-2013-05-02 10:11:27 WARN  AUTO-RUN Obsolete content type encountered: 'application/x-javascript'.
-2013-05-02 10:11:30 WARN  AUTO-RUN Obsolete content type encountered: 'application/x-javascript'.
-2013-05-02 10:11:30 WARN  AUTO-RUN Obsolete content type encountered: 'application/x-javascript'.
-2013-05-02 10:11:31 WARN  AUTO-RUN Obsolete content type encountered: 'application/x-javascript'.
-2013-05-02 10:11:31 WARN  AUTO-RUN Obsolete content type encountered: 'application/x-javascript'.
-2013-05-02 10:11:31 WARN  AUTO-RUN Obsolete content type encountered: 'application/x-javascript'.
-2013-05-02 10:11:31 WARN  AUTO-RUN warning: message=[Calling eval() with anything other than a primitive string value will simply return the value. Is this what you intended?] sourceName=[http://168.it168.com/bpagejsnew/bpage_gg.js] line=[486] lineSource=[null] lineOffset=[0]
-2013-05-02 10:11:31 WARN  AUTO-RUN Obsolete content type encountered: 'application/x-javascript'.
-2013-05-02 10:11:31 WARN  AUTO-RUN Obsolete content type encountered: 'application/x-javascript'.
-2013-05-02 10:11:32 WARN  AUTO-RUN Obsolete content type encountered: 'text/javascript'.
-2013-05-02 10:11:32 WARN  AUTO-RUN Obsolete content type encountered: 'application/x-javascript'.
-2013-05-02 10:11:32 WARN  AUTO-RUN CSS error: 'http://cpro.baidu.com/cpro/ui/uijs.php?rs=0&tu=u1225384&tn=baiduTlinkInlay&n=01084029_cpr&adn=5&rsi1=120&rsi0=180&rad=&rss0=%23BAB8B8&conBW=1&rss1=%23f0f0f0&conOP=0&rss2=%230000FF&titFF=%25E5%25BE%25AE%25E8%25BD%25AF%25E9%259B%2585%25E9%25BB%2591&titFS=12&titTA=left&rss3=&rss4=&rss5=&rss6=%23e10900&rsi5=4&ts=1&at=103&ch=0&cad=1&aurl=&rss7=&cpa=1&fv=9&cn=1&if=5&word=http%3A%2F%2Fproduct.it168.com%2Flist%2Fb%2F03010377_1.shtml&refer=&ready=1&jk=7e5e414f32e624c5&jn=3&lmt=1367458817&csp=1024,768&csn=1024,768&ccd=24&chi=2&cja=false&cpl=1&cmi=1&cce=true&csl=en-us&did=1&rt=182&dt=1367460692&ev=83886080&c01=0&prt=1367460692497&i3=f&anatp=0&stid=0&lunum=6&hn=5&wn=1' [3:661] Error in style rule. (Invalid token "*". Was expecting one of: <EOF>, <S>, <IDENT>, "}", ";".)
-2013-05-02 10:11:32 WARN  AUTO-RUN CSS warning: 'http://cpro.baidu.com/cpro/ui/uijs.php?rs=0&tu=u1225384&tn=baiduTlinkInlay&n=01084029_cpr&adn=5&rsi1=120&rsi0=180&rad=&rss0=%23BAB8B8&conBW=1&rss1=%23f0f0f0&conOP=0&rss2=%230000FF&titFF=%25E5%25BE%25AE%25E8%25BD%25AF%25E9%259B%2585%25E9%25BB%2591&titFS=12&titTA=left&rss3=&rss4=&rss5=&rss6=%23e10900&rsi5=4&ts=1&at=103&ch=0&cad=1&aurl=&rss7=&cpa=1&fv=9&cn=1&if=5&word=http%3A%2F%2Fproduct.it168.com%2Flist%2Fb%2F03010377_1.shtml&refer=&ready=1&jk=7e5e414f32e624c5&jn=3&lmt=1367458817&csp=1024,768&csn=1024,768&ccd=24&chi=2&cja=false&cpl=1&cmi=1&cce=true&csl=en-us&did=1&rt=182&dt=1367460692&ev=83886080&c01=0&prt=1367460692497&i3=f&anatp=0&stid=0&lunum=6&hn=5&wn=1' [3:661] Ignoring the following declarations in this rule.
-2013-05-02 10:11:32 WARN  AUTO-RUN CSS error: 'http://cpro.baidu.com/cpro/ui/uijs.php?rs=0&tu=u1225384&tn=baiduTlinkInlay&n=01084029_cpr&adn=5&rsi1=120&rsi0=180&rad=&rss0=%23BAB8B8&conBW=1&rss1=%23f0f0f0&conOP=0&rss2=%230000FF&titFF=%25E5%25BE%25AE%25E8%25BD%25AF%25E9%259B%2585%25E9%25BB%2591&titFS=12&titTA=left&rss3=&rss4=&rss5=&rss6=%23e10900&rsi5=4&ts=1&at=103&ch=0&cad=1&aurl=&rss7=&cpa=1&fv=9&cn=1&if=5&word=http%3A%2F%2Fproduct.it168.com%2Flist%2Fb%2F03010377_1.shtml&refer=&ready=1&jk=7e5e414f32e624c5&jn=3&lmt=1367458817&csp=1024,768&csn=1024,768&ccd=24&chi=2&cja=false&cpl=1&cmi=1&cce=true&csl=en-us&did=1&rt=182&dt=1367460692&ev=83886080&c01=0&prt=1367460692497&i3=f&anatp=0&stid=0&lunum=6&hn=5&wn=1' [4:326] Error in style rule. (Invalid token ":". Was expecting one of: <EOF>, <S>, <NUMBER>, "inherit", <IDENT>, <STRING>, <PLUS>, <COMMA>, <HASH>, <IMPORTANT_SYM>, <EMS>, <EXS>, <LENGTH_PX>, <LENGTH_CM>, <LENGTH_MM>, <LENGTH_IN>, <LENGTH_PT>, <LENGTH_PC>, <ANGLE_DEG>, <ANGLE_RAD>, <ANGLE_GRAD>, <TIME_MS>, <TIME_S>, <FREQ_HZ>, <FREQ_KHZ>, <PERCENTAGE>, <DIMENSION>, <URI>, <FUNCTION>, "}", ";", "/", "-".)
-2013-05-02 10:11:32 WARN  AUTO-RUN CSS warning: 'http://cpro.baidu.com/cpro/ui/uijs.php?rs=0&tu=u1225384&tn=baiduTlinkInlay&n=01084029_cpr&adn=5&rsi1=120&rsi0=180&rad=&rss0=%23BAB8B8&conBW=1&rss1=%23f0f0f0&conOP=0&rss2=%230000FF&titFF=%25E5%25BE%25AE%25E8%25BD%25AF%25E9%259B%2585%25E9%25BB%2591&titFS=12&titTA=left&rss3=&rss4=&rss5=&rss6=%23e10900&rsi5=4&ts=1&at=103&ch=0&cad=1&aurl=&rss7=&cpa=1&fv=9&cn=1&if=5&word=http%3A%2F%2Fproduct.it168.com%2Flist%2Fb%2F03010377_1.shtml&refer=&ready=1&jk=7e5e414f32e624c5&jn=3&lmt=1367458817&csp=1024,768&csn=1024,768&ccd=24&chi=2&cja=false&cpl=1&cmi=1&cce=true&csl=en-us&did=1&rt=182&dt=1367460692&ev=83886080&c01=0&prt=1367460692497&i3=f&anatp=0&stid=0&lunum=6&hn=5&wn=1' [4:326] Ignoring the following declarations in this rule.
-2013-05-02 10:11:32 WARN  AUTO-RUN CSS error: 'http://cpro.baidu.com/cpro/ui/uijs.php?rs=0&tu=u1225384&tn=baiduTlinkInlay&n=01084029_cpr&adn=5&rsi1=120&rsi0=180&rad=&rss0=%23BAB8B8&conBW=1&rss1=%23f0f0f0&conOP=0&rss2=%230000FF&titFF=%25E5%25BE%25AE%25E8%25BD%25AF%25E9%259B%2585%25E9%25BB%2591&titFS=12&titTA=left&rss3=&rss4=&rss5=&rss6=%23e10900&rsi5=4&ts=1&at=103&ch=0&cad=1&aurl=&rss7=&cpa=1&fv=9&cn=1&if=5&word=http%3A%2F%2Fproduct.it168.com%2Flist%2Fb%2F03010377_1.shtml&refer=&ready=1&jk=7e5e414f32e624c5&jn=3&lmt=1367458817&csp=1024,768&csn=1024,768&ccd=24&chi=2&cja=false&cpl=1&cmi=1&cce=true&csl=en-us&did=1&rt=182&dt=1367460692&ev=83886080&c01=0&prt=1367460692497&i3=f&anatp=0&stid=0&lunum=6&hn=5&wn=1' [4:565] Error in style rule. (Invalid token ":". Was expecting one of: <EOF>, <S>, <NUMBER>, "inherit", <IDENT>, <STRING>, <PLUS>, <COMMA>, <HASH>, <IMPORTANT_SYM>, <EMS>, <EXS>, <LENGTH_PX>, <LENGTH_CM>, <LENGTH_MM>, <LENGTH_IN>, <LENGTH_PT>, <LENGTH_PC>, <ANGLE_DEG>, <ANGLE_RAD>, <ANGLE_GRAD>, <TIME_MS>, <TIME_S>, <FREQ_HZ>, <FREQ_KHZ>, <PERCENTAGE>, <DIMENSION>, <URI>, <FUNCTION>, "}", ";", "/", "-".)
-2013-05-02 10:11:32 WARN  AUTO-RUN CSS warning: 'http://cpro.baidu.com/cpro/ui/uijs.php?rs=0&tu=u1225384&tn=baiduTlinkInlay&n=01084029_cpr&adn=5&rsi1=120&rsi0=180&rad=&rss0=%23BAB8B8&conBW=1&rss1=%23f0f0f0&conOP=0&rss2=%230000FF&titFF=%25E5%25BE%25AE%25E8%25BD%25AF%25E9%259B%2585%25E9%25BB%2591&titFS=12&titTA=left&rss3=&rss4=&rss5=&rss6=%23e10900&rsi5=4&ts=1&at=103&ch=0&cad=1&aurl=&rss7=&cpa=1&fv=9&cn=1&if=5&word=http%3A%2F%2Fproduct.it168.com%2Flist%2Fb%2F03010377_1.shtml&refer=&ready=1&jk=7e5e414f32e624c5&jn=3&lmt=1367458817&csp=1024,768&csn=1024,768&ccd=24&chi=2&cja=false&cpl=1&cmi=1&cce=true&csl=en-us&did=1&rt=182&dt=1367460692&ev=83886080&c01=0&prt=1367460692497&i3=f&anatp=0&stid=0&lunum=6&hn=5&wn=1' [4:565] Ignoring the following declarations in this rule.
-2013-05-02 10:11:32 WARN  AUTO-RUN CSS error: 'http://cpro.baidu.com/cpro/ui/uijs.php?rs=0&tu=u1225384&tn=baiduTlinkInlay&n=01084029_cpr&adn=5&rsi1=120&rsi0=180&rad=&rss0=%23BAB8B8&conBW=1&rss1=%23f0f0f0&conOP=0&rss2=%230000FF&titFF=%25E5%25BE%25AE%25E8%25BD%25AF%25E9%259B%2585%25E9%25BB%2591&titFS=12&titTA=left&rss3=&rss4=&rss5=&rss6=%23e10900&rsi5=4&ts=1&at=103&ch=0&cad=1&aurl=&rss7=&cpa=1&fv=9&cn=1&if=5&word=http%3A%2F%2Fproduct.it168.com%2Flist%2Fb%2F03010377_1.shtml&refer=&ready=1&jk=7e5e414f32e624c5&jn=3&lmt=1367458817&csp=1024,768&csn=1024,768&ccd=24&chi=2&cja=false&cpl=1&cmi=1&cce=true&csl=en-us&did=1&rt=182&dt=1367460692&ev=83886080&c01=0&prt=1367460692497&i3=f&anatp=0&stid=0&lunum=6&hn=5&wn=1' [4:920] Error in style rule. (Invalid token ":". Was expecting one of: <EOF>, <S>, <NUMBER>, "inherit", <IDENT>, <STRING>, <PLUS>, <COMMA>, <HASH>, <IMPORTANT_SYM>, <EMS>, <EXS>, <LENGTH_PX>, <LENGTH_CM>, <LENGTH_MM>, <LENGTH_IN>, <LENGTH_PT>, <LENGTH_PC>, <ANGLE_DEG>, <ANGLE_RAD>, <ANGLE_GRAD>, <TIME_MS>, <TIME_S>, <FREQ_HZ>, <FREQ_KHZ>, <PERCENTAGE>, <DIMENSION>, <URI>, <FUNCTION>, "}", ";", "/", "-".)
-2013-05-02 10:11:32 WARN  AUTO-RUN CSS warning: 'http://cpro.baidu.com/cpro/ui/uijs.php?rs=0&tu=u1225384&tn=baiduTlinkInlay&n=01084029_cpr&adn=5&rsi1=120&rsi0=180&rad=&rss0=%23BAB8B8&conBW=1&rss1=%23f0f0f0&conOP=0&rss2=%230000FF&titFF=%25E5%25BE%25AE%25E8%25BD%25AF%25E9%259B%2585%25E9%25BB%2591&titFS=12&titTA=left&rss3=&rss4=&rss5=&rss6=%23e10900&rsi5=4&ts=1&at=103&ch=0&cad=1&aurl=&rss7=&cpa=1&fv=9&cn=1&if=5&word=http%3A%2F%2Fproduct.it168.com%2Flist%2Fb%2F03010377_1.shtml&refer=&ready=1&jk=7e5e414f32e624c5&jn=3&lmt=1367458817&csp=1024,768&csn=1024,768&ccd=24&chi=2&cja=false&cpl=1&cmi=1&cce=true&csl=en-us&did=1&rt=182&dt=1367460692&ev=83886080&c01=0&prt=1367460692497&i3=f&anatp=0&stid=0&lunum=6&hn=5&wn=1' [4:920] Ignoring the following declarations in this rule.
-2013-05-02 10:11:32 WARN  AUTO-RUN CSS error: 'http://cpro.baidu.com/cpro/ui/uijs.php?rs=0&tu=u1225384&tn=baiduTlinkInlay&n=01084029_cpr&adn=5&rsi1=120&rsi0=180&rad=&rss0=%23BAB8B8&conBW=1&rss1=%23f0f0f0&conOP=0&rss2=%230000FF&titFF=%25E5%25BE%25AE%25E8%25BD%25AF%25E9%259B%2585%25E9%25BB%2591&titFS=12&titTA=left&rss3=&rss4=&rss5=&rss6=%23e10900&rsi5=4&ts=1&at=103&ch=0&cad=1&aurl=&rss7=&cpa=1&fv=9&cn=1&if=5&word=http%3A%2F%2Fproduct.it168.com%2Flist%2Fb%2F03010377_1.shtml&refer=&ready=1&jk=7e5e414f32e624c5&jn=3&lmt=1367458817&csp=1024,768&csn=1024,768&ccd=24&chi=2&cja=false&cpl=1&cmi=1&cce=true&csl=en-us&did=1&rt=182&dt=1367460692&ev=83886080&c01=0&prt=1367460692497&i3=f&anatp=0&stid=0&lunum=6&hn=5&wn=1' [4:1162] Error in style rule. (Invalid token ":". Was expecting one of: <EOF>, <S>, <NUMBER>, "inherit", <IDENT>, <STRING>, <PLUS>, <COMMA>, <HASH>, <IMPORTANT_SYM>, <EMS>, <EXS>, <LENGTH_PX>, <LENGTH_CM>, <LENGTH_MM>, <LENGTH_IN>, <LENGTH_PT>, <LENGTH_PC>, <ANGLE_DEG>, <ANGLE_RAD>, <ANGLE_GRAD>, <TIME_MS>, <TIME_S>, <FREQ_HZ>, <FREQ_KHZ>, <PERCENTAGE>, <DIMENSION>, <URI>, <FUNCTION>, "}", ";", "/", "-".)
-2013-05-02 10:11:32 WARN  AUTO-RUN CSS warning: 'http://cpro.baidu.com/cpro/ui/uijs.php?rs=0&tu=u1225384&tn=baiduTlinkInlay&n=01084029_cpr&adn=5&rsi1=120&rsi0=180&rad=&rss0=%23BAB8B8&conBW=1&rss1=%23f0f0f0&conOP=0&rss2=%230000FF&titFF=%25E5%25BE%25AE%25E8%25BD%25AF%25E9%259B%2585%25E9%25BB%2591&titFS=12&titTA=left&rss3=&rss4=&rss5=&rss6=%23e10900&rsi5=4&ts=1&at=103&ch=0&cad=1&aurl=&rss7=&cpa=1&fv=9&cn=1&if=5&word=http%3A%2F%2Fproduct.it168.com%2Flist%2Fb%2F03010377_1.shtml&refer=&ready=1&jk=7e5e414f32e624c5&jn=3&lmt=1367458817&csp=1024,768&csn=1024,768&ccd=24&chi=2&cja=false&cpl=1&cmi=1&cce=true&csl=en-us&did=1&rt=182&dt=1367460692&ev=83886080&c01=0&prt=1367460692497&i3=f&anatp=0&stid=0&lunum=6&hn=5&wn=1' [4:1162] Ignoring the following declarations in this rule.
-2013-05-02 10:11:32 WARN  AUTO-RUN CSS error: 'http://cpro.baidu.com/cpro/ui/uijs.php?rs=0&tu=u1225384&tn=baiduTlinkInlay&n=01084029_cpr&adn=5&rsi1=120&rsi0=180&rad=&rss0=%23BAB8B8&conBW=1&rss1=%23f0f0f0&conOP=0&rss2=%230000FF&titFF=%25E5%25BE%25AE%25E8%25BD%25AF%25E9%259B%2585%25E9%25BB%2591&titFS=12&titTA=left&rss3=&rss4=&rss5=&rss6=%23e10900&rsi5=4&ts=1&at=103&ch=0&cad=1&aurl=&rss7=&cpa=1&fv=9&cn=1&if=5&word=http%3A%2F%2Fproduct.it168.com%2Flist%2Fb%2F03010377_1.shtml&refer=&ready=1&jk=7e5e414f32e624c5&jn=3&lmt=1367458817&csp=1024,768&csn=1024,768&ccd=24&chi=2&cja=false&cpl=1&cmi=1&cce=true&csl=en-us&did=1&rt=182&dt=1367460692&ev=83886080&c01=0&prt=1367460692497&i3=f&anatp=0&stid=0&lunum=6&hn=5&wn=1' [4:1500] Error in style rule. (Invalid token ":". Was expecting one of: <EOF>, <S>, <NUMBER>, "inherit", <IDENT>, <STRING>, <PLUS>, <COMMA>, <HASH>, <IMPORTANT_SYM>, <EMS>, <EXS>, <LENGTH_PX>, <LENGTH_CM>, <LENGTH_MM>, <LENGTH_IN>, <LENGTH_PT>, <LENGTH_PC>, <ANGLE_DEG>, <ANGLE_RAD>, <ANGLE_GRAD>, <TIME_MS>, <TIME_S>, <FREQ_HZ>, <FREQ_KHZ>, <PERCENTAGE>, <DIMENSION>, <URI>, <FUNCTION>, "}", ";", "/", "-".)
-2013-05-02 10:11:32 WARN  AUTO-RUN CSS warning: 'http://cpro.baidu.com/cpro/ui/uijs.php?rs=0&tu=u1225384&tn=baiduTlinkInlay&n=01084029_cpr&adn=5&rsi1=120&rsi0=180&rad=&rss0=%23BAB8B8&conBW=1&rss1=%23f0f0f0&conOP=0&rss2=%230000FF&titFF=%25E5%25BE%25AE%25E8%25BD%25AF%25E9%259B%2585%25E9%25BB%2591&titFS=12&titTA=left&rss3=&rss4=&rss5=&rss6=%23e10900&rsi5=4&ts=1&at=103&ch=0&cad=1&aurl=&rss7=&cpa=1&fv=9&cn=1&if=5&word=http%3A%2F%2Fproduct.it168.com%2Flist%2Fb%2F03010377_1.shtml&refer=&ready=1&jk=7e5e414f32e624c5&jn=3&lmt=1367458817&csp=1024,768&csn=1024,768&ccd=24&chi=2&cja=false&cpl=1&cmi=1&cce=true&csl=en-us&did=1&rt=182&dt=1367460692&ev=83886080&c01=0&prt=1367460692497&i3=f&anatp=0&stid=0&lunum=6&hn=5&wn=1' [4:1500] Ignoring the following declarations in this rule.
-2013-05-02 10:11:32 WARN  AUTO-RUN CSS error: 'http://cpro.baidu.com/cpro/ui/uijs.php?rs=0&tu=u1225384&tn=baiduTlinkInlay&n=01084029_cpr&adn=5&rsi1=120&rsi0=180&rad=&rss0=%23BAB8B8&conBW=1&rss1=%23f0f0f0&conOP=0&rss2=%230000FF&titFF=%25E5%25BE%25AE%25E8%25BD%25AF%25E9%259B%2585%25E9%25BB%2591&titFS=12&titTA=left&rss3=&rss4=&rss5=&rss6=%23e10900&rsi5=4&ts=1&at=103&ch=0&cad=1&aurl=&rss7=&cpa=1&fv=9&cn=1&if=5&word=http%3A%2F%2Fproduct.it168.com%2Flist%2Fb%2F03010377_1.shtml&refer=&ready=1&jk=7e5e414f32e624c5&jn=3&lmt=1367458817&csp=1024,768&csn=1024,768&ccd=24&chi=2&cja=false&cpl=1&cmi=1&cce=true&csl=en-us&did=1&rt=182&dt=1367460692&ev=83886080&c01=0&prt=1367460692497&i3=f&anatp=0&stid=0&lunum=6&hn=5&wn=1' [5:203] Error in style rule. (Invalid token "*". Was expecting one of: <EOF>, <S>, <IDENT>, "}", ";".)
-2013-05-02 10:11:32 WARN  AUTO-RUN CSS warning: 'http://cpro.baidu.com/cpro/ui/uijs.php?rs=0&tu=u1225384&tn=baiduTlinkInlay&n=01084029_cpr&adn=5&rsi1=120&rsi0=180&rad=&rss0=%23BAB8B8&conBW=1&rss1=%23f0f0f0&conOP=0&rss2=%230000FF&titFF=%25E5%25BE%25AE%25E8%25BD%25AF%25E9%259B%2585%25E9%25BB%2591&titFS=12&titTA=left&rss3=&rss4=&rss5=&rss6=%23e10900&rsi5=4&ts=1&at=103&ch=0&cad=1&aurl=&rss7=&cpa=1&fv=9&cn=1&if=5&word=http%3A%2F%2Fproduct.it168.com%2Flist%2Fb%2F03010377_1.shtml&refer=&ready=1&jk=7e5e414f32e624c5&jn=3&lmt=1367458817&csp=1024,768&csn=1024,768&ccd=24&chi=2&cja=false&cpl=1&cmi=1&cce=true&csl=en-us&did=1&rt=182&dt=1367460692&ev=83886080&c01=0&prt=1367460692497&i3=f&anatp=0&stid=0&lunum=6&hn=5&wn=1' [5:203] Ignoring the following declarations in this rule.
-2013-05-02 10:11:32 WARN  AUTO-RUN Obsolete content type encountered: 'application/x-javascript'.
-2013-05-02 10:11:32 WARN  AUTO-RUN Obsolete content type encountered: 'application/x-javascript'.
-2013-05-02 10:11:32 WARN  AUTO-RUN Obsolete content type encountered: 'application/x-javascript'.
-2013-05-02 10:11:32 WARN  AUTO-RUN Obsolete content type encountered: 'application/x-javascript'.
-2013-05-02 10:11:32 WARN  AUTO-RUN Obsolete content type encountered: 'application/x-javascript'.
-2013-05-02 10:11:32 WARN  AUTO-RUN Obsolete content type encountered: 'application/x-javascript'.
-2013-05-02 10:11:32 WARN  AUTO-RUN Obsolete content type encountered: 'application/x-javascript'.
-2013-05-02 10:11:34 WARN  AUTO-RUN Obsolete content type encountered: 'application/x-javascript'.
-2013-05-02 10:11:34 WARN  AUTO-RUN Obsolete content type encountered: 'application/x-javascript'.
-2013-05-02 10:11:34 ERROR AUTO-RUN runtimeError: message=[An invalid or illegal selector was specified (selector: '#sso_login a:first' error: Invalid selector: *#sso_login a:first).] sourceName=[http://product.it168.com/js/jquery.js] line=[21] lineSource=[null] lineOffset=[0]
-2013-05-02 10:11:34 ERROR AUTO-RUN runtimeError: message=[An invalid or illegal selector was specified (selector: '#sso_login a:last' error: Invalid selector: *#sso_login a:last).] sourceName=[http://product.it168.com/js/jquery.js] line=[21] lineSource=[null] lineOffset=[0]
-2013-05-02 10:11:34 INFO  AUTO-RUN [Case:FrameTest=>frametest]使用浏览器HtmlUnit进行自动化测试，将要打开网址http://product.it168.com/list/b/03010377_1.shtml测试
-2013-05-02 10:11:39 ERROR AUTO-RUN >>>>>>>>>>>>>>>测试用例执行失败>>>>>>>>>>>
-2013-05-02 10:11:39 ERROR AUTO-RUN [Case:FrameTest=>frametest]org.sky.auto.exception.MyAutoException: cuowule
-2013-05-02 10:11:39 ERROR AUTO-RUN Exception:[Case:FrameTest=>frametest] at org.sky.auto.test.FrameTest.frametest(FrameTest.java:22)
-	Exception:[Case:FrameTest=>frametest] at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	Exception:[Case:FrameTest=>frametest] at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
-	Exception:[Case:FrameTest=>frametest] at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
-	Exception:[Case:FrameTest=>frametest] at java.lang.reflect.Method.invoke(Method.java:597)
-	Exception:[Case:FrameTest=>frametest] at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:45)
-	Exception:[Case:FrameTest=>frametest] at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
-	Exception:[Case:FrameTest=>frametest] at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:42)
-	Exception:[Case:FrameTest=>frametest] at org.sky.auto.runner.statement.InterceptorStatement.evaluate(InterceptorStatement.java:29)
-	Exception:[Case:FrameTest=>frametest] at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:263)
-	Exception:[Case:FrameTest=>frametest] at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:68)
-	Exception:[Case:FrameTest=>frametest] at org.databene.feed4junit.Feeder.runChild(Feeder.java:194)
-	Exception:[Case:FrameTest=>frametest] at org.databene.feed4junit.ChildRunner.run(ChildRunner.java:58)
-	Exception:[Case:FrameTest=>frametest] at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:439)
-	Exception:[Case:FrameTest=>frametest] at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
-	Exception:[Case:FrameTest=>frametest] at java.util.concurrent.FutureTask.run(FutureTask.java:138)
-	Exception:[Case:FrameTest=>frametest] at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:439)
-	Exception:[Case:FrameTest=>frametest] at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
-	Exception:[Case:FrameTest=>frametest] at java.util.concurrent.FutureTask.run(FutureTask.java:138)
-	Exception:[Case:FrameTest=>frametest] at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
-	Exception:[Case:FrameTest=>frametest] at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
-	Exception:[Case:FrameTest=>frametest] at java.lang.Thread.run(Thread.java:680)
-
-2013-05-02 10:11:39 INFO  AUTO-RUN >>>>>>>>>>>>>>>测试用例执行结束>>>>>>>>>>>
+2013-05-03 17:18:16 INFO  AUTO-RUN [Main]扫描file类型的class文件...
+2013-05-03 17:18:16 INFO  AUTO-RUN [Main]扫描file类型的class文件...
+2013-05-03 17:18:16 INFO  AUTO-RUN 扫描到了运行器级别的监听器org.sky.auto.runner.listener.SimpleRunListener
+2013-05-03 17:18:16 INFO  AUTO-RUN [Case:AppTest=>testSElement]开始对xml资源进行扫描....
+2013-05-03 17:18:17 INFO  AUTO-RUN [Case:AppTest=>testSElement]扫描收集了资源->百度首页-搜索框
+2013-05-03 17:18:17 INFO  AUTO-RUN [Case:AppTest=>testSElement]扫描收集了资源->百度首页-搜索按钮
+2013-05-03 17:18:17 INFO  AUTO-RUN [Case:AppTest=>testSElement]扫描收集了资源->测评游戏
+2013-05-03 17:18:17 INFO  AUTO-RUN [Case:AppTest=>testSElement]扫描收集了资源->测评模式
+2013-05-03 17:18:17 INFO  AUTO-RUN [Case:AppTest=>testSElement]扫描收集了资源->测评得分
+2013-05-03 17:18:17 INFO  AUTO-RUN [Case:AppTest=>testSElement]扫描收集了资源->测评显卡均价
+2013-05-03 17:18:17 INFO  AUTO-RUN [Case:AppTest=>testSElement]扫描收集了资源->MW-平板列表-苹果
+2013-05-03 17:18:17 INFO  AUTO-RUN [Case:AppTest=>testSElement]扫描收集了资源->百度-联想
+2013-05-03 17:18:17 INFO  AUTO-RUN [Case:AppTest=>testSElement]扫描XML资源完毕...
+2013-05-03 17:18:17 INFO  AUTO-RUN [Case:AppTest=>testSElement]开始扫描txt的资源元素...
+2013-05-03 17:18:17 INFO  AUTO-RUN [Case:AppTest=>testSElement]txt资源扫描结束
+2013-05-03 17:18:31 INFO  AUTO-RUN [Case:AppTest=>testSElement]扫描file类型的class文件...
+2013-05-03 17:18:31 INFO  AUTO-RUN [Case:AppTest=>testSElement]扫描file类型的class文件...
+2013-05-03 17:18:31 INFO  AUTO-RUN [Case:AppTest=>testSElement]开始扫描动作监听器......
+2013-05-03 17:18:31 INFO  AUTO-RUN [Case:AppTest=>testSElement]扫描动作监听器结束
+2013-05-03 17:18:45 INFO  AUTO-RUN [Case:AppTest=>testSElement]使用浏览器Firefox进行自动化测试，将要打开网址http://www.baidu.com测试
+2013-05-03 17:18:45 INFO  AUTO-RUN [Case:AppTest=>testSElement][百度首页-搜索框]是来自XML的资源
+2013-05-03 17:18:45 INFO  AUTO-RUN [Case:AppTest=>testSElement]>>[百度首页-搜索框]输入值[北京]成功！
+2013-05-03 17:18:45 INFO  AUTO-RUN [Case:AppTest=>testSElement]>>[百度首页-搜索框]输入值[伤害]成功！
+2013-05-03 17:18:45 INFO  AUTO-RUN [Case:AppTest=>testSElement][百度首页-搜索按钮]是来自XML的资源
+2013-05-03 17:18:47 INFO  AUTO-RUN [Case:AppTest=>testSElement]>>[百度首页-搜索按钮]点击成功！
+2013-05-03 17:18:47 INFO  AUTO-RUN [Case:AppTest=>testSElement]关闭了所有的浏览器！

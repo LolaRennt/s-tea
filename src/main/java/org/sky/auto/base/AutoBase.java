@@ -47,6 +47,7 @@ import org.sky.auto.xml.XMLToWebElement;
  * */
 public class AutoBase {
 	private static String caseName;
+	private static SElement currentElement;
 	private static AutoResetThreadLocal<AutoDriver> art = new AutoResetThreadLocal<AutoDriver>(){
 		protected synchronized AutoDriver initialValue() {
 			return new AutoDriver();	
@@ -358,6 +359,7 @@ public class AutoBase {
 	public static SElement sElement(String id){
 		SElement se=new SElement(element(id));
 		se.setId(id);
+		currentElement=se;
 		return se;
 	}
 	
@@ -423,5 +425,9 @@ public class AutoBase {
 		AutoBase.caseName = caseName;
 	}
 	
+	/**当前元素*/
+	public static SElement currentElement(){
+		return currentElement;
+	}
 	
 }
