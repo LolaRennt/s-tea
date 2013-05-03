@@ -1,9 +1,5 @@
 package org.sky.auto.element;
 
-
-import java.util.ArrayList;
-import java.util.List;
-
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
@@ -518,14 +514,32 @@ public class SElement{
 		AutoBase.focus(getElement());
 	}
 	/**通过这个元素获取他指定标签的元素list*/
-	public List<SElement> getOptions(String tagname){
-		List<SElement>slist=new ArrayList<SElement>();
-		List<WebElement> wlist = getElement().findElements(By.tagName(tagname));
-		for(WebElement we:wlist){
-			slist.add(new SElement(we));
-		}
-		return slist;
+	public ListElement getOptions(String tagname){
+		return new ListElement(this.element.findElements(By.tagName(tagname)));
 	}
+	
+	public ListElement getOptionsById(String id){
+		return new ListElement(this.element.findElements(By.id(id)));
+	}
+	
+	
+	public ListElement getOptionsByCss(String css){
+		return new ListElement(this.element.findElements(By.cssSelector(css)));
+	}
+	
+	public ListElement getOptionsByXpath(String xpath){
+		return new ListElement(this.element.findElements(By.xpath(xpath)));
+	}
+	
+	public ListElement getOptionsByLinkText(String link){
+		return new ListElement(this.element.findElements(By.linkText(link)));
+	}
+	
+	public ListElement getOptionsByClassName(String className){
+		return new ListElement(this.element.findElements(By.className(className)));
+	}
+	
+	
 	
 	
 	
