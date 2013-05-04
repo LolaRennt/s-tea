@@ -1,5 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <description>这是一个基于selenium2(webdriver)和Junit开发的一个web端自动化框架 </description>
   <developers>
@@ -9,10 +8,16 @@
           <url>https://github.com/celeskyking/s-tea</url>
       </developer>   
   </developers>
+  
   <organization>
       <name>IT168</name>
       <url>http://www.it168.com</url>
   </organization>
+  <parent>
+    <groupId>org.sonatype.oss</groupId>
+    <artifactId>oss-parent</artifactId>
+    <version>7</version>
+  </parent>
   <groupId>com.github.celeskyking</groupId>
   <artifactId>s-tea</artifactId>
   <version>2.4.6</version>
@@ -22,20 +27,20 @@
   <url>http://maven.apache.org</url>
  <scm>
     <connection>
-      scm:git:git://github.com/celeskyking/s-tea.git
+      scm:git:git@github.com:celeskyking/s-tea.git
     </connection>
     <url>git@github.com:celeskyking/s-tea.git</url>
     <developerConnection>
-      scm:git@github.com:celeskyking/s-tea.git
+      scm:git:git@github.com:celeskyking/s-tea.git
     </developerConnection>
   </scm>
  <licenses>
-  <license>
-      <name>The S-Tea Project</name>
-      <url>https://github.com/celeskyking/s-tea/blob/master/31E92933.txt</url>
-      <distribution>repo</distribution>
-    </license>
-  </licenses>
+	<license>
+		<name>The Apache Software License, Version 2.0</name>
+		<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+		<distribution>repo</distribution>
+	</license>
+	</licenses>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
