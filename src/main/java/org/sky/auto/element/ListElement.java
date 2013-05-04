@@ -5,8 +5,8 @@ import java.util.List;
 import java.util.Random;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.sky.auto.base.AutoBase;
 
 
 public class ListElement {
@@ -17,20 +17,15 @@ public class ListElement {
 		}
 	}
 	
-	public ListElement(WebDriver driver, By by){
-		List<WebElement> elist=driver.findElements(by);
-		for(int i=0;i<elist.size();i++){
-			slist.add(new SElement(elist.get(i)));
-		}
+	public ListElement(By by){
+		this(AutoBase.driver().findElements(by));
 	}
 
-	
-
-	public List<SElement> getSlist() {
+	protected List<SElement> getSlist() {
 		return slist;
 	}
 
-	public void setSlist(List<SElement> slist) {
+	protected void setSlist(List<SElement> slist) {
 		this.slist = slist;
 	}
 	
@@ -48,7 +43,6 @@ public class ListElement {
 	public int getSize(){
 		return slist.size();
 	}
-	
 	
 	
 }

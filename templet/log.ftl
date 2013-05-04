@@ -97,7 +97,6 @@
             	</div>
             	<div class="log">
             		<h2>系统日志信息</h2>
-            		<p style=""><#include  "log.inc"></p>
             		<span style="text-decoration: no-line-through"><#include  "log.inc"></span>
             	</div>
             </div>

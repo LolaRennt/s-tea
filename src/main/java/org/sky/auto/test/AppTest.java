@@ -22,30 +22,32 @@ public class AppTest {
 	public void testSElement(){
 		AutoBase.open(Browser.Firefox, "http://www.baidu.com");
 		AutoBase.sElement("百度首页-搜索框").sendKeys("北京");
+		
 		AutoBase.sElement("百度首页-搜索按钮").click();
+		AutoBase.currentElement().click();
 		AutoBase.closeAllWindow();
 	}
-	@Test
-	public void testSElement1(){
-		AutoBase.open(Browser.Firefox, "http://www.baidu.com");
-		AutoBase.sElement("百度首页-搜索框").sendKeys("北京");
-		AutoBase.sElement("百度首页-搜索按钮").click();
-		AutoBase.closeAllWindow();
-	}
-	@Test
-	public void testSElement2(){
-		AutoBase.open(Browser.Firefox, "http://www.baidu.com");
-		AutoBase.sElement("百度首页-搜索框").sendKeys("北京");
-		AutoBase.sElement("百度首页-搜索按钮").click();
-		AutoBase.closeAllWindow();
-	}
-	@Test
-	public void testSElement3(){
-		AutoBase.open(Browser.Firefox, "http://www.baidu.com");
-		AutoBase.sElement("百度首页-搜索框").sendKeys("北京");
-		AutoBase.sElement("百度首页-搜索按钮").click();
-		AutoBase.closeAllWindow();
-	}
+//	@Test
+//	public void testSElement1(){
+//		AutoBase.open(Browser.Firefox, "http://www.baidu.com");
+//		AutoBase.sElement("百度首页-搜索框").sendKeys("北京");
+//		AutoBase.sElement("百度首页-搜索按钮").click();
+//		AutoBase.closeAllWindow();
+//	}
+//	@Test
+//	public void testSElement2(){
+//		AutoBase.open(Browser.Firefox, "http://www.baidu.com");
+//		AutoBase.sElement("百度首页-搜索框").sendKeys("北京");
+//		AutoBase.sElement("百度首页-搜索按钮").click();
+//		AutoBase.closeAllWindow();
+//	}
+//	@Test
+//	public void testSElement3(){
+//		AutoBase.open(Browser.Firefox, "http://www.baidu.com");
+//		AutoBase.sElement("百度首页-搜索框").sendKeys("北京");
+//		AutoBase.sElement("百度首页-搜索按钮").click();
+//		AutoBase.closeAllWindow();
+//	}
 	
 	
 	

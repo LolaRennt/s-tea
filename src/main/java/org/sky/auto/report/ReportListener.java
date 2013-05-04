@@ -69,9 +69,9 @@ public class ReportListener extends RunListener{
 	@Override
 	public void testFailure(Failure failure) throws Exception {
 		logger.error(">>>>>>>>>>>>>>>测试用例执行失败>>>>>>>>>>>");
-		logger.error(failure.getException());
-		logger.error(failure.getMessage());
-		logger.error(failure.getTrace());
+		logger.error("["+RunTimeMethod.getName()+"]"+failure.getException());
+		//logger.error("["+RunTimeMethod.getName()+"]"+failure.getTrace());
+		logger.error(formatTrace(failure));
 		if(infomap.get(failure.getDescription().getMethodName())!=null){
 			infomap.remove(failure.getDescription().getMethodName());
 			CaseStatus.removeRunCaseDescription(new MyDescription(failure.getDescription()));
@@ -115,5 +115,16 @@ public class ReportListener extends RunListener{
 		
 	}
 	
-	
+	private String formatTrace(Failure failure){
+		String logname="["+RunTimeMethod.getName()+"]";
+		//String methodname = failure.getDescription().getMethodName();
+		String[] strs=failure.getTrace().split("at ");
+		String string="";
+		for(int i=1;i<strs.length;i++){
+			strs[i]="Exception:"+logname+" at "+strs[i];
+			//AddToFileWrite.writeContext(strs[i], "templet"+File.separator+methodname+".inc");
+			string=string+strs[i];
+		}
+		return string;
+	}
 }

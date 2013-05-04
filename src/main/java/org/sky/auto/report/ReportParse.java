@@ -82,10 +82,9 @@ public class ReportParse {
 			string=string.replaceAll("<s>", "").replaceAll("<S>", "");
 			//System.out.println(string);
 			if(string.contains("[Case:")){
-				
 				isWrite=true;
 				if(isWrite){
-					if(string.contains("AUTO-RUN")){
+					if(string.contains("AUTO-RUN")||string.trim().startsWith("Exception:")){
 						String methodname = string.substring(string.indexOf("=>")+2,string.indexOf("]"));
 						//System.out.println("+++++++++++"+methodname);
 						if(!new File("templet"+File.separator+methodname+".inc").exists()){

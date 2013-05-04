@@ -90,7 +90,7 @@ public class DSLAdapter extends Fixture {
             if (str.charAt(0) == '\\')
               sb.append('\\');
             else if (!isMethod) {
-              Object v = GenericFixture.fetchVariable( str );
+              Object v = STeaFixture.fetchVariable( str );
               // resolve variables only for String type
               if ( v != null && !v.getClass().isArray() 
                   && ( v.getClass().equals(String.class) || 

@@ -15,7 +15,7 @@ import org.sky.auto.report.RunTimeMethod;
 public class XMLLoader {
 	private static Logger logger = Logger.getLogger(XMLLoader.class);
 	private static Map<String,XMLElement> xmlmap = new HashMap<String,XMLElement>();
-	private static Map<String, XMLList> xlmap = new HashMap<String,XMLList>();
+	//private static Map<String, XMLList> xlmap = new HashMap<String,XMLList>();
 	public static List<String> getXMLs(String path){
 		XMLScaner scaner = new XMLScaner(path);
 		return scaner.getXMLFiles();
@@ -70,26 +70,4 @@ public class XMLLoader {
 		return xmlmap;
 	}
 	
-	public static Map<String,XMLList> loadXMLList(){
-		if(xlmap.size()==0){
-			logger.info("["+RunTimeMethod.getName()+"]"+"开始对xml的List资源进行扫描....");
-			List<String> list = getXMLs("xml");
-			for(String path:list){
-				XMLDocument xd =new XMLDocument(path);
-				XMLElements xe = new XMLElements(xd);
-				for(XMLList xl : xe.getXMLList()){
-					xlmap.put(xl.getId(), xl);
-					logger.info("["+RunTimeMethod.getName()+"]"+"扫描收集了List资源->"+xl.getId());
-				}
-			}
-			logger.info("["+RunTimeMethod.getName()+"]"+"扫描List资源完毕...");
-		}else{
-			return xlmap;
-		}
-		return xlmap;
-	}
-	
-	public static XMLList getXMLList(String id){
-		return xlmap.get(id);
-	}
 }

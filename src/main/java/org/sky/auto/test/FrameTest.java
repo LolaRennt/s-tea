@@ -10,7 +10,7 @@ import org.sky.auto.runner.ReportJUnitRunner;
 
 
 @RunWith(ReportJUnitRunner.class)
-@ThreadRunner(threads=1)
+@ThreadRunner(threads=2)
 public class FrameTest {
 	//private static Logger logger=Logger.getLogger(FrameTest.class);
 	
@@ -19,7 +19,7 @@ public class FrameTest {
 		AutoBase.open(Browser.HtmlUnit, "http://product.it168.com/list/b/03010377_1.shtml");
 		AutoBase.sleep(5);
 		//AutoBase.sElement("百度-联想").click();
-		throw new MyAutoException();
+		throw new MyAutoException("cuowule");
 //		logger.info("############");
 //		AutoBase.closeAllWindow();
 	}
@@ -32,13 +32,5 @@ public class FrameTest {
 		AutoBase.closeAllWindow();
 		//System.out.println(RunTimeMethod.getName());
 	}
-	
-	@Test
-	public void testlist(){
-		AutoBase.open(Browser.HtmlUnit, "http://www.it168.com/");
-		System.out.println(AutoBase.listElement("产品链接").get(0).getText());
-		AutoBase.closeAllWindow();
-	}
-	
 	
 }

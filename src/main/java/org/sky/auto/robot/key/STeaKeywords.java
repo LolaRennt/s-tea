@@ -327,11 +327,6 @@ public class STeaKeywords {
 	}
 	
 	@RobotKeyword
-	public long getJavaScriptLoadTime(String js){
-		return AutoBase.currentpage().getJavaScriptLoadTime(js);
-	}
-	
-	@RobotKeyword
 	public List<String> getHeadCssLinks(){
 		return AutoBase.currentpage().getHeadCssLinks();
 	}

@@ -13,7 +13,6 @@ import org.sky.auto.element.CheckBox;
 import org.sky.auto.element.ComoboBox;
 import org.sky.auto.element.Image;
 import org.sky.auto.element.Link;
-import org.sky.auto.element.ListElement;
 import org.sky.auto.element.RadioButton;
 import org.sky.auto.element.RichTextField;
 import org.sky.auto.element.SElement;
@@ -78,12 +77,7 @@ public class Page extends CurrentPage{
 	public void deleteAllCookie() {
 		AutoBase.driver().manage().deleteAllCookies();
 	}
-	
-	public  ListElement listElement(String id){
-		ListElement le= new ListElement(AutoBase.elements("id"));
-		logger.info("["+RunTimeMethod.getName()+"]"+"元素LIST["+id+"]的操作--->");
-		return le;
- 	}
+
 	public  Button button(String id){
 		Button bt=new Button(element(id));
 		logger.info("["+RunTimeMethod.getName()+"]"+"按钮["+id+"]的操作--->");
