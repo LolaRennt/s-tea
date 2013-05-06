@@ -1,6 +1,7 @@
 package org.sky.auto.element;
 
 import org.apache.log4j.Logger;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Keys;
@@ -537,6 +538,61 @@ public class SElement{
 	
 	public ListElement getOptionsByClassName(String className){
 		return new ListElement(this.element.findElements(By.className(className)));
+	}
+	
+	
+	public void assertValue(){
+		if(getElement().getAttribute("value")==null){
+			logger.error("["+RunTimeMethod.getName()+"]"+"["+this.getId()+"]这个元素的value值不存在，断言失败！");
+			Assert.fail();
+		}else{
+			logger.info("["+RunTimeMethod.getName()+"]"+"["+this.getId()+"]这个元素的value值存在，断言成功！");
+		}
+	}
+	
+	public void assertSelected(){
+		if(getElement().isSelected()){
+			logger.info("["+RunTimeMethod.getName()+"]"+"["+this.getId()+"]这个元素被选中了");
+		}else{
+			logger.error("["+RunTimeMethod.getName()+"]"+"["+this.getId()+"]这个元素没有被选中");
+			Assert.fail();
+		}
+	}
+	
+	public void assertText(String text){
+		if(getText().equals(text)){
+			logger.info("["+RunTimeMethod.getName()+"]"+"["+this.getId()+"]这个元素的Text值断言正确");
+		}else{
+			logger.error("["+RunTimeMethod.getName()+"]"+"["+this.getId()+"]这个元素的Text断言失败");
+			Assert.fail();
+		}
+	}
+	
+	public void assertEditable(){
+		if(isEnable()){
+			logger.info("["+RunTimeMethod.getName()+"]"+"["+this.getId()+"]这个元素可以被编辑，断言成功！");
+		}else{
+			logger.error("["+RunTimeMethod.getName()+"]"+"["+this.getId()+"]这个元素不可以被编辑，断言失败！");
+			Assert.fail();
+		}
+	}
+	
+	public void assertAttribute(String attr,String value){
+		if(getAttribute(attr).equals(value)){
+			logger.info("["+RunTimeMethod.getName()+"]"+"["+this.getId()+"]这个元素的属性"+attr+"值断言正确");
+		}else{
+			logger.error("["+RunTimeMethod.getName()+"]"+"["+this.getId()+"]这个元素的属性"+attr+"值断言失败");
+			Assert.fail();
+		}
+	}
+	
+	public void assertNotEditable(){
+		if(!isEnable()){
+			logger.info("["+RunTimeMethod.getName()+"]"+"["+this.getId()+"]这个元素不可以被编辑，断言成功！");
+		}else{
+			logger.error("["+RunTimeMethod.getName()+"]"+"["+this.getId()+"]这个元素不可以被编辑,断言失败");
+			Assert.fail();
+		}
 	}
 	
 	

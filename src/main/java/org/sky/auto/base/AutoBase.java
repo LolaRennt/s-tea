@@ -14,6 +14,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.sky.auto.anno.Register;
 import org.sky.auto.driver.AutoDriver;
 import org.sky.auto.driver.Browser;
+import org.sky.auto.element.AjaxElement;
 import org.sky.auto.element.Button;
 import org.sky.auto.element.CheckBox;
 import org.sky.auto.element.ComoboBox;
@@ -363,7 +364,17 @@ public class AutoBase {
 		return se;
 	}
 	
-
+	public static AjaxElement ajaxElement(String id){
+		AjaxElement ae = new AjaxElement(element(id));
+		ae.setId(id);
+		currentElement=ae;
+		return ae;
+	}
+	
+	
+	
+	
+	
 	/**获得element的list元素
 	 * @param id 在资源定义的id值
 	 * @return 通过id值返回的定义好的WebElement元素的列表
@@ -429,5 +440,7 @@ public class AutoBase {
 	public static SElement currentElement(){
 		return currentElement;
 	}
+	
+	
 	
 }

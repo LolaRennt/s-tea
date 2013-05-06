@@ -41,8 +41,4 @@ public class Assert extends org.junit.Assert{
 		}
 	}
 	
-	
-	
-	
-	
 }

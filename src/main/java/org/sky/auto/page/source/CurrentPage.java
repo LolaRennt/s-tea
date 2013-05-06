@@ -3,10 +3,15 @@ package org.sky.auto.page.source;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.log4j.Logger;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.sky.auto.base.AutoBase;
+import org.sky.auto.report.RunTimeMethod;
+import org.sky.auto.window.Window;
 
 public class CurrentPage {
+	private static Logger logger = Logger.getLogger(CurrentPage.class);
 	private Response response;
 	private PageHtml content;
 	private WebDriver currentpage;
@@ -94,4 +99,46 @@ public class CurrentPage {
 	public String getPageSource(){
 		return AutoBase.driver().getPageSource();
 	}
+	
+	/**当前页面是否有指定的文本*/
+	public void assertTextPresent(String text){
+		if(getPageSource().contains(text)){
+			logger.info("["+RunTimeMethod.getName()+"]"+"当前页面中存在此文本内容"+text+"校验成功！");
+		}else{
+			logger.error("["+RunTimeMethod.getName()+"]"+"当前页面中不存在此文本内容"+text+"校验失败！");
+			Assert.fail();
+		}
+	}
+	
+	public void assertTextNotPresent(String text){
+		if(!getPageSource().contains(text)){
+			logger.info("["+RunTimeMethod.getName()+"]"+"当前页面中不存在此文本内容"+text+"校验成功！");
+		}else{
+			logger.error("["+RunTimeMethod.getName()+"]"+"当前页面中存在此文本内容"+text+"校验失败！");
+			Assert.fail();
+		}
+	}
+	
+	
+	/**是否产生alert*/
+	public void assertAlert(){
+		try{
+			AutoBase.driver().switchTo().alert();
+			logger.info("["+RunTimeMethod.getName()+"]"+"当前页面找到了alert,校验成功！");
+			Window.selectDefaultWindow();
+		}catch(Exception e){
+			logger.error("["+RunTimeMethod.getName()+"]"+"没有找到alert,校验失败！");
+			Assert.fail();
+		}
+	}
+	
+	public void assertTitle(String title){
+		if(getTitle().equalsIgnoreCase(title)){
+			logger.info("["+RunTimeMethod.getName()+"]"+"当前页面的title值校验成功！");
+		}else{
+			logger.error("["+RunTimeMethod.getName()+"]"+"当前页面的title值校验失败！");
+		}
+	}
+	
+	
 }
