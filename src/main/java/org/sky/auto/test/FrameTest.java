@@ -5,7 +5,6 @@ import org.junit.runner.RunWith;
 import org.sky.auto.anno.ThreadRunner;
 import org.sky.auto.base.AutoBase;
 import org.sky.auto.driver.Browser;
-import org.sky.auto.exception.MyAutoException;
 import org.sky.auto.runner.ReportJUnitRunner;
 
 
