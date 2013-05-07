@@ -96,6 +96,7 @@ public class AutoBase {
 		}
 		logger.info("["+RunTimeMethod.getName()+"]"+"扫描动作监听器结束");
 		Window.maxWindow();
+		Window.updateWindow();
 	}
 	
 	/**设置浏览器类型
@@ -120,6 +121,7 @@ public class AutoBase {
 		}
 		logger.info("["+RunTimeMethod.getName()+"]"+"扫描动作监听器结束");
 		Window.maxWindow();	
+		Window.updateWindow();
 	}
 	
 	/**打开浏览器,里面包含了初始化操作，必须以此方法为开始
@@ -394,7 +396,7 @@ public class AutoBase {
 	 * @return 返回一个当前页的对象，可以操作关闭CurrentPage类的各种方法
 	 * */
 	public static CurrentPage currentpage(){
-		return new CurrentPage();
+		return CurrentPage.getInstance();
 	}
 	
 	public static SElement sElement(By by){
@@ -441,6 +443,15 @@ public class AutoBase {
 		return currentElement;
 	}
 	
+	
+	/**打开一个新的空白页面，并且定位到当前页面*/
+	public static CurrentPage openNew(){
+		Window.runJS("window.open(\"\",\"_blank\")");
+		//System.out.println(AutoBase.driver().getWindowHandles().size());
+		AutoBase.sleep(1);
+		Window.selectNewWindow();
+		return CurrentPage.getInstance();
+	}
 	
 	
 }

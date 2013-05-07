@@ -7,20 +7,21 @@ import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.sky.auto.base.AutoBase;
+import org.sky.auto.page.Page;
 import org.sky.auto.report.RunTimeMethod;
 import org.sky.auto.window.Window;
 
-public class CurrentPage {
+public class CurrentPage extends Page{
 	private static Logger logger = Logger.getLogger(CurrentPage.class);
 	private Response response;
 	private PageHtml content;
-	private WebDriver currentpage;
+	private static WebDriver currentpage;
 	private String url;
 	private String title;
 	private List<String> jsSrc;
 	private List<String> cssHref;
-	
-	public CurrentPage(){
+	static private CurrentPage cp;
+	protected CurrentPage(){
 		currentpage = AutoBase.driver();
 		this.url=currentpage.getCurrentUrl();
 		content=new PageHtml(this.url);
@@ -28,6 +29,15 @@ public class CurrentPage {
 		this.title=currentpage.getTitle();
 		jsSrc=content.getJavaScriptURL();
 		cssHref=content.getCssLink();
+	}
+	
+	public static CurrentPage getInstance(){
+		if(currentpage==null||currentpage!=AutoBase.driver()){
+			cp= new CurrentPage();
+			return cp;
+		}else{
+			return cp;
+		}
 	}
 	/**返回当前页的url*/
 	public String getCurrentUrl(){
@@ -139,6 +149,9 @@ public class CurrentPage {
 			logger.error("["+RunTimeMethod.getName()+"]"+"当前页面的title值校验失败！");
 		}
 	}
-	
+	/**在当前页打开*/
+	public void open(String url){
+		currentpage.get(url);
+	}
 	
 }

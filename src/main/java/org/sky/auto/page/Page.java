@@ -8,6 +8,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebElement;
 import org.sky.auto.base.AutoBase;
+import org.sky.auto.element.AjaxElement;
 import org.sky.auto.element.Button;
 import org.sky.auto.element.CheckBox;
 import org.sky.auto.element.ComoboBox;
@@ -18,11 +19,10 @@ import org.sky.auto.element.RichTextField;
 import org.sky.auto.element.SElement;
 import org.sky.auto.element.Table;
 import org.sky.auto.element.TextField;
-import org.sky.auto.page.source.CurrentPage;
 import org.sky.auto.report.RunTimeMethod;
 
 
-public class Page extends CurrentPage{
+public class Page{
 	//protected static Page page = new Page();
 	static Logger logger = Logger.getLogger(Page.class);
 	static Object o;
@@ -47,6 +47,22 @@ public class Page extends CurrentPage{
 	public WebElement element(String id){
 		return AutoBase.element(id);
 	}
+	
+	public SElement sElement(){
+		return AutoBase.sElement();
+	}
+	
+	public SElement currentElement(){
+		return AutoBase.currentElement();
+	}
+	
+	
+	public AjaxElement ajaxElement(String id){
+		return AutoBase.ajaxElement(id);
+	}
+	
+	
+	
 	
 	/**得到页面的title*/
 	public  String getTitle(){
