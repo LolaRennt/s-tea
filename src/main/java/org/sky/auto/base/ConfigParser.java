@@ -108,7 +108,14 @@ public class ConfigParser {
 	}
 	
 	
+	/**得到服务器主机的remote-server*/
+	public static String getRemoteServerPath(){
+		return parse().get("remote-server-path");
+	}
 	
+	public static String getNodeServerPath(){
+		return parse().get("node-server-path");
+	}
 }
 
 
