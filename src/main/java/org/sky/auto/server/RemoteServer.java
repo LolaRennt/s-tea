@@ -51,8 +51,4 @@ public class RemoteServer{
 		isClosed=false;
 		process.destroy();
 	}
-	public static void main(String[] args) throws IOException {
-		RemoteServer.start();
-		RemoteServer.close();
-	}
 }

@@ -23,8 +23,8 @@ import com.jcraft.jsch.Session;
 import com.jcraft.jsch.UIKeyboardInteractive;
 import com.jcraft.jsch.UserInfo;
 
-public class RemoteShell {
-	static private Logger logger = Logger.getLogger(RemoteShell.class);
+public class SSH2RemoteShell {
+	static private Logger logger = Logger.getLogger(SSH2RemoteShell.class);
 	private String username;
 	private String password;
 	private String host;
@@ -58,14 +58,14 @@ public class RemoteShell {
 //	UserInfo ui = new SimpleUserInfo(){
 //		
 //	};
-	public RemoteShell(String host,String username,String password,int port){
+	public SSH2RemoteShell(String host,String username,String password,int port){
 		this.username=username;
 		this.password=password;
 		this.host=host;
 		this.port=port;
 		this.jsch=new JSch();
 	}
-	public RemoteShell(){
+	public SSH2RemoteShell(){
 		
 	}
 
