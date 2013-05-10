@@ -3,13 +3,11 @@ package org.sky.auto.server;
 import java.io.IOException;
 import java.io.InputStream;
 
-import org.sky.auto.base.ConfigParser;
-
 public class RemoteServer{
 	static private Process process; 
 	static boolean isClosed;
-	public static void start(){
-		String serverpath=ConfigParser.getRemoteServerPath();
+	public static void start(String serverpath){
+		//String serverpath=ConfigParser.getRemoteServerPath();
 		isClosed=true;
 		try {
 			process=Runtime.getRuntime().exec("java -jar"+serverpath+"-role hub");
