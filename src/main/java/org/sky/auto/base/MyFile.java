@@ -299,7 +299,7 @@ private static String lineBreak;
 	  public static void delAllFile(String path,String suffix) {
 	       File file = new File(path);
 	       if(!file.exists()){
-	    	  logger.info("不存在要删除的页面，请检查一下目录是否正确");
+	    	  logger.warn("不存在要删除的页面，请检查一下目录是否正确");
 	       }else{
 	    	   File[] files = file.listFiles();
 		       for(File f: files){
@@ -310,4 +310,20 @@ private static String lineBreak;
 	       }
 	          
 	     }
+	  
+	  public static void delAllFileByStart(String path,String start){
+		  File file = new File(path);
+	       if(!file.exists()){
+	    	  logger.warn("不存在要删除的目录，请检查一下目录是否正确");
+	       }else{
+	    	   File[] files = file.listFiles();
+		       for(File f: files){
+		    	   if(f.getName().startsWith(start)){
+		    		   f.delete();
+		    	   }
+		       }
+		       logger.info("清空了以前的日志文件");
+	       }
+	  }
+	  
 }
