@@ -1,8 +1,12 @@
 package org.sky.auto.mail;
 
+import java.io.File;
 import java.util.Date;
 import java.util.Properties;
 
+import javax.activation.DataHandler;
+import javax.activation.DataSource;
+import javax.activation.FileDataSource;
 import javax.mail.Address;
 import javax.mail.BodyPart;
 import javax.mail.Message;
@@ -108,7 +112,8 @@ import javax.mail.internet.MimeMultipart;
 	      return false;   
 	    }   
 	    
-	    public boolean sendEmail(MailSenderInfo mailInfo){
+	    @SuppressWarnings("restriction")
+		public boolean sendEmail(MailSenderInfo mailInfo){
 	    	// 判断是否需要身份认证   
 	    	SimpleAuthenticator authenticator = null;   
 		    Properties pro = mailInfo.getProperties();  
@@ -118,6 +123,7 @@ import javax.mail.internet.MimeMultipart;
 		    }  
 		    // 根据邮件会话属性和密码验证器构造一个发送邮件的session   
 		    Session sendMailSession = Session.getDefaultInstance(pro,authenticator);   
+		    sendMailSession.setDebug(true);
 		    try {   
 		    	// 根据session创建一个邮件消息   
 		    	Message mailMessage = new MimeMessage(sendMailSession);   
@@ -134,14 +140,21 @@ import javax.mail.internet.MimeMultipart;
 		    	mailMessage.setSentDate(new Date());   
 		    	// 设置邮件消息的主要内容   
 		    	String mailContent = mailInfo.getContent();   
-		    	mailMessage.setText(mailContent);   
+		    	Multipart multipart = new MimeMultipart();   
+		    	BodyPart contentPart = new MimeBodyPart();
+		    	contentPart.setText(mailContent);
+		    	multipart.addBodyPart(contentPart);
 		    	//设置附件    	
-		    	if(mailInfo.getAttachment()!=null){
-		    		Multipart mp = mailInfo.getAttachment();
-		    		mailMessage.setContent(mp);
-		    	}else{
-		    		System.out.println("---------+++++++邮件中没有加入附件+++++++++-----------");
-		    	}
+		    	BodyPart messageBodyPart= new MimeBodyPart();
+	            DataSource source = new FileDataSource(mailInfo.getAttachPath()+File.separator+mailInfo.getAttachFile());
+	            //添加附件的内容
+	            messageBodyPart.setDataHandler(new DataHandler(source));
+	            //添加附件的标题
+	            //这里很重要，通过下面的Base64编码的转换可以保证你的中文附件标题名在发送时不会变成乱码
+	            sun.misc.BASE64Encoder enc = new sun.misc.BASE64Encoder();
+	            messageBodyPart.setFileName("=?GBK?B?"+enc.encode(mailInfo.getAttachFile().getBytes())+"?=");
+	            multipart.addBodyPart(messageBodyPart);
+	            mailMessage.setContent(multipart);
 		    	// 发送邮件   
 		    	Transport.send(mailMessage);  
 		    	return true;   

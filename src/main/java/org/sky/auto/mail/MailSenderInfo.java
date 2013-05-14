@@ -3,7 +3,6 @@ package org.sky.auto.mail;
 
 import java.util.Properties;
 
-import javax.mail.Multipart;
 
 
 public class MailSenderInfo {
@@ -22,10 +21,11 @@ public class MailSenderInfo {
 	    // 邮件主题   
 	    private String subject;   
 	    // 邮件的文本内容   
-	    private String content;   
+	    private String content; 
+	    private String attachFile;
+	    private String attachPath;
 	    // 邮件附件的文件名   
 	   // private String[] attachFileNames; 
-	    private Multipart attach;
 	    /**  
 	      * 获得邮件会话属性  
 	      */   
@@ -90,11 +90,17 @@ public class MailSenderInfo {
 	    public void setContent(String textContent) {   
 	      this.content = textContent;   
 	    }
-		public Multipart getAttachment() {
-			return attach;
+		public String getAttachFile() {
+			return attachFile;
 		}
-		public void setAttachment(Multipart attach) {
-			this.attach = attach;
-		}   
+		public void setAttachFile(String attachFile) {
+			this.attachFile = attachFile;
+		}
+		public String getAttachPath() {
+			return attachPath;
+		}
+		public void setAttachPath(String attachPath) {
+			this.attachPath = attachPath;
+		}
 	
 }
