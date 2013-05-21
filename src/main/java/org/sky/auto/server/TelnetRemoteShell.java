@@ -195,16 +195,5 @@ public class TelnetRemoteShell implements Runnable, TelnetNotificationHandler{
             e.printStackTrace();     
         }             
     }
-
-	
-	public static void main(String[] args) {
-		TelnetRemoteShell trs = new TelnetRemoteShell("10.168.20.129", 23, "sky", "123");
-		trs.thread=new Thread(trs);
-		trs.thread.start();
-		trs.write(trs.getUser()+"\r");
-		trs.write(trs.getPassword()+"\r");
-		trs.writescript("resource/command.txt");
-	}
-	
 	
 }

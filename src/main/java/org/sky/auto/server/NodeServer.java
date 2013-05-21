@@ -20,9 +20,4 @@ public class NodeServer {
 		trs.disconnect();
 		//System.exit(1);
 	}
-	
-	public static void main(String[] args) {
-		NodeServer.start("10.168.20.129", 23, "sky", "123");
-		NodeServer.stop();
-	}
 }
