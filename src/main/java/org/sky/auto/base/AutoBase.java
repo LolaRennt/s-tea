@@ -377,11 +377,6 @@ public class AutoBase {
 	
 	
 	
-	/**获得element的list元素
-	 * @param id 在资源定义的id值
-	 * @return 通过id值返回的定义好的WebElement元素的列表
-	 * */
-	
 	private static Source elementBelongTo(String id){
 		try{
 			return SourceLoader.getSource(id);
