@@ -297,8 +297,6 @@
               <artifactId>cobertura-maven-plugin</artifactId>
               <version>2.5.2</version>
           </plugin>
-           <reporting>
-    <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-report-plugin</artifactId>
@@ -339,10 +337,8 @@
             </reports>  
         </reportSet>  
     </reportSets>  
-      </plugin>
-      </plugins>
-      </reporting>        
-      </plugins>   
+    </plugin>       
+   </plugins>   
   </reporting>
   <dependencyManagement>
             <dependencies>
