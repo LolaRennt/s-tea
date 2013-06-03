@@ -7,6 +7,7 @@ import org.sky.auto.base.AutoBase;
 import org.sky.auto.exception.MyAutoException;
 import org.sky.auto.report.RunTimeMethod;
 
+
 public class CheckBox extends SElement{
 	private WebElement element;
 	public CheckBox(){

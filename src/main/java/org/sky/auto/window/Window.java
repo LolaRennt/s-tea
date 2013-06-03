@@ -107,16 +107,18 @@ public class Window {
 	}
 	
 	/**执行js*/
-	public static void runJS(String js){
+	public static Object runJS(String js){
 		ProxyRunnerListener.getDispatcher().beforerunJS();
-		((JavascriptExecutor)AutoBase.driver()).executeScript(js);
+		Object obj= ((JavascriptExecutor)AutoBase.driver()).executeScript(js);
 		ProxyRunnerListener.getDispatcher().afterrunJS();
+		return obj;
 	}
 	/**执行带有参数的js*/
-	public static void runJs(String js, Object... o){
+	public static Object runJs(String js, Object... o){
 		ProxyRunnerListener.getDispatcher().beforerunJS();
-		((JavascriptExecutor)AutoBase.driver()).executeScript(js, o);
+		Object obj=((JavascriptExecutor)AutoBase.driver()).executeScript(js, o);
 		ProxyRunnerListener.getDispatcher().afterrunJS();
+		return obj;
 	}
 	/**关闭所有的窗口*/
 	public static void closeAllWindows(){

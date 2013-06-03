@@ -1,4 +1,4 @@
-package org.sky.auto;
+package org.sky.auto.base.test;
 
 
 

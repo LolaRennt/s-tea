@@ -30,7 +30,6 @@ public class RunTimeMethod {
 						mname.set("Case:"+className.substring(className.lastIndexOf(".")+1, className.length())+"=>"+stacks[i].getMethodName());
 							return mname.get();
 						}
-						
 					}
 				}
 				i++;

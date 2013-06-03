@@ -25,8 +25,8 @@ public class InterceptorStatement extends Statement{
 		for(Interceptor interceptor:interceptors){
 			interceptor.interceptorBefore();
 		}
-		//logger.info(">>>>>>>>>>>>>>>测试用例执行开始>>>>>>>>>>>");
-		testMethod.invokeExplosively(target);
+			testMethod.invokeExplosively(target);
+		
 		for(Interceptor interceptor:interceptors){
 			interceptor.interceptorAfter();
 		}
