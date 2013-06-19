@@ -11,7 +11,7 @@ public class TxtScaner {
 		this.setBasepath(basepath);
 	}
 	public TxtScaner(){
-		this.setBasepath("xml"+File.separator);
+		this.setBasepath("source"+File.separator);
 	}
 	public String getBasepath() {
 		return basepath;

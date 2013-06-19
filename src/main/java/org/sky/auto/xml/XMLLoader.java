@@ -52,7 +52,7 @@ public class XMLLoader {
 	public static Map<String, XMLElement> load(){
 		if(xmlmap.size()==0){
 			logger.info("["+RunTimeMethod.getName()+"]"+"开始对xml资源进行扫描....");
-			List<String> list = getXMLs("xml");
+			List<String> list = getXMLs("source");
 			for(String path:list){
 				XMLDocument xd = new XMLDocument(path);
 				XMLElements xe = new XMLElements(xd);

@@ -17,7 +17,6 @@
     		<element ref="st:frame" minOccurs="0"
     			maxOccurs="unbounded">
     		</element>
-    		<element ref="st:list" minOccurs="0" maxOccurs="unbounded"></element>
     	</sequence>
     </complexType>
 
@@ -114,15 +113,6 @@
 
     
 
-    <element name="list" type="st:list">
-    </element>
 
     
-    <complexType name="list">
-    	<sequence maxOccurs="unbounded">
-    		<element ref="st:frame" minOccurs="0" ></element>
-    		<element ref="st:element" minOccurs="0"></element>
-    	</sequence>
-    	<attribute name="id" type="string" use="required"></attribute>
-    </complexType>
 </schema>
