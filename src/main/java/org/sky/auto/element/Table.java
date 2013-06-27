@@ -9,7 +9,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebElement;
 import org.sky.auto.base.AutoBase;
 import org.sky.auto.exception.MyAutoException;
-import org.sky.auto.report.RunTimeMethod;
+
+import com.github.lmm.runtime.RuntimeMethod;
+
 
 public class Table extends SElement{
 	
@@ -49,13 +51,13 @@ public class Table extends SElement{
 		if(isExist()){
 			try{
 				content=getElement().findElement(By.xpath(".//tr["+(row)+"]/td{"+(col)+"]")).getText();
-				logger.info("["+RunTimeMethod.getName()+"]"+">>["+this.getId()+"]第"+(row+1)+"行，第"+(col+1)+"列的元素获取成功！");
+				logger.info("["+RuntimeMethod.getName()+"]"+">>["+this.getId()+"]第"+(row+1)+"行，第"+(col+1)+"列的元素获取成功！");
 			}catch(Exception e){
-				logger.info("["+RunTimeMethod.getName()+"]"+">>["+this.getId()+"]第"+(row+1)+"行，第"+(col+1)+"列的元素获取失败！找不到这个table元素！");
+				logger.info("["+RuntimeMethod.getName()+"]"+">>["+this.getId()+"]第"+(row+1)+"行，第"+(col+1)+"列的元素获取失败！找不到这个table元素！");
 			}
 			return content;
 		}else{
-			logger.error("["+RunTimeMethod.getName()+"]"+"第"+(row+1)+"行，第"+(col+1)+"列的元素获取成功！");
+			logger.error("["+RuntimeMethod.getName()+"]"+"第"+(row+1)+"行，第"+(col+1)+"列的元素获取成功！");
 			throw new MyAutoException("["+this.getId()+"]获得table内的数据的时候出现错误，可能的原因是元素没有被找到！");
 		}
 		
@@ -70,13 +72,13 @@ public class Table extends SElement{
 		if(isExist()){
 			try{
 				content=getElement().findElement(By.xpath(".//tr["+(row)+"]/th{"+(col)+"]")).getText();
-				logger.info("["+RunTimeMethod.getName()+"]"+">>["+this.getId()+"]第"+(row+1)+"行，第"+(col+1)+"列的元素获取成功！");
+				logger.info("["+RuntimeMethod.getName()+"]"+">>["+this.getId()+"]第"+(row+1)+"行，第"+(col+1)+"列的元素获取成功！");
 			}catch(Exception e){
-				logger.info("["+RunTimeMethod.getName()+"]"+">>["+this.getId()+"]第"+(row+1)+"行，第"+(col+1)+"列的元素获取失败！找不到这个table元素！");
+				logger.info("["+RuntimeMethod.getName()+"]"+">>["+this.getId()+"]第"+(row+1)+"行，第"+(col+1)+"列的元素获取失败！找不到这个table元素！");
 			}
 			return content;
 		}else{
-			logger.error("["+RunTimeMethod.getName()+"]"+"第"+(row+1)+"行，第"+(col+1)+"列的元素获取成功！");
+			logger.error("["+RuntimeMethod.getName()+"]"+"第"+(row+1)+"行，第"+(col+1)+"列的元素获取成功！");
 			throw new MyAutoException("["+this.getId()+"]获得table内的数据的时候出现错误，可能的原因是元素没有被找到！");
 		}
 		
@@ -95,10 +97,10 @@ public class Table extends SElement{
 				for(WebElement cell : cells){
 					contents.add(cell.getText());
 				}
-				logger.info("["+RunTimeMethod.getName()+"]"+">>["+this.getId()+"]第"+col+"列的信息获得成功！");
+				logger.info("["+RuntimeMethod.getName()+"]"+">>["+this.getId()+"]第"+col+"列的信息获得成功！");
 				return contents;
 			}catch(Exception e){
-				logger.error("["+RunTimeMethod.getName()+"]"+"第"+col+"列的信息获得失败！！");
+				logger.error("["+RuntimeMethod.getName()+"]"+"第"+col+"列的信息获得失败！！");
 			}
 		}else{
 			logger.error(">>["+this.getId()+"]第"+col+"列的信息获得失败！！元素没有找到！");
@@ -122,14 +124,14 @@ public class Table extends SElement{
 					}
 					contents.add(getTableContentByRow(rowCount));
 					rowCount++;
-					logger.info("["+RunTimeMethod.getName()+"]"+">>["+this.getId()+"]第"+rowCount+"行的所有信息获得成功！");
+					logger.info("["+RuntimeMethod.getName()+"]"+">>["+this.getId()+"]第"+rowCount+"行的所有信息获得成功！");
 				}
 			}catch(Exception e){
-				logger.info("["+RunTimeMethod.getName()+"]"+"第"+rowCount+"行的所有信息获得失败！没有找到这个table内的要查找的元素！");
+				logger.info("["+RuntimeMethod.getName()+"]"+"第"+rowCount+"行的所有信息获得失败！没有找到这个table内的要查找的元素！");
 			}
 			return contents;
 		}else{
-			logger.info("["+RunTimeMethod.getName()+"]"+"第"+rowCount+"行的所有信息获得失败！没有找到这个table元素！");
+			logger.info("["+RuntimeMethod.getName()+"]"+"第"+rowCount+"行的所有信息获得失败！没有找到这个table元素！");
 			throw new MyAutoException("["+this.getId()+"]查找table的所有元素的时候出现错误！可能这个元素不存在！");
 		}
 		
@@ -148,13 +150,13 @@ public class Table extends SElement{
 				for(WebElement cell : cells){
 					contents.add(cell.getText());
 				}
-				logger.info("["+RunTimeMethod.getName()+"]"+">>["+this.getId()+"]第"+row+"行的信息获得成功！");
+				logger.info("["+RuntimeMethod.getName()+"]"+">>["+this.getId()+"]第"+row+"行的信息获得成功！");
 			}catch(Exception e){
-				logger.info("["+RunTimeMethod.getName()+"]"+"第"+row+"行的信息获得失败！找不到table内的要查找的的元素！");
+				logger.info("["+RuntimeMethod.getName()+"]"+"第"+row+"行的信息获得失败！找不到table内的要查找的的元素！");
 			}
 			return null;
 		}else{
-			logger.info("["+RunTimeMethod.getName()+"]"+"第"+row+"行的信息获得失败！找不到这个table的元素！");
+			logger.info("["+RuntimeMethod.getName()+"]"+"第"+row+"行的信息获得失败！找不到这个table的元素！");
 			throw new MyAutoException("["+this.getId()+"]查找table的值时出现了错误，可能的原因是这个table元素定位错误！没有找到这个元素");
 		}
 	

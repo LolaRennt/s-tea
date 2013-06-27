@@ -8,8 +8,9 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.sky.auto.base.AutoBase;
 import org.sky.auto.page.Page;
-import org.sky.auto.report.RunTimeMethod;
 import org.sky.auto.window.Window;
+
+import com.github.lmm.runtime.RuntimeMethod;
 
 public class CurrentPage extends Page{
 	private static Logger logger = Logger.getLogger(CurrentPage.class);
@@ -113,18 +114,18 @@ public class CurrentPage extends Page{
 	/**当前页面是否有指定的文本*/
 	public void assertTextPresent(String text){
 		if(getPageSource().contains(text)){
-			logger.info("["+RunTimeMethod.getName()+"]"+"当前页面中存在此文本内容"+text+"校验成功！");
+			logger.info("["+RuntimeMethod.getName()+"]"+"当前页面中存在此文本内容"+text+"校验成功！");
 		}else{
-			logger.error("["+RunTimeMethod.getName()+"]"+"当前页面中不存在此文本内容"+text+"校验失败！");
+			logger.error("["+RuntimeMethod.getName()+"]"+"当前页面中不存在此文本内容"+text+"校验失败！");
 			Assert.fail();
 		}
 	}
 	
 	public void assertTextNotPresent(String text){
 		if(!getPageSource().contains(text)){
-			logger.info("["+RunTimeMethod.getName()+"]"+"当前页面中不存在此文本内容"+text+"校验成功！");
+			logger.info("["+RuntimeMethod.getName()+"]"+"当前页面中不存在此文本内容"+text+"校验成功！");
 		}else{
-			logger.error("["+RunTimeMethod.getName()+"]"+"当前页面中存在此文本内容"+text+"校验失败！");
+			logger.error("["+RuntimeMethod.getName()+"]"+"当前页面中存在此文本内容"+text+"校验失败！");
 			Assert.fail();
 		}
 	}
@@ -134,19 +135,19 @@ public class CurrentPage extends Page{
 	public void assertAlert(){
 		try{
 			AutoBase.driver().switchTo().alert();
-			logger.info("["+RunTimeMethod.getName()+"]"+"当前页面找到了alert,校验成功！");
+			logger.info("["+RuntimeMethod.getName()+"]"+"当前页面找到了alert,校验成功！");
 			Window.selectDefaultWindow();
 		}catch(Exception e){
-			logger.error("["+RunTimeMethod.getName()+"]"+"没有找到alert,校验失败！");
+			logger.error("["+RuntimeMethod.getName()+"]"+"没有找到alert,校验失败！");
 			Assert.fail();
 		}
 	}
 	
 	public void assertTitle(String title){
 		if(getTitle().equalsIgnoreCase(title)){
-			logger.info("["+RunTimeMethod.getName()+"]"+"当前页面的title值校验成功！");
+			logger.info("["+RuntimeMethod.getName()+"]"+"当前页面的title值校验成功！");
 		}else{
-			logger.error("["+RunTimeMethod.getName()+"]"+"当前页面的title值校验失败！");
+			logger.error("["+RuntimeMethod.getName()+"]"+"当前页面的title值校验失败！");
 		}
 	}
 	/**在当前页打开*/

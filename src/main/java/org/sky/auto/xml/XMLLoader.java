@@ -3,10 +3,11 @@ package org.sky.auto.xml;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import org.apache.log4j.Logger;
 import org.sky.auto.load.SourceLoader;
-import org.sky.auto.report.RunTimeMethod;
+
+import com.github.lmm.runtime.RuntimeMethod;
+
 
 
 
@@ -23,7 +24,7 @@ public class XMLLoader {
 	
 	public static Map<String, XMLElement> load(String basepath){
 		if(xmlmap.size()==0){
-			logger.info("["+RunTimeMethod.getName()+"]"+"开始对xml资源进行扫描....");
+			logger.info("["+RuntimeMethod.getName()+"]"+"开始对xml资源进行扫描....");
 			List<String> list = getXMLs(basepath);
 			for(String path:list){
 				XMLDocument xd = new XMLDocument(path);
@@ -31,11 +32,11 @@ public class XMLLoader {
 				for(XMLElement xn :xe.getAllXMLElement()){
 					SourceLoader.add(xn);
 					xmlmap.put(xn.getId().trim(),xn);
-					logger.info("["+RunTimeMethod.getName()+"]"+"扫描收集了资源->"+xn.getId());
+					logger.info("["+RuntimeMethod.getName()+"]"+"扫描收集了资源->"+xn.getId());
 				}
 			}
 			//Log.Debug("查找到"+xmlmap.size()+"个元素！");
-			logger.info("["+RunTimeMethod.getName()+"]"+"扫描XML资源完毕...");
+			logger.info("["+RuntimeMethod.getName()+"]"+"扫描XML资源完毕...");
 		}		
 		return xmlmap;
 	}
@@ -51,7 +52,7 @@ public class XMLLoader {
 	
 	public static Map<String, XMLElement> load(){
 		if(xmlmap.size()==0){
-			logger.info("["+RunTimeMethod.getName()+"]"+"开始对xml资源进行扫描....");
+			logger.info("["+RuntimeMethod.getName()+"]"+"开始对xml资源进行扫描....");
 			List<String> list = getXMLs("source");
 			for(String path:list){
 				XMLDocument xd = new XMLDocument(path);
@@ -59,11 +60,11 @@ public class XMLLoader {
 				for(XMLElement xn :xe.getAllXMLElement()){
 					SourceLoader.add(xn);
 					xmlmap.put(xn.getId(),xn);
-					logger.info("["+RunTimeMethod.getName()+"]"+"扫描收集了资源->"+xn.getId());
+					logger.info("["+RuntimeMethod.getName()+"]"+"扫描收集了资源->"+xn.getId());
 				}
 			}
 			//Log.Debug("查找到"+xmlmap.size()+"个元素！");
-			logger.info("["+RunTimeMethod.getName()+"]"+"扫描XML资源完毕...");
+			logger.info("["+RuntimeMethod.getName()+"]"+"扫描XML资源完毕...");
 		}else{
 			return xmlmap;
 		}

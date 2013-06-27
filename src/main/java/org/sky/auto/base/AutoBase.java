@@ -32,7 +32,6 @@ import org.sky.auto.load.SourceLoader;
 import org.sky.auto.page.Page;
 import org.sky.auto.page.source.CurrentPage;
 import org.sky.auto.proxy.ProxyRunnerListener;
-import org.sky.auto.report.RunTimeMethod;
 import org.sky.auto.text.read.TxtLoader;
 import org.sky.auto.text.read.TxtProvider;
 import org.sky.auto.window.Window;
@@ -42,6 +41,7 @@ import org.sky.auto.xml.XMLToWebElement;
 import com.github.lmm.core.AutoResetThreadLocal;
 //import org.sky.auto.xml.XMLParser;
 import com.github.lmm.intrumentation.ClassPool;
+import com.github.lmm.runtime.RuntimeMethod;
 
 /**
  * 这是整个框架的一个核心类，可以理解为主要入口类，把分层的各种概念都整合在了这个类里面
@@ -79,7 +79,7 @@ public class AutoBase {
 	 * @param browser 设置浏览器属性，通过Browser枚举类来设置
 	 * */
 	public static void setDriver(Browser browser){
-		setCaseName(RunTimeMethod.getMethodName());
+		setCaseName(RuntimeMethod.getMethodName());
 		setLogStarted();
 		XMLLoader.load();
 		TxtLoader.load();
@@ -87,15 +87,15 @@ public class AutoBase {
 		getAutoDriver().setDriver(browser);
 		ClassPool.reset();
 		Set<Class<?>> cls = ClassPool.getClassPool();
-		logger.info("["+RunTimeMethod.getName()+"]"+"开始扫描动作监听器......");
+		logger.info("["+RuntimeMethod.getName()+"]"+"开始扫描动作监听器......");
 		for(Class<?>clazz:cls){
 			
 			if(clazz.isAnnotationPresent(Register.class)){
-				logger.info("["+RunTimeMethod.getName()+"]"+"扫描到了动作监听器："+clazz.getName());
+				logger.info("["+RuntimeMethod.getName()+"]"+"扫描到了动作监听器："+clazz.getName());
 				ProxyRunnerListener.register(clazz);
 			}
 		}
-		logger.info("["+RunTimeMethod.getName()+"]"+"扫描动作监听器结束");
+		logger.info("["+RuntimeMethod.getName()+"]"+"扫描动作监听器结束");
 		Window.maxWindow();
 		Window.updateWindow();
 	}
@@ -104,7 +104,7 @@ public class AutoBase {
 	 * @param browser 设置浏览器属性，通过String来设置
 	 * */
 	public static void setDriver(String browser){
-		setCaseName(RunTimeMethod.getMethodName());
+		setCaseName(RuntimeMethod.getMethodName());
 		setLogStarted();
 		XMLLoader.load();
 		TxtLoader.load();
@@ -112,15 +112,15 @@ public class AutoBase {
 		getAutoDriver().setDriver(browser);
 		ClassPool.reset();
 		Set<Class<?>> cls = ClassPool.getClassPool();
-		logger.info("["+RunTimeMethod.getName()+"]"+"开始扫描监听器......");
+		logger.info("["+RuntimeMethod.getName()+"]"+"开始扫描监听器......");
 		for(Class<?>clazz:cls){
 			
 			if(clazz.isAnnotationPresent(Register.class)){
-				logger.info("["+RunTimeMethod.getName()+"]"+"扫描到了动作监听器："+clazz.getName());
+				logger.info("["+RuntimeMethod.getName()+"]"+"扫描到了动作监听器："+clazz.getName());
 				ProxyRunnerListener.register(clazz);
 			}
 		}
-		logger.info("["+RunTimeMethod.getName()+"]"+"扫描动作监听器结束");
+		logger.info("["+RuntimeMethod.getName()+"]"+"扫描动作监听器结束");
 		Window.maxWindow();	
 		Window.updateWindow();
 	}
@@ -133,7 +133,7 @@ public class AutoBase {
 		setLogStarted();
 		setDriver(browser);
 		getAutoDriver().getDriver().get(url);
-		logger.info("["+RunTimeMethod.getName()+"]"+"使用浏览器"+browser+"进行自动化测试，将要打开网址"+url+"测试");
+		logger.info("["+RuntimeMethod.getName()+"]"+"使用浏览器"+browser+"进行自动化测试，将要打开网址"+url+"测试");
 		ProxyRunnerListener.getDispatcher().afterOpen();
 	}
 	
@@ -144,7 +144,7 @@ public class AutoBase {
 	public static void open(String browser,String url){
 		setDriver(browser);
 		getAutoDriver().getDriver().get(url);
-		logger.info("["+RunTimeMethod.getName()+"]"+"使用浏览器"+browser+"进行自动化测试，将要打开网址"+url+"测试");
+		logger.info("["+RuntimeMethod.getName()+"]"+"使用浏览器"+browser+"进行自动化测试，将要打开网址"+url+"测试");
 		ProxyRunnerListener.getDispatcher().afterOpen();
 	}
 	/**在本页面跳转到指定的链接处
@@ -152,7 +152,7 @@ public class AutoBase {
 	 * */
 	public static void open(String url){
 		driver().get(url);
-		logger.info("["+RunTimeMethod.getName()+"]"+"打开了网址"+url+"来进行自动化测试！");
+		logger.info("["+RuntimeMethod.getName()+"]"+"打开了网址"+url+"来进行自动化测试！");
 		ProxyRunnerListener.getDispatcher().afterOpen();
 	}
 	/**返回一个page对象
@@ -255,10 +255,10 @@ public class AutoBase {
 		if(driver()!=null){
 			driver().quit();
 			setClose_Status(true);
-			logger.info("["+RunTimeMethod.getName()+"]"+"关闭了所有的浏览器！");
+			logger.info("["+RuntimeMethod.getName()+"]"+"关闭了所有的浏览器！");
 		}else{
-			logger.error("["+RunTimeMethod.getName()+"]"+"driver是空值！不存在认识的浏览器对象！");
-			throw new MyAutoException("["+RunTimeMethod.getName()+"]"+"driver设置值出现错误，导致driver值为空值，请检查是否配置正确的driver");
+			logger.error("["+RuntimeMethod.getName()+"]"+"driver是空值！不存在认识的浏览器对象！");
+			throw new MyAutoException("["+RuntimeMethod.getName()+"]"+"driver设置值出现错误，导致driver值为空值，请检查是否配置正确的driver");
 		}
 		setCaseName(null);
 	}
@@ -329,7 +329,7 @@ public class AutoBase {
 	/**把浏览器的设置为null，释放资源*/
 	public static void clearCurrentThreadDriver(){
 		getAutoDriver().setDriver(Browser.NULL);
-		logger.info("["+RunTimeMethod.getName()+"]"+"多线程资源释放成功！");
+		logger.info("["+RuntimeMethod.getName()+"]"+"多线程资源释放成功！");
 	}
 	/**开启日志功能，默认为resource目录下的log4j.properties*/
 	public static void setLogStarted(){
@@ -382,7 +382,7 @@ public class AutoBase {
 		try{
 			return SourceLoader.getSource(id);
 		}catch(Exception e){
-			logger.error("["+RunTimeMethod.getName()+"]"+"没有找到这个"+id+"资源,请检查是否在资料文件中定义");
+			logger.error("["+RuntimeMethod.getName()+"]"+"没有找到这个"+id+"资源,请检查是否在资料文件中定义");
 			throw new MyAutoException("没有找到这个"+id+"资源，请检查是否在资源文件中定义");
 		}
 		
@@ -413,15 +413,15 @@ public class AutoBase {
 	public static WebElement element(String id){
 		if(elementBelongTo(id)!=null){
 			if(elementBelongTo(id).toString().equals("TXT")){
-				logger.info("["+RunTimeMethod.getName()+"]"+"["+id+"]是来自TXT的资源");
+				logger.info("["+RuntimeMethod.getName()+"]"+"["+id+"]是来自TXT的资源");
 				TxtProvider tp = new TxtProvider();
 				return tp.element(id);
 			}else if(elementBelongTo(id).toString().equals("XML")){
-				logger.info("["+RunTimeMethod.getName()+"]"+"["+id+"]是来自XML的资源");
+				logger.info("["+RuntimeMethod.getName()+"]"+"["+id+"]是来自XML的资源");
 				XMLToWebElement xtw = new XMLToWebElement();
 				return xtw.element(id);
 			}else{
-				logger.error("["+RunTimeMethod.getName()+"]"+"扫描资源中没有找到["+id+"]元素,请检查是否输入正确");
+				logger.error("["+RuntimeMethod.getName()+"]"+"扫描资源中没有找到["+id+"]元素,请检查是否输入正确");
 				throw new MyElementNotFoundException("扫描的资源中没有找到["+id+"]元素，请检查是否输入正确");
 			}
 		}

@@ -5,7 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebElement;
 import org.sky.auto.base.AutoBase;
 import org.sky.auto.exception.MyAutoException;
-import org.sky.auto.report.RunTimeMethod;
+
+import com.github.lmm.runtime.RuntimeMethod;
 
 
 public class CheckBox extends SElement{
@@ -35,7 +36,7 @@ public class CheckBox extends SElement{
 		if(isExist()){
 			return getElement().isSelected();
 		}else{
-			logger.error("["+RunTimeMethod.getName()+"]"+"元素不存在，校验失败！");
+			logger.error("["+RuntimeMethod.getName()+"]"+"元素不存在，校验失败！");
 			throw new MyAutoException("["+this.getId()+"]判断元素是否被选中的时候出现了错误，可能的原因是这个元素没有被找到！");
 		}
 		
@@ -51,7 +52,7 @@ public class CheckBox extends SElement{
 				getElement().click();
 			}
 		}else{
-			logger.error("["+RunTimeMethod.getName()+"]"+"没有找到元素，设定值失败！");
+			logger.error("["+RuntimeMethod.getName()+"]"+"没有找到元素，设定值失败！");
 			throw new MyAutoException("["+this.getId()+"]设置状态的时候出现了错误，可能的原因是这个元素没有被找到！");
 		}
 		

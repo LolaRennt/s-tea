@@ -6,7 +6,9 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 import org.sky.auto.load.SourceLoader;
-import org.sky.auto.report.RunTimeMethod;
+
+import com.github.lmm.runtime.RuntimeMethod;
+
 
 public class TxtLoader {
 	private static Map<String,ChainLink> map = new HashMap<String,ChainLink>();
@@ -21,7 +23,7 @@ public class TxtLoader {
 	public static Map<String,ChainLink> load(){
 		List<String> txtfiles=getTxts();
 		if(map.size()==0){
-			logger.info("["+RunTimeMethod.getName()+"]"+"开始扫描txt的资源元素...");
+			logger.info("["+com.github.lmm.runtime.RuntimeMethod.getName()+"]"+"开始扫描txt的资源元素...");
 			for(String txtfile:txtfiles){
 				ReadFromFile rff = new ReadFromFile(txtfile);
 				if(rff.isFrameBlockFile()){
@@ -29,18 +31,18 @@ public class TxtLoader {
 					for(StringFrameBlock fblock :fblocks){
 						SourceLoader.add(fblock);
 						map.put(fblock.getLocationName(), fblock.getLocation());
-						logger.info("["+RunTimeMethod.getName()+"]"+"扫描收集了资源->"+fblock.getLocationName());
+						logger.info("["+RuntimeMethod.getName()+"]"+"扫描收集了资源->"+fblock.getLocationName());
 					}
 				}else{
 					List<StringBlock> blocks=rff.getStringBlockList();
 					for(StringBlock block:blocks){
 						SourceLoader.add(block);
 						map.put(block.getLocationName(), block.getLocation());
-						logger.info("["+RunTimeMethod.getName()+"]"+"扫描收集了资源->"+block.getLocationName());
+						logger.info("["+RuntimeMethod.getName()+"]"+"扫描收集了资源->"+block.getLocationName());
 					}
 				}		
 			}
-			logger.info("["+RunTimeMethod.getName()+"]"+"txt资源扫描结束");
+			logger.info("["+RuntimeMethod.getName()+"]"+"txt资源扫描结束");
 		}else{
 			return map;
 		}
