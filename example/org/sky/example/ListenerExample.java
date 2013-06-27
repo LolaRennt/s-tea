@@ -1,7 +1,6 @@
 package org.sky.example;
 
 import org.sky.auto.anno.Register;
-import org.sky.auto.driver.event.RunnerListener;
 
 
 /**这个例子说明了监听器的使用，监听器分为两种，一种是动作的，一种还是运行时的，运行时的监听器需要继承RunListener
@@ -11,7 +10,7 @@ import org.sky.auto.driver.event.RunnerListener;
  * 
  * */
 @Register
-public class ListenerExample implements RunnerListener{
+public class ListenerExample implements org.sky.auto.proxy.RunnerListener{
 
 	@Override
 	public void afterClickOn() {

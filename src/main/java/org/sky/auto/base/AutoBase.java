@@ -27,20 +27,21 @@ import org.sky.auto.element.Table;
 import org.sky.auto.element.TextField;
 import org.sky.auto.exception.MyAutoException;
 import org.sky.auto.exception.MyElementNotFoundException;
-import org.sky.auto.intrumentation.ClassPool;
 import org.sky.auto.load.Source;
 import org.sky.auto.load.SourceLoader;
 import org.sky.auto.page.Page;
 import org.sky.auto.page.source.CurrentPage;
 import org.sky.auto.proxy.ProxyRunnerListener;
 import org.sky.auto.report.RunTimeMethod;
-import org.sky.auto.runner.AutoResetThreadLocal;
 import org.sky.auto.text.read.TxtLoader;
 import org.sky.auto.text.read.TxtProvider;
 import org.sky.auto.window.Window;
 import org.sky.auto.xml.XMLLoader;
 import org.sky.auto.xml.XMLToWebElement;
+
+import com.github.lmm.core.AutoResetThreadLocal;
 //import org.sky.auto.xml.XMLParser;
+import com.github.lmm.intrumentation.ClassPool;
 
 /**
  * 这是整个框架的一个核心类，可以理解为主要入口类，把分层的各种概念都整合在了这个类里面

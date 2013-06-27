@@ -6,10 +6,11 @@ import org.junit.runner.RunWith;
 import org.sky.auto.anno.ThreadRunner;
 import org.sky.auto.base.AutoBase;
 import org.sky.auto.driver.Browser;
-import org.sky.auto.runner.BaseJUnitAutoRunner;
+
+import com.github.lmm.runner.JUnitBaseRunner;
 
 /**一个简单的例子，里面有元素的定义方式*/
-@RunWith(BaseJUnitAutoRunner.class)
+@RunWith(JUnitBaseRunner.class)
 @ThreadRunner(threads=2)
 public class FirstCase {
 	

@@ -4,10 +4,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.sky.auto.exception.SameIDNameException;
-import org.sky.auto.runner.AutoResetThreadLocal;
 import org.sky.auto.text.read.StringBlock;
 import org.sky.auto.text.read.StringFrameBlock;
 import org.sky.auto.xml.XMLElement;
+
+import com.github.lmm.core.AutoResetThreadLocal;
 
 public class SourceLoader {
 	private static AutoResetThreadLocal<Map<String,Source>> smapthread = new AutoResetThreadLocal<Map<String,Source>>(){

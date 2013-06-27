@@ -9,9 +9,10 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.Point;
 import org.robotframework.javalib.annotation.RobotKeyword;
 import org.sky.auto.base.AutoBase;
-import org.sky.auto.intrumentation.ClassPool;
 import org.sky.auto.page.source.Response;
 import org.sky.auto.window.Window;
+
+import com.github.lmm.intrumentation.ClassPool;
 
 public class STeaKeywords {
 	@RobotKeyword
