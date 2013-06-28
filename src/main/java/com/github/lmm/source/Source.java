@@ -3,6 +3,7 @@ package com.github.lmm.source;
 import com.github.lmm.browser.IBrowser;
 import com.github.lmm.element.ElementManager;
 import com.github.lmm.element.TempElement;
+import com.github.lmm.page.IPage;
 import com.github.lmm.page.SourcePage;
 
 import java.util.Map;

@@ -3,7 +3,7 @@ package com.github.lmm.exception;
 /**
  * @author 王天庆
  * */
-public class NotFoundListenerException extends RuntimeException {
+public class NotFoundListenerException extends ContorlError {
     public NotFoundListenerException(){
         super();
     }

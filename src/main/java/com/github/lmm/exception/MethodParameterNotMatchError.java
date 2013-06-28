@@ -7,7 +7,7 @@ package com.github.lmm.exception;
  * Time: 上午11:33
  * To change this template use File | Settings | File Templates.
  */
-public class MethodParameterNotMatchError extends RuntimeException {
+public class MethodParameterNotMatchError extends ContorlError {
     public MethodParameterNotMatchError(){
         super();
     }

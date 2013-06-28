@@ -7,7 +7,7 @@ package com.github.lmm.exception;
  * Time: 下午2:01
  * To change this template use File | Settings | File Templates.
  */
-public class NotExistLocatorError extends RuntimeException {
+public class NotExistLocatorError extends ContorlError {
     public NotExistLocatorError(){
         super();
     }

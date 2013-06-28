@@ -1,5 +1,6 @@
 package com.github.lmm.source;
 
+import com.github.lmm.element.TempElement;
 import com.github.lmm.exception.NotExistLocatorError;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;

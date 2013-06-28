@@ -24,6 +24,8 @@ import java.util.Set;
 public class CurrentPage implements ICurrentPage {
     private ElementManager elementManager;
     private Logger logger = Logger.getLogger(CurrentPage.class);
+    private String url;
+    private String title;
     private static Object currentpage;
     private String name;
     public WebDriver getCurrentwindow() {

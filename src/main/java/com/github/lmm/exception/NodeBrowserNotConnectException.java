@@ -7,7 +7,7 @@ package com.github.lmm.exception;
  * Time: 下午3:35
  * To change this template use File | Settings | File Templates.
  */
-public class NodeBrowserNotConnectException extends  RuntimeException {
+public class NodeBrowserNotConnectException extends  ContorlError {
     public NodeBrowserNotConnectException(){
         super();
     }

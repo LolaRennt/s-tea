@@ -1,6 +1,10 @@
 package com.github.lmm.page;
 
+import com.github.lmm.element.IElement;
+import org.openqa.selenium.Cookie;
 
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created with IntelliJ IDEA.

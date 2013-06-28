@@ -7,7 +7,7 @@ package com.github.lmm.exception;
  * Time: 下午1:11
  * To change this template use File | Settings | File Templates.
  */
-public class NotXMLFileException extends RuntimeException {
+public class NotXMLFileException extends ContorlError {
 
     public NotXMLFileException(){
         super();

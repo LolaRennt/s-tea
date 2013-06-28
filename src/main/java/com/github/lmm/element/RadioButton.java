@@ -9,7 +9,7 @@ import com.github.lmm.browser.IBrowser;
  * Time: 下午1:33
  * To change this template use File | Settings | File Templates.
  */
-public class RadioButton extends Element {
+public class RadioButton extends CheckBox {
 
     public RadioButton(IBrowser browser, TempElement tempElement) {
         super(browser, tempElement);
@@ -20,10 +20,10 @@ public class RadioButton extends Element {
     }
 
     public boolean isChecked(){
-        return false;
+        return super.isChecked();
     }
 
     public void setStatus(boolean status){
+        super.setStatus(status);
     }
-
 }

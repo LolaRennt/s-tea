@@ -3,7 +3,7 @@ package com.github.lmm.exception;
 /**
  * @author 王天庆
  * */
-public class TestFailedError extends RuntimeException {
+public class TestFailedError extends ContorlError {
     public TestFailedError(){
         super();
     }

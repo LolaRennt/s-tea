@@ -694,4 +694,8 @@ public class Element implements IElement {
         }
 
     }
+
+    protected WebElement getElement(){
+        return this.element;
+    }
 }

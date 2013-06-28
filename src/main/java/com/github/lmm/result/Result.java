@@ -9,9 +9,4 @@ package com.github.lmm.result;
  */
 public interface Result {
 
-
-
-
-
-
 }

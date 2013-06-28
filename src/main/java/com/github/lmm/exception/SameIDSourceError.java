@@ -7,7 +7,7 @@ package com.github.lmm.exception;
  * Time: 下午1:46
  * To change this template use File | Settings | File Templates.
  */
-public class SameIDSourceError extends RuntimeException{
+public class SameIDSourceError extends ContorlError{
     public SameIDSourceError(){
         super();
     }
