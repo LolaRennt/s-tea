@@ -2,6 +2,7 @@ package com.github.lmm.pairwise.generator;
 
 import com.github.lmm.pairwise.algorithm.FullCombinationAlgorithm;
 import com.github.lmm.pairwise.core.*;
+
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -72,7 +73,6 @@ public class ExcelParameters implements Parameters{
         }
         this.templineparams.add(lp);
     }
-    @Override
     public void generate() {
         Workbook pictworkbook= new XSSFWorkbook();
         Sheet mysheet=pictworkbook.createSheet("pict");
@@ -88,9 +88,19 @@ public class ExcelParameters implements Parameters{
                     j++;
                 }
                 i++;
+                for(LineParameters lp:this.templineparams){
+                	this.lineParameterses.add(lp);
+                	Row row=mysheet.createRow(i);
+                	 int k=0;
+                     for(String p:lp.getParameters()){
+                         row.createCell(k).setCellValue(p);
+                         k++;
+                     }
+                }
+                i++;
                 continue;
             }else{
-                for(LineParameters lp:this.templineparams){
+                for(LineParameters lp:this.templineparams){                	
                     this.lineParameterses.add(lp);
                     Row myrow = mysheet.createRow(i);
                     int k=0;
