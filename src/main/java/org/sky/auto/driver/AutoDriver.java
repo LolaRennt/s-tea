@@ -13,11 +13,11 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
-import org.sky.auto.base.ConfigParser;
 import org.sky.auto.proxy.AutoDriverEventListener;
 
 import com.gargoylesoftware.htmlunit.BrowserVersion;
 import com.github.lmm.core.AutoResetThreadLocal;
+import com.github.lmm.core.ConfigParser;
 
 
 public class AutoDriver implements IDriver{

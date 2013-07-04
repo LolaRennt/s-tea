@@ -203,10 +203,6 @@ public class Feeder extends BlockJUnit4ClassRunner {
 			eachTestMethod.validatePublicVoid(isStatic, errors);
 	}
 
-    private List<FrameworkMethodWithParameters> computeParameteriedTestMethodsByPict(){
-        return null;
-    }
-
 
 	private List<FrameworkMethodWithParameters> computeParameterizedTestMethods(Method method, BeneratorContext context) {
 		Integer threads = getThreadCount(method);

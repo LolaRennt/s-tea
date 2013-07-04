@@ -20,7 +20,6 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.sky.auto.base.AutoBase;
-import org.sky.auto.base.ConfigParser;
 import org.sky.auto.driver.Browser;
 import org.sky.auto.element.SElement;
 import org.sky.auto.proxy.ProxyRunnerListener;
@@ -183,7 +182,7 @@ public class Window {
 	/**截屏操作,将当前页面的截屏放在指定的目录下*/
 	public static void takeScreenShot(){
 		ProxyRunnerListener.getDispatcher().beforetakeScreenShot();
-		String path = ConfigParser.getScreenShotPath();
+		String path = com.github.lmm.core.ConfigParser.getScreenShotPath();
 		TakesScreenshot tss = (TakesScreenshot)AutoBase.driver();
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd-HHmmss");
 		String time = sdf.format(new Date());

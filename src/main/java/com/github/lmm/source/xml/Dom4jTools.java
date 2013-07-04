@@ -125,6 +125,9 @@ public class Dom4jTools {
 
     public List<Element> getAllElements(){
         List<Element> elementList=this.document.selectNodes("//s-tea:element");
+        if(elementList.size()==0){
+        	elementList=this.document.selectNodes("//element");
+        }
         return elementList;
     }
 

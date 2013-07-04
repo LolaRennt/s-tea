@@ -30,7 +30,16 @@ import java.util.concurrent.TimeUnit;
  */
 public class BaseBrowser implements IBrowser {
     private Logger logger = Logger.getLogger(BaseBrowser.class);
-    private boolean isClosed;
+    private boolean isScanFrame=false;
+    public boolean isScanFrame() {
+		return isScanFrame;
+	}
+
+	public void setScanFrame(boolean isScanFrame) {
+		this.isScanFrame = isScanFrame;
+	}
+
+	private boolean isClosed;
     private WindowsCollectorListener windowsCollectorListener;
     private WindowSource windowSource;
     private ICurrentPage currentPage;
@@ -42,6 +51,7 @@ public class BaseBrowser implements IBrowser {
         this.commit= com.github.lmm.runtime.RuntimeMethod.getName();
         this.driver=browser.browser();
         maxWindow();
+        this.driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
         this.elementManager=new ElementManager();
         this.currentPage=new CurrentPage(this);
         this.windowSource=new WindowSource(this);
@@ -59,8 +69,7 @@ public class BaseBrowser implements IBrowser {
             this.driver=browser.browser(url);
         }
         maxWindow();
-        this.driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-        this.driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+        this.driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
         this.currentPage=new CurrentPage(this);
         this.windowSource=new WindowSource(this);
         this.windowsCollectorListener=new WindowsCollectorListener();
@@ -310,4 +319,20 @@ public class BaseBrowser implements IBrowser {
     public WindowSource getWindowSource() {
         return windowSource;
     }
+    
+    protected void setWebDriver(WebDriver driver){
+    	this.driver=driver;
+    }
+
+	@Override
+	public void pageLoadTimeout(int seconds) {
+		this.driver.manage().timeouts().pageLoadTimeout(seconds, TimeUnit.SECONDS);	
+	}
+    
+    public void elementLoadTimeout(int seconds){
+    	this.driver.manage().timeouts().implicitlyWait(seconds, TimeUnit.SECONDS);
+    }
+    
+    
+    
 }

@@ -1,5 +1,7 @@
 package org.sky.auto.base;
 
+import com.github.lmm.core.ConfigParser;
+
 public class Configure {
 	private String basename;
 	//private String browserpath;

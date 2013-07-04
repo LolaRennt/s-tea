@@ -449,5 +449,9 @@ public class AutoBase {
 		return CurrentPage.getInstance();
 	}
 	
+	public static void pageTimeOut(int seconds){
+		driver().manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+	}
+	
 	
 }

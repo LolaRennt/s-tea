@@ -16,6 +16,12 @@ import java.util.Set;
  * To change this template use File | Settings | File Templates.
  */
 public interface IBrowser {
+	
+	public void pageLoadTimeout(int seconds);
+	
+	public void elementLoadTimeout(int seconds);
+	
+	public boolean isScanFrame();
 
     public ICurrentPage open(String url);
 

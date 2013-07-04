@@ -51,6 +51,10 @@ public class ConfigParser {
 	public static String getOperaNode(){
 		return parse().get("node-safari");
 	}
+	/**@return 返回opare的分布式地址*/
+	public static String getPhantomJSNode(){
+		return parse().get("node-phantomJS");
+	}
 	/**@return 返回错误日志的路径*/
 	public static String getErrorLogDir(){
 		return parse().get("error-log");

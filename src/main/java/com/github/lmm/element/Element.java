@@ -35,7 +35,6 @@ public class Element implements IElement {
     public Element(IBrowser browser,TempElement tempElement){
         this.browser=browser;
         this.currentwindow=browser.getCurrentBrowserDriver();
-        this.currentwindow.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         actions=new Actions(this.currentwindow);
         commit="["+ com.github.lmm.runtime.RuntimeMethod.getName()+"]";
         this.tempElement= tempElement;
@@ -44,21 +43,30 @@ public class Element implements IElement {
         this.id=tempElement.getId();
         this.index=tempElement.getIndex();
         List<WebElement> list=this.currentwindow.findElements(this.locator);
-        if(list.size()>0){
-            this.element=list.get(this.index);
-            selectElementWithChild(this.tempElement);
+        if(browser.isScanFrame()){
+        	if(list.size()>0){
+                this.element=list.get(this.index);
+                selectElementWithChild(this.tempElement);
+            }else{
+                this.currentwindow.manage().timeouts().implicitlyWait(0,TimeUnit.SECONDS);
+                this.frameElements=this.browser.getCurrentBrowserDriver().findElements(By.tagName("iframe"));
+                this.frameElements.addAll(this.browser.getCurrentBrowserDriver().findElements(By.tagName("frame")));
+                locatorFrameElement(list, this.locator,this.index);
+                selectElementWithChild(this.tempElement);
+                if(this.element==null){
+                    logger.error("在转化元素的时候出现了错误，给出的临时元素并不能够转化为网页的元素，请仔细检查元素的定义");
+                    logger.error("临时元素信息->"+this.tempElement.getId()+":"+this.tempElement.getLocator().toString());
+                    throw new NoSuchElementException("没有找到定义的元素，请仔细检查元素是否定义正确");
+                }
+                this.currentwindow.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+            }	
         }else{
-            this.currentwindow.manage().timeouts().implicitlyWait(0,TimeUnit.SECONDS);
-            this.frameElements=this.browser.getCurrentBrowserDriver().findElements(By.tagName("iframe"));
-            this.frameElements.addAll(this.browser.getCurrentBrowserDriver().findElements(By.tagName("frame")));
-            locatorFrameElement(list, this.locator,this.index);
-            selectElementWithChild(this.tempElement);
-            if(this.element==null){
-                logger.error("在转化元素的时候出现了错误，给出的临时元素并不能够转化为网页的元素，请仔细检查元素的定义");
-                logger.error("临时元素信息->"+this.tempElement.getId()+":"+this.tempElement.getLocator().toString());
-                throw new NoSuchElementException("没有找到定义的元素，请仔细检查元素是否定义正确");
-            }
+        	if(list.size()>0){
+        		this.element=list.get(this.index);
+        		selectElementWithChild(this.tempElement);
+        	}
         }
+        
     }
 
     private void locatorFrameElement(List<WebElement> frameElements,By selectby){
@@ -91,7 +99,7 @@ public class Element implements IElement {
     public Element(IBrowser browser){
         this.browser=browser;
         this.currentwindow=browser.getCurrentBrowserDriver();
-        //this.currentwindow.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+        this.currentwindow.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
         actions=new Actions(this.currentwindow);
         commit="["+ RuntimeMethod.getName()+"]";
         this.id="Element";
@@ -698,4 +706,5 @@ public class Element implements IElement {
     protected WebElement getElement(){
         return this.element;
     }
+    
 }

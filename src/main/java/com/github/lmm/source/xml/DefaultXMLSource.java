@@ -23,7 +23,7 @@ public class DefaultXMLSource implements Source {
     private List<String> filelist;
     public DefaultXMLSource(){
         MyFile myFile=new MyFile();
-        filelist=myFile.listFile(new File("source"),"xml",true);
+        filelist=myFile.listFile(new File("new-source"),"xml",true);
     }
 
 

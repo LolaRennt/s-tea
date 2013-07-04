@@ -3,6 +3,7 @@ package com.github.lmm.core;
 import com.github.lmm.browser.BaseBrowser;
 import com.github.lmm.browser.Browser;
 import com.github.lmm.browser.IBrowser;
+import com.github.lmm.browser.RemoteBrowser;
 import com.github.lmm.exception.NodeBrowserNotConnectException;
 import com.github.lmm.page.ICurrentPage;
 import org.apache.log4j.Logger;
@@ -56,8 +57,14 @@ public class Auto {
             browserManager.setBrowser(new BaseBrowser(browser,new URL(url)));
         } catch (MalformedURLException e) {
             logger.error("没有连接到远程节点的服务器，远程浏览器引用失败！请检查环境配置是否正确！");
-            throw new NodeBrowserNotConnectException("没有连接到远程节点的服务器，远程浏览器引用失败！请检查环境配置是否正确");
+            throw new NodeBrowserNotConnectException("没有连接到远程节点的服务器，远程浏览器引用失败！请检查环境配置是否正确",e);
         }
+        local.set(browserManager);
+    }
+    
+    public static void requireRemote(Browser browser){
+    	BrowserManager browserManager=new BrowserManager();
+        browserManager.setBrowser(new RemoteBrowser(browser));
         local.set(browserManager);
     }
     public static IBrowser browser(){
@@ -66,7 +73,9 @@ public class Auto {
     public static ICurrentPage open(String url){
         return browser().open(url);
     };
-
+    public static void setPageLoadTimeOut(int seconds){
+    	
+    }
     public static void maxWindow(){
         browser().maxWindow();
     };
@@ -211,7 +220,8 @@ public class Auto {
         }
     }
 
-    public static <T> T page(Class<T> clazz) {
+    @SuppressWarnings("unchecked")
+	public static <T> T page(Class<T> clazz) {
         Auto.page=null;
         try {
             page=Class.forName(clazz.getName()).newInstance();
@@ -226,9 +236,9 @@ public class Auto {
         return (T)page;
     }
 
-//    public static Class<?> commit(String commit){
-//        return  PageManager.getPageClass(commit);
-//    }
+    public static void pageLoadTimeout(int seconds){
+    	
+    }
 
 
 

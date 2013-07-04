@@ -22,7 +22,7 @@ public class PictToMethod {
     private Parameters parameters;
     //private Method method;
     public PictToMethod(File f){
-        if(f.getName().endsWith(".xls")){
+        if(f.getName().endsWith(".xls")||f.getName().endsWith(".xlsx")){
             this.parameters=new ExcelParameters(f);
             parameters.generate();
         }else if(f.getName().endsWith(".txt")){
@@ -33,6 +33,7 @@ public class PictToMethod {
 
     public PictToMethod(Parameters parameters){
         this.parameters=parameters;
+        this.parameters.generate();
     }
 
     public PictToMethod(String path){
