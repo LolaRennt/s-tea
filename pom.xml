@@ -20,7 +20,7 @@
   </parent>
   <groupId>com.github.celeskyking</groupId>
   <artifactId>s-tea</artifactId>
-  <version>3.0</version>
+  <version>3.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>s-tea</name>
@@ -281,7 +281,7 @@
           	<locales>zh_CN</locales>
         	</configuration>
       </plugin>
-      <!--plugin>
+      <plugin>
     		<groupId>org.apache.maven.plugins</groupId>
     		<artifactId>maven-gpg-plugin</artifactId>
     		<version>1.4</version>
@@ -294,7 +294,7 @@
 	    	</goals>
 			</execution>
     		</executions>
-		</plugin-->
+		</plugin>
   	</plugins>
   	<defaultGoal>compile</defaultGoal>
   </build>
