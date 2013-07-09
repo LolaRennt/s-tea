@@ -1,76 +1,49 @@
 package com.github.lmm.page;
 
-import com.github.lmm.annotation.Bys;
+import com.github.lmm.annotation.At;
+import com.github.lmm.annotation.FindBy;
 import com.github.lmm.annotation.Commit;
+import com.github.lmm.annotation.Title;
 import com.github.lmm.browser.IBrowser;
 import com.github.lmm.core.Auto;
 import com.github.lmm.element.ElementManager;
-import com.github.lmm.element.Locator;
+import com.github.lmm.element.JSoupElement;
 import com.github.lmm.source.ElementInfo;
 import com.github.lmm.source.Source;
 import com.github.lmm.element.Element;
 import com.github.lmm.source.TempChainElement;
 import org.apache.log4j.Logger;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.openqa.selenium.By;
 
+import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
+import java.util.NoSuchElementException;
 
 /**
  * @author 王天庆
  */
 public class SourcePage extends CurrentPage {
     private Logger logger = Logger.getLogger(SourcePage.class);
+    private Document doc;
     private ElementManager elementManager;
     private Source source;
     private String pageCommit;
     public SourcePage(IBrowser browser) {
         super(browser);
-        if(this.getClass().isAnnotationPresent(Commit.class)){
-            this.pageCommit=this.getClass().getAnnotation(Commit.class).value();
-        }
+        this.doc=Jsoup.parse(browser.getCurrentBrowserDriver().getPageSource());
         this.elementManager=new ElementManager();
-        Field[] fields=this.getClass().getDeclaredFields();
-        for(Field field:fields){
-            if(field.isAnnotationPresent(Bys.class)){
-                ElementInfo elementInfo=new ElementInfo();
-                Bys elementLocator=field.getAnnotation(Bys.class);
-                String commit = elementLocator.commit();
-                Locator locator=elementLocator.locator();
-                String value=elementLocator.value();
-                Integer index=elementLocator.index();
-                elementInfo.setLocator(locator.getLocator(value));
-                elementInfo.setId(commit);
-                elementInfo.setIndex(index);
-                TempChainElement tempChainElement=new TempChainElement(elementInfo);
-                this.elementManager.addElement(tempChainElement);
-                logger.info("收集了当前页面的注解属性元素"+commit);
-            }
-        }
-
+        classAnnotationsTools();
+        fieldAnnotationsTools();
     }
 
     public SourcePage(IBrowser browser,Source source){
         super(browser);
-        if(this.getClass().isAnnotationPresent(Commit.class)){
-            this.pageCommit=this.getClass().getAnnotation(Commit.class).value();
-        }
+        classAnnotationsTools();
         this.elementManager=new ElementManager();
         loadSource(source);
-        Field[] fields=this.getClass().getDeclaredFields();
-        for(Field field:fields){
-            if(field.isAnnotationPresent(Bys.class)){
-                ElementInfo elementInfo=new ElementInfo();
-                Bys bys=field.getAnnotation(Bys.class);
-                Locator locator=bys.locator();
-                int index = bys.index();
-                String commit=bys.commit();
-                String value = bys.value();
-                elementInfo.setIndex(index);
-                elementInfo.setLocator(locator.getLocator(value));
-                TempChainElement tempChainElement=new TempChainElement(elementInfo);
-                this.elementManager.addElement(tempChainElement);
-                logger.info("收集了当前页面的注解属性元素"+commit);
-            }
-        }
+        fieldAnnotationsTools();
     }
 
     public SourcePage(){
@@ -109,6 +82,46 @@ public class SourcePage extends CurrentPage {
     public void setPageCommit(String pageCommit) {
         this.pageCommit = pageCommit;
     }
-
+    
+    private void classAnnotationsTools(){
+    	Annotation[] annos = this.getClass().getAnnotations();
+    	for(Annotation anno : annos){
+    		if(anno instanceof At){
+    			String tempurl = ((At) anno).value();
+    			this.getBrowser().selectWindowContainsUrl(tempurl);
+    		}
+    		if(anno instanceof Title){
+    			String temptitle = ((Title) anno).value();
+    			this.getBrowser().selectWindowContainsTitle(temptitle);
+    		}
+    		if(anno instanceof Commit){
+    			this.pageCommit=((Commit) anno).value();
+    		}
+    	}
+    }
+    
+    private void fieldAnnotationsTools(){
+    	Field[] fields=this.getClass().getDeclaredFields();
+        for(Field field:fields){
+            if(field.isAnnotationPresent(FindBy.class)){
+                ElementInfo elementInfo=new ElementInfo();
+                FindBy elementLocator=field.getAnnotation(FindBy.class);
+                String commit = elementLocator.commit();
+                Integer index=elementLocator.index();
+                String value=elementLocator.value();
+                org.jsoup.nodes.Element htmlelement = this.doc.select(value).get(index);
+                if(htmlelement==null){
+                	throw new NoSuchElementException("没有找到这种定位方式的元素");
+                }
+                JSoupElement je = new JSoupElement(htmlelement);
+                By jby = By.xpath(je.toXpath());
+                elementInfo.setIndex(0);
+                elementInfo.setLocator(jby);
+                TempChainElement tempChainElement=new TempChainElement(elementInfo);
+                this.elementManager.addElement(tempChainElement);
+                logger.info("收集了当前页面的注解属性元素"+commit);
+            }
+        }
+    }
 
 }

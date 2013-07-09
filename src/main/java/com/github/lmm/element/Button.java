@@ -18,4 +18,12 @@ public class Button extends Element {
     public Button(IBrowser browser) {
         super(browser);
     }
+    
+    public Button(IBrowser browser,String cssSelector){
+    	super(browser,cssSelector);
+    }
+    public Button(IBrowser browser,String cssSelector,int index){
+    	super(browser,cssSelector,index);
+    }
 }
+

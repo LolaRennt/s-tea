@@ -62,16 +62,16 @@ public enum Locator {
         public By getLocator(String value){
             return By.cssSelector(value);
         }
-        public By value(){
-            return null;
+        public By value(String value){
+            return getLocator(value);
         }
     },
     TAGNAME(){
         public By getLocator(String value){
             return By.tagName(value);
         }
-        public By value(){
-            return null;
+        public By value(String value){
+            return getLocator(value);
         }
     };
 

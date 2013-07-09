@@ -29,6 +29,12 @@ public class Select extends Element {
         super(browser);
     }
 
+    public Select(IBrowser browser,String cssSelector){
+    	super(browser,cssSelector);
+    }
+    public Select(IBrowser browser,String cssSelector,int index){
+    	super(browser,cssSelector,index);
+    }
     /**根据comobobox中的索引值来进行选择，索引值从0开始的
      * @param index 要选择的索引号
      * */

@@ -18,7 +18,8 @@ public class Form extends Element {
     Element user;
     Element password;
     Element submit;
-    public Form(IBrowser browser, TempElement tempElement) {
+    @SuppressWarnings("unchecked")
+	public Form(IBrowser browser, TempElement tempElement) {
         super(browser, tempElement);
         this.formElements=this.getOptions("input");
         if(this.formElements.get(0).getAttribute("type").equals("text"))
@@ -33,7 +34,7 @@ public class Form extends Element {
             }
         }
     }
-
+    
     public List<Element> getAllInputs(){
         return this.formElements.getAllElements();
     }

@@ -20,6 +20,12 @@ public class Link extends Element {
         super(browser);
     }
 
+    public Link(IBrowser browser,String cssSelector){
+    	super(browser,cssSelector);
+    }
+    public Link(IBrowser browser,String cssSelector,int index){
+    	super(browser,cssSelector,index);
+    }
     public String getHref(){
         return this.getAttribute("href");
     }

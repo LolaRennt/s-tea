@@ -18,6 +18,13 @@ public class RadioButton extends CheckBox {
     public RadioButton(IBrowser browser) {
         super(browser);
     }
+    
+    public RadioButton(IBrowser browser,String cssSelector){
+    	super(browser,cssSelector);
+    }
+    public RadioButton(IBrowser browser,String cssSelector,int index){
+    	super(browser,cssSelector,index);
+    }
 
     public boolean isChecked(){
         return super.isChecked();

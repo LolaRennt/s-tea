@@ -18,6 +18,13 @@ public class Image extends Element {
     public Image(IBrowser browser) {
         super(browser);
     }
+    
+    public Image(IBrowser browser,String cssSelector){
+    	super(browser,cssSelector);
+    }
+    public Image(IBrowser browser,String cssSelector,int index){
+    	super(browser,cssSelector,index);
+    }
 
     public String getSrc(){
         return getAttribute("href");

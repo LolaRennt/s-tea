@@ -5,6 +5,8 @@ import com.github.lmm.proxy.ActionListenerProxy;
 import com.github.lmm.runtime.RuntimeMethod;
 import com.github.lmm.source.xml.ChildElementInfo;
 import org.apache.log4j.Logger;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
@@ -67,6 +69,23 @@ public class Element implements IElement {
         	}
         }
         
+    }
+    public Element(IBrowser browser,String cssSelector,int index){
+    	this.browser=browser;
+        this.currentwindow=browser.getCurrentBrowserDriver();
+        actions=new Actions(this.currentwindow);
+        commit="["+ com.github.lmm.runtime.RuntimeMethod.getName()+"]";
+        Document doc = Jsoup.parse(this.browser.getCurrentBrowserDriver().getPageSource());
+        org.jsoup.nodes.Element htmlelement = doc.select(cssSelector).get(index);
+        if(htmlelement==null){
+        	throw new java.util.NoSuchElementException("没有找到该定位方式下的元素,请检查和修改定位方式！");
+        }
+        JSoupElement je = new JSoupElement(htmlelement);
+        this.element=this.currentwindow.findElement(By.xpath(je.toXpath()));
+        
+    }
+    public Element(IBrowser browser,String cssSelector){
+    	this(browser,cssSelector,0);
     }
 
     private void locatorFrameElement(List<WebElement> frameElements,By selectby){
@@ -707,4 +726,24 @@ public class Element implements IElement {
         return this.element;
     }
     
+    public Element addLocator(String cssSelector){
+    	Document doc = Jsoup.parse(this.browser.getCurrentBrowserDriver().getPageSource());
+        org.jsoup.nodes.Element htmlelement = doc.select(cssSelector).first();
+        if(htmlelement==null){
+        	throw new java.util.NoSuchElementException("没有找到该定位方式下的元素,请检查和修改定位方式！");
+        }
+        JSoupElement je = new JSoupElement(htmlelement);
+        this.element=this.currentwindow.findElement(By.xpath(je.toXpath()));
+        return this;
+    }
+    public Element addLocator(String cssSelector,int index){
+    	Document doc = Jsoup.parse(this.browser.getCurrentBrowserDriver().getPageSource());
+        org.jsoup.nodes.Element htmlelement = doc.select(cssSelector).get(index);
+        if(htmlelement==null){
+        	throw new java.util.NoSuchElementException("没有找到该定位方式下的元素,请检查和修改定位方式！");
+        }
+        JSoupElement je = new JSoupElement(htmlelement);
+        this.element=this.currentwindow.findElement(By.xpath(je.toXpath()));
+        return this;
+    }
 }

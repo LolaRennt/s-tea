@@ -21,6 +21,13 @@ public class RichTextField extends Element {
     public RichTextField(IBrowser browser) {
         super(browser);
     }
+    
+    public RichTextField(IBrowser browser,String cssSelector){
+    	super(browser,cssSelector);
+    }
+    public RichTextField(IBrowser browser,String cssSelector,int index){
+    	super(browser,cssSelector,index);
+    }
 
     /**在富文本框里面输入内容*/
     public void setText(String text){

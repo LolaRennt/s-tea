@@ -1,21 +1,16 @@
 package com.github.lmm.annotation;
 
-import com.github.lmm.element.Locator;
-
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * @author
+ * 这个类用来定义一个URL来配合sourcepage来进行页面的直接性切换。可以提供url的部分内容，能够匹配到唯一就行。
+ * 
  * */
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.FIELD)
-public @interface Bys {
-
-    Locator locator();
-    String  value();
-    int index() default 0;
-    String commit();
+@Target(ElementType.TYPE)
+public @interface At {
+	String value();
 }

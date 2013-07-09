@@ -237,9 +237,22 @@ public class Auto {
     }
 
     public static void pageLoadTimeout(int seconds){
-    	
+    	browser().pageLoadTimeout(seconds);
     }
 
+    public static void elementLoadTimeout(int seconds){
+    	browser().elementLoadTimeout(seconds);
+    }
+    
+    public static String dealAlert(){
+    	return browser().dealAlert();
+    }
 
+    public static String dealConfirm(boolean isyes){
+    	return browser().dealConfirm(isyes);
+    }
 
+    public static String dealPrompt(boolean isyes,String text){
+    	return browser().dealPrompt(isyes, text);
+    }
 }

@@ -1,9 +1,6 @@
 package com.github.lmm.element;
 
 import com.github.lmm.browser.IBrowser;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.Point;
 
 /**
  * Created with IntelliJ IDEA.

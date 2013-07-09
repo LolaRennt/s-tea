@@ -1,4 +1,4 @@
-package org.sky.auto.base.test;
+package org.sky.example;
 
 import java.util.concurrent.TimeUnit;
 
@@ -46,6 +46,9 @@ public class MaxWindow {
 	
 	public void steatimeout(){
 		AutoBase.setDriver(Browser.Firefox);
+		/**设置元素等待时间*/
+		AutoBase.setElementWaitTime(30);
+		/**设置页面加载时间为30s*/
 		AutoBase.pageTimeOut(30);
 		AutoBase.open("http://www.baidu.com");
 		AutoBase.closeAllWindow();	
@@ -53,6 +56,11 @@ public class MaxWindow {
 	
 	public void stea3timeout(){
 		Auto.require(com.github.lmm.browser.Browser.FIREFOX);
-		
+		/**设置页面加载时间为30s*/
+		Auto.pageLoadTimeout(30);
+		/**查找元素默认的加载时间*/
+		Auto.elementLoadTimeout(30);
+		Auto.open("http://www.baidu.com");
+		Auto.closeAllWindows();
 	}
 }

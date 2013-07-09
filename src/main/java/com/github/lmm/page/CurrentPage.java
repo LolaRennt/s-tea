@@ -631,4 +631,17 @@ public class CurrentPage implements ICurrentPage {
     public WebDriver getCurrentWindow() {
         return this.browser.getCurrentBrowserDriver();
     }
+	@Override
+	public void closepage() {
+		this.currentwindow.close();
+		
+	}
+	@Override
+	public IElement node(String cssSelector) {
+		return new Element(this.browser,cssSelector);
+	}
+	
+	public IElement node(String cssSelector,int index){
+		return new Element(this.browser,cssSelector,index);
+	}
 }

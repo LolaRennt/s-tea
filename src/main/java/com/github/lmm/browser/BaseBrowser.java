@@ -11,6 +11,7 @@ import com.github.lmm.window.WindowsCollectorListener;
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.*;
+
 import com.github.lmm.source.Source;
 import java.io.File;
 import java.io.IOException;
@@ -51,7 +52,7 @@ public class BaseBrowser implements IBrowser {
         this.commit= com.github.lmm.runtime.RuntimeMethod.getName();
         this.driver=browser.browser();
         maxWindow();
-        this.driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
+        this.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         this.elementManager=new ElementManager();
         this.currentPage=new CurrentPage(this);
         this.windowSource=new WindowSource(this);
@@ -69,7 +70,7 @@ public class BaseBrowser implements IBrowser {
             this.driver=browser.browser(url);
         }
         maxWindow();
-        this.driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
+        this.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         this.currentPage=new CurrentPage(this);
         this.windowSource=new WindowSource(this);
         this.windowsCollectorListener=new WindowsCollectorListener();
@@ -182,6 +183,7 @@ public class BaseBrowser implements IBrowser {
         logger.info("["+this.commit+"]当前页面信息：URL--->"+this.getCurrentPage().getUrl());
         logger.info("["+this.commit+"]当前页面信息：Title--->"+this.getCurrentPage().getTitle());
         logger.info("["+this.commit+"]当前页面信息：窗口句柄数--->"+this.getWindows().size());
+        ActionListenerProxy.getDispatcher().afterselectWindow();
         return this.currentPage;
     }
 
@@ -197,6 +199,7 @@ public class BaseBrowser implements IBrowser {
         logger.info("["+this.commit+"]当前页面信息：URL--->"+this.getCurrentPage().getUrl());
         logger.info("["+this.commit+"]当前页面信息：Title--->"+this.getCurrentPage().getTitle());
         logger.info("["+this.commit+"]当前页面信息：窗口句柄数--->"+this.getWindows().size());
+        ActionListenerProxy.getDispatcher().afterselectWindow();
         return this.currentPage;
     }
 
@@ -216,10 +219,12 @@ public class BaseBrowser implements IBrowser {
         logger.info("["+this.commit+"]当前页面信息：URL--->"+this.getCurrentPage().getUrl());
         logger.info("["+this.commit+"]当前页面信息：Title--->"+this.getCurrentPage().getTitle());
         logger.info("["+this.commit+"]当前页面信息：窗口句柄数--->"+this.getWindows().size());
+        ActionListenerProxy.getDispatcher().afterselectWindow();
         return this.currentPage;
     }
 
     public ICurrentPage selectWindowByIndex(Integer index) {
+    	ActionListenerProxy.getDispatcher().beforeselectWindow();
         this.windowSource.getWindowsCollecter().updateWindows();
         String windowhandle=this.windowSource.getWindowsCollecter().getWindowhandleByIndex(index);
         this.driver.switchTo().window(windowhandle);
@@ -228,6 +233,7 @@ public class BaseBrowser implements IBrowser {
         logger.info("["+this.commit+"]当前页面信息：URL--->"+this.getCurrentPage().getUrl());
         logger.info("["+this.commit+"]当前页面信息：Title--->"+this.getCurrentPage().getTitle());
         logger.info("["+this.commit+"]当前页面信息：窗口句柄数--->"+this.getWindows().size());
+        ActionListenerProxy.getDispatcher().afterselectWindow();
         return this.currentPage;
     }
 
@@ -235,7 +241,7 @@ public class BaseBrowser implements IBrowser {
     public ICurrentPage selectWindowContainsUrl(String url) {
         ActionListenerProxy.getDispatcher().beforeselectWindow();
         this.windowSource.getWindowsCollecter().updateWindows();
-        for(Map.Entry<String,WindowInfo> info:this.windowSource.getWindowsCollecter().getWindowInfoMap().entrySet()){
+        for(Map.Entry<String,WindowInfo> info:this.windowSource.getWindowsCollecter().getWindowInfourlMap().entrySet()){
             if(info.getValue().getUrl().contains(url)){
                 this.driver.switchTo().window(info.getValue().getWindowHandle());
                 logger.info("["+this.commit+"]当前页面切换到了--------->"+info.getValue().getTitle());
@@ -333,6 +339,83 @@ public class BaseBrowser implements IBrowser {
     	this.driver.manage().timeouts().implicitlyWait(seconds, TimeUnit.SECONDS);
     }
     
-    
+    @Override
+    public String dealAlert() {
+        ActionListenerProxy.getDispatcher().beforedealAlert();
+        String alerMessage=null;
+        try{
+            Alert alert=this.getCurrentBrowserDriver().switchTo().alert();
+            alerMessage=alert.getText();
+            alert.accept();
+            ActionListenerProxy.getDispatcher().afterdealAlert();
+            return alerMessage;
+        }catch(NoAlertPresentException e){
+            ActionListenerProxy.getDispatcher().afterdealAlert();
+            logger.warn("["+this.commit+"]没有找到alert窗口，程序将继续运行，可能会出现异常，请查看代码是否正确");
+            return null;
+        }
+    }
+
+    @Override
+    public String dealConfirm(boolean isyes) {
+        ActionListenerProxy.getDispatcher().beforedealConfirm();
+        String alerMessage=null;
+        try{
+            Alert alert=this.getCurrentBrowserDriver().switchTo().alert();
+            alerMessage=alert.getText();
+            if(isyes){
+                alert.accept();
+            }else{
+                alert.dismiss();
+            }
+            ActionListenerProxy.getDispatcher().afterdealConfirm();
+            return alerMessage;
+        }catch(NoAlertPresentException e){
+            ActionListenerProxy.getDispatcher().afterdealConfirm();
+            logger.warn("["+this.commit+"]没有找到comfirm窗口，程序将继续运行，可能会出现异常，请查看代码是否正确");
+            return null;
+        }
+    }
+
+    @Override
+    public String dealPrompt(boolean isyes, String text) {
+        ActionListenerProxy.getDispatcher().beforedealConfirm();
+        String alerMessage=null;
+        try{
+            Alert alert=this.getCurrentBrowserDriver().switchTo().alert();
+            alert.sendKeys(text);
+            alerMessage=alert.getText();
+            if(isyes){
+                alert.accept();
+            }else{
+                alert.dismiss();
+            }
+            ActionListenerProxy.getDispatcher().afterdealConfirm();
+            return alerMessage;
+        }catch(NoAlertPresentException e){
+            ActionListenerProxy.getDispatcher().afterdealConfirm();
+            logger.warn("["+this.commit+"]没有找到prompt窗口，程序将继续运行，可能会出现异常，请查看代码是否正确");
+            return null;
+        }
+    }
+
+	@Override
+	public ICurrentPage selectWindowContainsTitle(String title) {
+		ActionListenerProxy.getDispatcher().beforeselectWindow();
+        this.windowSource.getWindowsCollecter().updateWindows();
+        for(Map.Entry<String,WindowInfo> info:this.windowSource.getWindowsCollecter().getWindowInfoMap().entrySet()){
+            if(info.getValue().getUrl().contains(title)){
+                this.driver.switchTo().window(info.getValue().getWindowHandle());
+                logger.info("["+this.commit+"]当前页面切换到了--------->"+info.getValue().getTitle());
+                break;
+            }
+        }
+        this.currentPage.setBrowser(this);
+        logger.info("["+this.commit+"]当前页面信息：URL--->"+this.getCurrentPage().getUrl());
+        logger.info("["+this.commit+"]当前页面信息：Title--->"+this.getCurrentPage().getTitle());
+        logger.info("["+this.commit+"]当前页面信息：窗口句柄数--->"+this.getWindows().size());
+        ActionListenerProxy.getDispatcher().afterselectWindow();
+        return this.currentPage;
+	}
     
 }

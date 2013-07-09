@@ -26,6 +26,10 @@ public interface ICurrentPage extends IPage {
     public void addElement(TempElement element);
 
     public void addElements(Source source);
+    
+    public IElement node(String cssSelector);
+    
+    public IElement node(String cssSelector,int index);
 
     public IElement element();
 
@@ -170,5 +174,6 @@ public interface ICurrentPage extends IPage {
     public Frame frame(By by);
 
     public Frame frame(By by,int index);
-
+    
+    public void closepage();
 }

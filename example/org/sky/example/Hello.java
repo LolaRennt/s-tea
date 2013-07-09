@@ -1,4 +1,4 @@
-package org.sky.auto.base.test;
+package org.sky.example;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

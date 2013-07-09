@@ -14,7 +14,11 @@ import java.util.*;
  * To change this template use File | Settings | File Templates.
  */
 public class WindowsCollecter extends EventObject {
-    private Logger logger = Logger.getLogger(WindowsCollecter.class);
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private Logger logger = Logger.getLogger(WindowsCollecter.class);
     public Set<String> windowhandles;
     public int windowNums;
     private Map<String,WindowInfo> windowInfoMap;
@@ -120,5 +124,9 @@ public class WindowsCollecter extends EventObject {
         }
         return false;
     }
+
+	public Map<String, WindowInfo> getWindowInfourlMap() {
+		return windowInfourlMap;
+	}
 
 }

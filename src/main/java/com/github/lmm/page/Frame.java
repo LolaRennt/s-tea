@@ -1,15 +1,21 @@
 package com.github.lmm.page;
 
 import com.github.lmm.annotation.Commit;
+import com.github.lmm.annotation.FindBy;
 import com.github.lmm.annotation.FrameLocator;
-import com.github.lmm.browser.IBrowser;
 import com.github.lmm.element.*;
+import com.github.lmm.source.ElementInfo;
+import com.github.lmm.source.TempChainElement;
+
 import org.apache.log4j.Logger;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
 import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
+import java.util.NoSuchElementException;
 
 /**
  * Created with IntelliJ IDEA.
@@ -24,6 +30,7 @@ public abstract class Frame{
     private String commit;
     private ICurrentPage page;
     private ElementManager elementManager;
+    private Document doc;
     public Frame(Frame frame,By by){
         this.currentFrame=frame.getCurrentFrame().switchTo().frame(page.getCurrentWindow().findElement(by));
         this.page=frame.getPage();
@@ -31,6 +38,7 @@ public abstract class Frame{
         if(this.getClass().isAnnotationPresent(Commit.class)){
             this.commit=this.getClass().getAnnotation(Commit.class).value();
         }
+        fieldAnnotationsTools();
     }
     public Frame(Frame frame,By by,int index){
         this.currentFrame=frame.getCurrentFrame().switchTo().frame(page.getCurrentWindow().findElements(by).get(index));
@@ -39,6 +47,7 @@ public abstract class Frame{
         if(this.getClass().isAnnotationPresent(Commit.class)){
             this.commit=this.getClass().getAnnotation(Commit.class).value();
         }
+        fieldAnnotationsTools();
     }
 
     public Frame(Frame frame,Integer frameindex){
@@ -48,6 +57,7 @@ public abstract class Frame{
         if(this.getClass().isAnnotationPresent(Commit.class)){
             this.commit=this.getClass().getAnnotation(Commit.class).value();
         }
+        fieldAnnotationsTools();
     }
 
     public Frame(Frame frame,String nameorId){
@@ -58,6 +68,7 @@ public abstract class Frame{
         if(this.getClass().isAnnotationPresent(Commit.class)){
             this.commit=this.getClass().getAnnotation(Commit.class).value();
         }
+        fieldAnnotationsTools();
     }
     public Frame(Frame frame,TempElement element){
         this(frame,element.getLocator(),element.getIndex());
@@ -69,6 +80,7 @@ public abstract class Frame{
         if(this.getClass().isAnnotationPresent(Commit.class)){
             this.commit=this.getClass().getAnnotation(Commit.class).value();
         }
+        fieldAnnotationsTools();
     }
     public Frame(ICurrentPage page,By by,int index){
         this.page=page;
@@ -77,6 +89,7 @@ public abstract class Frame{
         if(this.getClass().isAnnotationPresent(Commit.class)){
             this.commit=this.getClass().getAnnotation(Commit.class).value();
         }
+        fieldAnnotationsTools();
     }
 
     public Frame(ICurrentPage  page,Integer frameindex){
@@ -86,7 +99,7 @@ public abstract class Frame{
         if(this.getClass().isAnnotationPresent(Commit.class)){
             this.commit=this.getClass().getAnnotation(Commit.class).value();
         }
-
+        fieldAnnotationsTools();
     }
 
     public Frame(ICurrentPage page,String nameorId){
@@ -96,6 +109,7 @@ public abstract class Frame{
         if(this.getClass().isAnnotationPresent(Commit.class)){
             this.commit=this.getClass().getAnnotation(Commit.class).value();
         }
+        fieldAnnotationsTools();
     }
     public Frame(ICurrentPage page,TempElement element){
         this(page,element.getLocator(),element.getIndex());
@@ -107,13 +121,13 @@ public abstract class Frame{
         }else if(getNameOrId()!=null){
             this.currentFrame=page.getCurrentWindow().switchTo().frame(getNameOrId());
         }else{
-            this.currentFrame=page.getCurrentWindow().switchTo().frame(page.getCurrentWindow().findElements(getLocator()).get(getIndex()));
+            this.currentFrame=page.getCurrentWindow().switchTo().frame(page.getCurrentWindow().findElement(getLocator()));
         }
         this.elementManager=page.getElementManager();
         if(this.getClass().isAnnotationPresent(Commit.class)){
             this.commit=this.getClass().getAnnotation(Commit.class).value();
         }
-
+        fieldAnnotationsTools();
     }
 
     public ElementManager getElementManager(){
@@ -148,7 +162,8 @@ public abstract class Frame{
         this.commit = commit;
     }
 
-    public <T>T frame(Class<T>clazz){
+    @SuppressWarnings("unchecked")
+	public <T>T frame(Class<T>clazz){
         Object frame=null;
         try {
             Constructor<T> constructor=clazz.getConstructor(Frame.class);
@@ -162,30 +177,21 @@ public abstract class Frame{
         } catch (IllegalAccessException e) {
             throw new RuntimeException("没有找到这个class类"+clazz.getName()+",请检查类是否被加载或者类名是否正确");
         }
-        return (T)frame;
+        return (T) frame;
     }
 
     protected By getLocator(){
         if(this.getClass().isAnnotationPresent(FrameLocator.class)){
             FrameLocator frameLocator=this.getClass().getAnnotation(FrameLocator.class);
-            Locator locator = frameLocator.locator();
-            String value=frameLocator.value();
-            //int index = frameLocator.index();
-            return  locator.getLocator(value);
+            String locator = frameLocator.value();
+            int index=frameLocator.index();
+            this.doc=Jsoup.parse(this.currentFrame.getPageSource());
+            org.jsoup.nodes.Element htmlelement=this.doc.select(locator).get(index);
+            JSoupElement je = new JSoupElement(htmlelement);
+            return  By.xpath(je.toXpath());
         }else{
             logger.warn("这个Frame没有启用注解来标注Frame的位置。");
             return null;
-        }
-    }
-
-    protected int getIndex(){
-        if(this.getClass().isAnnotationPresent(FrameLocator.class)){
-            FrameLocator frameLocator=this.getClass().getAnnotation(FrameLocator.class);
-            int index =frameLocator.index();
-            return index;
-        } else{
-            logger.warn("这个Frame没有启用注解来标注Frame的位置。");
-            return 0;
         }
     }
 
@@ -515,6 +521,30 @@ public abstract class Frame{
 
     public Frame frame(By by, int index) {
         return new DefaultFrame(this,by,index);
+    }
+    
+    private void fieldAnnotationsTools(){
+    	Field[] fields=this.getClass().getDeclaredFields();
+        for(Field field:fields){
+            if(field.isAnnotationPresent(FindBy.class)){
+                ElementInfo elementInfo=new ElementInfo();
+                FindBy elementLocator=field.getAnnotation(FindBy.class);
+                String commit = elementLocator.commit();
+                Integer index=elementLocator.index();
+                String value=elementLocator.value();
+                org.jsoup.nodes.Element htmlelement = this.doc.select(value).get(index);
+                if(htmlelement==null){
+                	throw new NoSuchElementException("没有找到这种定位方式的元素");
+                }
+                JSoupElement je = new JSoupElement(htmlelement);
+                By jby = By.xpath(je.toXpath());
+                elementInfo.setIndex(0);
+                elementInfo.setLocator(jby);
+                TempChainElement tempChainElement=new TempChainElement(elementInfo);
+                this.elementManager.addElement(tempChainElement);
+                logger.info("收集了当前页面的注解属性元素"+commit);
+            }
+        }
     }
 
 }

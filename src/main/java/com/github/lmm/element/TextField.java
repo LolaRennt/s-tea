@@ -21,6 +21,12 @@ public class TextField extends Element {
     public TextField(IBrowser browser) {
         super(browser);
     }
+    public TextField(IBrowser browser,String cssSelector){
+    	super(browser,cssSelector);
+    }
+    public TextField(IBrowser browser,String cssSelector,int index){
+    	super(browser,cssSelector,index);
+    }
 
     public void setText(String text){
         if(isExist()){

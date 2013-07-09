@@ -51,7 +51,7 @@ public interface IBrowser {
 
     public ICurrentPage selectWindowByUrl(String url);
 
-    //public ICurrentPage selectWindowContainsTitle(String title);
+    public ICurrentPage selectWindowContainsTitle(String title);
 
     public ICurrentPage selectWindowContainsUrl(String url);
 
@@ -74,4 +74,10 @@ public interface IBrowser {
     public void setElementManager(ElementManager elementManager);
 
     public WindowSource getWindowSource();
+    
+    public String dealAlert();
+
+    public String dealConfirm(boolean isyes);
+
+    public String dealPrompt(boolean isyes,String text);
 }

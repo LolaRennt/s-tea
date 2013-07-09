@@ -21,6 +21,12 @@ public class CheckBox extends Element {
     public CheckBox(IBrowser browser) {
         super(browser);
     }
+    public CheckBox(IBrowser browser,String cssSelector){
+    	super(browser,cssSelector);
+    }
+    public CheckBox(IBrowser browser,String cssSelector,int index){
+    	super(browser,cssSelector,index);
+    }
 
     public boolean isCheck(){
         return false;

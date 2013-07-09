@@ -1,8 +1,5 @@
 package com.github.lmm.annotation;
 
-import com.github.lmm.element.Locator;
-import com.github.lmm.element.TempElement;
-
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -18,10 +15,8 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
 public @interface FrameLocator {
-    Locator locator() default Locator.ID;
     String value() default "";
-    int index() default 0;
     int frameIndex() default -1;
-    String[] locators() default "";
     String nameOrId() default "";
+    int index() default 0;
 }
