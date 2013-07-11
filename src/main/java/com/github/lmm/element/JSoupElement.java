@@ -21,10 +21,19 @@ public class JSoupElement {
 		}else{
 			node=this.element;
 			while(!hasID(node)){
-				if(node.elementSiblingIndex()==0){
-					this.stack.push(node.tagName());
+				if(node.parent().children().size()==1){
+					String tagname=node.tagName();
+					if(tagname.contains(":")){
+						tagname=tagname.substring(tagname.lastIndexOf(":")+1);
+					}
+					this.stack.push(tagname);
 				}else{
-					this.stack.push(node.tagName()+"["+node.elementSiblingIndex()+"]");
+					String tagname=node.tagName();
+					if(tagname.contains(":")){
+						tagname=tagname.substring(tagname.lastIndexOf(":")+1);
+					}
+					int index=node.elementSiblingIndex().intValue()+1;
+					this.stack.push(tagname+"["+index+"]");
 				}
 				node=node.parent();
 			}

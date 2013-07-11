@@ -9,6 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
@@ -60,6 +61,22 @@ public class AutoDriver implements IDriver{
 			return tl.get();
 		}
 	}
+	class PhantomJS implements Runnable{
+		ThreadLocal<PhantomJSDriver> tl = new ThreadLocal<PhantomJSDriver>(){
+			
+			protected PhantomJSDriver initialValue() {
+				return new PhantomJSDriver(DesiredCapabilities.phantomjs());
+			};
+		};
+		
+		public void run() {
+			
+		}
+		public PhantomJSDriver ie(){
+			return tl.get();
+		}
+	}
+	
 	
 	class Safari implements Runnable{
 		ThreadLocal<SafariDriver> tl = new ThreadLocal<SafariDriver>(){

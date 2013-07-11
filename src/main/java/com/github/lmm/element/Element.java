@@ -1,6 +1,7 @@
 package com.github.lmm.element;
 
 import com.github.lmm.browser.IBrowser;
+import com.github.lmm.core.Wait;
 import com.github.lmm.proxy.ActionListenerProxy;
 import com.github.lmm.runtime.RuntimeMethod;
 import com.github.lmm.source.xml.ChildElementInfo;
@@ -22,12 +23,13 @@ import java.util.concurrent.TimeUnit;
  */
 public class Element implements IElement {
     private Logger logger = Logger.getLogger(Element.class);
+    private org.jsoup.nodes.Element currentJSoupElement;
     private IBrowser browser;
     private WebElement element;
     private TempElement tempElement;
     private Actions actions;
     private String id;
-    private WebDriver currentwindow;
+    //private WebDriver currentwindow;
     private String value;
     private String by;
     private Integer index;
@@ -36,21 +38,21 @@ public class Element implements IElement {
     private List<WebElement> frameElements;
     public Element(IBrowser browser,TempElement tempElement){
         this.browser=browser;
-        this.currentwindow=browser.getCurrentBrowserDriver();
-        actions=new Actions(this.currentwindow);
+        //this.currentwindow.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        actions=new Actions(this.browser.getCurrentBrowserDriver());
         commit="["+ com.github.lmm.runtime.RuntimeMethod.getName()+"]";
         this.tempElement= tempElement;
         this.locator=tempElement.getLocator();
         this.value=tempElement.getValue();
         this.id=tempElement.getId();
         this.index=tempElement.getIndex();
-        List<WebElement> list=this.currentwindow.findElements(this.locator);
+        Wait wait = new Wait(this.browser.getCurrentBrowserDriver());
+        List<WebElement> list=wait.applyList(this.locator);
         if(browser.isScanFrame()){
         	if(list.size()>0){
                 this.element=list.get(this.index);
                 selectElementWithChild(this.tempElement);
             }else{
-                this.currentwindow.manage().timeouts().implicitlyWait(0,TimeUnit.SECONDS);
                 this.frameElements=this.browser.getCurrentBrowserDriver().findElements(By.tagName("iframe"));
                 this.frameElements.addAll(this.browser.getCurrentBrowserDriver().findElements(By.tagName("frame")));
                 locatorFrameElement(list, this.locator,this.index);
@@ -60,7 +62,8 @@ public class Element implements IElement {
                     logger.error("临时元素信息->"+this.tempElement.getId()+":"+this.tempElement.getLocator().toString());
                     throw new NoSuchElementException("没有找到定义的元素，请仔细检查元素是否定义正确");
                 }
-                this.currentwindow.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+                //this.currentwindow.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+                this.browser.getCurrentBrowserDriver().switchTo().defaultContent();
             }	
         }else{
         	if(list.size()>0){
@@ -72,16 +75,21 @@ public class Element implements IElement {
     }
     public Element(IBrowser browser,String cssSelector,int index){
     	this.browser=browser;
-        this.currentwindow=browser.getCurrentBrowserDriver();
-        actions=new Actions(this.currentwindow);
+        actions=new Actions(this.browser.getCurrentBrowserDriver());
         commit="["+ com.github.lmm.runtime.RuntimeMethod.getName()+"]";
         Document doc = Jsoup.parse(this.browser.getCurrentBrowserDriver().getPageSource());
-        org.jsoup.nodes.Element htmlelement = doc.select(cssSelector).get(index);
-        if(htmlelement==null){
-        	throw new java.util.NoSuchElementException("没有找到该定位方式下的元素,请检查和修改定位方式！");
+        try{
+        	this.currentJSoupElement = doc.select(cssSelector).get(index);
+        	JSoupElement je = new JSoupElement(this.currentJSoupElement);
+        	Wait wait = new Wait(this.browser.getCurrentBrowserDriver());
+        	this.locator=By.xpath(je.toXpath());
+        	this.index=0;
+        	System.out.println(je.toXpath());
+            this.element=wait.apply(this.locator,0);
+        }catch(Exception e){
+        	throw new NoSuchElementException("没有找到该定位方式下的元素,请检查和修改定位方式！");
         }
-        JSoupElement je = new JSoupElement(htmlelement);
-        this.element=this.currentwindow.findElement(By.xpath(je.toXpath()));
+        
         
     }
     public Element(IBrowser browser,String cssSelector){
@@ -98,12 +106,12 @@ public class Element implements IElement {
             if(isout){
                 break;
             }
-            this.currentwindow.switchTo().frame(webElement);
-            this.actions=new Actions(this.currentwindow);
-            List<WebElement> elements=this.currentwindow.findElements(selectby);
+            this.browser.getCurrentBrowserDriver().switchTo().frame(webElement);
+            this.actions=new Actions(this.browser.getCurrentBrowserDriver());
+            List<WebElement> elements=this.browser.getCurrentBrowserDriver().findElements(selectby);
             if(elements.size()==0){
-                List<WebElement> framelist=this.currentwindow.findElements(By.tagName("iframe"));
-                framelist.addAll(this.currentwindow.findElements(By.tagName("frame")));
+                List<WebElement> framelist=this.browser.getCurrentBrowserDriver().findElements(By.tagName("iframe"));
+                framelist.addAll(this.browser.getCurrentBrowserDriver().findElements(By.tagName("frame")));
                 locatorFrameElement(framelist,selectby,findex);
             }else{
                 this.element=elements.get(findex);
@@ -117,14 +125,12 @@ public class Element implements IElement {
     }
     public Element(IBrowser browser){
         this.browser=browser;
-        this.currentwindow=browser.getCurrentBrowserDriver();
-        this.currentwindow.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
-        actions=new Actions(this.currentwindow);
+        actions=new Actions(this.browser.getCurrentBrowserDriver());
         commit="["+ RuntimeMethod.getName()+"]";
         this.id="Element";
-        this.frameElements=this.currentwindow.findElements(By.tagName("iframe"));
+        this.frameElements=this.browser.getCurrentBrowserDriver().findElements(By.tagName("iframe"));
         //System.out.println(frameElements.size());
-        this.frameElements.addAll(this.currentwindow.findElements(By.tagName("frame")));
+        this.frameElements.addAll(this.browser.getCurrentBrowserDriver().findElements(By.tagName("frame")));
         this.element=new RemoteWebElement();
     }
     @Override
@@ -374,7 +380,7 @@ public class Element implements IElement {
     @Override
     public ListElements getOptions(String tagname) {
         List<Element> elist = new ArrayList<Element>();
-        List<WebElement> welist = this.currentwindow.findElements(By.tagName(tagname));
+        List<WebElement> welist = this.browser.getCurrentBrowserDriver().findElements(By.tagName(tagname));
         for(WebElement we:welist){
             Element e=new Element(this.browser);
             e.element=we;
@@ -386,7 +392,7 @@ public class Element implements IElement {
     @Override
     public ListElements getOptionsById(String id) {
         List<Element> elist = new ArrayList<Element>();
-        List<WebElement> welist = this.currentwindow.findElements(By.id(id));
+        List<WebElement> welist = this.browser.getCurrentBrowserDriver().findElements(By.id(id));
         for(WebElement we:welist){
             Element e=new Element(this.browser);
             e.element=we;
@@ -398,7 +404,7 @@ public class Element implements IElement {
     @Override
     public ListElements getOptionsByXpath(String xpath) {
         List<Element> elist = new ArrayList<Element>();
-        List<WebElement> welist = this.currentwindow.findElements(By.xpath(xpath));
+        List<WebElement> welist = this.browser.getCurrentBrowserDriver().findElements(By.xpath(xpath));
         for(WebElement we:welist){
             Element e=new Element(this.browser);
             e.element=we;
@@ -410,7 +416,7 @@ public class Element implements IElement {
     @Override
     public ListElements getOptionsByName(String name) {
         List<Element> elist = new ArrayList<Element>();
-        List<WebElement> welist = this.currentwindow.findElements(By.name(name));
+        List<WebElement> welist = this.browser.getCurrentBrowserDriver().findElements(By.name(name));
         for(WebElement we:welist){
             Element e=new Element(this.browser);
             e.element=we;
@@ -422,7 +428,7 @@ public class Element implements IElement {
     @Override
     public ListElements getOptionsByClassName(String classname) {
         List<Element> elist = new ArrayList<Element>();
-        List<WebElement> welist = this.currentwindow.findElements(By.className(classname));
+        List<WebElement> welist = this.browser.getCurrentBrowserDriver().findElements(By.className(classname));
         for(WebElement we:welist){
             Element e=new Element(this.browser);
             e.element=we;
@@ -434,7 +440,7 @@ public class Element implements IElement {
     @Override
     public ListElements getOptionsByLinkText(String linktext) {
         List<Element> elist = new ArrayList<Element>();
-        List<WebElement> welist = this.currentwindow.findElements(By.linkText(linktext));
+        List<WebElement> welist = this.browser.getCurrentBrowserDriver().findElements(By.linkText(linktext));
         for(WebElement we:welist){
             Element e=new Element(this.browser);
             e.element=we;
@@ -446,7 +452,7 @@ public class Element implements IElement {
     @Override
     public ListElements getOptionsByCss(String css) {
         List<Element> elist = new ArrayList<Element>();
-        List<WebElement> welist = this.currentwindow.findElements(By.cssSelector(css));
+        List<WebElement> welist = this.browser.getCurrentBrowserDriver().findElements(By.cssSelector(css));
         for(WebElement we:welist){
             Element e=new Element(this.browser);
             e.element=we;
@@ -623,10 +629,9 @@ public class Element implements IElement {
 
     public Element addLocator(Locator style,String value){
         try{
-            this.currentwindow.manage().timeouts().implicitlyWait(2,TimeUnit.SECONDS);
-            this.element=this.currentwindow.findElement(style.getLocator(value));
+            this.element=this.browser.getCurrentBrowserDriver().findElement(style.getLocator(value));
         }catch (NoSuchElementException e){
-            this.currentwindow.manage().timeouts().implicitlyWait(0,TimeUnit.SECONDS);
+            //this.currentwindow.manage().timeouts().implicitlyWait(0,TimeUnit.SECONDS);
             locatorFrameElement(this.frameElements,style.getLocator(value));
             if(element==null){
                 logger.error("定位器位置的元素不存在，没有获取到任何元素，请检查定义的元素");
@@ -638,10 +643,9 @@ public class Element implements IElement {
     }
 
     public Element addLocator(Locator style,String value,Integer eindex){
-        this.currentwindow.manage().timeouts().implicitlyWait(2,TimeUnit.SECONDS);
-        List<WebElement> webElementList =this.currentwindow.findElements(style.getLocator(value));
+        //this.currentwindow.manage().timeouts().implicitlyWait(2,TimeUnit.SECONDS);
+        List<WebElement> webElementList =this.browser.getCurrentBrowserDriver().findElements(style.getLocator(value));
         if(webElementList.size()==0){
-            this.currentwindow.manage().timeouts().implicitlyWait(0,TimeUnit.SECONDS);
             locatorFrameElement(this.frameElements,style.getLocator(value));
             if(this.element==null){
                 logger.error("定位器位置的元素不存在，没有获取到任何元素，请检查定义的元素");
@@ -660,10 +664,10 @@ public class Element implements IElement {
 
     public Element addLocator(By byLocator){
         try{
-            this.currentwindow.manage().timeouts().implicitlyWait(2,TimeUnit.SECONDS);
-            this.element=this.currentwindow.findElement(byLocator);
+           // this.currentwindow.manage().timeouts().implicitlyWait(2,TimeUnit.SECONDS);
+            this.element=this.browser.getCurrentBrowserDriver().findElement(byLocator);
         }catch (NoSuchElementException e){
-            this.currentwindow.manage().timeouts().implicitlyWait(0,TimeUnit.SECONDS);
+            this.browser.getCurrentBrowserDriver().manage().timeouts().implicitlyWait(0,TimeUnit.SECONDS);
             //System.out.println("没有路过这么？");
             locatorFrameElement(this.frameElements,byLocator);
             if(this.element==null){
@@ -676,10 +680,10 @@ public class Element implements IElement {
     }
 
     public Element addLocator(By byLocator,Integer eindex){
-        this.currentwindow.manage().timeouts().implicitlyWait(2,TimeUnit.SECONDS);
-        List<WebElement> webElementList=this.currentwindow.findElements(byLocator);
+        //this.currentwindow.manage().timeouts().implicitlyWait(2,TimeUnit.SECONDS);
+        List<WebElement> webElementList=this.browser.getCurrentBrowserDriver().findElements(byLocator);
         if(webElementList.size()==0){
-            this.currentwindow.manage().timeouts().implicitlyWait(0,TimeUnit.SECONDS);
+            this.browser.getCurrentBrowserDriver().manage().timeouts().implicitlyWait(0,TimeUnit.SECONDS);
             locatorFrameElement(this.frameElements, byLocator);
             if(this.element==null){
                 logger.error("定位器位置的元素不存在，没有获取到任何元素，请检查定义的元素");
@@ -730,20 +734,44 @@ public class Element implements IElement {
     	Document doc = Jsoup.parse(this.browser.getCurrentBrowserDriver().getPageSource());
         org.jsoup.nodes.Element htmlelement = doc.select(cssSelector).first();
         if(htmlelement==null){
-        	throw new java.util.NoSuchElementException("没有找到该定位方式下的元素,请检查和修改定位方式！");
+        	throw new NoSuchElementException("没有找到该定位方式下的元素,请检查和修改定位方式！");
         }
         JSoupElement je = new JSoupElement(htmlelement);
-        this.element=this.currentwindow.findElement(By.xpath(je.toXpath()));
+        this.element=this.browser.getCurrentBrowserDriver().findElement(By.xpath(je.toXpath()));
         return this;
     }
     public Element addLocator(String cssSelector,int index){
     	Document doc = Jsoup.parse(this.browser.getCurrentBrowserDriver().getPageSource());
         org.jsoup.nodes.Element htmlelement = doc.select(cssSelector).get(index);
         if(htmlelement==null){
-        	throw new java.util.NoSuchElementException("没有找到该定位方式下的元素,请检查和修改定位方式！");
+        	throw new NoSuchElementException("没有找到该定位方式下的元素,请检查和修改定位方式！");
         }
         JSoupElement je = new JSoupElement(htmlelement);
-        this.element=this.currentwindow.findElement(By.xpath(je.toXpath()));
+        this.element=this.browser.getCurrentBrowserDriver().findElement(By.xpath(je.toXpath()));
         return this;
+    }
+    
+    public IElement node(String cssSelector,int jindex){
+    	if(this.currentJSoupElement==null){
+    		try{
+    			this.currentJSoupElement=Jsoup.parse(this.browser.getCurrentBrowserDriver().getPageSource()).select(cssSelector).first();
+    		}catch(Exception e){
+    			throw new NoSuchElementException("没有找到该定位方式下的元素,请检查和修改定位方式！");
+    		}	
+    	}else{
+    		try{
+        		this.currentJSoupElement = this.currentJSoupElement.select(cssSelector).get(jindex);
+        	}catch(Exception e){
+        		throw new NoSuchElementException("没有找到该定位方式下的元素,请检查和修改定位方式！");
+        	}
+    	}
+        JSoupElement jsoupelement = new JSoupElement(this.currentJSoupElement);
+        Element newelement=new Element(this.browser);
+        newelement.addLocator(By.xpath(jsoupelement.toXpath()));
+        return newelement;
+    }
+    
+    public IElement node(String cssSelector){
+    	return node(cssSelector,0);
     }
 }

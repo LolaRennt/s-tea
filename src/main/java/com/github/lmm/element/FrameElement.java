@@ -1,5 +1,6 @@
 package com.github.lmm.element;
 
+import com.github.lmm.core.Wait;
 import com.github.lmm.proxy.ActionListenerProxy;
 import com.github.lmm.runtime.RuntimeMethod;
 import org.apache.log4j.Logger;
@@ -19,7 +20,6 @@ import java.util.List;
  */
 public class FrameElement implements IElement {
     private Logger logger = Logger.getLogger(FrameElement.class);
-    private WebDriver currentFrame;
     private Frame frame;
     private WebElement element;
     private String id;
@@ -32,15 +32,15 @@ public class FrameElement implements IElement {
     private By locator;
     public FrameElement(Frame frame,TempElement tempElement){
         this.frame=frame;
-        this.currentFrame=frame.getCurrentFrame();
-        actions=new Actions(this.currentFrame);
+        actions=new Actions(this.frame.getCurrentFrame());
         commit="["+ com.github.lmm.runtime.RuntimeMethod.getName()+"]";
         this.tempElement=tempElement;
         this.locator=tempElement.getLocator();
         this.value=tempElement.getValue();
         this.id=tempElement.getId();
         this.index=tempElement.getIndex();
-        List<WebElement> list=this.currentFrame.findElements(this.locator);
+        Wait wait = new Wait(this.frame.getCurrentFrame());
+        List<WebElement> list=wait.applyList(this.locator);
         if(list.size()>0){
             this.element=list.get(this.index);
         }else{
@@ -52,8 +52,7 @@ public class FrameElement implements IElement {
     
     public FrameElement(Frame frame){
         this.frame=frame;
-        this.currentFrame=frame.getCurrentFrame();
-        actions=new Actions(this.currentFrame);
+        actions=new Actions(this.frame.getCurrentFrame());
         commit="["+ RuntimeMethod.getName()+"]";
         this.id="FrameElement";
     }
@@ -316,7 +315,7 @@ public class FrameElement implements IElement {
     @Override
     public ListElements getOptions(String tagname) {
         List<FrameElement> elist = new ArrayList<FrameElement>();
-        List<WebElement> welist = this.currentFrame.findElements(By.tagName(tagname));
+        List<WebElement> welist = this.frame.getCurrentFrame().findElements(By.tagName(tagname));
         for(WebElement we:welist){
             FrameElement e=new FrameElement(this.frame);
             e.element=we;
@@ -328,7 +327,7 @@ public class FrameElement implements IElement {
     @Override
     public ListElements getOptionsById(String id) {
         List<FrameElement> elist = new ArrayList<FrameElement>();
-        List<WebElement> welist = this.currentFrame.findElements(By.id(id));
+        List<WebElement> welist = this.frame.getCurrentFrame().findElements(By.id(id));
         for(WebElement we:welist){
             FrameElement e=new FrameElement(this.frame);
             e.element=we;
@@ -340,7 +339,7 @@ public class FrameElement implements IElement {
     @Override
     public ListElements getOptionsByXpath(String xpath) {
         List<FrameElement> elist = new ArrayList<FrameElement>();
-        List<WebElement> welist = this.currentFrame.findElements(By.xpath(xpath));
+        List<WebElement> welist = this.frame.getCurrentFrame().findElements(By.xpath(xpath));
         for(WebElement we:welist){
             FrameElement e=new FrameElement(this.frame);
             e.element=we;
@@ -352,7 +351,7 @@ public class FrameElement implements IElement {
     @Override
     public ListElements getOptionsByName(String name) {
         List<FrameElement> elist = new ArrayList<FrameElement>();
-        List<WebElement> welist = this.currentFrame.findElements(By.name(name));
+        List<WebElement> welist = this.frame.getCurrentFrame().findElements(By.name(name));
         for(WebElement we:welist){
             FrameElement e=new FrameElement(this.frame);
             e.element=we;
@@ -364,7 +363,7 @@ public class FrameElement implements IElement {
     @Override
     public ListElements getOptionsByClassName(String classname) {
         List<FrameElement> elist = new ArrayList<FrameElement>();
-        List<WebElement> welist = this.currentFrame.findElements(By.className(classname));
+        List<WebElement> welist = this.frame.getCurrentFrame().findElements(By.className(classname));
         for(WebElement we:welist){
             FrameElement e=new FrameElement(this.frame);
             e.element=we;
@@ -376,7 +375,7 @@ public class FrameElement implements IElement {
     @Override
     public ListElements getOptionsByLinkText(String linktext) {
         List<FrameElement> elist = new ArrayList<FrameElement>();
-        List<WebElement> welist = this.currentFrame.findElements(By.linkText(linktext));
+        List<WebElement> welist = this.frame.getCurrentFrame().findElements(By.linkText(linktext));
         for(WebElement we:welist){
             FrameElement e=new FrameElement(this.frame);
             e.element=we;
@@ -388,7 +387,7 @@ public class FrameElement implements IElement {
     @Override
     public ListElements getOptionsByCss(String css) {
         List<FrameElement> elist = new ArrayList<FrameElement>();
-        List<WebElement> welist = this.currentFrame.findElements(By.cssSelector(css));
+        List<WebElement> welist = this.frame.getCurrentFrame().findElements(By.cssSelector(css));
         for(WebElement we:welist){
             FrameElement e=new FrameElement(this.frame);
             e.element=we;
@@ -565,34 +564,37 @@ public class FrameElement implements IElement {
     }
 
     public FrameElement addLocator(Locator style,String value){
-        this.element=this.currentFrame.findElement(style.getLocator(value));
+        this.element=this.frame.getCurrentFrame().findElement(style.getLocator(value));
+        this.id=style.getLocator(value).toString();
         return this;
     }
 
     public FrameElement addLocator(Locator style,String value,Integer eindex){
-        List<WebElement> webElementList =this.currentFrame.findElements(style.getLocator(value));
+        List<WebElement> webElementList =this.frame.getCurrentFrame().findElements(style.getLocator(value));
         if(webElementList.size()==0){
             logger.error("定位器位置的元素不存在，没有获取到任何元素，请检查定义的元素");
             throw new NoSuchElementException("元素加载定位器的时候出现了错误！没有指定位置的元素");
         }else{
             this.element= webElementList.get(eindex);
         }
+        this.id=style.getLocator(value).toString()+",index->"+eindex+1;
         return this;
     }
 
     public FrameElement addLocator(By byLocator){
-        this.element=this.currentFrame.findElement(byLocator);
+        this.element=this.frame.getCurrentFrame().findElement(byLocator);
         return this;
     }
 
     public FrameElement addLocator(By byLocator,Integer eindex){
-        List<WebElement> webElementList=this.currentFrame.findElements(byLocator);
+        List<WebElement> webElementList=this.frame.getCurrentFrame().findElements(byLocator);
         if(webElementList.size()==0){
             logger.error("定位器位置的元素不存在，没有获取到任何元素，请检查定义的元素");
             throw new NoSuchElementException("元素加载定位器的时候出现了错误！没有指定位置的元素");
         }else{
             this.element= webElementList.get(eindex);
         }
+        this.id=byLocator.toString()+",index->"+eindex+1;
         return this;
     }
 
@@ -627,6 +629,7 @@ public class FrameElement implements IElement {
         }
         JSoupElement je = new JSoupElement(htmlelement);
         this.element=this.frame.getCurrentFrame().findElement(By.xpath(je.toXpath()));
+        this.id=By.xpath(je.toXpath()).toString();
         return this;
     }
     public FrameElement addLocator(String cssSelector,int index){
@@ -637,8 +640,22 @@ public class FrameElement implements IElement {
         }
         JSoupElement je = new JSoupElement(htmlelement);
         this.element=this.frame.getCurrentFrame().findElement(By.xpath(je.toXpath()));
+        this.id=By.xpath(je.toXpath()).toString();
         return this;
     }
+
+	@Override
+	public IElement node(String cssSelector) {
+		Document doc = Jsoup.parse(this.frame.getCurrentFrame().getPageSource());
+        org.jsoup.nodes.Element htmlelement = doc.select(cssSelector).get(index);
+        if(htmlelement==null){
+        	throw new java.util.NoSuchElementException("没有找到该定位方式下的元素,请检查和修改定位方式！");
+        }
+        JSoupElement je = new JSoupElement(htmlelement);
+        FrameElement fe = new FrameElement(this.frame);
+        fe.addLocator(By.xpath(je.toXpath()));
+        return fe;
+	}
 
 
 }

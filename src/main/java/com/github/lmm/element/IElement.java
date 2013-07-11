@@ -61,4 +61,5 @@ public interface IElement {
     public void leftDown();
     public void leftUp();
    // public void rightClick();
+    public IElement node(String cssSelector);
 }

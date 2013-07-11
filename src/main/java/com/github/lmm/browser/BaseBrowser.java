@@ -52,7 +52,6 @@ public class BaseBrowser implements IBrowser {
         this.commit= com.github.lmm.runtime.RuntimeMethod.getName();
         this.driver=browser.browser();
         maxWindow();
-        this.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         this.elementManager=new ElementManager();
         this.currentPage=new CurrentPage(this);
         this.windowSource=new WindowSource(this);
@@ -70,7 +69,6 @@ public class BaseBrowser implements IBrowser {
             this.driver=browser.browser(url);
         }
         maxWindow();
-        this.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         this.currentPage=new CurrentPage(this);
         this.windowSource=new WindowSource(this);
         this.windowsCollectorListener=new WindowsCollectorListener();

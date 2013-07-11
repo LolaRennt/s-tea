@@ -29,10 +29,8 @@ public class CurrentPage implements ICurrentPage {
     private static Object currentpage;
     private String name;
     public WebDriver getCurrentwindow() {
-        return currentwindow;
+        return this.browser.getCurrentBrowserDriver();
     }
-
-    private WebDriver currentwindow;
 
     public IBrowser getBrowser() {
         return browser;
@@ -42,17 +40,8 @@ public class CurrentPage implements ICurrentPage {
     public CurrentPage(IBrowser browser){
         this.name= com.github.lmm.runtime.RuntimeMethod.getName();
         this.browser=browser;
-        this.currentwindow=browser.getCurrentBrowserDriver();
         elementManager=new ElementManager();
         this.elementManager.addElements(this.browser.getElementManager());
-    }
-    public CurrentPage(WebDriver driver){
-        this.currentwindow=driver;
-    }
-
-    public void setBrowser(IBrowser browser){
-        this.browser=browser;
-        this.currentwindow=browser.getCurrentBrowserDriver();
     }
 
     @Override
@@ -99,28 +88,28 @@ public class CurrentPage implements ICurrentPage {
 
     @Override
     public Set<Cookie> getAllCookies() {
-        return this.currentwindow.manage().getCookies();
+        return this.getCurrentwindow().manage().getCookies();
     }
 
     @Override
     public void deleteAllCookies() {
-        this.currentwindow.manage().deleteAllCookies();
+        this.getCurrentwindow().manage().deleteAllCookies();
         logger.info("["+this.name+"]进行了删除所有cookie的操作");
     }
 
     @Override
     public String getTitle() {
-        return this.currentwindow.getTitle();
+        return this.getCurrentwindow().getTitle();
     }
 
     @Override
     public String getUrl() {
-        return this.currentwindow.getCurrentUrl();
+        return this.getCurrentwindow().getCurrentUrl();
     }
 
     @Override
     public String getCookieByName(String name) {
-        return this.currentwindow.manage().getCookieNamed(name).getValue();
+        return this.getCurrentwindow().manage().getCookieNamed(name).getValue();
     }
 
     @Override
@@ -146,7 +135,7 @@ public class CurrentPage implements ICurrentPage {
 
     @Override
     public void open(String url) {
-        this.currentwindow.get(url);
+        this.getCurrentwindow().get(url);
         logger.info("["+this.name+"]页面跳转到了页面"+url);
     }
 
@@ -517,7 +506,7 @@ public class CurrentPage implements ICurrentPage {
 
     @Override
     public String getPageSource() {
-        return this.currentwindow.getPageSource();
+        return this.getCurrentwindow().getPageSource();
     }
 
     @Override
@@ -606,12 +595,12 @@ public class CurrentPage implements ICurrentPage {
 
     @Override
     public Object runJavaScript(String js, Object... objects) {
-        return ((JavascriptExecutor)this.currentwindow).executeScript(js, objects);
+        return this.browser.runJavaScript(js, objects);
     }
 
     @Override
     public Object runAsynJavaScript(String js, Object... objects) {
-        return ((JavascriptExecutor)this.currentwindow).executeAsyncScript(js, objects);
+        return this.browser.runAsynJavaScript(js, objects);
     }
 
     @Override
@@ -633,7 +622,7 @@ public class CurrentPage implements ICurrentPage {
     }
 	@Override
 	public void closepage() {
-		this.currentwindow.close();
+		this.getCurrentwindow().close();
 		
 	}
 	@Override
@@ -643,5 +632,11 @@ public class CurrentPage implements ICurrentPage {
 	
 	public IElement node(String cssSelector,int index){
 		return new Element(this.browser,cssSelector,index);
+	}
+
+	@Override
+	public void setBrowser(IBrowser browser) {
+		this.browser=browser;
+		
 	}
 }
