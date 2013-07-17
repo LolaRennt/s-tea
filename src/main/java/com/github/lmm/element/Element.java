@@ -774,4 +774,19 @@ public class Element implements IElement {
     public IElement node(String cssSelector){
     	return node(cssSelector,0);
     }
+	@Override
+	public void keypress(Keys key) {
+		this.actions.sendKeys(this.element,key).perform();
+		
+	}
+	@Override
+	public void clickAndHold() {
+		this.actions.clickAndHold(this.element).perform();
+		
+	}
+	@Override
+	public void release() {
+		this.actions.release(this.element).perform();
+	}
+	
 }

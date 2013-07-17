@@ -15,8 +15,8 @@ public class Hello {
 	public void hello(){
 		Auto.require(Browser.FIREFOX);
 		Auto.open("http://www.baidu.com");
-		Auto.currentage().element("百度首页-搜索框").input("selenium");
-		Auto.currentage().element("百度首页-搜索按钮").click();
+		Auto.currentpage().element("百度首页-搜索框").input("selenium");
+		Auto.currentpage().element("百度首页-搜索按钮").click();
 		Auto.closeAllWindows();
 	}
 }

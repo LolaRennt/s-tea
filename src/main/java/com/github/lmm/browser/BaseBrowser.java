@@ -11,6 +11,7 @@ import com.github.lmm.window.WindowsCollectorListener;
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 
 import com.github.lmm.source.Source;
 import java.io.File;
@@ -41,6 +42,7 @@ public class BaseBrowser implements IBrowser {
 	}
 
 	private boolean isClosed;
+	private Actions actions;
     private WindowsCollectorListener windowsCollectorListener;
     private WindowSource windowSource;
     private ICurrentPage currentPage;
@@ -51,6 +53,7 @@ public class BaseBrowser implements IBrowser {
     public BaseBrowser(Browser browser){
         this.commit= com.github.lmm.runtime.RuntimeMethod.getName();
         this.driver=browser.browser();
+        this.actions=new Actions(this.driver);
         maxWindow();
         this.elementManager=new ElementManager();
         this.currentPage=new CurrentPage(this);
@@ -414,6 +417,11 @@ public class BaseBrowser implements IBrowser {
         logger.info("["+this.commit+"]当前页面信息：窗口句柄数--->"+this.getWindows().size());
         ActionListenerProxy.getDispatcher().afterselectWindow();
         return this.currentPage;
+	}
+
+	@Override
+	public Actions getActions() {
+		return this.actions;
 	}
     
 }

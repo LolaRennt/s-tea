@@ -150,7 +150,7 @@ public class Auto {
         browser().setClosed(isClosed());
     };
 
-    public static ICurrentPage currentage(){
+    public static ICurrentPage currentpage(){
         return getCurrentPage();
     };
 

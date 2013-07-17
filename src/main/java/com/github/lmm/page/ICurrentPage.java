@@ -4,6 +4,7 @@ import com.github.lmm.browser.IBrowser;
 import com.github.lmm.element.*;
 import com.github.lmm.source.Source;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
 import java.util.List;
@@ -176,4 +177,8 @@ public interface ICurrentPage extends IPage {
     public Frame frame(By by,int index);
     
     public void closepage();
+    
+    public void keypress(Keys key);
+    
+    public void release();
 }

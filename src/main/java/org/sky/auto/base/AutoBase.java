@@ -453,5 +453,29 @@ public class AutoBase {
 		driver().manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 	}
 	
+	public static void keypress(Keys key){
+		Actions action = new Actions(driver());
+		action.sendKeys(key);
+	}
 	
+	public static void release(){
+		Actions action = new Actions(driver());
+		action.release();
+	}
+	
+	public static void keypress(SElement se,Keys key){
+		Actions action = new Actions(driver());
+		action.sendKeys(se.getElement(),key);
+
+	}
+	
+	public static void release(SElement se){
+		Actions action = new Actions(driver());
+		action.release(se.getElement());
+	}
+	
+	public static void clickAndHold(SElement se){
+		Actions action = new Actions(driver());
+		action.clickAndHold(se.getElement());
+	}
 }

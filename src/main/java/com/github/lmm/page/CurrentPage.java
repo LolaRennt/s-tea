@@ -21,7 +21,7 @@ import java.util.Set;
  * Time: 上午10:56
  * To change this template use File | Settings | File Templates.
  */
-public class CurrentPage implements ICurrentPage {
+public class CurrentPage implements ICurrentPage,Cloneable{
     private ElementManager elementManager;
     private Logger logger = Logger.getLogger(CurrentPage.class);
     private String url;
@@ -117,7 +117,8 @@ public class CurrentPage implements ICurrentPage {
         return null;  //To change body of implemented methods use File | Settings | File Templates.
     }
 
-    public static <T> T page(Class<T> clazz) {
+    @SuppressWarnings("unchecked")
+	public static <T> T page(Class<T> clazz) {
         CurrentPage.currentpage=null;
         try {
             currentpage=Class.forName(clazz.getName()).newInstance();
@@ -637,6 +638,18 @@ public class CurrentPage implements ICurrentPage {
 	@Override
 	public void setBrowser(IBrowser browser) {
 		this.browser=browser;
+		
+	}
+
+	@Override
+	public void keypress(Keys key) {
+		this.browser.getActions().sendKeys(key).perform();
+		
+	}
+
+	@Override
+	public void release() {
+		this.browser.getActions().release().build().perform();
 		
 	}
 }

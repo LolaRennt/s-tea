@@ -5,6 +5,8 @@ import com.github.lmm.page.ICurrentPage;
 import com.github.lmm.window.WindowSource;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.interactions.Actions;
+
 import java.util.Set;
 
 
@@ -80,4 +82,6 @@ public interface IBrowser {
     public String dealConfirm(boolean isyes);
 
     public String dealPrompt(boolean isyes,String text);
+    
+    public Actions getActions();
 }

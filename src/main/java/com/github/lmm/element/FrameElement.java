@@ -657,5 +657,21 @@ public class FrameElement implements IElement {
         return fe;
 	}
 
+	@Override
+	public void keypress(Keys key) {
+		this.element.sendKeys(key);
+		
+	}
+
+	@Override
+	public void clickAndHold() {
+		this.actions.clickAndHold(this.element);
+	}
+
+	@Override
+	public void release() {
+		this.actions.release(this.element);
+	}
+
 
 }

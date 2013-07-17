@@ -57,8 +57,8 @@ public class FirefoxGet {
 	public void stea3title(){
 		Auto.require("firefox");
 		Auto.open("http://www.baidu.com");
-		String title=Auto.currentage().getTitle();
-		String url = Auto.currentage().getUrl();
+		String title=Auto.currentpage().getTitle();
+		String url = Auto.currentpage().getUrl();
 		System.out.println(title);
 		System.out.println(url);
 	}
@@ -95,8 +95,8 @@ public class FirefoxGet {
 	public void stea3navigate(){
 		Auto.require("firefox");
 		Auto.open("http://www.baidu.com");
-		Auto.currentage().element(By.id("kw")).input("北京");
-		Auto.currentage().element(By.id("su")).click();
+		Auto.currentpage().element(By.id("kw")).input("北京");
+		Auto.currentpage().element(By.id("su")).click();
 		Auto.browser().back();
 		//Auto.back();这两种方式都行。Auto的含义就是一个代理浏览器
 		Auto.browser().forward();
@@ -135,8 +135,8 @@ public class FirefoxGet {
 		Auto.require("firefox");
 		Auto.open("http://www.baidu.com");
 		//在新的窗口打开一个新的页面
-		Auto.currentage().openNewWindow("http://ibiubiu.herokuapp.com");
-		Auto.currentage().closepage();
+		Auto.currentpage().openNewWindow("http://ibiubiu.herokuapp.com");
+		Auto.currentpage().closepage();
 	}
 	
 	

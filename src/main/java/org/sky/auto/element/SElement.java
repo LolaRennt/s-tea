@@ -597,7 +597,16 @@ public class SElement{
 	}
 	
 	
+	public void keypress(Keys key){
+		AutoBase.keypress(this, key);
+	}
 	
+	public void release(){
+		AutoBase.release(this);
+	}
 	
+	public void clickAndHold(){
+		AutoBase.clickAndHold(this);
+	}
 	
 }

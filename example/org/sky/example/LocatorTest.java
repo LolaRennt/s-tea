@@ -51,11 +51,11 @@ public class LocatorTest {
 		Auto.require("firefox");
 		Auto.open("http://ibiubiu.herokuapp.com");
 		//进入ID定位元素的隐藏栏目中
-		Auto.currentage().element(By.id("action-id")).click();
+		Auto.currentpage().element(By.id("action-id")).click();
 		//点击蓝色按钮，等待弹出模态窗口
-		Auto.currentage().element(By.id("action-id-button")).click();
+		Auto.currentpage().element(By.id("action-id-button")).click();
 		//关闭模态窗口
-		Auto.currentage().element(By.id("id-model-close")).click();
+		Auto.currentpage().element(By.id("id-model-close")).click();
 		//关闭浏览器
 		Auto.closeAllWindows();
 	}
@@ -92,11 +92,11 @@ public class LocatorTest {
 		Auto.require("firefox");
 		Auto.open("http://ibiubiu.herokuapp.com");
 		//进入Name定位元素的隐藏栏目中
-		Auto.currentage().element(By.id("action-name")).click();
+		Auto.currentpage().element(By.id("action-name")).click();
 		//点击下拉按钮
-		Auto.currentage().element(By.name("action-name-buttonright")).click();
+		Auto.currentpage().element(By.name("action-name-buttonright")).click();
 		//点击弹出的连接选项，并且弹出alert
-		Auto.currentage().element(By.name("name-alert")).click();
+		Auto.currentpage().element(By.name("name-alert")).click();
 		//关闭浏览器
 		Auto.closeAllWindows();
 	}
@@ -139,9 +139,9 @@ public class LocatorTest {
 		Auto.require("firefox");
 		//通过页面的内容和简单的熟悉操作，我们知道我们要找的按钮在"通过ID来定位元素的"隐藏栏目下，所以我们要写的操作就是先去点击这个栏
 		//目，然后再去查找里面的元素,在这个例子中我们处理的一个比较复杂的html元素。我们先去找它的id值。
-		Auto.currentage().element(By.xpath(".//*[@id='action-xpath']")).click();
-		Auto.currentage().element(By.xpath(".//*[@id='locatorXpath']/div/div[2]/a")).click();
-		Auto.currentage().element(By.xpath(".//*[@id='xpath-model-close']")).click();
+		Auto.currentpage().element(By.xpath(".//*[@id='action-xpath']")).click();
+		Auto.currentpage().element(By.xpath(".//*[@id='locatorXpath']/div/div[2]/a")).click();
+		Auto.currentpage().element(By.xpath(".//*[@id='xpath-model-close']")).click();
 		Auto.closeAllWindows();
 	}
 	
@@ -179,12 +179,12 @@ public class LocatorTest {
 	public void stea3tag(){
 		Auto.require("firefox");
 		Auto.open("http://localhost:3000/action");
-		Auto.currentage().element(By.id("action-tagname")).click();
+		Auto.currentpage().element(By.id("action-tagname")).click();
 		//这是s-tea3.0里面的定位方式，jsoup的定位方式。
-		String text=Auto.currentage().node("#locatorTagName").node("[class^=well]").getText();
-		Auto.currentage().runJavaScript("alert('"+text+"')");
+		String text=Auto.currentpage().node("#locatorTagName").node("[class^=well]").getText();
+		Auto.currentpage().runJavaScript("alert('"+text+"')");
 		AutoBase.sleep(3);
-		Auto.currentage().dealAlert();
+		Auto.currentpage().dealAlert();
 		Auto.closeAllWindows();
 	}
 	
@@ -212,9 +212,9 @@ public class LocatorTest {
 		public void stea3css(){
 			Auto.require("firefox");
 			Auto.open("http://localhost:3000/action");
-			Auto.currentage().element(By.id("action-css")).click();
+			Auto.currentpage().element(By.id("action-css")).click();
 			//这是s-tea3.0里面的定位方式，jsoup的定位方式。
-			Auto.currentage().element(By.cssSelector(".alert button")).click();
+			Auto.currentpage().element(By.cssSelector(".alert button")).click();
 			AutoBase.sleep(3);
 			Auto.closeAllWindows();
 		}
@@ -242,8 +242,8 @@ public class LocatorTest {
 	public void stea3link(){
 		Auto.require("firefox");
 		Auto.open("http://localhost:3000/action");
-		Auto.currentage().element(By.id("action-link")).click();
-		Auto.currentage().element(By.linkText("转向百度")).click();
+		Auto.currentpage().element(By.id("action-link")).click();
+		Auto.currentpage().element(By.linkText("转向百度")).click();
 		AutoBase.sleep(3);
 		Auto.closeAllWindows();
 	}

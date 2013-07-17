@@ -29,6 +29,7 @@ public abstract class Frame{
     private WebDriver currentFrame;
     private String commit;
     private ICurrentPage page;
+    private WebDriver pageCurrentWindow;
     private ElementManager elementManager;
     private Document doc;
     public Frame(Frame frame,By by){
@@ -94,7 +95,8 @@ public abstract class Frame{
 
     public Frame(ICurrentPage  page,Integer frameindex){
         this.page=page;
-        this.currentFrame=page.getCurrentWindow().switchTo().frame(frameindex);
+        this.pageCurrentWindow=page.getCurrentWindow();
+        this.currentFrame=this.pageCurrentWindow.switchTo().frame(frameindex);
         this.elementManager=page.getElementManager();
         if(this.getClass().isAnnotationPresent(Commit.class)){
             this.commit=this.getClass().getAnnotation(Commit.class).value();

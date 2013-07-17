@@ -1,359 +1,142 @@
-2013-07-11 09:21:37 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-11 09:21:52 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-11 09:21:52 INFO  [Main]添加了新的窗口信息->WebDriver教程 | 元素定位和元素操作
-2013-07-11 09:21:52 INFO  [Main]当前初始化页面信息：URL--->http://localhost:3000/action
-2013-07-11 09:21:52 INFO  [Main]当前初始化页面信息：Title--->WebDriver教程 | 元素定位和元素操作
-2013-07-11 09:21:52 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-11 09:22:02 INFO  [Main][By.id: action-tagname]点击操作成功
-2013-07-11 09:26:28 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-11 09:26:42 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-11 09:26:42 INFO  [Main]添加了新的窗口信息->WebDriver教程 | 元素定位和元素操作
-2013-07-11 09:26:42 INFO  [Main]当前初始化页面信息：URL--->http://localhost:3000/action
-2013-07-11 09:26:42 INFO  [Main]当前初始化页面信息：Title--->WebDriver教程 | 元素定位和元素操作
-2013-07-11 09:26:42 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-11 09:26:53 INFO  [Main][By.id: action-tagname]点击操作成功
-2013-07-11 09:32:11 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-11 09:32:24 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-11 09:32:24 INFO  [Main]添加了新的窗口信息->WebDriver教程 | 元素定位和元素操作
-2013-07-11 09:32:24 INFO  [Main]当前初始化页面信息：URL--->http://localhost:3000/action
-2013-07-11 09:32:24 INFO  [Main]当前初始化页面信息：Title--->WebDriver教程 | 元素定位和元素操作
-2013-07-11 09:32:24 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-11 09:32:35 INFO  [Main][By.id: action-tagname]点击操作成功
-2013-07-11 09:35:23 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-11 09:35:34 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-11 09:35:34 INFO  [Main]添加了新的窗口信息->WebDriver教程 | 元素定位和元素操作
-2013-07-11 09:35:35 INFO  [Main]当前初始化页面信息：URL--->http://localhost:3000/action
-2013-07-11 09:35:35 INFO  [Main]当前初始化页面信息：Title--->WebDriver教程 | 元素定位和元素操作
-2013-07-11 09:35:35 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-11 09:35:45 INFO  [Main][By.id: action-tagname]点击操作成功
-2013-07-11 09:37:56 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-11 09:38:08 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-11 09:38:08 INFO  [Main]添加了新的窗口信息->WebDriver教程 | 元素定位和元素操作
-2013-07-11 09:38:08 INFO  [Main]当前初始化页面信息：URL--->http://localhost:3000/action
-2013-07-11 09:38:08 INFO  [Main]当前初始化页面信息：Title--->WebDriver教程 | 元素定位和元素操作
-2013-07-11 09:38:08 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-11 09:38:19 INFO  [Main][By.id: action-tagname]点击操作成功
-2013-07-11 09:43:15 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-11 09:43:26 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-11 09:43:27 INFO  [Main]添加了新的窗口信息->WebDriver教程 | 元素定位和元素操作
-2013-07-11 09:43:27 INFO  [Main]当前初始化页面信息：URL--->http://localhost:3000/action
-2013-07-11 09:43:27 INFO  [Main]当前初始化页面信息：Title--->WebDriver教程 | 元素定位和元素操作
-2013-07-11 09:43:27 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-11 09:43:27 INFO  [Main][By.id: action-tagname]点击操作成功
-2013-07-11 09:59:41 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-11 09:59:55 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-11 09:59:55 INFO  [Main]添加了新的窗口信息->WebDriver教程 | 元素定位和元素操作
-2013-07-11 09:59:55 INFO  [Main]当前初始化页面信息：URL--->http://localhost:3000/action
-2013-07-11 09:59:55 INFO  [Main]当前初始化页面信息：Title--->WebDriver教程 | 元素定位和元素操作
-2013-07-11 09:59:55 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-11 09:59:56 INFO  [Main][By.id: action-tagname]点击操作成功
-2013-07-11 10:07:25 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-11 10:07:40 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-11 10:07:40 INFO  [Main]添加了新的窗口信息->WebDriver教程 | 元素定位和元素操作
-2013-07-11 10:07:40 INFO  [Main]当前初始化页面信息：URL--->http://localhost:3000/action
-2013-07-11 10:07:40 INFO  [Main]当前初始化页面信息：Title--->WebDriver教程 | 元素定位和元素操作
-2013-07-11 10:07:40 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-11 10:07:40 INFO  [Main][By.id: action-tagname]点击操作成功
-2013-07-11 10:08:18 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-11 10:08:30 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-11 10:08:30 INFO  [Main]添加了新的窗口信息->WebDriver教程 | 元素定位和元素操作
-2013-07-11 10:08:30 INFO  [Main]当前初始化页面信息：URL--->http://localhost:3000/action
-2013-07-11 10:08:30 INFO  [Main]当前初始化页面信息：Title--->WebDriver教程 | 元素定位和元素操作
-2013-07-11 10:08:30 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-11 10:08:30 INFO  [Main][By.id: action-tagname]点击操作成功
-2013-07-11 10:08:32 INFO  [Main][null]获取文本值[tagName就是标签名的意思。关于TagName的使用就更加的普遍了，因为页面就是由HTML的各种各样的标签组成的，所以我们在这里演示一个例子，就是把当前框框内的这段话打印出来。顺便我们还会讲解一下 findELements的使用方法。findElement是返回一个元素，findElements是返回一组元素。其实我在观察selenium的源码的时候，findElement就是findElement()取第一个元素 的实现。所以有的时候我们碰见了一组元素使用findElement也不会报错，因为它会把我们得到的第一个元素返回。在webdriver的演示代码中我会使用到层级定位的方式，通过注释的方式 来描述出来，大家可以理解一下。具体的使用情况我们通过源码来解析。
-java
-python
-ruby
-s-tea1.0
-s-tea3.0
-?
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-@Test
-public void tagtest() throws InterruptedException{
-    WebDriver driver = new FirefoxDriver();
-    driver.manage().window().maximize();
-    driver.get("http://web/action");
-    //点击开tagname元素定位的隐藏栏目
-    driver.findElement(By.id("action-tagname")).click();
-    //找到我们想要找的元素，通过一层层的定位元素的位置来实现，我们通过观察页面的源码，然后再来对比我一层层的查找元素的方式就是层级定位。
-    WebElement textElement=driver.findElement(By.id("locatorTagName"))
-          .findElement(By.className("accordion-inner"))
-          .findElements(By.tagName("div")).get(0);
-    String text = textElement.getText();
-    //我们把获取到的内容通过alert的形式打印出来，然后等待3秒钟之后再关掉alert和浏览器。
-    ((JavascriptExecutor)driver).executeScript("alert('"+text+"')");
-    Thread.sleep(3000);
-    driver.switchTo().alert().accept();
-    driver.quit();
-}]操作成功
-2013-07-11 10:28:14 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-11 10:28:30 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-11 10:28:30 INFO  [Main]添加了新的窗口信息->WebDriver教程 | 元素定位和元素操作
-2013-07-11 10:28:30 INFO  [Main]当前初始化页面信息：URL--->http://localhost:3000/action
-2013-07-11 10:28:30 INFO  [Main]当前初始化页面信息：Title--->WebDriver教程 | 元素定位和元素操作
-2013-07-11 10:28:30 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-11 10:28:30 INFO  [Main][By.id: action-tagname]点击操作成功
-2013-07-11 10:30:54 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-11 10:31:05 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-11 10:31:05 INFO  [Main]添加了新的窗口信息->WebDriver教程 | 元素定位和元素操作
-2013-07-11 10:31:05 INFO  [Main]当前初始化页面信息：URL--->http://localhost:3000/action
-2013-07-11 10:31:05 INFO  [Main]当前初始化页面信息：Title--->WebDriver教程 | 元素定位和元素操作
-2013-07-11 10:31:05 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-11 10:31:05 INFO  [Main][By.id: action-tagname]点击操作成功
-2013-07-11 10:35:35 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-11 10:35:45 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-11 10:35:45 INFO  [Main]添加了新的窗口信息->WebDriver教程 | 元素定位和元素操作
-2013-07-11 10:35:45 INFO  [Main]当前初始化页面信息：URL--->http://localhost:3000/action
-2013-07-11 10:35:45 INFO  [Main]当前初始化页面信息：Title--->WebDriver教程 | 元素定位和元素操作
-2013-07-11 10:35:45 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-11 10:35:46 INFO  [Main][By.id: action-tagname]点击操作成功
-2013-07-11 10:41:03 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-11 10:41:17 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-11 10:41:17 INFO  [Main]添加了新的窗口信息->WebDriver教程 | 元素定位和元素操作
-2013-07-11 10:41:17 INFO  [Main]当前初始化页面信息：URL--->http://localhost:3000/action
-2013-07-11 10:41:17 INFO  [Main]当前初始化页面信息：Title--->WebDriver教程 | 元素定位和元素操作
-2013-07-11 10:41:17 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-11 10:41:18 INFO  [Main][By.id: action-tagname]点击操作成功
-2013-07-11 11:02:01 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-11 11:02:12 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-11 11:02:12 INFO  [Main]添加了新的窗口信息->WebDriver教程 | 元素定位和元素操作
-2013-07-11 11:02:12 INFO  [Main]当前初始化页面信息：URL--->http://localhost:3000/action
-2013-07-11 11:02:12 INFO  [Main]当前初始化页面信息：Title--->WebDriver教程 | 元素定位和元素操作
-2013-07-11 11:02:12 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-11 11:02:12 INFO  [Main][By.id: action-tagname]点击操作成功
-2013-07-11 11:04:53 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-11 11:05:04 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-11 11:05:04 INFO  [Main]添加了新的窗口信息->WebDriver教程 | 元素定位和元素操作
-2013-07-11 11:05:04 INFO  [Main]当前初始化页面信息：URL--->http://localhost:3000/action
-2013-07-11 11:05:04 INFO  [Main]当前初始化页面信息：Title--->WebDriver教程 | 元素定位和元素操作
-2013-07-11 11:05:04 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-11 11:05:05 INFO  [Main][By.id: action-tagname]点击操作成功
-2013-07-11 11:08:55 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-11 11:09:07 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-11 11:09:07 INFO  [Main]添加了新的窗口信息->WebDriver教程 | 元素定位和元素操作
-2013-07-11 11:09:07 INFO  [Main]当前初始化页面信息：URL--->http://localhost:3000/action
-2013-07-11 11:09:07 INFO  [Main]当前初始化页面信息：Title--->WebDriver教程 | 元素定位和元素操作
-2013-07-11 11:09:07 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-11 11:09:08 INFO  [Main][By.id: action-tagname]点击操作成功
-2013-07-11 11:10:33 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-11 11:10:44 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-11 11:10:45 INFO  [Main]添加了新的窗口信息->WebDriver教程 | 元素定位和元素操作
-2013-07-11 11:10:45 INFO  [Main]当前初始化页面信息：URL--->http://localhost:3000/action
-2013-07-11 11:10:45 INFO  [Main]当前初始化页面信息：Title--->WebDriver教程 | 元素定位和元素操作
-2013-07-11 11:10:45 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-11 11:10:45 INFO  [Main][By.id: action-tagname]点击操作成功
-2013-07-11 11:12:00 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-11 11:12:10 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-11 11:12:10 INFO  [Main]添加了新的窗口信息->WebDriver教程 | 元素定位和元素操作
-2013-07-11 11:12:10 INFO  [Main]当前初始化页面信息：URL--->http://localhost:3000/action
-2013-07-11 11:12:10 INFO  [Main]当前初始化页面信息：Title--->WebDriver教程 | 元素定位和元素操作
-2013-07-11 11:12:10 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-11 11:12:11 INFO  [Main][By.id: action-tagname]点击操作成功
-2013-07-11 11:15:35 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-11 11:15:48 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-11 11:15:48 INFO  [Main]添加了新的窗口信息->WebDriver教程 | 元素定位和元素操作
-2013-07-11 11:15:48 INFO  [Main]当前初始化页面信息：URL--->http://localhost:3000/action
-2013-07-11 11:15:48 INFO  [Main]当前初始化页面信息：Title--->WebDriver教程 | 元素定位和元素操作
-2013-07-11 11:15:48 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-11 11:15:49 INFO  [Main][By.id: action-tagname]点击操作成功
-2013-07-11 11:17:18 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-11 11:17:30 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-11 11:17:30 INFO  [Main]添加了新的窗口信息->WebDriver教程 | 元素定位和元素操作
-2013-07-11 11:17:30 INFO  [Main]当前初始化页面信息：URL--->http://localhost:3000/action
-2013-07-11 11:17:30 INFO  [Main]当前初始化页面信息：Title--->WebDriver教程 | 元素定位和元素操作
-2013-07-11 11:17:30 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-11 11:17:30 INFO  [Main][By.id: action-tagname]点击操作成功
-2013-07-11 11:18:43 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-11 11:18:55 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-11 11:18:55 INFO  [Main]添加了新的窗口信息->WebDriver教程 | 元素定位和元素操作
-2013-07-11 11:18:55 INFO  [Main]当前初始化页面信息：URL--->http://localhost:3000/action
-2013-07-11 11:18:55 INFO  [Main]当前初始化页面信息：Title--->WebDriver教程 | 元素定位和元素操作
-2013-07-11 11:18:55 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-11 11:18:55 INFO  [Main][By.id: action-tagname]点击操作成功
-2013-07-11 11:20:34 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-11 11:20:50 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-11 11:20:50 INFO  [Main]添加了新的窗口信息->WebDriver教程 | 元素定位和元素操作
-2013-07-11 11:20:50 INFO  [Main]当前初始化页面信息：URL--->http://localhost:3000/action
-2013-07-11 11:20:50 INFO  [Main]当前初始化页面信息：Title--->WebDriver教程 | 元素定位和元素操作
-2013-07-11 11:20:50 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-11 11:20:50 INFO  [Main][By.id: action-tagname]点击操作成功
-2013-07-11 11:24:15 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-11 11:24:26 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-11 11:24:26 INFO  [Main]添加了新的窗口信息->WebDriver教程 | 元素定位和元素操作
-2013-07-11 11:24:27 INFO  [Main]当前初始化页面信息：URL--->http://localhost:3000/action
-2013-07-11 11:24:27 INFO  [Main]当前初始化页面信息：Title--->WebDriver教程 | 元素定位和元素操作
-2013-07-11 11:24:27 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-11 11:24:27 INFO  [Main][By.id: action-tagname]点击操作成功
-2013-07-11 11:25:20 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-11 11:25:30 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-11 11:25:30 INFO  [Main]添加了新的窗口信息->WebDriver教程 | 元素定位和元素操作
-2013-07-11 11:25:30 INFO  [Main]当前初始化页面信息：URL--->http://localhost:3000/action
-2013-07-11 11:25:30 INFO  [Main]当前初始化页面信息：Title--->WebDriver教程 | 元素定位和元素操作
-2013-07-11 11:25:30 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-11 11:25:31 INFO  [Main][By.id: action-tagname]点击操作成功
-2013-07-11 11:27:35 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-11 11:27:48 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-11 11:27:48 INFO  [Main]添加了新的窗口信息->WebDriver教程 | 元素定位和元素操作
-2013-07-11 11:27:48 INFO  [Main]当前初始化页面信息：URL--->http://localhost:3000/action
-2013-07-11 11:27:48 INFO  [Main]当前初始化页面信息：Title--->WebDriver教程 | 元素定位和元素操作
-2013-07-11 11:27:48 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-11 11:27:49 INFO  [Main][By.id: action-tagname]点击操作成功
-2013-07-11 11:31:34 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-11 11:31:44 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-11 11:31:44 INFO  [Main]添加了新的窗口信息->WebDriver教程 | 元素定位和元素操作
-2013-07-11 11:31:44 INFO  [Main]当前初始化页面信息：URL--->http://localhost:3000/action
-2013-07-11 11:31:44 INFO  [Main]当前初始化页面信息：Title--->WebDriver教程 | 元素定位和元素操作
-2013-07-11 11:31:44 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-11 11:31:45 INFO  [Main][By.id: action-tagname]点击操作成功
-2013-07-11 13:38:39 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-11 13:39:29 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-11 13:39:29 INFO  [Main]添加了新的窗口信息->WebDriver教程 | 元素定位和元素操作
-2013-07-11 13:39:29 INFO  [Main]当前初始化页面信息：URL--->http://localhost:3000/action
-2013-07-11 13:39:29 INFO  [Main]当前初始化页面信息：Title--->WebDriver教程 | 元素定位和元素操作
-2013-07-11 13:39:29 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-11 13:39:29 INFO  [Main][By.id: action-tagname]点击操作成功
-2013-07-11 13:51:13 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-11 13:51:17 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-11 13:51:17 INFO  [Main]添加了新的窗口信息->WebDriver教程 | 元素定位和元素操作
-2013-07-11 13:51:17 INFO  [Main]当前初始化页面信息：URL--->http://localhost:3000/action
-2013-07-11 13:51:17 INFO  [Main]当前初始化页面信息：Title--->WebDriver教程 | 元素定位和元素操作
-2013-07-11 13:51:17 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-11 13:51:18 INFO  [Main][By.id: action-tagname]点击操作成功
-2013-07-11 13:53:14 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-11 13:53:17 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-11 13:53:17 INFO  [Main]添加了新的窗口信息->WebDriver教程 | 元素定位和元素操作
-2013-07-11 13:53:17 INFO  [Main]当前初始化页面信息：URL--->http://localhost:3000/action
-2013-07-11 13:53:17 INFO  [Main]当前初始化页面信息：Title--->WebDriver教程 | 元素定位和元素操作
-2013-07-11 13:53:17 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-11 13:53:17 INFO  [Main][By.id: action-tagname]点击操作成功
-2013-07-11 13:59:23 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-11 13:59:33 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-11 13:59:33 INFO  [Main]添加了新的窗口信息->WebDriver教程 | 元素定位和元素操作
-2013-07-11 13:59:33 INFO  [Main]当前初始化页面信息：URL--->http://localhost:3000/action
-2013-07-11 13:59:33 INFO  [Main]当前初始化页面信息：Title--->WebDriver教程 | 元素定位和元素操作
-2013-07-11 13:59:33 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-11 13:59:33 INFO  [Main][By.id: action-tagname]点击操作成功
-2013-07-11 14:01:52 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-11 14:01:58 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-11 14:01:58 INFO  [Main]添加了新的窗口信息->WebDriver教程 | 元素定位和元素操作
-2013-07-11 14:01:58 INFO  [Main]当前初始化页面信息：URL--->http://localhost:3000/action
-2013-07-11 14:01:58 INFO  [Main]当前初始化页面信息：Title--->WebDriver教程 | 元素定位和元素操作
-2013-07-11 14:01:58 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-11 14:01:59 INFO  [Main][By.id: action-tagname]点击操作成功
-2013-07-11 14:02:42 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-11 14:02:46 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-11 14:02:46 INFO  [Main]添加了新的窗口信息->WebDriver教程 | 元素定位和元素操作
-2013-07-11 14:02:46 INFO  [Main]当前初始化页面信息：URL--->http://localhost:3000/action
-2013-07-11 14:02:46 INFO  [Main]当前初始化页面信息：Title--->WebDriver教程 | 元素定位和元素操作
-2013-07-11 14:02:46 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-11 14:02:46 INFO  [Main][By.id: action-tagname]点击操作成功
-2013-07-11 14:07:02 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-11 14:07:05 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-11 14:07:05 INFO  [Main]添加了新的窗口信息->WebDriver教程 | 元素定位和元素操作
-2013-07-11 14:07:05 INFO  [Main]当前初始化页面信息：URL--->http://localhost:3000/action
-2013-07-11 14:07:05 INFO  [Main]当前初始化页面信息：Title--->WebDriver教程 | 元素定位和元素操作
-2013-07-11 14:07:05 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-11 14:07:06 INFO  [Main][By.id: action-tagname]点击操作成功
-2013-07-11 14:10:43 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-11 14:10:46 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-11 14:10:46 INFO  [Main]添加了新的窗口信息->WebDriver教程 | 元素定位和元素操作
-2013-07-11 14:10:46 INFO  [Main]当前初始化页面信息：URL--->http://localhost:3000/action
-2013-07-11 14:10:46 INFO  [Main]当前初始化页面信息：Title--->WebDriver教程 | 元素定位和元素操作
-2013-07-11 14:10:46 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-11 14:10:46 INFO  [Main][By.id: action-tagname]点击操作成功
-2013-07-11 14:23:27 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-11 14:23:32 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-11 14:23:32 INFO  [Main]添加了新的窗口信息->WebDriver教程 | 元素定位和元素操作
-2013-07-11 14:23:32 INFO  [Main]当前初始化页面信息：URL--->http://localhost:3000/action
-2013-07-11 14:23:32 INFO  [Main]当前初始化页面信息：Title--->WebDriver教程 | 元素定位和元素操作
-2013-07-11 14:23:32 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-11 14:23:32 INFO  [Main][By.id: action-tagname]点击操作成功
-2013-07-11 14:23:33 INFO  [Main][By.xpath: .//*[@id='locatorTagName']/div/div[1]]获取文本值[tagName就是标签名的意思。关于TagName的使用就更加的普遍了，因为页面就是由HTML的各种各样的标签组成的，所以我们在这里演示一个例子，就是把当前框框内的这段话打印出来。顺便我们还会讲解一下 findELements的使用方法。findElement是返回一个元素，findElements是返回一组元素。其实我在观察selenium的源码的时候，findElement就是findElement()取第一个元素 的实现。所以有的时候我们碰见了一组元素使用findElement也不会报错，因为它会把我们得到的第一个元素返回。在webdriver的演示代码中我会使用到层级定位的方式，通过注释的方式 来描述出来，大家可以理解一下。具体的使用情况我们通过源码来解析。]操作成功
-2013-07-11 14:23:37 INFO  [Main]关闭了浏览器
-2013-07-11 16:40:41 INFO  [Case:LocatorTest=>steacss]开始对xml资源进行扫描....
-2013-07-11 16:40:42 INFO  [Case:LocatorTest=>steacss]扫描收集了资源->百度首页-搜索框
-2013-07-11 16:40:42 INFO  [Case:LocatorTest=>steacss]扫描收集了资源->百度首页-搜索按钮
-2013-07-11 16:40:42 INFO  [Case:LocatorTest=>steacss]扫描收集了资源->
-2013-07-11 16:40:42 INFO  [Case:LocatorTest=>steacss]扫描XML资源完毕...
-2013-07-11 16:40:42 INFO  [Case:LocatorTest=>steacss]开始扫描txt的资源元素...
-2013-07-11 16:40:42 INFO  [Case:LocatorTest=>steacss]txt资源扫描结束
-2013-07-11 16:40:57 INFO  [Case:LocatorTest=>steacss]扫描file类型的class文件...
-2013-07-11 16:40:57 INFO  [Case:LocatorTest=>steacss]扫描file类型的class文件...
-2013-07-11 16:40:58 INFO  [Case:LocatorTest=>steacss]开始扫描动作监听器......
-2013-07-11 16:40:58 INFO  [Case:LocatorTest=>steacss]扫描动作监听器结束
-2013-07-11 16:41:15 INFO  [Case:LocatorTest=>steacss]使用浏览器Firefox进行自动化测试，将要打开网址http://localhost:3000/action测试
-2013-07-11 16:41:15 INFO  [Case:LocatorTest=>steacss]>>[Element]点击成功！
-2013-07-11 16:41:15 INFO  [Case:LocatorTest=>steacss]>>[Element]点击成功！
-2013-07-11 16:41:19 INFO  [Case:LocatorTest=>steacss]关闭了所有的浏览器！
-2013-07-11 16:46:04 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-11 16:46:18 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-11 16:46:19 INFO  [Main]添加了新的窗口信息->Selenium WebDriver入门教程-Heroku | 元素定位和元素操作
-2013-07-11 16:46:19 INFO  [Main]当前初始化页面信息：URL--->http://localhost:3000/action
-2013-07-11 16:46:19 INFO  [Main]当前初始化页面信息：Title--->Selenium WebDriver入门教程-Heroku | 元素定位和元素操作
-2013-07-11 16:46:19 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-11 16:46:19 INFO  [Main][By.id: action-tagname]点击操作成功
-2013-07-11 16:47:01 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-11 16:47:56 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-11 16:47:56 INFO  [Main]添加了新的窗口信息->Selenium WebDriver入门教程-Heroku | 元素定位和元素操作
-2013-07-11 16:47:56 INFO  [Main]当前初始化页面信息：URL--->http://localhost:3000/action
-2013-07-11 16:47:56 INFO  [Main]当前初始化页面信息：Title--->Selenium WebDriver入门教程-Heroku | 元素定位和元素操作
-2013-07-11 16:47:56 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-11 16:47:57 INFO  [Main][By.id: action-css]点击操作成功
-2013-07-11 16:47:57 INFO  [Main][By.selector: .alert button]点击操作成功
-2013-07-11 16:48:00 INFO  [Main]关闭了浏览器
-2013-07-11 17:01:34 INFO  [Case:LocatorTest=>stealink]开始对xml资源进行扫描....
-2013-07-11 17:01:35 INFO  [Case:LocatorTest=>stealink]扫描收集了资源->百度首页-搜索框
-2013-07-11 17:01:35 INFO  [Case:LocatorTest=>stealink]扫描收集了资源->百度首页-搜索按钮
-2013-07-11 17:01:35 INFO  [Case:LocatorTest=>stealink]扫描收集了资源->
-2013-07-11 17:01:35 INFO  [Case:LocatorTest=>stealink]扫描XML资源完毕...
-2013-07-11 17:01:35 INFO  [Case:LocatorTest=>stealink]开始扫描txt的资源元素...
-2013-07-11 17:01:35 INFO  [Case:LocatorTest=>stealink]txt资源扫描结束
-2013-07-11 17:01:48 INFO  [Case:LocatorTest=>stealink]扫描file类型的class文件...
-2013-07-11 17:01:48 INFO  [Case:LocatorTest=>stealink]扫描file类型的class文件...
-2013-07-11 17:01:48 INFO  [Case:LocatorTest=>stealink]开始扫描动作监听器......
-2013-07-11 17:01:48 INFO  [Case:LocatorTest=>stealink]扫描动作监听器结束
-2013-07-11 17:02:05 INFO  [Case:LocatorTest=>stealink]使用浏览器Firefox进行自动化测试，将要打开网址http://localhost:3000/action测试
-2013-07-11 17:02:06 INFO  [Case:LocatorTest=>stealink]>>[Element]点击成功！
-2013-07-11 17:02:24 INFO  [Case:LocatorTest=>stealink]开始对xml资源进行扫描....
-2013-07-11 17:02:25 INFO  [Case:LocatorTest=>stealink]扫描收集了资源->百度首页-搜索框
-2013-07-11 17:02:25 INFO  [Case:LocatorTest=>stealink]扫描收集了资源->百度首页-搜索按钮
-2013-07-11 17:02:25 INFO  [Case:LocatorTest=>stealink]扫描收集了资源->
-2013-07-11 17:02:25 INFO  [Case:LocatorTest=>stealink]扫描XML资源完毕...
-2013-07-11 17:02:25 INFO  [Case:LocatorTest=>stealink]开始扫描txt的资源元素...
-2013-07-11 17:02:25 INFO  [Case:LocatorTest=>stealink]txt资源扫描结束
-2013-07-11 17:02:37 INFO  [Case:LocatorTest=>stealink]扫描file类型的class文件...
-2013-07-11 17:02:37 INFO  [Case:LocatorTest=>stealink]扫描file类型的class文件...
-2013-07-11 17:02:37 INFO  [Case:LocatorTest=>stealink]开始扫描动作监听器......
-2013-07-11 17:02:37 INFO  [Case:LocatorTest=>stealink]扫描动作监听器结束
-2013-07-11 17:02:49 INFO  [Case:LocatorTest=>stealink]使用浏览器Firefox进行自动化测试，将要打开网址http://localhost:3000/action测试
-2013-07-11 17:02:49 INFO  [Case:LocatorTest=>stealink]>>[Element]点击成功！
-2013-07-11 17:02:50 INFO  [Case:LocatorTest=>stealink]>>[Element]点击成功！
-2013-07-11 17:02:53 INFO  [Case:LocatorTest=>stealink]关闭了所有的浏览器！
-2013-07-11 17:04:38 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-11 17:04:51 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-11 17:04:51 INFO  [Main]添加了新的窗口信息->Selenium WebDriver入门教程-Heroku | 元素定位和元素操作
-2013-07-11 17:04:51 INFO  [Main]当前初始化页面信息：URL--->http://localhost:3000/action
-2013-07-11 17:04:51 INFO  [Main]当前初始化页面信息：Title--->Selenium WebDriver入门教程-Heroku | 元素定位和元素操作
-2013-07-11 17:04:51 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-11 17:04:51 INFO  [Main][By.id: action-link]点击操作成功
-2013-07-11 17:04:52 INFO  [Main][By.linkText: 转向百度]点击操作成功
-2013-07-11 17:04:52 INFO  [Main]当前页面发生了变化，切换到了新的页面--->百度一下，你就知道
-2013-07-11 17:04:56 INFO  [Main]关闭了浏览器
+2013-07-17 15:49:03 INFO  [Case:ActionTest=>steamouseover]开始对xml资源进行扫描....
+2013-07-17 15:49:03 INFO  [Case:ActionTest=>steamouseover]扫描收集了资源->百度首页-搜索框
+2013-07-17 15:49:03 INFO  [Case:ActionTest=>steamouseover]扫描收集了资源->百度首页-搜索按钮
+2013-07-17 15:49:03 INFO  [Case:ActionTest=>steamouseover]扫描收集了资源->
+2013-07-17 15:49:03 INFO  [Case:ActionTest=>steamouseover]扫描XML资源完毕...
+2013-07-17 15:49:03 INFO  [Case:ActionTest=>steamouseover]开始扫描txt的资源元素...
+2013-07-17 15:49:03 INFO  [Case:ActionTest=>steamouseover]txt资源扫描结束
+2013-07-17 15:49:22 INFO  [Case:ActionTest=>steamouseover]扫描file类型的class文件...
+2013-07-17 15:49:22 INFO  [Case:ActionTest=>steamouseover]扫描file类型的class文件...
+2013-07-17 15:49:22 INFO  [Case:ActionTest=>steamouseover]开始扫描动作监听器......
+2013-07-17 15:49:22 INFO  [Case:ActionTest=>steamouseover]扫描动作监听器结束
+2013-07-17 15:49:50 INFO  [Case:ActionTest=>steamouseover]使用浏览器Firefox进行自动化测试，将要打开网址http://www.it168.com测试
+2013-07-17 15:49:51 INFO  [Case:ActionTest=>steamouseover]>>[Element]鼠标悬停成功！
+2013-07-17 15:49:52 INFO  [Case:ActionTest=>steamouseover]>>[Element]点击成功！
+2013-07-17 15:49:56 INFO  [Case:ActionTest=>steamouseover]关闭了所有的浏览器！
+2013-07-17 15:58:39 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
+2013-07-17 15:58:55 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
+2013-07-17 15:58:55 INFO  [Main]添加了新的窗口信息->IT168.com – IT主流资讯互动平台
+2013-07-17 15:58:56 INFO  [Main]当前初始化页面信息：URL--->http://www.it168.com/
+2013-07-17 15:58:56 INFO  [Main]当前初始化页面信息：Title--->IT168.com – IT主流资讯互动平台
+2013-07-17 15:58:56 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
+2013-07-17 15:58:57 INFO  [Main][By.xpath: .//*[@id='h80']/dt/i[1]/a[1]]元素处鼠标悬浮成功！
+2013-07-17 15:58:58 INFO  [Main][By.xpath: .//*[@id='h80']/dt/div/span[1]/ul/li[1]/a]点击操作成功
+2013-07-17 15:59:01 ERROR [Main]driver是空值！不存在认识的浏览器对象！
+2013-07-17 16:01:32 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
+2013-07-17 16:01:46 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
+2013-07-17 16:01:47 INFO  [Main]添加了新的窗口信息->IT168.com – IT主流资讯互动平台
+2013-07-17 16:01:47 INFO  [Main]当前初始化页面信息：URL--->http://www.it168.com/
+2013-07-17 16:01:47 INFO  [Main]当前初始化页面信息：Title--->IT168.com – IT主流资讯互动平台
+2013-07-17 16:01:47 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
+2013-07-17 16:01:47 INFO  [Main][By.xpath: .//*[@id='h80']/dt/i[1]/a[1]]元素处鼠标悬浮成功！
+2013-07-17 16:01:47 INFO  [Main][By.xpath: .//*[@id='h80']/dt/i[1]/a[1]]获取元素位置操作成功
+2013-07-17 16:01:47 INFO  [Main]浏览器执行了javascript--> window.scrollTo(166,1)
+2013-07-17 16:01:47 INFO  [Main][By.xpath: .//*[@id='h80']/dt/i[1]/a[1]]视角移动到了[166,1]的位置
+2013-07-17 16:01:48 INFO  [Main][By.xpath: .//*[@id='h80']/dt/div/span[1]/ul/li[1]/a]点击操作成功
+2013-07-17 16:01:52 INFO  [Main]关闭了浏览器
+2013-07-17 16:38:21 INFO  [Case:ActionTest=>steakeytest]开始对xml资源进行扫描....
+2013-07-17 16:38:21 INFO  [Case:ActionTest=>steakeytest]扫描收集了资源->百度首页-搜索框
+2013-07-17 16:38:21 INFO  [Case:ActionTest=>steakeytest]扫描收集了资源->百度首页-搜索按钮
+2013-07-17 16:38:21 INFO  [Case:ActionTest=>steakeytest]扫描收集了资源->
+2013-07-17 16:38:21 INFO  [Case:ActionTest=>steakeytest]扫描XML资源完毕...
+2013-07-17 16:38:21 INFO  [Case:ActionTest=>steakeytest]开始扫描txt的资源元素...
+2013-07-17 16:38:21 INFO  [Case:ActionTest=>steakeytest]txt资源扫描结束
+2013-07-17 16:38:35 INFO  [Case:ActionTest=>steakeytest]扫描file类型的class文件...
+2013-07-17 16:38:35 INFO  [Case:ActionTest=>steakeytest]扫描file类型的class文件...
+2013-07-17 16:38:36 INFO  [Case:ActionTest=>steakeytest]开始扫描动作监听器......
+2013-07-17 16:38:36 INFO  [Case:ActionTest=>steakeytest]扫描动作监听器结束
+2013-07-17 16:38:45 INFO  [Case:ActionTest=>steakeytest]使用浏览器Firefox进行自动化测试，将要打开网址http://www.baidu.com测试
+2013-07-17 16:38:45 INFO  [Case:ActionTest=>steakeytest]>>[Element]输入值[北京]成功！
+2013-07-17 16:40:40 INFO  [Case:ActionTest=>steakeytest]开始对xml资源进行扫描....
+2013-07-17 16:40:40 INFO  [Case:ActionTest=>steakeytest]扫描收集了资源->百度首页-搜索框
+2013-07-17 16:40:40 INFO  [Case:ActionTest=>steakeytest]扫描收集了资源->百度首页-搜索按钮
+2013-07-17 16:40:40 INFO  [Case:ActionTest=>steakeytest]扫描收集了资源->
+2013-07-17 16:40:40 INFO  [Case:ActionTest=>steakeytest]扫描XML资源完毕...
+2013-07-17 16:40:40 INFO  [Case:ActionTest=>steakeytest]开始扫描txt的资源元素...
+2013-07-17 16:40:40 INFO  [Case:ActionTest=>steakeytest]txt资源扫描结束
+2013-07-17 16:40:53 INFO  [Case:ActionTest=>steakeytest]扫描file类型的class文件...
+2013-07-17 16:40:53 INFO  [Case:ActionTest=>steakeytest]扫描file类型的class文件...
+2013-07-17 16:40:54 INFO  [Case:ActionTest=>steakeytest]开始扫描动作监听器......
+2013-07-17 16:40:54 INFO  [Case:ActionTest=>steakeytest]扫描动作监听器结束
+2013-07-17 16:41:04 INFO  [Case:ActionTest=>steakeytest]使用浏览器Firefox进行自动化测试，将要打开网址http://www.baidu.com测试
+2013-07-17 16:41:05 INFO  [Case:ActionTest=>steakeytest]>>[Element]输入值[北京]成功！
+2013-07-17 16:41:08 INFO  [Case:ActionTest=>steakeytest]关闭了所有的浏览器！
+2013-07-17 16:45:19 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
+2013-07-17 16:45:28 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
+2013-07-17 16:45:28 INFO  [Main]添加了新的窗口信息->百度一下，你就知道
+2013-07-17 16:45:28 INFO  [Main]当前初始化页面信息：URL--->http://www.baidu.com/
+2013-07-17 16:45:28 INFO  [Main]当前初始化页面信息：Title--->百度一下，你就知道
+2013-07-17 16:45:28 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
+2013-07-17 16:45:29 INFO  [Main][By.id: kw]输入[北京]值操作成功
+2013-07-17 16:45:32 INFO  [Main]关闭了浏览器
+2013-07-17 17:45:55 INFO  [Case:ActionTest=>steaFrameTest]开始对xml资源进行扫描....
+2013-07-17 17:45:55 INFO  [Case:ActionTest=>steaFrameTest]扫描收集了资源->百度首页-搜索框
+2013-07-17 17:45:55 INFO  [Case:ActionTest=>steaFrameTest]扫描收集了资源->百度首页-搜索按钮
+2013-07-17 17:45:55 INFO  [Case:ActionTest=>steaFrameTest]扫描收集了资源->
+2013-07-17 17:45:55 INFO  [Case:ActionTest=>steaFrameTest]扫描XML资源完毕...
+2013-07-17 17:45:55 INFO  [Case:ActionTest=>steaFrameTest]开始扫描txt的资源元素...
+2013-07-17 17:45:55 INFO  [Case:ActionTest=>steaFrameTest]txt资源扫描结束
+2013-07-17 17:46:10 INFO  [Case:ActionTest=>steaFrameTest]扫描file类型的class文件...
+2013-07-17 17:46:10 INFO  [Case:ActionTest=>steaFrameTest]扫描file类型的class文件...
+2013-07-17 17:46:10 INFO  [Case:ActionTest=>steaFrameTest]开始扫描动作监听器......
+2013-07-17 17:46:10 INFO  [Case:ActionTest=>steaFrameTest]扫描动作监听器结束
+2013-07-17 17:46:18 INFO  [Case:ActionTest=>steaFrameTest]使用浏览器Firefox进行自动化测试，将要打开网址http://lesson.ibiubiu.org测试
+2013-07-17 17:46:19 INFO  [Case:ActionTest=>steaFrameTest]>>[Element]点击成功！
+2013-07-17 17:46:25 INFO  [Case:ActionTest=>steaFrameTest]>>[Element]点击成功！
+2013-07-17 17:46:26 INFO  [Case:ActionTest=>steaFrameTest]>>[Element]点击成功！
+2013-07-17 17:46:27 INFO  [Case:ActionTest=>steaFrameTest]关闭了所有的浏览器！
+2013-07-17 17:55:10 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
+2013-07-17 17:55:19 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
+2013-07-17 17:55:19 INFO  [Main]添加了新的窗口信息->Selenium WebDriver入门教程-Heroku | Welcome Here
+2013-07-17 17:55:19 INFO  [Main]当前初始化页面信息：URL--->http://lesson.ibiubiu.org/
+2013-07-17 17:55:19 INFO  [Main]当前初始化页面信息：Title--->Selenium WebDriver入门教程-Heroku | Welcome Here
+2013-07-17 17:55:19 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
+2013-07-17 17:56:11 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
+2013-07-17 17:56:22 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
+2013-07-17 17:56:22 INFO  [Main]添加了新的窗口信息->Selenium WebDriver入门教程-Heroku | Welcome Here
+2013-07-17 17:56:22 INFO  [Main]当前初始化页面信息：URL--->http://lesson.ibiubiu.org/
+2013-07-17 17:56:22 INFO  [Main]当前初始化页面信息：Title--->Selenium WebDriver入门教程-Heroku | Welcome Here
+2013-07-17 17:56:22 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
+2013-07-17 17:57:13 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
+2013-07-17 17:57:20 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
+2013-07-17 17:57:20 INFO  [Main]添加了新的窗口信息->Selenium WebDriver入门教程-Heroku | Welcome Here
+2013-07-17 17:57:21 INFO  [Main]当前初始化页面信息：URL--->http://lesson.ibiubiu.org/
+2013-07-17 17:57:21 INFO  [Main]当前初始化页面信息：Title--->Selenium WebDriver入门教程-Heroku | Welcome Here
+2013-07-17 17:57:21 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
+2013-07-17 17:57:21 INFO  [Main][By.xpath: .//*[@id='nav-left']/li[4]/a]点击操作成功
+2013-07-17 17:57:27 INFO  [Main][FrameElement]点击操作成功
+2013-07-17 17:57:28 INFO  [Main]当前页面发生了变化，切换到了新的页面--->Selenium WebDriver入门教程-Heroku | Welcome Here
+2013-07-17 18:07:06 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
+2013-07-17 18:07:19 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
+2013-07-17 18:07:19 INFO  [Main]添加了新的窗口信息->Selenium WebDriver入门教程-Heroku | Welcome Here
+2013-07-17 18:07:19 INFO  [Main]当前初始化页面信息：URL--->http://lesson.ibiubiu.org/
+2013-07-17 18:07:19 INFO  [Main]当前初始化页面信息：Title--->Selenium WebDriver入门教程-Heroku | Welcome Here
+2013-07-17 18:07:19 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
+2013-07-17 18:07:20 INFO  [Main][By.xpath: .//*[@id='nav-left']/li[4]/a]点击操作成功
+2013-07-17 18:07:25 INFO  [Main][FrameElement]点击操作成功
+2013-07-17 18:07:26 INFO  [Main]当前页面发生了变化，切换到了新的页面--->Selenium WebDriver入门教程-Heroku | Welcome Here
+2013-07-17 18:15:06 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
+2013-07-17 18:15:14 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
+2013-07-17 18:15:14 INFO  [Main]添加了新的窗口信息->Selenium WebDriver入门教程-Heroku | Welcome Here
+2013-07-17 18:15:14 INFO  [Main]当前初始化页面信息：URL--->http://lesson.ibiubiu.org/
+2013-07-17 18:15:14 INFO  [Main]当前初始化页面信息：Title--->Selenium WebDriver入门教程-Heroku | Welcome Here
+2013-07-17 18:15:14 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
+2013-07-17 18:15:15 INFO  [Main][By.xpath: .//*[@id='nav-left']/li[4]/a]点击操作成功
+2013-07-17 18:25:26 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
+2013-07-17 18:25:37 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
+2013-07-17 18:25:37 INFO  [Main]添加了新的窗口信息->Selenium WebDriver入门教程-Heroku | Welcome Here
+2013-07-17 18:25:37 INFO  [Main]当前初始化页面信息：URL--->http://lesson.ibiubiu.org/
+2013-07-17 18:25:37 INFO  [Main]当前初始化页面信息：Title--->Selenium WebDriver入门教程-Heroku | Welcome Here
+2013-07-17 18:25:37 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
+2013-07-17 18:25:38 INFO  [Main][By.xpath: .//*[@id='nav-left']/li[4]/a]点击操作成功
+2013-07-17 18:25:43 INFO  [Main][FrameElement]点击操作成功
+2013-07-17 18:25:43 INFO  [Main]当前页面发生了变化，切换到了新的页面--->Selenium WebDriver入门教程-Heroku | Welcome Here
+2013-07-17 18:46:33 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
+2013-07-17 18:46:41 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
+2013-07-17 18:46:41 INFO  [Main]添加了新的窗口信息->Selenium WebDriver入门教程-Heroku | Welcome Here
+2013-07-17 18:46:41 INFO  [Main]当前初始化页面信息：URL--->http://lesson.ibiubiu.org/
+2013-07-17 18:46:41 INFO  [Main]当前初始化页面信息：Title--->Selenium WebDriver入门教程-Heroku | Welcome Here
+2013-07-17 18:46:41 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
+2013-07-17 18:46:42 INFO  [Main][By.xpath: .//*[@id='nav-left']/li[4]/a]点击操作成功
+2013-07-17 18:46:47 INFO  [Main][FrameElement]点击操作成功
+2013-07-17 18:46:47 INFO  [Main]当前页面发生了变化，切换到了新的页面--->Selenium WebDriver入门教程-Heroku | Welcome Here

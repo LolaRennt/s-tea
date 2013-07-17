@@ -89,6 +89,10 @@ public class Window {
 		AutoBase.driver().switchTo().frame(AutoBase.driver().findElement(selector));
 	}
 	/**进入frame*/
+	public static void selectFrame(int index){
+		AutoBase.driver().switchTo().frame(index);
+	}
+	/**进入frame*/
 	public static void selectFrameByName(String name){
 		AutoBase.driver().switchTo().frame(name);
 	}
