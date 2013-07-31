@@ -85,17 +85,16 @@ public class AutoBase {
 		TxtLoader.load();
 		setClose_Status(false);
 		getAutoDriver().setDriver(browser);
-		ClassPool.reset();
-		Set<Class<?>> cls = ClassPool.getClassPool();
-		logger.info("["+RuntimeMethod.getName()+"]"+"开始扫描动作监听器......");
-		for(Class<?>clazz:cls){
-			
-			if(clazz.isAnnotationPresent(Register.class)){
-				logger.info("["+RuntimeMethod.getName()+"]"+"扫描到了动作监听器："+clazz.getName());
-				ProxyRunnerListener.register(clazz);
-			}
-		}
-		logger.info("["+RuntimeMethod.getName()+"]"+"扫描动作监听器结束");
+		//ClassPool.reset();
+		//Set<Class<?>> cls = ClassPool.getClassPool();
+//		logger.info("["+RuntimeMethod.getName()+"]"+"开始扫描动作监听器......");
+//		for(Class<?>clazz:cls){
+//			if(clazz.isAnnotationPresent(Register.class)){
+//				logger.info("["+RuntimeMethod.getName()+"]"+"扫描到了动作监听器："+clazz.getName());
+//				ProxyRunnerListener.register(clazz);
+//			}
+//		}
+//		logger.info("["+RuntimeMethod.getName()+"]"+"扫描动作监听器结束");
 		Window.maxWindow();
 		Window.updateWindow();
 	}
@@ -110,17 +109,17 @@ public class AutoBase {
 		TxtLoader.load();
 		setClose_Status(false);
 		getAutoDriver().setDriver(browser);
-		ClassPool.reset();
-		Set<Class<?>> cls = ClassPool.getClassPool();
-		logger.info("["+RuntimeMethod.getName()+"]"+"开始扫描监听器......");
-		for(Class<?>clazz:cls){
-			
-			if(clazz.isAnnotationPresent(Register.class)){
-				logger.info("["+RuntimeMethod.getName()+"]"+"扫描到了动作监听器："+clazz.getName());
-				ProxyRunnerListener.register(clazz);
-			}
-		}
-		logger.info("["+RuntimeMethod.getName()+"]"+"扫描动作监听器结束");
+//		ClassPool.reset();
+//		Set<Class<?>> cls = ClassPool.getClassPool();
+//		logger.info("["+RuntimeMethod.getName()+"]"+"开始扫描监听器......");
+//		for(Class<?>clazz:cls){
+//			
+//			if(clazz.isAnnotationPresent(Register.class)){
+//				logger.info("["+RuntimeMethod.getName()+"]"+"扫描到了动作监听器："+clazz.getName());
+//				ProxyRunnerListener.register(clazz);
+//			}
+//		}
+//		logger.info("["+RuntimeMethod.getName()+"]"+"扫描动作监听器结束");
 		Window.maxWindow();	
 		Window.updateWindow();
 	}
@@ -392,7 +391,7 @@ public class AutoBase {
 	 * @return 返回一个当前页的对象，可以操作关闭CurrentPage类的各种方法
 	 * */
 	public static CurrentPage currentpage(){
-		return CurrentPage.getInstance();
+		return new CurrentPage();
 	}
 	
 	public static SElement sElement(By by){
@@ -446,7 +445,14 @@ public class AutoBase {
 		//System.out.println(AutoBase.driver().getWindowHandles().size());
 		AutoBase.sleep(1);
 		Window.selectNewWindow();
-		return CurrentPage.getInstance();
+		return currentpage();
+	}
+	
+	public static CurrentPage openNew(String url){
+		Window.runJS("window.open(\"\",\""+url+"\")");
+		AutoBase.sleep(1);
+		Window.selectNewWindow();
+		return currentpage();
 	}
 	
 	public static void pageTimeOut(int seconds){
@@ -477,5 +483,13 @@ public class AutoBase {
 	public static void clickAndHold(SElement se){
 		Actions action = new Actions(driver());
 		action.clickAndHold(se.getElement());
+	}
+	
+	public static SElement node(String selector){
+		return new SElement().node(selector);
+	}
+	
+	public static SElement node(String selector,int index){
+		return new SElement().node(selector, index);
 	}
 }

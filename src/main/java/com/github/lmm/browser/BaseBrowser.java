@@ -16,6 +16,7 @@ import org.openqa.selenium.interactions.Actions;
 import com.github.lmm.source.Source;
 import java.io.File;
 import java.io.IOException;
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Map;
@@ -30,8 +31,12 @@ import java.util.concurrent.TimeUnit;
  * Time: 上午11:00
  * To change this template use File | Settings | File Templates.
  */
-public class BaseBrowser implements IBrowser {
-    private Logger logger = Logger.getLogger(BaseBrowser.class);
+public class BaseBrowser implements IBrowser,Serializable {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private Logger logger = Logger.getLogger(BaseBrowser.class);
     private boolean isScanFrame=false;
     public boolean isScanFrame() {
 		return isScanFrame;
@@ -259,6 +264,7 @@ public class BaseBrowser implements IBrowser {
 
     @Override
     public ICurrentPage getCurrentPage() {
+    	selectDefaultWindow();
         this.currentPage.setBrowser(this);
         return this.currentPage;  //To change body of implemented methods use File | Settings | File Templates.
     }

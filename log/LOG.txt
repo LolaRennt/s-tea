@@ -1,142 +1,1242 @@
-2013-07-17 15:49:03 INFO  [Case:ActionTest=>steamouseover]开始对xml资源进行扫描....
-2013-07-17 15:49:03 INFO  [Case:ActionTest=>steamouseover]扫描收集了资源->百度首页-搜索框
-2013-07-17 15:49:03 INFO  [Case:ActionTest=>steamouseover]扫描收集了资源->百度首页-搜索按钮
-2013-07-17 15:49:03 INFO  [Case:ActionTest=>steamouseover]扫描收集了资源->
-2013-07-17 15:49:03 INFO  [Case:ActionTest=>steamouseover]扫描XML资源完毕...
-2013-07-17 15:49:03 INFO  [Case:ActionTest=>steamouseover]开始扫描txt的资源元素...
-2013-07-17 15:49:03 INFO  [Case:ActionTest=>steamouseover]txt资源扫描结束
-2013-07-17 15:49:22 INFO  [Case:ActionTest=>steamouseover]扫描file类型的class文件...
-2013-07-17 15:49:22 INFO  [Case:ActionTest=>steamouseover]扫描file类型的class文件...
-2013-07-17 15:49:22 INFO  [Case:ActionTest=>steamouseover]开始扫描动作监听器......
-2013-07-17 15:49:22 INFO  [Case:ActionTest=>steamouseover]扫描动作监听器结束
-2013-07-17 15:49:50 INFO  [Case:ActionTest=>steamouseover]使用浏览器Firefox进行自动化测试，将要打开网址http://www.it168.com测试
-2013-07-17 15:49:51 INFO  [Case:ActionTest=>steamouseover]>>[Element]鼠标悬停成功！
-2013-07-17 15:49:52 INFO  [Case:ActionTest=>steamouseover]>>[Element]点击成功！
-2013-07-17 15:49:56 INFO  [Case:ActionTest=>steamouseover]关闭了所有的浏览器！
-2013-07-17 15:58:39 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-17 15:58:55 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-17 15:58:55 INFO  [Main]添加了新的窗口信息->IT168.com – IT主流资讯互动平台
-2013-07-17 15:58:56 INFO  [Main]当前初始化页面信息：URL--->http://www.it168.com/
-2013-07-17 15:58:56 INFO  [Main]当前初始化页面信息：Title--->IT168.com – IT主流资讯互动平台
-2013-07-17 15:58:56 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-17 15:58:57 INFO  [Main][By.xpath: .//*[@id='h80']/dt/i[1]/a[1]]元素处鼠标悬浮成功！
-2013-07-17 15:58:58 INFO  [Main][By.xpath: .//*[@id='h80']/dt/div/span[1]/ul/li[1]/a]点击操作成功
-2013-07-17 15:59:01 ERROR [Main]driver是空值！不存在认识的浏览器对象！
-2013-07-17 16:01:32 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-17 16:01:46 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-17 16:01:47 INFO  [Main]添加了新的窗口信息->IT168.com – IT主流资讯互动平台
-2013-07-17 16:01:47 INFO  [Main]当前初始化页面信息：URL--->http://www.it168.com/
-2013-07-17 16:01:47 INFO  [Main]当前初始化页面信息：Title--->IT168.com – IT主流资讯互动平台
-2013-07-17 16:01:47 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-17 16:01:47 INFO  [Main][By.xpath: .//*[@id='h80']/dt/i[1]/a[1]]元素处鼠标悬浮成功！
-2013-07-17 16:01:47 INFO  [Main][By.xpath: .//*[@id='h80']/dt/i[1]/a[1]]获取元素位置操作成功
-2013-07-17 16:01:47 INFO  [Main]浏览器执行了javascript--> window.scrollTo(166,1)
-2013-07-17 16:01:47 INFO  [Main][By.xpath: .//*[@id='h80']/dt/i[1]/a[1]]视角移动到了[166,1]的位置
-2013-07-17 16:01:48 INFO  [Main][By.xpath: .//*[@id='h80']/dt/div/span[1]/ul/li[1]/a]点击操作成功
-2013-07-17 16:01:52 INFO  [Main]关闭了浏览器
-2013-07-17 16:38:21 INFO  [Case:ActionTest=>steakeytest]开始对xml资源进行扫描....
-2013-07-17 16:38:21 INFO  [Case:ActionTest=>steakeytest]扫描收集了资源->百度首页-搜索框
-2013-07-17 16:38:21 INFO  [Case:ActionTest=>steakeytest]扫描收集了资源->百度首页-搜索按钮
-2013-07-17 16:38:21 INFO  [Case:ActionTest=>steakeytest]扫描收集了资源->
-2013-07-17 16:38:21 INFO  [Case:ActionTest=>steakeytest]扫描XML资源完毕...
-2013-07-17 16:38:21 INFO  [Case:ActionTest=>steakeytest]开始扫描txt的资源元素...
-2013-07-17 16:38:21 INFO  [Case:ActionTest=>steakeytest]txt资源扫描结束
-2013-07-17 16:38:35 INFO  [Case:ActionTest=>steakeytest]扫描file类型的class文件...
-2013-07-17 16:38:35 INFO  [Case:ActionTest=>steakeytest]扫描file类型的class文件...
-2013-07-17 16:38:36 INFO  [Case:ActionTest=>steakeytest]开始扫描动作监听器......
-2013-07-17 16:38:36 INFO  [Case:ActionTest=>steakeytest]扫描动作监听器结束
-2013-07-17 16:38:45 INFO  [Case:ActionTest=>steakeytest]使用浏览器Firefox进行自动化测试，将要打开网址http://www.baidu.com测试
-2013-07-17 16:38:45 INFO  [Case:ActionTest=>steakeytest]>>[Element]输入值[北京]成功！
-2013-07-17 16:40:40 INFO  [Case:ActionTest=>steakeytest]开始对xml资源进行扫描....
-2013-07-17 16:40:40 INFO  [Case:ActionTest=>steakeytest]扫描收集了资源->百度首页-搜索框
-2013-07-17 16:40:40 INFO  [Case:ActionTest=>steakeytest]扫描收集了资源->百度首页-搜索按钮
-2013-07-17 16:40:40 INFO  [Case:ActionTest=>steakeytest]扫描收集了资源->
-2013-07-17 16:40:40 INFO  [Case:ActionTest=>steakeytest]扫描XML资源完毕...
-2013-07-17 16:40:40 INFO  [Case:ActionTest=>steakeytest]开始扫描txt的资源元素...
-2013-07-17 16:40:40 INFO  [Case:ActionTest=>steakeytest]txt资源扫描结束
-2013-07-17 16:40:53 INFO  [Case:ActionTest=>steakeytest]扫描file类型的class文件...
-2013-07-17 16:40:53 INFO  [Case:ActionTest=>steakeytest]扫描file类型的class文件...
-2013-07-17 16:40:54 INFO  [Case:ActionTest=>steakeytest]开始扫描动作监听器......
-2013-07-17 16:40:54 INFO  [Case:ActionTest=>steakeytest]扫描动作监听器结束
-2013-07-17 16:41:04 INFO  [Case:ActionTest=>steakeytest]使用浏览器Firefox进行自动化测试，将要打开网址http://www.baidu.com测试
-2013-07-17 16:41:05 INFO  [Case:ActionTest=>steakeytest]>>[Element]输入值[北京]成功！
-2013-07-17 16:41:08 INFO  [Case:ActionTest=>steakeytest]关闭了所有的浏览器！
-2013-07-17 16:45:19 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-17 16:45:28 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-17 16:45:28 INFO  [Main]添加了新的窗口信息->百度一下，你就知道
-2013-07-17 16:45:28 INFO  [Main]当前初始化页面信息：URL--->http://www.baidu.com/
-2013-07-17 16:45:28 INFO  [Main]当前初始化页面信息：Title--->百度一下，你就知道
-2013-07-17 16:45:28 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-17 16:45:29 INFO  [Main][By.id: kw]输入[北京]值操作成功
-2013-07-17 16:45:32 INFO  [Main]关闭了浏览器
-2013-07-17 17:45:55 INFO  [Case:ActionTest=>steaFrameTest]开始对xml资源进行扫描....
-2013-07-17 17:45:55 INFO  [Case:ActionTest=>steaFrameTest]扫描收集了资源->百度首页-搜索框
-2013-07-17 17:45:55 INFO  [Case:ActionTest=>steaFrameTest]扫描收集了资源->百度首页-搜索按钮
-2013-07-17 17:45:55 INFO  [Case:ActionTest=>steaFrameTest]扫描收集了资源->
-2013-07-17 17:45:55 INFO  [Case:ActionTest=>steaFrameTest]扫描XML资源完毕...
-2013-07-17 17:45:55 INFO  [Case:ActionTest=>steaFrameTest]开始扫描txt的资源元素...
-2013-07-17 17:45:55 INFO  [Case:ActionTest=>steaFrameTest]txt资源扫描结束
-2013-07-17 17:46:10 INFO  [Case:ActionTest=>steaFrameTest]扫描file类型的class文件...
-2013-07-17 17:46:10 INFO  [Case:ActionTest=>steaFrameTest]扫描file类型的class文件...
-2013-07-17 17:46:10 INFO  [Case:ActionTest=>steaFrameTest]开始扫描动作监听器......
-2013-07-17 17:46:10 INFO  [Case:ActionTest=>steaFrameTest]扫描动作监听器结束
-2013-07-17 17:46:18 INFO  [Case:ActionTest=>steaFrameTest]使用浏览器Firefox进行自动化测试，将要打开网址http://lesson.ibiubiu.org测试
-2013-07-17 17:46:19 INFO  [Case:ActionTest=>steaFrameTest]>>[Element]点击成功！
-2013-07-17 17:46:25 INFO  [Case:ActionTest=>steaFrameTest]>>[Element]点击成功！
-2013-07-17 17:46:26 INFO  [Case:ActionTest=>steaFrameTest]>>[Element]点击成功！
-2013-07-17 17:46:27 INFO  [Case:ActionTest=>steaFrameTest]关闭了所有的浏览器！
-2013-07-17 17:55:10 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-17 17:55:19 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-17 17:55:19 INFO  [Main]添加了新的窗口信息->Selenium WebDriver入门教程-Heroku | Welcome Here
-2013-07-17 17:55:19 INFO  [Main]当前初始化页面信息：URL--->http://lesson.ibiubiu.org/
-2013-07-17 17:55:19 INFO  [Main]当前初始化页面信息：Title--->Selenium WebDriver入门教程-Heroku | Welcome Here
-2013-07-17 17:55:19 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-17 17:56:11 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-17 17:56:22 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-17 17:56:22 INFO  [Main]添加了新的窗口信息->Selenium WebDriver入门教程-Heroku | Welcome Here
-2013-07-17 17:56:22 INFO  [Main]当前初始化页面信息：URL--->http://lesson.ibiubiu.org/
-2013-07-17 17:56:22 INFO  [Main]当前初始化页面信息：Title--->Selenium WebDriver入门教程-Heroku | Welcome Here
-2013-07-17 17:56:22 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-17 17:57:13 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-17 17:57:20 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-17 17:57:20 INFO  [Main]添加了新的窗口信息->Selenium WebDriver入门教程-Heroku | Welcome Here
-2013-07-17 17:57:21 INFO  [Main]当前初始化页面信息：URL--->http://lesson.ibiubiu.org/
-2013-07-17 17:57:21 INFO  [Main]当前初始化页面信息：Title--->Selenium WebDriver入门教程-Heroku | Welcome Here
-2013-07-17 17:57:21 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-17 17:57:21 INFO  [Main][By.xpath: .//*[@id='nav-left']/li[4]/a]点击操作成功
-2013-07-17 17:57:27 INFO  [Main][FrameElement]点击操作成功
-2013-07-17 17:57:28 INFO  [Main]当前页面发生了变化，切换到了新的页面--->Selenium WebDriver入门教程-Heroku | Welcome Here
-2013-07-17 18:07:06 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-17 18:07:19 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-17 18:07:19 INFO  [Main]添加了新的窗口信息->Selenium WebDriver入门教程-Heroku | Welcome Here
-2013-07-17 18:07:19 INFO  [Main]当前初始化页面信息：URL--->http://lesson.ibiubiu.org/
-2013-07-17 18:07:19 INFO  [Main]当前初始化页面信息：Title--->Selenium WebDriver入门教程-Heroku | Welcome Here
-2013-07-17 18:07:19 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-17 18:07:20 INFO  [Main][By.xpath: .//*[@id='nav-left']/li[4]/a]点击操作成功
-2013-07-17 18:07:25 INFO  [Main][FrameElement]点击操作成功
-2013-07-17 18:07:26 INFO  [Main]当前页面发生了变化，切换到了新的页面--->Selenium WebDriver入门教程-Heroku | Welcome Here
-2013-07-17 18:15:06 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-17 18:15:14 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-17 18:15:14 INFO  [Main]添加了新的窗口信息->Selenium WebDriver入门教程-Heroku | Welcome Here
-2013-07-17 18:15:14 INFO  [Main]当前初始化页面信息：URL--->http://lesson.ibiubiu.org/
-2013-07-17 18:15:14 INFO  [Main]当前初始化页面信息：Title--->Selenium WebDriver入门教程-Heroku | Welcome Here
-2013-07-17 18:15:14 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-17 18:15:15 INFO  [Main][By.xpath: .//*[@id='nav-left']/li[4]/a]点击操作成功
-2013-07-17 18:25:26 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-17 18:25:37 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-17 18:25:37 INFO  [Main]添加了新的窗口信息->Selenium WebDriver入门教程-Heroku | Welcome Here
-2013-07-17 18:25:37 INFO  [Main]当前初始化页面信息：URL--->http://lesson.ibiubiu.org/
-2013-07-17 18:25:37 INFO  [Main]当前初始化页面信息：Title--->Selenium WebDriver入门教程-Heroku | Welcome Here
-2013-07-17 18:25:37 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-17 18:25:38 INFO  [Main][By.xpath: .//*[@id='nav-left']/li[4]/a]点击操作成功
-2013-07-17 18:25:43 INFO  [Main][FrameElement]点击操作成功
-2013-07-17 18:25:43 INFO  [Main]当前页面发生了变化，切换到了新的页面--->Selenium WebDriver入门教程-Heroku | Welcome Here
-2013-07-17 18:46:33 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
-2013-07-17 18:46:41 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
-2013-07-17 18:46:41 INFO  [Main]添加了新的窗口信息->Selenium WebDriver入门教程-Heroku | Welcome Here
-2013-07-17 18:46:41 INFO  [Main]当前初始化页面信息：URL--->http://lesson.ibiubiu.org/
-2013-07-17 18:46:41 INFO  [Main]当前初始化页面信息：Title--->Selenium WebDriver入门教程-Heroku | Welcome Here
-2013-07-17 18:46:41 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
-2013-07-17 18:46:42 INFO  [Main][By.xpath: .//*[@id='nav-left']/li[4]/a]点击操作成功
-2013-07-17 18:46:47 INFO  [Main][FrameElement]点击操作成功
-2013-07-17 18:46:47 INFO  [Main]当前页面发生了变化，切换到了新的页面--->Selenium WebDriver入门教程-Heroku | Welcome Here
+2013-07-31 09:34:45 INFO  [Main]扫描file类型的class文件...
+2013-07-31 09:34:45 INFO  [Main]扫描file类型的class文件...
+2013-07-31 09:34:45 INFO  [Case:Method=>testListener]*******************测试用例[testListener]开始执行*****************
+2013-07-31 09:34:45 INFO  [Case:MyActionsTest=>testListener]开始对xml资源进行扫描....
+2013-07-31 09:34:46 INFO  [Case:MyActionsTest=>testListener]扫描收集了资源->百度首页-搜索框
+2013-07-31 09:34:46 INFO  [Case:MyActionsTest=>testListener]扫描收集了资源->百度首页-搜索按钮
+2013-07-31 09:34:46 INFO  [Case:MyActionsTest=>testListener]扫描收集了资源->
+2013-07-31 09:34:46 INFO  [Case:MyActionsTest=>testListener]扫描XML资源完毕...
+2013-07-31 09:34:46 INFO  [Case:MyActionsTest=>testListener]开始扫描txt的资源元素...
+2013-07-31 09:34:46 INFO  [Case:MyActionsTest=>testListener]txt资源扫描结束
+2013-07-31 09:35:03 INFO  [Case:MyActionsTest=>testListener]扫描file类型的class文件...
+2013-07-31 09:35:03 INFO  [Case:MyActionsTest=>testListener]扫描file类型的class文件...
+2013-07-31 09:35:03 INFO  [Case:MyActionsTest=>testListener]开始扫描动作监听器......
+2013-07-31 09:35:03 INFO  [Case:MyActionsTest=>testListener]扫描动作监听器结束
+2013-07-31 09:35:04 ERROR [Case:MyActionsTest=>testListener]用例执行失败了,异常信息->Component returned failure code: 0x804b000a (NS_ERROR_MALFORMED_URI) [nsIIOService.newURI]
+Command duration or timeout: 9 milliseconds
+Build info: version: '2.33.0', revision: '4ecaf82108b2a6cc6f006aae81961236eba93358', time: '2013-05-22 12:00:17'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.8.4', java.version: '1.6.0_51'
+Session ID: 411e961c-a67f-6b47-baab-d78f76772f80
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=MAC, acceptSslCerts=true, javascriptEnabled=true, browserName=firefox, rotatable=false, locationContextEnabled=true, version=22.0, cssSelectorsEnabled=true, databaseEnabled=true, handlesAlerts=true, browserConnectionEnabled=true, nativeEvents=false, webStorageEnabled=true, applicationCacheEnabled=true, takesScreenshot=true}]
+2013-07-31 09:35:24 INFO  [Main]扫描file类型的class文件...
+2013-07-31 09:35:24 INFO  [Main]扫描file类型的class文件...
+2013-07-31 09:35:24 INFO  [Case:Method=>testListener]*******************测试用例[testListener]开始执行*****************
+2013-07-31 09:35:24 INFO  [Case:MyActionsTest=>testListener]开始对xml资源进行扫描....
+2013-07-31 09:35:24 INFO  [Case:MyActionsTest=>testListener]扫描收集了资源->百度首页-搜索框
+2013-07-31 09:35:24 INFO  [Case:MyActionsTest=>testListener]扫描收集了资源->百度首页-搜索按钮
+2013-07-31 09:35:24 INFO  [Case:MyActionsTest=>testListener]扫描收集了资源->
+2013-07-31 09:35:24 INFO  [Case:MyActionsTest=>testListener]扫描XML资源完毕...
+2013-07-31 09:35:24 INFO  [Case:MyActionsTest=>testListener]开始扫描txt的资源元素...
+2013-07-31 09:35:24 INFO  [Case:MyActionsTest=>testListener]txt资源扫描结束
+2013-07-31 09:35:33 INFO  [Case:MyActionsTest=>testListener]扫描file类型的class文件...
+2013-07-31 09:35:33 INFO  [Case:MyActionsTest=>testListener]扫描file类型的class文件...
+2013-07-31 09:35:33 INFO  [Case:MyActionsTest=>testListener]开始扫描动作监听器......
+2013-07-31 09:35:33 INFO  [Case:MyActionsTest=>testListener]扫描动作监听器结束
+2013-07-31 09:35:35 INFO  [Case:MyActionsTest=>testListener]使用浏览器Firefox进行自动化测试，将要打开网址http://www.baidu.com测试
+2013-07-31 09:35:36 INFO  [Case:MyActionsTest=>testListener]>>[Element]输入值[北京]成功！
+2013-07-31 09:35:37 INFO  [Case:MyActionsTest=>testListener]>>[Element]点击成功！
+2013-07-31 09:35:40 INFO  [Case:MyActionsTest=>testListener]关闭了所有的浏览器！
+2013-07-31 09:35:40 INFO  [Case:MyActionsTest=>testListener]*******************测试用例[testListener]执行结束****************
+2013-07-31 09:38:00 INFO  [Main]扫描file类型的class文件...
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.base.test.BaseTest
+2013-07-31 09:38:00 INFO  [Main]扫描file类型的class文件...
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.annotation.At
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.annotation.Browsers
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.annotation.Commit
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.annotation.FindBy
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.annotation.FrameLocator
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.annotation.InterceptorClass
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.annotation.Pict
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.annotation.Register
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.annotation.Retry
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.annotation.RunnerListener
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.annotation.RunnerRegister
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.annotation.ThreadRunner
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.annotation.Title
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.BaseBrowser
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$1
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$10$1
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$10
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$11$1
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$11
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$12$1
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$12
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$13$1
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$13
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$14$1
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$14
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$15$1
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$15
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$2
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$3
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$4
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$5
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$6
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$7$1
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$7
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$8$1
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$8
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$9$1
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$9
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Chrome
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Firefox
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.HtmlUnit
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.IBrowser
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.IE
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Opera
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.RemoteBrowser
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Safari
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.commons.StringUtils
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.Auto$1
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.Auto$2
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.Auto$Chrome
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.Auto$Firefox
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.Auto$HtmlUnit
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.Auto$Http
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.Auto$IE
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.Auto$Opera
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.Auto$PhantomJS
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.Auto$Safari
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.Auto
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.AutoResetThreadLocal
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.BrowserManager
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.ConfigParser
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.MyFile
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.PageManager
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.PhantomJSExecuter
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.PropertiesTool
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.SerializableObject
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.ThreadLocalRegistry$1
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.ThreadLocalRegistry
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.Wait$1
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.Wait$2
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.Wait
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.driver.STeaDriver$STeaChromeDriver
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.driver.STeaDriver$STeaFirefoxDriver
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.driver.STeaDriver$STeaHtmlUnitDriver
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.driver.STeaDriver$STeaIEDriver
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.driver.STeaDriver$STeaOperaDriver
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.driver.STeaDriver$STeaPhantomJSDriver
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.driver.STeaDriver$STeaRemoteWebDriver
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.driver.STeaDriver$STeaSafariDriver
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.driver.STeaDriver
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.AjaxElement
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.Button
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.CheckBox
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.Element
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.ElementManager
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.Form
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.FrameElement
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.IElement
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.Image
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.JSoupElement
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.Link
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.ListElements
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.Locator$1
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.Locator$2
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.Locator$3
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.Locator$4
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.Locator$5
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.Locator$6
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.Locator$7
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.Locator$8
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.Locator
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.RadioButton
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.RichTextField
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.Select
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.SelfConfigElement
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.Table
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.TempElement
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.TempElementLocator
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.TextField
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.exception.ConfigWrongException
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.exception.ContorlError
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.exception.MethodParameterNotMatchError
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.exception.NodeBrowserNotConnectException
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.exception.NotExistLocatorError
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.exception.NotFoundListenerException
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.exception.NotXMLFileException
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.exception.SameIDSourceError
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.exception.TestFailedError
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.intrumentation.ClassPathScanHandler$1
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.intrumentation.ClassPathScanHandler
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.intrumentation.ClassPool
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.listener.ActionListener
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.listener.RunnerListener
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.listener.WindowSourceListener
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.page.CurrentPage
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.page.DefaultFrame
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.page.DefaultSourcePage
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.page.Frame
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.page.ICurrentPage
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.page.IPage
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.page.JSTest
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.page.PageResponse
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.page.SourcePage
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.page.TypePage
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.pairwise.algorithm.FullCombinationAlgorithm
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.pairwise.AllPairList
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.pairwise.CombinationCreator
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.pairwise.core.Algorithm
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.pairwise.core.Combination
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.pairwise.core.CombinationList
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.pairwise.core.Generator
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.pairwise.core.Parameter
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.pairwise.core.ParameterList
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.pairwise.core.ParameterValuePair
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.pairwise.FullCombinationAlgorithm
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.pairwise.generator.ExcelParameters
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.pairwise.generator.LineParameters
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.pairwise.generator.Parameters
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.pairwise.generator.TestPairWise
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.pairwise.generator.TXTParameters
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.pairwise.Pair
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.pairwise.PairWiseAlgorithm
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.proxy.ActionListenerProxy$1
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.proxy.ActionListenerProxy
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.proxy.RunnerListenerProxy
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.report.IReport
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.report.Report
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.result.Result
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.result.ResultImpl
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.ChildRunner
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.ErrorReportingFrameworkMethod
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.Feed4JUnitConfig
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.Feed4JUnitGenerator
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.Feeder$1
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.Feeder
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.FrameworkMethodWithParameters
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.info.DefaultInfoProvider
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.info.OrdinalInfoProvider
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.JUnitBaseRunner$1
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.JUnitBaseRunner$NamedThreadFactory
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.JUnitBaseRunner
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.MyJUnitThreadRunner$1
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.MyJUnitThreadRunner$NamedThreadFactory
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.MyJUnitThreadRunner
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.MyJUnitThreadSuitRunner$1$1
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.MyJUnitThreadSuitRunner$1
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.MyJUnitThreadSuitRunner$2
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.MyJUnitThreadSuitRunner$NamedThreadFactory
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.MyJUnitThreadSuitRunner
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.PictToMethod
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.PlatformDescriptor
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.scheduler.DefaultFeedScheduler
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.scheduler.PlainParallelScheduler
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.scheduler.SerialScheduler
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.Scheduler
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.statement.Interceptor
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.statement.InterceptorStatement
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.statement.ThreadLocalResetInterceptor
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.TestInfoProvider
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.TestNGRunner
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runtime.RuntimeMethod$1
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runtime.RuntimeMethod
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.sgap.SGAP
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.source.ElementInfo
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.source.FrameInfo
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.source.FrameInfoManager
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.source.PageInfo
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.source.Source
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.source.TempChainElement
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.source.txt.TXTSource
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.source.xml.ChildElementInfo
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.source.xml.DefaultXMLSource
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.source.xml.Dom4jTools
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.source.xml.XMLChainElement
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.source.xml.XMLSource
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.story.Steps
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.story.Story
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.window.WindowInfo
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.window.WindowsCollecter
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.window.WindowsCollectorListener
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.window.WindowsListener
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.window.WindowSource
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.anno.core.AnnotationTools
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.anno.InterceptorClass
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.anno.JUnitRunListener
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.anno.Register
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.base.AddToFileWrite
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.base.AutoBase$1
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.base.AutoBase
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.base.Configure
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.base.ConstValue
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.base.ElementBase
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.base.IJUnitBase
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.base.ITestNGBase
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.base.JUnitBase
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.base.MyFile
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.base.PageModel
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.base.PropertiesTool
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.base.SystemPlatform
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.base.TestNGBase
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.base.TestNGRemoteBase
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.data.testng.excel.FeedIterator
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.data.testng.excel.TestNGFeed
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.AutoDriver$Chrome$1
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.AutoDriver$Chrome
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.AutoDriver$Firefox$1
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.AutoDriver$Firefox
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.AutoDriver$HtmlUnit$1
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.AutoDriver$HtmlUnit
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.AutoDriver$IE$1
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.AutoDriver$IE
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.AutoDriver$PhantomJS$1
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.AutoDriver$PhantomJS
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.AutoDriver$RemoteChrome$1
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.AutoDriver$RemoteChrome
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.AutoDriver$RemoteFirefox$1
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.AutoDriver$RemoteFirefox
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.AutoDriver$RemoteHtmlUnit$1
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.AutoDriver$RemoteHtmlUnit
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.AutoDriver$RemoteIE$1
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.AutoDriver$RemoteIE
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.AutoDriver$RemoteSafari$1
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.AutoDriver$RemoteSafari
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.AutoDriver$Safari$1
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.AutoDriver$Safari
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.AutoDriver
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.Browser
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.FlashDriver$JavascriptNotSupported
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.FlashDriver
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.IDriver
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.element.AjaxElement$1
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.element.AjaxElement$2
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.element.AjaxElement$3
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.element.AjaxElement
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.element.Button
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.element.CheckBox
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.element.ComoboBox
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.element.Image
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.element.Link
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.element.ListElement
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.element.Locator
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.element.RadioButton
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.element.RichTextField
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.element.SElement
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.element.Table
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.element.TextField
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.exception.MyAutoException
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.exception.MyElementNotFoundException
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.exception.NoSuchIDElementException
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.exception.NotFoundListenerException
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.exception.NotFoundLoadSourceException
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.exception.SameIDNameException
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.fit.DSLAdapter$CommandRow
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.fit.DSLAdapter$InvalidParamSequence
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.fit.DSLAdapter
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.fit.InterfaceFixture
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.fit.STActionFixture
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.fit.STeaFixture$RowEntry
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.fit.STeaFixture
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.json.CDL
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.json.Cookie
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.json.CookieList
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.json.HTTP
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.json.HTTPTokener
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.json.JSONArray
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.json.JSONException
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.json.JSONML
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.json.JSONObject$Null
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.json.JSONObject
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.json.JSONString
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.json.JSONStringer
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.json.JSONTokener
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.json.JSONWriter
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.json.None
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.json.XML
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.json.XMLTokener
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.load.Source
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.load.SourceLoader$1
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.load.SourceLoader
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.log.Log
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.log.MyLogger
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.mail.date.SimpleDate
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.mail.MailSenderInfo
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.mail.SimpleAuthenticator
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.mail.SimpleMailSender
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.page.Page
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.page.source.CurrentPage
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.page.source.HttpHeader
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.page.source.HttpHeaders
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.page.source.HttpHtml
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.page.source.HttpMethod
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.page.source.PageHtml
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.page.source.Response
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.proxy.AutoDriverEventListener
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.proxy.AutoRunnerListener
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.proxy.JUnitRunnerInterceptorListener
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.proxy.ProxyJUnitRunListener
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.proxy.ProxyRunnerListener$1
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.proxy.ProxyRunnerListener
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.proxy.RunnerListener
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.robot.key.BaseKeyWords
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.robot.key.PageWordkeys
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.robot.key.SElementWordkeys
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.robot.key.STeaKeywords
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.robot.key.WindowKeywords
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.robot.run.AutoKeyWordRunner
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.server.IOUtil$1
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.server.IOUtil$2
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.server.IOUtil
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.server.NodeServer
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.server.RemoteServer$1
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.server.RemoteServer
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.server.SSH2RemoteShell$1
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.server.SSH2RemoteShell$MyUserInfo
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.server.SSH2RemoteShell$SimpleUserInfo
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.server.SSH2RemoteShell
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.server.TelnetRemoteShell
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.text.read.Block
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.text.read.ChainLink
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.text.read.ReadFromFile
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.text.read.StringBlock
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.text.read.StringContorl
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.text.read.StringFrameBlock
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.text.read.TXTFormat
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.text.read.TxtLoader
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.text.read.TxtProvider
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.text.read.TxtScaner
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.verify.Assert
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.verify.Verify
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.window.Window
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.xml.XMLChildElement
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.xml.XMLDocument
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.xml.XMLElement
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.xml.XMLElements
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.xml.XMLFrame
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.xml.XMLLoader
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.xml.XMLNode
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.xml.XmlProvider
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.xml.XMLScaner
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.xml.XmlToJavaTools
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.xml.XMLToWebElement
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.example.ActionTest
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.example.FirefoxGet
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.example.FirefoxOpen
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.example.FirefoxSteaOpen
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.example.FirstCase
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.example.Hello
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.example.HtmlUnit
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.example.ListenerExample
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.example.LocatorTest
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.example.MaxWindow
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.example.MyActionListener
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.example.MyActionsTest
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.example.Parameters
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.example.PhantomJSOpen
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.example.RunListenerExample
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.example.WindowTest
+2013-07-31 09:38:00 INFO  [Main]扫描file类型的class文件...
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit4.runner.FailuresFirstSorter
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit4.runner.JUnit4Identifier
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit4.runner.JUnit4TestClassReference
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit4.runner.JUnit4TestListener$IgnoredTestIdentifier
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit4.runner.JUnit4TestListener
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit4.runner.JUnit4TestLoader
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit4.runner.JUnit4TestMethodReference
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference$1
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference
+2013-07-31 09:38:00 INFO  [Main]扫描file类型的class文件...
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.AbstractTestLoader
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.CustomHashtable$EmptyEnumerator
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.CustomHashtable$HashEnumerator
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.CustomHashtable$HashMapEntry
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.CustomHashtable
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.DefaultClassifier
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.FailedComparison
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.FailuresFirstPrioritizer
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.FirstRunExecutionListener
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.IClassifiesThrowables
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.IElementComparer
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.IListensToTestExecutions
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.IStopListener
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.ITestIdentifier
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.ITestLoader
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.ITestPrioritizer
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.ITestReference
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.ITestRunner
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.IVisitsTestTrees
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.junit3.JUnit3Identifier
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.junit3.JUnit3Listener
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestLoader$1
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestLoader
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference$1
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.JUnitMessages
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.MessageIds
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.MessageSender
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.NullPrioritizer
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.RemoteTestRunner$ReaderThread
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.RemoteTestRunner$RerunRequest
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.RemoteTestRunner
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.RerunExecutionListener
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.TestExecution
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.TestIdMap
+2013-07-31 09:38:00 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.TestReferenceFailure
+2013-07-31 09:38:00 INFO  [Case:Method=>testListener]*******************测试用例[testListener]开始执行*****************
+2013-07-31 09:38:00 INFO  [Case:MyActionsTest=>testListener]开始对xml资源进行扫描....
+2013-07-31 09:38:00 INFO  [Case:MyActionsTest=>testListener]扫描收集了资源->百度首页-搜索框
+2013-07-31 09:38:00 INFO  [Case:MyActionsTest=>testListener]扫描收集了资源->百度首页-搜索按钮
+2013-07-31 09:38:00 INFO  [Case:MyActionsTest=>testListener]扫描收集了资源->
+2013-07-31 09:38:00 INFO  [Case:MyActionsTest=>testListener]扫描XML资源完毕...
+2013-07-31 09:38:00 INFO  [Case:MyActionsTest=>testListener]开始扫描txt的资源元素...
+2013-07-31 09:38:00 INFO  [Case:MyActionsTest=>testListener]txt资源扫描结束
+2013-07-31 09:38:11 INFO  [Case:MyActionsTest=>testListener]扫描file类型的class文件...
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.base.test.BaseTest
+2013-07-31 09:38:11 INFO  [Case:MyActionsTest=>testListener]扫描file类型的class文件...
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.annotation.At
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.annotation.Browsers
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.annotation.Commit
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.annotation.FindBy
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.annotation.FrameLocator
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.annotation.InterceptorClass
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.annotation.Pict
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.annotation.Register
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.annotation.Retry
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.annotation.RunnerListener
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.annotation.RunnerRegister
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.annotation.ThreadRunner
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.annotation.Title
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.BaseBrowser
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$1
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$10$1
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$10
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$11$1
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$11
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$12$1
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$12
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$13$1
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$13
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$14$1
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$14
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$15$1
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$15
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$2
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$3
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$4
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$5
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$6
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$7$1
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$7
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$8$1
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$8
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$9$1
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser$9
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Browser
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Chrome
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Firefox
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.HtmlUnit
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.IBrowser
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.IE
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Opera
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.RemoteBrowser
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.browser.Safari
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.commons.StringUtils
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.Auto$1
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.Auto$2
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.Auto$Chrome
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.Auto$Firefox
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.Auto$HtmlUnit
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.Auto$Http
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.Auto$IE
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.Auto$Opera
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.Auto$PhantomJS
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.Auto$Safari
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.Auto
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.AutoResetThreadLocal
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.BrowserManager
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.ConfigParser
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.MyFile
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.PageManager
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.PhantomJSExecuter
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.PropertiesTool
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.SerializableObject
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.ThreadLocalRegistry$1
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.ThreadLocalRegistry
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.Wait$1
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.Wait$2
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.core.Wait
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.driver.STeaDriver$STeaChromeDriver
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.driver.STeaDriver$STeaFirefoxDriver
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.driver.STeaDriver$STeaHtmlUnitDriver
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.driver.STeaDriver$STeaIEDriver
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.driver.STeaDriver$STeaOperaDriver
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.driver.STeaDriver$STeaPhantomJSDriver
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.driver.STeaDriver$STeaRemoteWebDriver
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.driver.STeaDriver$STeaSafariDriver
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.driver.STeaDriver
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.AjaxElement
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.Button
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.CheckBox
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.Element
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.ElementManager
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.Form
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.FrameElement
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.IElement
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.Image
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.JSoupElement
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.Link
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.ListElements
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.Locator$1
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.Locator$2
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.Locator$3
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.Locator$4
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.Locator$5
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.Locator$6
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.Locator$7
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.Locator$8
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.Locator
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.RadioButton
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.RichTextField
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.Select
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.SelfConfigElement
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.Table
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.TempElement
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.TempElementLocator
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.element.TextField
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.exception.ConfigWrongException
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.exception.ContorlError
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.exception.MethodParameterNotMatchError
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.exception.NodeBrowserNotConnectException
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.exception.NotExistLocatorError
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.exception.NotFoundListenerException
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.exception.NotXMLFileException
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.exception.SameIDSourceError
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.exception.TestFailedError
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.intrumentation.ClassPathScanHandler$1
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.intrumentation.ClassPathScanHandler
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.intrumentation.ClassPool
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.listener.ActionListener
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.listener.RunnerListener
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.listener.WindowSourceListener
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.page.CurrentPage
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.page.DefaultFrame
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.page.DefaultSourcePage
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.page.Frame
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.page.ICurrentPage
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.page.IPage
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.page.JSTest
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.page.PageResponse
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.page.SourcePage
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.page.TypePage
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.pairwise.algorithm.FullCombinationAlgorithm
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.pairwise.AllPairList
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.pairwise.CombinationCreator
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.pairwise.core.Algorithm
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.pairwise.core.Combination
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.pairwise.core.CombinationList
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.pairwise.core.Generator
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.pairwise.core.Parameter
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.pairwise.core.ParameterList
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.pairwise.core.ParameterValuePair
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.pairwise.FullCombinationAlgorithm
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.pairwise.generator.ExcelParameters
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.pairwise.generator.LineParameters
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.pairwise.generator.Parameters
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.pairwise.generator.TestPairWise
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.pairwise.generator.TXTParameters
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.pairwise.Pair
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.pairwise.PairWiseAlgorithm
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.proxy.ActionListenerProxy$1
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.proxy.ActionListenerProxy
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.proxy.RunnerListenerProxy
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.report.IReport
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.report.Report
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.result.Result
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.result.ResultImpl
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.ChildRunner
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.ErrorReportingFrameworkMethod
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.Feed4JUnitConfig
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.Feed4JUnitGenerator
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.Feeder$1
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.Feeder
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.FrameworkMethodWithParameters
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.info.DefaultInfoProvider
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.info.OrdinalInfoProvider
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.JUnitBaseRunner$1
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.JUnitBaseRunner$NamedThreadFactory
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.JUnitBaseRunner
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.MyJUnitThreadRunner$1
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.MyJUnitThreadRunner$NamedThreadFactory
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.MyJUnitThreadRunner
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.MyJUnitThreadSuitRunner$1$1
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.MyJUnitThreadSuitRunner$1
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.MyJUnitThreadSuitRunner$2
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.MyJUnitThreadSuitRunner$NamedThreadFactory
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.MyJUnitThreadSuitRunner
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.PictToMethod
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.PlatformDescriptor
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.scheduler.DefaultFeedScheduler
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.scheduler.PlainParallelScheduler
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.scheduler.SerialScheduler
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.Scheduler
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.statement.Interceptor
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.statement.InterceptorStatement
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.statement.ThreadLocalResetInterceptor
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.TestInfoProvider
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runner.TestNGRunner
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runtime.RuntimeMethod$1
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.runtime.RuntimeMethod
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.sgap.SGAP
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.source.ElementInfo
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.source.FrameInfo
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.source.FrameInfoManager
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.source.PageInfo
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.source.Source
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.source.TempChainElement
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.source.txt.TXTSource
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.source.xml.ChildElementInfo
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.source.xml.DefaultXMLSource
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.source.xml.Dom4jTools
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.source.xml.XMLChainElement
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.source.xml.XMLSource
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.story.Steps
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.story.Story
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.window.WindowInfo
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.window.WindowsCollecter
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.window.WindowsCollectorListener
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.window.WindowsListener
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .com.github.lmm.window.WindowSource
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.anno.core.AnnotationTools
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.anno.InterceptorClass
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.anno.JUnitRunListener
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.anno.Register
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.base.AddToFileWrite
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.base.AutoBase$1
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.base.AutoBase
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.base.Configure
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.base.ConstValue
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.base.ElementBase
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.base.IJUnitBase
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.base.ITestNGBase
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.base.JUnitBase
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.base.MyFile
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.base.PageModel
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.base.PropertiesTool
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.base.SystemPlatform
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.base.TestNGBase
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.base.TestNGRemoteBase
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.data.testng.excel.FeedIterator
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.data.testng.excel.TestNGFeed
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.AutoDriver$Chrome$1
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.AutoDriver$Chrome
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.AutoDriver$Firefox$1
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.AutoDriver$Firefox
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.AutoDriver$HtmlUnit$1
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.AutoDriver$HtmlUnit
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.AutoDriver$IE$1
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.AutoDriver$IE
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.AutoDriver$PhantomJS$1
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.AutoDriver$PhantomJS
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.AutoDriver$RemoteChrome$1
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.AutoDriver$RemoteChrome
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.AutoDriver$RemoteFirefox$1
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.AutoDriver$RemoteFirefox
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.AutoDriver$RemoteHtmlUnit$1
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.AutoDriver$RemoteHtmlUnit
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.AutoDriver$RemoteIE$1
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.AutoDriver$RemoteIE
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.AutoDriver$RemoteSafari$1
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.AutoDriver$RemoteSafari
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.AutoDriver$Safari$1
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.AutoDriver$Safari
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.AutoDriver
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.Browser
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.FlashDriver$JavascriptNotSupported
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.FlashDriver
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.driver.IDriver
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.element.AjaxElement$1
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.element.AjaxElement$2
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.element.AjaxElement$3
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.element.AjaxElement
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.element.Button
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.element.CheckBox
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.element.ComoboBox
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.element.Image
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.element.Link
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.element.ListElement
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.element.Locator
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.element.RadioButton
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.element.RichTextField
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.element.SElement
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.element.Table
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.element.TextField
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.exception.MyAutoException
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.exception.MyElementNotFoundException
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.exception.NoSuchIDElementException
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.exception.NotFoundListenerException
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.exception.NotFoundLoadSourceException
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.exception.SameIDNameException
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.fit.DSLAdapter$CommandRow
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.fit.DSLAdapter$InvalidParamSequence
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.fit.DSLAdapter
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.fit.InterfaceFixture
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.fit.STActionFixture
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.fit.STeaFixture$RowEntry
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.fit.STeaFixture
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.json.CDL
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.json.Cookie
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.json.CookieList
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.json.HTTP
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.json.HTTPTokener
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.json.JSONArray
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.json.JSONException
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.json.JSONML
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.json.JSONObject$Null
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.json.JSONObject
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.json.JSONString
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.json.JSONStringer
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.json.JSONTokener
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.json.JSONWriter
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.json.None
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.json.XML
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.json.XMLTokener
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.load.Source
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.load.SourceLoader$1
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.load.SourceLoader
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.log.Log
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.log.MyLogger
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.mail.date.SimpleDate
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.mail.MailSenderInfo
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.mail.SimpleAuthenticator
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.mail.SimpleMailSender
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.page.Page
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.page.source.CurrentPage
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.page.source.HttpHeader
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.page.source.HttpHeaders
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.page.source.HttpHtml
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.page.source.HttpMethod
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.page.source.PageHtml
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.page.source.Response
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.proxy.AutoDriverEventListener
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.proxy.AutoRunnerListener
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.proxy.JUnitRunnerInterceptorListener
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.proxy.ProxyJUnitRunListener
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.proxy.ProxyRunnerListener$1
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.proxy.ProxyRunnerListener
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.proxy.RunnerListener
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.robot.key.BaseKeyWords
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.robot.key.PageWordkeys
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.robot.key.SElementWordkeys
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.robot.key.STeaKeywords
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.robot.key.WindowKeywords
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.robot.run.AutoKeyWordRunner
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.server.IOUtil$1
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.server.IOUtil$2
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.server.IOUtil
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.server.NodeServer
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.server.RemoteServer$1
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.server.RemoteServer
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.server.SSH2RemoteShell$1
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.server.SSH2RemoteShell$MyUserInfo
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.server.SSH2RemoteShell$SimpleUserInfo
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.server.SSH2RemoteShell
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.server.TelnetRemoteShell
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.text.read.Block
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.text.read.ChainLink
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.text.read.ReadFromFile
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.text.read.StringBlock
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.text.read.StringContorl
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.text.read.StringFrameBlock
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.text.read.TXTFormat
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.text.read.TxtLoader
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.text.read.TxtProvider
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.text.read.TxtScaner
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.verify.Assert
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.verify.Verify
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.window.Window
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.xml.XMLChildElement
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.xml.XMLDocument
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.xml.XMLElement
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.xml.XMLElements
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.xml.XMLFrame
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.xml.XMLLoader
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.xml.XMLNode
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.xml.XmlProvider
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.xml.XMLScaner
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.xml.XmlToJavaTools
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.auto.xml.XMLToWebElement
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.example.ActionTest
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.example.FirefoxGet
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.example.FirefoxOpen
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.example.FirefoxSteaOpen
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.example.FirstCase
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.example.Hello
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.example.HtmlUnit
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.example.ListenerExample
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.example.LocatorTest
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.example.MaxWindow
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.example.MyActionListener
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.example.MyActionsTest
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.example.Parameters
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.example.PhantomJSOpen
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.example.RunListenerExample
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.sky.example.WindowTest
+2013-07-31 09:38:11 INFO  [Case:MyActionsTest=>testListener]扫描file类型的class文件...
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit4.runner.FailuresFirstSorter
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit4.runner.JUnit4Identifier
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit4.runner.JUnit4TestClassReference
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit4.runner.JUnit4TestListener$IgnoredTestIdentifier
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit4.runner.JUnit4TestListener
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit4.runner.JUnit4TestLoader
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit4.runner.JUnit4TestMethodReference
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference$1
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference
+2013-07-31 09:38:11 INFO  [Case:MyActionsTest=>testListener]扫描file类型的class文件...
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.AbstractTestLoader
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.CustomHashtable$EmptyEnumerator
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.CustomHashtable$HashEnumerator
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.CustomHashtable$HashMapEntry
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.CustomHashtable
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.DefaultClassifier
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.FailedComparison
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.FailuresFirstPrioritizer
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.FirstRunExecutionListener
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.IClassifiesThrowables
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.IElementComparer
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.IListensToTestExecutions
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.IStopListener
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.ITestIdentifier
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.ITestLoader
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.ITestPrioritizer
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.ITestReference
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.ITestRunner
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.IVisitsTestTrees
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.junit3.JUnit3Identifier
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.junit3.JUnit3Listener
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestLoader$1
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestLoader
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference$1
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.junit3.JUnit3TestReference
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.JUnitMessages
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.MessageIds
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.MessageSender
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.NullPrioritizer
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.RemoteTestRunner$ReaderThread
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.RemoteTestRunner$RerunRequest
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.RemoteTestRunner
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.RerunExecutionListener
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.TestExecution
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.TestIdMap
+2013-07-31 09:38:11 ERROR Class.forName ERROR:java.lang.ClassNotFoundException: .org.eclipse.jdt.internal.junit.runner.TestReferenceFailure
+2013-07-31 09:38:11 INFO  [Case:MyActionsTest=>testListener]开始扫描动作监听器......
+2013-07-31 09:38:11 INFO  [Case:MyActionsTest=>testListener]扫描动作监听器结束
+2013-07-31 09:38:15 INFO  [Case:MyActionsTest=>testListener]使用浏览器Firefox进行自动化测试，将要打开网址http://www.baidu.com测试
+2013-07-31 09:38:15 INFO  [Case:MyActionsTest=>testListener]>>[Element]输入值[北京]成功！
+2013-07-31 09:38:16 INFO  [Case:MyActionsTest=>testListener]>>[Element]点击成功！
+2013-07-31 09:38:19 INFO  [Case:MyActionsTest=>testListener]关闭了所有的浏览器！
+2013-07-31 09:38:19 INFO  [Case:MyActionsTest=>testListener]*******************测试用例[testListener]执行结束****************
+2013-07-31 09:38:49 INFO  [Main]扫描file类型的class文件...
+2013-07-31 09:38:49 INFO  [Main]扫描file类型的class文件...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:38:50 INFO  [Main]扫描file类型的class文件...
+2013-07-31 09:38:50 INFO  [Main]扫描file类型的class文件...
+2013-07-31 09:38:50 INFO  扫描到了动作级别的监听器org.sky.example.MyActionListener
+2013-07-31 09:38:50 INFO  扫描到了动作级别的监听器org.sky.example.ListenerExample
+2013-07-31 09:38:50 INFO  [Case:Method=>testListener]*******************测试用例[testListener]开始执行*****************
+2013-07-31 09:38:50 INFO  [Case:MyActionsTest=>testListener]开始对xml资源进行扫描....
+2013-07-31 09:38:50 INFO  [Case:MyActionsTest=>testListener]扫描收集了资源->百度首页-搜索框
+2013-07-31 09:38:50 INFO  [Case:MyActionsTest=>testListener]扫描收集了资源->百度首页-搜索按钮
+2013-07-31 09:38:50 INFO  [Case:MyActionsTest=>testListener]扫描收集了资源->
+2013-07-31 09:38:50 INFO  [Case:MyActionsTest=>testListener]扫描XML资源完毕...
+2013-07-31 09:38:50 INFO  [Case:MyActionsTest=>testListener]开始扫描txt的资源元素...
+2013-07-31 09:38:50 INFO  [Case:MyActionsTest=>testListener]txt资源扫描结束
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描file类型的class文件...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描file类型的class文件...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描jar文件中的类...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描file类型的class文件...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描file类型的class文件...
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]开始扫描动作监听器......
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描到了动作监听器：org.sky.example.MyActionListener
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描到了动作监听器：org.sky.example.ListenerExample
+2013-07-31 09:38:59 INFO  [Case:MyActionsTest=>testListener]扫描动作监听器结束
+2013-07-31 09:39:04 INFO  [Case:MyActionsTest=>testListener]使用浏览器Firefox进行自动化测试，将要打开网址http://www.baidu.com测试
+2013-07-31 09:39:04 INFO  [Case:MyActionsTest=>testListener]>>[Element]输入值[北京]成功！
+2013-07-31 09:39:06 INFO  [Case:MyActionsTest=>testListener]>>[Element]点击成功！
+2013-07-31 09:39:09 INFO  [Case:MyActionsTest=>testListener]关闭了所有的浏览器！
+2013-07-31 09:39:09 INFO  [Case:MyActionsTest=>testListener]*******************测试用例[testListener]执行结束****************
+2013-07-31 09:43:09 INFO  [Main]扫描file类型的class文件...
+2013-07-31 09:43:09 INFO  [Main]扫描file类型的class文件...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描jar文件中的类...
+2013-07-31 09:43:10 INFO  [Main]扫描file类型的class文件...
+2013-07-31 09:43:10 INFO  [Main]扫描file类型的class文件...
+2013-07-31 09:43:10 INFO  扫描到了动作级别的监听器org.sky.example.MyActionListener
+2013-07-31 09:43:10 INFO  扫描到了动作级别的监听器org.sky.example.ListenerExample
+2013-07-31 09:43:10 INFO  [Case:Method=>testListener]*******************测试用例[testListener]开始执行*****************
+2013-07-31 09:43:10 INFO  [Case:MyActionsTest=>testListener]开始对xml资源进行扫描....
+2013-07-31 09:43:10 INFO  [Case:MyActionsTest=>testListener]扫描收集了资源->百度首页-搜索框
+2013-07-31 09:43:10 INFO  [Case:MyActionsTest=>testListener]扫描收集了资源->百度首页-搜索按钮
+2013-07-31 09:43:10 INFO  [Case:MyActionsTest=>testListener]扫描收集了资源->
+2013-07-31 09:43:10 INFO  [Case:MyActionsTest=>testListener]扫描XML资源完毕...
+2013-07-31 09:43:10 INFO  [Case:MyActionsTest=>testListener]开始扫描txt的资源元素...
+2013-07-31 09:43:10 INFO  [Case:MyActionsTest=>testListener]txt资源扫描结束
+2013-07-31 09:43:33 INFO  [Case:MyActionsTest=>testListener]使用浏览器Firefox进行自动化测试，将要打开网址http://www.baidu.com测试
+2013-07-31 09:43:34 INFO  [Case:MyActionsTest=>testListener]>>[Element]输入值[北京]成功！
+2013-07-31 09:43:35 INFO  [Case:MyActionsTest=>testListener]>>[Element]点击成功！
+2013-07-31 09:43:38 INFO  [Case:MyActionsTest=>testListener]关闭了所有的浏览器！
+2013-07-31 09:43:38 INFO  [Case:MyActionsTest=>testListener]*******************测试用例[testListener]执行结束****************
+2013-07-31 09:54:12 INFO  [Main]扫描file类型的class文件...
+2013-07-31 09:54:12 INFO  [Main]扫描file类型的class文件...
+2013-07-31 09:54:12 INFO  扫描到了动作级别的监听器org.sky.example.MyActionListener
+2013-07-31 09:54:12 INFO  扫描到了动作级别的监听器org.sky.example.ListenerExample
+2013-07-31 09:54:12 INFO  [Case:Method=>testListener]*******************测试用例[testListener]开始执行*****************
+2013-07-31 09:54:12 INFO  [Case:MyActionsTest=>testListener]开始对xml资源进行扫描....
+2013-07-31 09:54:12 INFO  [Case:MyActionsTest=>testListener]扫描收集了资源->百度首页-搜索框
+2013-07-31 09:54:12 INFO  [Case:MyActionsTest=>testListener]扫描收集了资源->百度首页-搜索按钮
+2013-07-31 09:54:12 INFO  [Case:MyActionsTest=>testListener]扫描收集了资源->
+2013-07-31 09:54:12 INFO  [Case:MyActionsTest=>testListener]扫描XML资源完毕...
+2013-07-31 09:54:12 INFO  [Case:MyActionsTest=>testListener]开始扫描txt的资源元素...
+2013-07-31 09:54:12 INFO  [Case:MyActionsTest=>testListener]txt资源扫描结束
+2013-07-31 09:54:30 INFO  [Case:MyActionsTest=>testListener]使用浏览器Firefox进行自动化测试，将要打开网址http://www.baidu.com测试
+2013-07-31 09:54:30 INFO  [Case:MyActionsTest=>testListener]>>[Element]输入值[北京]成功！
+2013-07-31 09:54:31 INFO  [Case:MyActionsTest=>testListener]>>[Element]点击成功！
+2013-07-31 09:54:34 INFO  [Case:MyActionsTest=>testListener]关闭了所有的浏览器！
+2013-07-31 09:54:34 INFO  [Case:MyActionsTest=>testListener]*******************测试用例[testListener]执行结束****************
+2013-07-31 09:59:07 INFO  [Main]扫描file类型的class文件...
+2013-07-31 09:59:07 INFO  [Main]扫描file类型的class文件...
+2013-07-31 09:59:08 INFO  扫描到了动作级别的监听器org.sky.example.ListenerExample
+2013-07-31 09:59:08 INFO  扫描到了动作级别的监听器org.sky.example.MyActionListener
+2013-07-31 09:59:08 INFO  [Case:MyActionsTest=>testListener]*******************测试用例[testListener]开始执行*****************
+2013-07-31 09:59:08 INFO  [Case:MyActionsTest=>testListener]开始对xml资源进行扫描....
+2013-07-31 09:59:08 INFO  [Case:MyActionsTest=>testListener]扫描收集了资源->百度首页-搜索框
+2013-07-31 09:59:08 INFO  [Case:MyActionsTest=>testListener]扫描收集了资源->百度首页-搜索按钮
+2013-07-31 09:59:08 INFO  [Case:MyActionsTest=>testListener]扫描收集了资源->
+2013-07-31 09:59:08 INFO  [Case:MyActionsTest=>testListener]扫描XML资源完毕...
+2013-07-31 09:59:08 INFO  [Case:MyActionsTest=>testListener]开始扫描txt的资源元素...
+2013-07-31 09:59:08 INFO  [Case:MyActionsTest=>testListener]txt资源扫描结束
+2013-07-31 09:59:26 INFO  [Case:MyActionsTest=>testListener]使用浏览器Firefox进行自动化测试，将要打开网址http://www.baidu.com测试
+2013-07-31 09:59:26 INFO  [Case:MyActionsTest=>testListener]>>[Element]输入值[北京]成功！
+2013-07-31 09:59:27 INFO  [Case:MyActionsTest=>testListener]>>[Element]点击成功！
+2013-07-31 09:59:27 INFO  [Case:MyActionsTest=>testListener]关闭了所有的浏览器！
+2013-07-31 09:59:27 INFO  [Case:MyActionsTest=>testListener]*******************测试用例[testListener]执行结束****************

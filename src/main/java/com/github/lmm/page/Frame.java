@@ -3,6 +3,7 @@ package com.github.lmm.page;
 import com.github.lmm.annotation.Commit;
 import com.github.lmm.annotation.FindBy;
 import com.github.lmm.annotation.FrameLocator;
+import com.github.lmm.core.SerializableObject;
 import com.github.lmm.element.*;
 import com.github.lmm.source.ElementInfo;
 import com.github.lmm.source.TempChainElement;
@@ -12,6 +13,8 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+
+import java.io.IOException;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
@@ -93,9 +96,9 @@ public abstract class Frame{
         fieldAnnotationsTools();
     }
 
-    public Frame(ICurrentPage  page,Integer frameindex){
-        this.page=page;
-        this.pageCurrentWindow=page.getCurrentWindow();
+    public Frame(ICurrentPage  ipage,int frameindex){
+    	this.page=ipage;
+        this.pageCurrentWindow=this.page.getCurrentWindow();
         this.currentFrame=this.pageCurrentWindow.switchTo().frame(frameindex);
         this.elementManager=page.getElementManager();
         if(this.getClass().isAnnotationPresent(Commit.class)){

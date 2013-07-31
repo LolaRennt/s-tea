@@ -1,6 +1,5 @@
 package org.sky.example;
 
-import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -122,10 +121,10 @@ public class ActionTest {
 	}
 	
 	
-	@Test
+	//@Test
 	public void stea3FrameTest(){
 		Auto.require("firefox");
-		Auto.open("http://lesson.ibiubiu.org");
+		Auto.open("http://localhost:3000");
 		Auto.currentpage().element(By.xpath(".//*[@id='nav-left']/li[4]/a")).click();
 		AutoBase.sleep(4);
 		Auto.currentpage().frame(0).element(By.id("case-button")).click();

@@ -2,10 +2,11 @@ package org.sky.example;
 
 import org.junit.runner.notification.Failure;
 import org.junit.runner.notification.RunListener;
-import org.sky.auto.anno.RunListenerRegister;
+import com.github.lmm.annotation.RunnerRegister;
+
 
 /**通过注解就能够注册到运行器监听器*/
-@RunListenerRegister
+@RunnerRegister
 public class RunListenerExample  extends RunListener{
 	@Override
 	public void testFailure(Failure failure) throws Exception {

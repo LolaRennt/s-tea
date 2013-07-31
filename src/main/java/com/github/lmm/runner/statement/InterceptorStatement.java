@@ -27,7 +27,7 @@ public class InterceptorStatement extends Statement{
 
 	@Override
 	public void evaluate() throws Throwable {
-        String className=testMethod.getMethod().getClass().getName();
+        String className=testMethod.getMethod().getDeclaringClass().getName();
         String name="Case:"+className.substring(className.lastIndexOf(".")+1, className.length())+"=>"+testMethod.getName();
         com.github.lmm.runtime.RuntimeMethod.setName(name);
         for(Interceptor interceptor:interceptors){
@@ -43,7 +43,7 @@ public class InterceptorStatement extends Statement{
         }else{
             this.times=0;
         }
-		logger.info("["+ com.github.lmm.runtime.RuntimeMethod.getName()+"]*******************测试用例["+testMethod.getName()+"]开始执行*****************");
+		logger.info("["+ com.github.lmm.runtime.RuntimeMethod.getName()+"]*******************测试用例["+this.testMethod.getName()+"]开始执行*****************");
 
         if(testMethod.getMethod().isAnnotationPresent(Browsers.class)){
             Browsers browsers=testMethod.getMethod().getAnnotation(Browsers.class);

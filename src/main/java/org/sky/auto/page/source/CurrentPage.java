@@ -21,25 +21,19 @@ public class CurrentPage extends Page{
 	private String title;
 	private List<String> jsSrc;
 	private List<String> cssHref;
-	static private CurrentPage cp;
-	protected CurrentPage(){
+	public CurrentPage(){
 		currentpage = AutoBase.driver();
 		this.url=currentpage.getCurrentUrl();
-		content=new PageHtml(this.url);
+		if(this.url==null){
+			content=new PageHtml(this.url);
+			jsSrc=content.getJavaScriptURL();
+			cssHref=content.getCssLink();
+		}
 		//response =new Response(this.url);
 		this.title=currentpage.getTitle();
-		jsSrc=content.getJavaScriptURL();
-		cssHref=content.getCssLink();
+		
 	}
 	
-	public static CurrentPage getInstance(){
-		if(currentpage==null||currentpage!=AutoBase.driver()){
-			cp= new CurrentPage();
-			return cp;
-		}else{
-			return cp;
-		}
-	}
 	/**返回当前页的url*/
 	public String getCurrentUrl(){
 		return url;
@@ -144,10 +138,11 @@ public class CurrentPage extends Page{
 	}
 	
 	public void assertTitle(String title){
-		if(getTitle().equalsIgnoreCase(title)){
+		if(getTitle().equals(title)){
 			logger.info("["+RuntimeMethod.getName()+"]"+"当前页面的title值校验成功！");
 		}else{
 			logger.error("["+RuntimeMethod.getName()+"]"+"当前页面的title值校验失败！");
+			Assert.fail();
 		}
 	}
 	/**在当前页打开*/

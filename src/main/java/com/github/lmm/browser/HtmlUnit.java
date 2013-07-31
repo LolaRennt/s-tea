@@ -1,8 +1,6 @@
 package com.github.lmm.browser;
 
-import com.gargoylesoftware.htmlunit.BrowserVersion;
 
-import java.net.URL;
 
 /**
  * Created with IntelliJ IDEA.
@@ -12,8 +10,10 @@ import java.net.URL;
  * To change this template use File | Settings | File Templates.
  */
 public class HtmlUnit extends BaseBrowser {
-    private BrowserVersion version;
-    private URL url;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
     public HtmlUnit(){
         super(Browser.HTMLUNIT);
     }

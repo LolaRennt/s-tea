@@ -1,6 +1,8 @@
 package org.sky.auto.element;
 
 import org.apache.log4j.Logger;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
@@ -15,6 +17,7 @@ import org.sky.auto.proxy.ProxyRunnerListener;
 //import org.sky.auto.log.MyLogger;
 import org.sky.auto.window.Window;
 
+import com.github.lmm.element.JSoupElement;
 import com.github.lmm.runtime.RuntimeMethod;
 /**这个Element类是一个辅助操作的类，可以混用的一个类型，里面定义了常用的元素方法，这样的话可以节约自己封装了<br>
  * 这个element类不支持HtmlUnit的元素定义
@@ -608,5 +611,20 @@ public class SElement{
 	public void clickAndHold(){
 		AutoBase.clickAndHold(this);
 	}
+	
+	public SElement node(String selector){
+		Document doc = Jsoup.parse(AutoBase.driver().getPageSource());
+		JSoupElement je = new JSoupElement(doc.select(selector).first());
+		this.element=AutoBase.driver().findElement(By.xpath(je.toXpath()));
+		return this;
+	}
+	
+	public SElement node(String selector,int index){
+		Document doc = Jsoup.parse(AutoBase.driver().getPageSource());
+		JSoupElement je = new JSoupElement(doc.select(selector).get(index));
+		this.element=AutoBase.driver().findElement(By.xpath(je.toXpath()));
+		return this;
+	}
+	
 	
 }

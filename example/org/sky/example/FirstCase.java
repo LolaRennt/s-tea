@@ -3,10 +3,10 @@ package org.sky.example;
 import org.databene.benerator.anno.Source;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.sky.auto.anno.ThreadRunner;
 import org.sky.auto.base.AutoBase;
 import org.sky.auto.driver.Browser;
 
+import com.github.lmm.annotation.ThreadRunner;
 import com.github.lmm.runner.JUnitBaseRunner;
 
 /**一个简单的例子，里面有元素的定义方式*/

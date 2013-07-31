@@ -1,0 +1,62 @@
+2013-07-18 13:59:49 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
+2013-07-18 13:59:58 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
+2013-07-18 13:59:58 INFO  [Main]添加了新的窗口信息->Selenium WebDriver入门教程-Heroku | Welcome Here
+2013-07-18 13:59:58 INFO  [Main]当前初始化页面信息：URL--->http://lesson.ibiubiu.org/
+2013-07-18 13:59:58 INFO  [Main]当前初始化页面信息：Title--->Selenium WebDriver入门教程-Heroku | Welcome Here
+2013-07-18 13:59:58 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
+2013-07-18 14:00:00 INFO  [Main][By.xpath: .//*[@id='nav-left']/li[4]/a]点击操作成功
+2013-07-18 14:01:21 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
+2013-07-18 14:02:22 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
+2013-07-18 14:02:22 INFO  [Main]添加了新的窗口信息->Selenium WebDriver入门教程-Heroku | Welcome Here
+2013-07-18 14:02:22 INFO  [Main]当前初始化页面信息：URL--->http://lesson.ibiubiu.org/
+2013-07-18 14:02:22 INFO  [Main]当前初始化页面信息：Title--->Selenium WebDriver入门教程-Heroku | Welcome Here
+2013-07-18 14:02:22 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
+2013-07-18 14:02:23 INFO  [Main][By.xpath: .//*[@id='nav-left']/li[4]/a]点击操作成功
+2013-07-18 14:16:13 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
+2013-07-18 14:16:23 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
+2013-07-18 14:16:23 INFO  [Main]添加了新的窗口信息->百度一下，你就知道
+2013-07-18 14:16:23 INFO  [Main]当前初始化页面信息：URL--->http://www.baidu.com/
+2013-07-18 14:16:23 INFO  [Main]当前初始化页面信息：Title--->百度一下，你就知道
+2013-07-18 14:16:23 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
+2013-07-18 14:21:16 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
+2013-07-18 14:21:27 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
+2013-07-18 14:21:27 INFO  [Main]添加了新的窗口信息->百度一下，你就知道
+2013-07-18 14:21:27 INFO  [Main]当前初始化页面信息：URL--->http://www.baidu.com/
+2013-07-18 14:21:27 INFO  [Main]当前初始化页面信息：Title--->百度一下，你就知道
+2013-07-18 14:21:27 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
+2013-07-18 16:18:47 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
+2013-07-18 16:19:52 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
+2013-07-18 16:19:52 INFO  [Main]添加了新的窗口信息->New Tab
+2013-07-18 16:19:52 INFO  [Main]当前初始化页面信息：URL--->about:newtab
+2013-07-18 16:19:52 INFO  [Main]当前初始化页面信息：Title--->New Tab
+2013-07-18 16:19:52 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
+2013-07-18 16:19:52 INFO  解析frame元素消费了-->0毫秒,每次打印的时间意味着此方法访问了一次frame，在此过程中会通过递归的方式来进行查找元素，消费的总时间应该是所有的消费时间的总和。此日志的记录是为了防止因为访问frame性能影响脚本运行
+2013-07-18 16:21:56 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
+2013-07-18 16:22:04 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
+2013-07-18 16:22:04 INFO  [Main]添加了新的窗口信息->IBIUBIU-Selenium WebDriver入门教程
+2013-07-18 16:22:04 INFO  [Main]当前初始化页面信息：URL--->http://localhost:3000/
+2013-07-18 16:22:04 INFO  [Main]当前初始化页面信息：Title--->IBIUBIU-Selenium WebDriver入门教程
+2013-07-18 16:22:04 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
+2013-07-18 16:22:05 INFO  [Main][By.xpath: .//*[@id='nav-left']/li[4]/a]点击操作成功
+2013-07-18 16:46:03 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
+2013-07-18 16:46:06 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
+2013-07-18 16:46:06 INFO  [Main]添加了新的窗口信息->IBIUBIU-Selenium WebDriver入门教程
+2013-07-18 16:46:06 INFO  [Main]当前初始化页面信息：URL--->http://localhost:3000/
+2013-07-18 16:46:06 INFO  [Main]当前初始化页面信息：Title--->IBIUBIU-Selenium WebDriver入门教程
+2013-07-18 16:46:06 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
+2013-07-18 16:46:06 INFO  [Main][By.xpath: .//*[@id='nav-left']/li[4]/a]点击操作成功
+2013-07-18 16:46:11 INFO  [Main][FrameElement]点击操作成功
+2013-07-18 16:46:12 INFO  [Main]当前页面发生了变化，切换到了新的页面--->IBIUBIU-Selenium WebDriver入门教程
+2013-07-18 16:46:12 INFO  [Main][FrameElement]点击操作成功
+2013-07-18 16:46:13 INFO  [Main]关闭了浏览器
+2013-07-18 17:54:21 INFO  [Main]初始化了浏览器FIREFOX来进行自动化测试
+2013-07-18 17:54:33 INFO  [Main]窗口的句柄数增多，进行句柄收集操作
+2013-07-18 17:54:35 INFO  [Main]添加了新的窗口信息->IBIUBIU-Selenium WebDriver入门教程
+2013-07-18 17:54:37 INFO  [Main]当前初始化页面信息：URL--->http://localhost:3000/
+2013-07-18 17:54:37 INFO  [Main]当前初始化页面信息：Title--->IBIUBIU-Selenium WebDriver入门教程
+2013-07-18 17:54:37 INFO  [Main]当前初始化页面信息：窗口句柄数--->1
+2013-07-18 17:54:40 INFO  [Main][By.xpath: .//*[@id='nav-left']/li[4]/a]点击操作成功
+2013-07-18 17:54:47 INFO  [Main][FrameElement]点击操作成功
+2013-07-18 17:54:48 INFO  [Main]当前页面发生了变化，切换到了新的页面--->IBIUBIU-Selenium WebDriver入门教程
+2013-07-18 17:54:48 INFO  [Main][FrameElement]点击操作成功
+2013-07-18 17:54:51 INFO  [Main]关闭了浏览器

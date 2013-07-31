@@ -9,6 +9,7 @@ import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 
+import java.io.Serializable;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 import java.util.Map;
@@ -21,13 +22,15 @@ import java.util.Set;
  * Time: 上午10:56
  * To change this template use File | Settings | File Templates.
  */
-public class CurrentPage implements ICurrentPage,Cloneable{
-    private ElementManager elementManager;
+public class CurrentPage implements ICurrentPage,Serializable{
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 9087041756229368602L;
+	protected ElementManager elementManager;
     private Logger logger = Logger.getLogger(CurrentPage.class);
-    private String url;
-    private String title;
-    private static Object currentpage;
-    private String name;
+    protected static Object currentpage;
+    protected String name;
     public WebDriver getCurrentwindow() {
         return this.browser.getCurrentBrowserDriver();
     }
@@ -36,9 +39,10 @@ public class CurrentPage implements ICurrentPage,Cloneable{
         return browser;
     }
 
-    private IBrowser browser;
+    protected IBrowser browser;
     public CurrentPage(IBrowser browser){
         this.name= com.github.lmm.runtime.RuntimeMethod.getName();
+        browser.getCurrentBrowserDriver().switchTo().defaultContent();
         this.browser=browser;
         elementManager=new ElementManager();
         this.elementManager.addElements(this.browser.getElementManager());

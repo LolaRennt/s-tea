@@ -5,6 +5,7 @@ import java.util.Iterator;
 import java.util.Set;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebElement;
 import org.sky.auto.base.AutoBase;
@@ -53,6 +54,9 @@ public class Page{
 		return AutoBase.sElement();
 	}
 	
+	public SElement sElement(By by){
+		return AutoBase.sElement(by);
+	}
 	public SElement currentElement(){
 		return AutoBase.currentElement();
 	}

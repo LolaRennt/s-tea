@@ -82,11 +82,15 @@
   	  <artifactId>selenium-server</artifactId>
   	  <version>2.33.0</version>
 	</dependency>
+	<dependency>
+          <groupId>org.databene</groupId>
+          <artifactId>databene-commons</artifactId>
+          <version>0.5.16</version>
+      </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.11</version>
-      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>dom4j</groupId>
@@ -128,16 +132,6 @@
         <groupId>org.powermock</groupId>
         <artifactId>powermock-module-junit4</artifactId>
         <version>1.5</version>
-    </dependency>
-    <dependency>
-      <groupId>org.jbehave</groupId>
-      <artifactId>jbehave-core</artifactId>
-      <version>3.7.5</version>
-    </dependency>
-    <dependency>
-      <groupId>org.jbehave.web</groupId>
-      <artifactId>jbehave-web-selenium</artifactId>
-      <version>3.5.5</version>
     </dependency>
     <dependency>
       <groupId>org.robotframework</groupId>
@@ -281,7 +275,7 @@
           	<locales>zh_CN</locales>
         	</configuration>
       </plugin>
-      <plugin>
+      <!-- plugin>
     		<groupId>org.apache.maven.plugins</groupId>
     		<artifactId>maven-gpg-plugin</artifactId>
     		<version>1.4</version>
@@ -294,7 +288,7 @@
 	    	</goals>
 			</execution>
     		</executions>
-		</plugin>
+		</plugin-->
   	</plugins>
   	<defaultGoal>compile</defaultGoal>
   </build>

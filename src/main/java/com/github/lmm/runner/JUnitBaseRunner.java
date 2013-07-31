@@ -12,6 +12,8 @@ import org.apache.log4j.Logger;
 import org.junit.runners.model.FrameworkMethod;
 import org.junit.runners.model.RunnerScheduler;
 import org.junit.runners.model.Statement;
+import org.sky.auto.proxy.ProxyRunnerListener;
+
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Set;
@@ -107,8 +109,15 @@ public class JUnitBaseRunner extends Feeder{
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
+            }else if(clazz.isAnnotationPresent(org.sky.auto.anno.Register.class)){
+            	try{
+            		ProxyRunnerListener.register(clazz);
+            		logger.info("扫描到了动作级别的监听器"+clazz.getName());
+            	}catch(Exception e){
+            		e.printStackTrace();
+            	}
             }
-            if(clazz.isAnnotationPresent(RunnerListener.class)){
+            if(clazz.isAnnotationPresent(RunnerRegister.class)){
                 try {
                     RunnerListenerProxy.register((RunListener)clazz.newInstance());
                 } catch (InstantiationException e) {

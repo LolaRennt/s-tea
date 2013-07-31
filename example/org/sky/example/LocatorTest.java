@@ -188,7 +188,7 @@ public class LocatorTest {
 		Auto.closeAllWindows();
 	}
 	
-	//@Test
+	@Test
 	public void css() throws InterruptedException{
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().window().maximize();
@@ -238,7 +238,7 @@ public class LocatorTest {
 		AutoBase.sleep(3);
 		AutoBase.closeAllWindow();
 	}
-	@Test
+	//@Test
 	public void stea3link(){
 		Auto.require("firefox");
 		Auto.open("http://localhost:3000/action");

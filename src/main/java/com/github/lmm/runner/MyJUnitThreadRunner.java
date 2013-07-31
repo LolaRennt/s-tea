@@ -13,7 +13,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 import org.junit.runners.BlockJUnit4ClassRunner;
 import org.junit.runners.model.InitializationError;
 import org.junit.runners.model.RunnerScheduler;
-import org.sky.auto.anno.ThreadRunner;
+
+import com.github.lmm.annotation.ThreadRunner;
 
 
 public class MyJUnitThreadRunner extends BlockJUnit4ClassRunner{

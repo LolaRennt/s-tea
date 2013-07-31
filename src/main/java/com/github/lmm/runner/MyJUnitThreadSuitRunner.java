@@ -8,7 +8,8 @@ import org.junit.runners.Suite;
 import org.junit.runners.model.InitializationError;
 import org.junit.runners.model.RunnerBuilder;
 import org.junit.runners.model.RunnerScheduler;
-import org.sky.auto.anno.ThreadRunner;
+
+import com.github.lmm.annotation.ThreadRunner;
 
 import java.util.Arrays;
 import java.util.LinkedList;
