@@ -18,11 +18,11 @@ public class PhantomJSOpen {
 	}
 	
 	public void stea3open(){
-		Auto.require(Browser.PhantomJS);
+		Auto.require(Browser.PHANTOMJS);
 		Auto.closeAllWindows();
 	}
 	
-	@Browsers({Browser.PhantomJS})
+	@Browsers({Browser.PHANTOMJS})
 	public void stea3AtOpen(){
 		Auto.closeAllWindows();
 	}

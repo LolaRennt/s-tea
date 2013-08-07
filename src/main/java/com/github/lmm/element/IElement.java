@@ -15,6 +15,8 @@ public interface IElement {
     public IElement addLocator(Locator locator,String value);
     public IElement addLocator(By by,Integer index);
     public IElement addLocator(Locator locator,String value,Integer index);
+    public IElement addLocator(String cssSelector);
+    public IElement addLocator(String cssSelector,int index);
     public void click();
     public void doubleClick();
     public void keyDown(Keys key);
