@@ -27,7 +27,7 @@ import org.openqa.selenium.safari.SafariDriver;
  * To change this template use File | Settings | File Templates.
  */
 public enum Browser{
-    PhantomJS(){
+    PHANTOMJS(){
 		@Override
 		public PhantomJSDriver browser() {
             return new STeaDriver.STeaPhantomJSDriver(DesiredCapabilities.phantomjs());

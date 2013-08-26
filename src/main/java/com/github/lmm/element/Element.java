@@ -84,8 +84,8 @@ public class Element implements IElement {
         	Wait wait = new Wait(this.browser.getCurrentBrowserDriver());
         	this.locator=By.xpath(je.toXpath());
         	this.index=0;
-        	System.out.println(je.toXpath());
             this.element=wait.apply(this.locator,0);
+            this.id=cssSelector;
         }catch(Exception e){
         	throw new NoSuchElementException("没有找到该定位方式下的元素,请检查和修改定位方式！");
         }
@@ -128,9 +128,6 @@ public class Element implements IElement {
         actions=new Actions(this.browser.getCurrentBrowserDriver());
         commit="["+ RuntimeMethod.getName()+"]";
         this.id="Element";
-        this.frameElements=this.browser.getCurrentBrowserDriver().findElements(By.tagName("iframe"));
-        //System.out.println(frameElements.size());
-        this.frameElements.addAll(this.browser.getCurrentBrowserDriver().findElements(By.tagName("frame")));
         this.element=new RemoteWebElement();
     }
     @Override
@@ -304,10 +301,10 @@ public class Element implements IElement {
         ActionListenerProxy.getDispatcher().beforeSendkeys();
         if(isExist()){
             element.sendKeys(text);
-            logger.info(this.commit+"["+id+"]输入["+text+"]值操作成功");
+            logger.info(this.commit+"["+this.id+"]输入["+text+"]值操作成功");
 
         }else{
-            logger.error(this.commit+"["+id+"]元素查找失败，可能这个元素不存在，输入["+text+"]失败！");
+            logger.error(this.commit+"["+this.id+"]元素查找失败，可能这个元素不存在，输入["+text+"]失败！");
             throw new NoSuchElementException(this.commit+"["+id+"]元素查找失败，可能这个元素不存在，输入["+text+"]失败！");
         }
         ActionListenerProxy.getDispatcher().afterSendkeys();
@@ -738,6 +735,7 @@ public class Element implements IElement {
         }
         JSoupElement je = new JSoupElement(htmlelement);
         this.element=this.browser.getCurrentBrowserDriver().findElement(By.xpath(je.toXpath()));
+        this.id=cssSelector;
         return this;
     }
     public Element addLocator(String cssSelector,int index){
@@ -748,6 +746,7 @@ public class Element implements IElement {
         }
         JSoupElement je = new JSoupElement(htmlelement);
         this.element=this.browser.getCurrentBrowserDriver().findElement(By.xpath(je.toXpath()));
+        this.id=cssSelector;
         return this;
     }
     
@@ -767,6 +766,7 @@ public class Element implements IElement {
     	}
         JSoupElement jsoupelement = new JSoupElement(this.currentJSoupElement);
         Element newelement=new Element(this.browser);
+        newelement.setId(cssSelector);
         newelement.addLocator(By.xpath(jsoupelement.toXpath()));
         return newelement;
     }

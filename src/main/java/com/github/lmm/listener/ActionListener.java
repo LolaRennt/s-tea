@@ -104,4 +104,6 @@ public interface ActionListener {
     public void beforesubmit();
 
     public void aftersubmit();
+    
+    public void onRetryError();
 }

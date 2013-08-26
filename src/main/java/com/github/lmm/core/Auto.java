@@ -215,7 +215,7 @@ public class Auto {
     }
     public static class PhantomJS extends Auto{
         public static ICurrentPage open(String url){
-            require(Browser.PhantomJS);
+            require(Browser.PHANTOMJS);
             return Auto.open(url);
         }
     }
