@@ -2,7 +2,6 @@ package com.github.lmm.browser;
 
 import com.gargoylesoftware.htmlunit.BrowserVersion;
 import com.github.lmm.core.ConfigParser;
-import com.github.lmm.driver.STeaDriver;
 import com.github.lmm.exception.ConfigWrongException;
 import com.github.lmm.exception.NodeBrowserNotConnectException;
 import com.opera.core.systems.OperaDriver;
@@ -30,19 +29,19 @@ public enum Browser{
     PHANTOMJS(){
 		@Override
 		public PhantomJSDriver browser() {
-            return new STeaDriver.STeaPhantomJSDriver(DesiredCapabilities.phantomjs());
+            return new PhantomJSDriver(DesiredCapabilities.phantomjs());
         }
 
         @Override
 		public RemoteWebDriver browser(URL url) {
-            return new STeaDriver.STeaRemoteWebDriver(url,DesiredCapabilities.phantomjs());
+            return new RemoteWebDriver(url,DesiredCapabilities.phantomjs());
         }
 
 		@Override
 		public RemoteWebDriver remoteBrowser() {
 			if(ConfigParser.getPhantomJSNode()!=null&&ConfigParser.getPhantomJSNode()!=""){
 				try {
-					return new STeaDriver.STeaRemoteWebDriver(new URL(ConfigParser.getPhantomJSNode()),DesiredCapabilities.phantomjs());
+					return new RemoteWebDriver(new URL(ConfigParser.getPhantomJSNode()),DesiredCapabilities.phantomjs());
 				} catch (MalformedURLException e) {
 					throw new NodeBrowserNotConnectException("在连接远程浏览器的时候出现了错误！", e);
 				}
@@ -53,15 +52,15 @@ public enum Browser{
     },
     IE(){
         public InternetExplorerDriver browser(){
-            return new STeaDriver.STeaIEDriver();
+            return new InternetExplorerDriver();
         }
         public RemoteWebDriver browser(URL url){
-            return new STeaDriver.STeaRemoteWebDriver(url,DesiredCapabilities.internetExplorer());
+            return new RemoteWebDriver(url,DesiredCapabilities.internetExplorer());
         }
         public RemoteWebDriver remoteBrowser() {
 			if(ConfigParser.getIENode()!=null&&ConfigParser.getIENode()!=""){
 				try {
-					return new STeaDriver.STeaRemoteWebDriver(new URL(ConfigParser.getIENode()),DesiredCapabilities.internetExplorer());
+					return new RemoteWebDriver(new URL(ConfigParser.getIENode()),DesiredCapabilities.internetExplorer());
 				} catch (MalformedURLException e) {
 					throw new NodeBrowserNotConnectException("在连接远程浏览器的时候出现了错误！", e);
 				}
@@ -72,15 +71,15 @@ public enum Browser{
     },
     FIREFOX(){
         public FirefoxDriver browser(){
-              return new STeaDriver.STeaFirefoxDriver();
+              return new FirefoxDriver();
           }
         public RemoteWebDriver browser(URL url){
-            return new STeaDriver.STeaRemoteWebDriver(url,DesiredCapabilities.firefox());
+            return new RemoteWebDriver(url,DesiredCapabilities.firefox());
         }
         public RemoteWebDriver remoteBrowser() {
 			if(ConfigParser.getFirefoxNode()!=null&&ConfigParser.getFirefoxNode()!=""){
 				try {
-					return new STeaDriver.STeaRemoteWebDriver(new URL(ConfigParser.getFirefoxNode()),DesiredCapabilities.firefox());
+					return new RemoteWebDriver(new URL(ConfigParser.getFirefoxNode()),DesiredCapabilities.firefox());
 				} catch (MalformedURLException e) {
 					throw new NodeBrowserNotConnectException("在连接远程浏览器的时候出现了错误！", e);
 				}
@@ -91,15 +90,15 @@ public enum Browser{
     },
     CHROME(){
         public ChromeDriver browser(){
-                  return new STeaDriver.STeaChromeDriver();
+                  return new ChromeDriver();
         }
         public RemoteWebDriver browser(URL url){
-            return new STeaDriver.STeaRemoteWebDriver(url,DesiredCapabilities.chrome());
+            return new RemoteWebDriver(url,DesiredCapabilities.chrome());
         }
         public RemoteWebDriver remoteBrowser() {
 			if(ConfigParser.getChromeNode()!=null&&ConfigParser.getChromeNode()!=""){
 				try {
-					return new STeaDriver.STeaRemoteWebDriver(new URL(ConfigParser.getChromeNode()),DesiredCapabilities.chrome());
+					return new RemoteWebDriver(new URL(ConfigParser.getChromeNode()),DesiredCapabilities.chrome());
 				} catch (MalformedURLException e) {
 					throw new NodeBrowserNotConnectException("在连接远程浏览器的时候出现了错误！", e);
 				}
@@ -110,15 +109,15 @@ public enum Browser{
     },
     SAFARI(){
         public SafariDriver browser(){
-            return new STeaDriver.STeaSafariDriver();
+            return new SafariDriver();
         }
         public RemoteWebDriver browser(URL url){
-            return new STeaDriver.STeaRemoteWebDriver(url,DesiredCapabilities.safari());
+            return new RemoteWebDriver(url,DesiredCapabilities.safari());
         }
         public RemoteWebDriver remoteBrowser() {
 			if(ConfigParser.getSafariNode()!=null&&ConfigParser.getSafariNode()!=""){
 				try {
-					return new STeaDriver.STeaRemoteWebDriver(new URL(ConfigParser.getSafariNode()),DesiredCapabilities.safari());
+					return new RemoteWebDriver(new URL(ConfigParser.getSafariNode()),DesiredCapabilities.safari());
 				} catch (MalformedURLException e) {
 					throw new NodeBrowserNotConnectException("在连接远程浏览器的时候出现了错误！", e);
 				}
@@ -129,15 +128,15 @@ public enum Browser{
     },
     OPERA(){
         public OperaDriver browser(){
-            return new STeaDriver.STeaOperaDriver();
+            return new OperaDriver();
         }
         public RemoteWebDriver browser(URL url){
-            return new STeaDriver.STeaRemoteWebDriver(url,DesiredCapabilities.opera());
+            return new RemoteWebDriver(url,DesiredCapabilities.opera());
         }
         public RemoteWebDriver remoteBrowser() {
 			if(ConfigParser.getOperaNode()!=null&&ConfigParser.getOperaNode()!=""){
 				try {
-					return new STeaDriver.STeaRemoteWebDriver(new URL(ConfigParser.getOperaNode()),DesiredCapabilities.opera());
+					return new RemoteWebDriver(new URL(ConfigParser.getOperaNode()),DesiredCapabilities.opera());
 				} catch (MalformedURLException e) {
 					throw new NodeBrowserNotConnectException("在连接远程浏览器的时候出现了错误！", e);
 				}
@@ -148,12 +147,12 @@ public enum Browser{
     },
     HTMLUNIT(){
         public HtmlUnitDriver browser(){
-            HtmlUnitDriver driver = new STeaDriver.STeaHtmlUnitDriver(BrowserVersion.FIREFOX_17);
+            HtmlUnitDriver driver = new HtmlUnitDriver(BrowserVersion.FIREFOX_17);
             driver.setJavascriptEnabled(true);
             return driver;
         }
         public RemoteWebDriver browser(URL url){
-            RemoteWebDriver driver= new STeaDriver.STeaRemoteWebDriver(url,DesiredCapabilities.htmlUnit(),new DesiredCapabilities(){
+            RemoteWebDriver driver= new RemoteWebDriver(url,DesiredCapabilities.htmlUnit(),new DesiredCapabilities(){
                 /**
 				 * 
 				 */
@@ -169,7 +168,7 @@ public enum Browser{
         public RemoteWebDriver remoteBrowser() {
 			if(ConfigParser.getHtmlUnitNode()!=null&&ConfigParser.getHtmlUnitNode()!=""){
 				try {
-					return new STeaDriver.STeaRemoteWebDriver(new URL(ConfigParser.getHtmlUnitNode()),DesiredCapabilities.htmlUnit());
+					return new RemoteWebDriver(new URL(ConfigParser.getHtmlUnitNode()),DesiredCapabilities.htmlUnit());
 				} catch (MalformedURLException e) {
 					throw new NodeBrowserNotConnectException("在连接远程浏览器的时候出现了错误！", e);
 				}
